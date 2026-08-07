@@ -1,8 +1,12 @@
 import { redirect, notFound } from "next/navigation";
-import { and, asc, eq } from "drizzle-orm";
+import { and, asc, eq, inArray } from "drizzle-orm";
 import { auth } from "@/lib/auth";
 import { db } from "@/db";
-import { chatMessages, generatedActivities } from "@/db/schema";
+import {
+  chatMessages,
+  flashcardProgress,
+  generatedActivities,
+} from "@/db/schema";
 import {
   getAdjacentLessons,
   listAllLessons,
@@ -15,6 +19,10 @@ import {
   isUnlocked,
   recomputeStandard,
 } from "@/lib/standard";
+import {
+  extractCardsFromLesson,
+  sortDeckForPractice,
+} from "@/lib/flashcards/extract";
 import { LessonClient } from "@/components/lesson/LessonClient";
 import { TeachBody } from "@/components/lesson/TeachBody";
 import type { Activity } from "@/types/activity";
@@ -90,6 +98,33 @@ export default async function LessonPage({
   );
   const teachContent = await TeachBody({ source: teachSource });
 
+  const rawCards = extractCardsFromLesson(lesson);
+  const cardKeys = rawCards.map((c) => c.key);
+  const fcRows =
+    cardKeys.length > 0
+      ? await db
+          .select()
+          .from(flashcardProgress)
+          .where(
+            and(
+              eq(flashcardProgress.userId, session.user.id),
+              inArray(flashcardProgress.cardKey, cardKeys)
+            )
+          )
+      : [];
+  const fcStats = new Map(
+    fcRows.map((r) => [
+      r.cardKey,
+      {
+        correctCount: r.correctCount,
+        wrongCount: r.wrongCount,
+        streak: r.streak,
+        lastResult: r.lastResult,
+      },
+    ])
+  );
+  const flashcards = sortDeckForPractice(rawCards, fcStats);
+
   return (
     <LessonClient
       lessonSlug={lesson.slug}
@@ -111,6 +146,7 @@ export default async function LessonPage({
         role: r.role,
         content: r.content,
       }))}
+      flashcards={flashcards}
       prev={
         prev
           ? { unitSlug: prev.unitSlug, slug: prev.slug, title: prev.title }

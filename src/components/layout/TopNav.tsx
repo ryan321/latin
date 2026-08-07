@@ -29,6 +29,12 @@ export async function TopNav() {
               Units
             </Link>
             <Link
+              href="/practice/flashcards"
+              className="rounded-lg px-2.5 py-1.5 text-sm font-medium text-stone-600 hover:bg-stone-200/60 hover:text-stone-900 dark:text-stone-300 dark:hover:bg-stone-800 dark:hover:text-stone-50"
+            >
+              Flashcards
+            </Link>
+            <Link
               href="/help/typing"
               className="rounded-lg px-2.5 py-1.5 text-sm font-medium text-stone-600 hover:bg-stone-200/60 hover:text-stone-900 dark:text-stone-300 dark:hover:bg-stone-800 dark:hover:text-stone-50"
             >

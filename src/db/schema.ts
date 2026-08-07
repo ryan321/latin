@@ -112,3 +112,36 @@ export const chatMessages = pgTable(
     index("idx_chat_messages_user_lesson").on(t.userId, t.lessonSlug),
   ]
 );
+
+/**
+ * Optional practice flashcards (not part of lesson standard).
+ * cardKey is a stable hash of front|back so the same fact merges across lessons.
+ */
+export const flashcardProgress = pgTable(
+  "flashcard_progress",
+  {
+    id: uuid("id").defaultRandom().primaryKey(),
+    userId: uuid("user_id")
+      .notNull()
+      .references(() => users.id, { onDelete: "cascade" }),
+    /** Stable id: hash of normalized front + back */
+    cardKey: text("card_key").notNull(),
+    front: text("front").notNull(),
+    back: text("back").notNull(),
+    /** Last known source lesson slugs (JSON string array) */
+    sourceLessons: jsonb("source_lessons").$type<string[]>().default([]),
+    correctCount: integer("correct_count").notNull().default(0),
+    wrongCount: integer("wrong_count").notNull().default(0),
+    /** Current streak of correct answers */
+    streak: integer("streak").notNull().default(0),
+    lastResult: text("last_result"), // "know" | "again"
+    lastSeenAt: timestamp("last_seen_at", { withTimezone: true }),
+    updatedAt: timestamp("updated_at", { withTimezone: true })
+      .notNull()
+      .defaultNow(),
+  },
+  (t) => [
+    unique("flashcard_progress_user_card").on(t.userId, t.cardKey),
+    index("idx_flashcard_progress_user").on(t.userId),
+  ]
+);

@@ -12,6 +12,10 @@ import {
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { ActivityCard } from "@/components/activities/ActivityCard";
+import {
+  FlashcardPractice,
+  type FlashcardClient,
+} from "@/components/flashcards/FlashcardPractice";
 import type { AnswerStatus, Activity } from "@/types/activity";
 
 type ChatMessage = { id: string; role: "user" | "assistant"; content: string };
@@ -39,6 +43,8 @@ type Props = {
   initialMessages: ChatMessage[];
   prev: { unitSlug: string; slug: string; title: string } | null;
   next: { unitSlug: string; slug: string; title: string } | null;
+  /** Dynamic flashcards from this lesson (practice only, not graded). */
+  flashcards?: FlashcardClient[];
 };
 
 export function LessonClient({
@@ -55,6 +61,7 @@ export function LessonClient({
   initialMessages,
   prev,
   next,
+  flashcards = [],
 }: Props) {
   const [generated, setGenerated] = useState(initialGenerated);
   const [latest, setLatest] = useState(initialLatest);
@@ -433,6 +440,24 @@ export function LessonClient({
             )}
           </div>
         )}
+
+        {/* Flashcards — practice only; does not affect the lesson standard */}
+        {flashcards.length > 0 && (
+          <FlashcardPractice
+            initialCards={flashcards}
+            title="Lesson flashcards"
+            subtitle="Built from this lesson’s material. Optional practice — not part of the standard."
+            embedded
+          />
+        )}
+        <p className="text-center text-xs text-stone-500">
+          <Link
+            href="/practice/flashcards"
+            className="font-medium text-violet-800 underline-offset-2 hover:underline dark:text-violet-300"
+          >
+            Vocab flashcards & weak words →
+          </Link>
+        </p>
 
         <nav className="flex justify-between gap-3 pb-8 text-sm">
           {prev ? (
