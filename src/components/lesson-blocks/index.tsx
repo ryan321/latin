@@ -434,6 +434,97 @@ export function FlowChart({ steps = "" }: { steps?: string }) {
   );
 }
 
+/** Side-by-side short vs long vowels (avoids fragile MDX markdown tables). */
+export function VowelChart({
+  title,
+  short = "a|e|i|o|u",
+  long = "ā|ē|ī|ō|ū",
+  note,
+}: {
+  title?: string;
+  short?: string;
+  long?: string;
+  note?: string;
+}) {
+  const s = split(short);
+  const l = split(long);
+  const n = Math.max(s.length, l.length);
+  return (
+    <figure className="not-prose my-5 overflow-hidden rounded-xl border border-stone-200 shadow-sm dark:border-stone-700">
+      {title && (
+        <figcaption className="border-b border-stone-200 bg-stone-100 px-4 py-2 text-center text-xs font-bold uppercase tracking-wide text-stone-600 dark:border-stone-700 dark:bg-stone-800 dark:text-stone-300">
+          {title}
+        </figcaption>
+      )}
+      <div className="grid grid-cols-2 divide-x divide-stone-200 dark:divide-stone-700">
+        <div className="bg-stone-50/80 px-3 py-2 text-center text-xs font-bold uppercase tracking-wide text-stone-500 dark:bg-stone-900 dark:text-stone-400">
+          Short
+        </div>
+        <div className="bg-amber-50/80 px-3 py-2 text-center text-xs font-bold uppercase tracking-wide text-amber-900/70 dark:bg-amber-950/40 dark:text-amber-300/80">
+          Long (macron)
+        </div>
+      </div>
+      <div className="grid grid-cols-2 divide-x divide-stone-200 dark:divide-stone-700">
+        <div className="flex flex-wrap items-center justify-center gap-2 px-3 py-4">
+          {Array.from({ length: n }).map((_, i) => (
+            <span
+              key={`s-${i}`}
+              className="flex h-10 w-10 items-center justify-center rounded-lg border border-stone-200 bg-white font-serif text-xl text-stone-900 dark:border-stone-600 dark:bg-stone-950 dark:text-stone-100"
+            >
+              {s[i] ?? ""}
+            </span>
+          ))}
+        </div>
+        <div className="flex flex-wrap items-center justify-center gap-2 bg-amber-50/30 px-3 py-4 dark:bg-amber-950/20">
+          {Array.from({ length: n }).map((_, i) => (
+            <span
+              key={`l-${i}`}
+              className="flex h-10 w-10 items-center justify-center rounded-lg border border-amber-300/60 bg-white font-serif text-xl text-stone-900 dark:border-amber-800 dark:bg-stone-950 dark:text-stone-100"
+            >
+              {l[i] ?? ""}
+            </span>
+          ))}
+        </div>
+      </div>
+      {note && (
+        <p className="border-t border-stone-200 px-4 py-2 text-center text-xs text-stone-500 dark:border-stone-700">
+          {note}
+        </p>
+      )}
+    </figure>
+  );
+}
+
+/** Chip row for diphthongs / letter groups */
+export function LetterRow({
+  label,
+  letters = "",
+}: {
+  label?: string;
+  letters?: string;
+}) {
+  const parts = split(letters);
+  return (
+    <div className="not-prose my-4">
+      {label && (
+        <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-stone-500">
+          {label}
+        </p>
+      )}
+      <div className="flex flex-wrap gap-2">
+        {parts.map((p) => (
+          <span
+            key={p}
+            className="rounded-lg border border-stone-200 bg-white px-3 py-1.5 font-serif text-base font-semibold text-stone-900 shadow-sm dark:border-stone-600 dark:bg-stone-900 dark:text-stone-100"
+          >
+            {p}
+          </span>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 export const lessonComponents = {
   KeyTerm,
   Latin,
@@ -449,4 +540,6 @@ export const lessonComponents = {
   Steps,
   MapCallout,
   FlowChart,
+  VowelChart,
+  LetterRow,
 };

@@ -35,7 +35,11 @@ Import nothing — components are injected by the renderer.
 | `Steps` | Numbered process | `steps="One\|Two\|Three"` |
 | `FlowChart` | Horizontal flow | `steps="A\|B\|C"` |
 | `MapCallout` | Culture / place box | `title` + children |
+| `VowelChart` | Short vs long vowels | `short="a\|e\|…"` `long="ā\|ē\|…"` |
+| `LetterRow` | Chip row of letters/diphthongs | `letters="ae\|au\|oe"` |
 | `Image` / `Video` | Media | `src` `alt` / `caption` |
+
+Prefer `VowelChart` / `ParadigmTable` over raw markdown tables in MDX — GFM tables can flatten under MDX.
 
 Array-like props use **pipe-delimited strings** (MDX-friendly), same convention as education diagrams.
 
