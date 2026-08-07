@@ -1,0 +1,542 @@
+{
+  "slug": "vocab-v12-empire",
+  "title": "Vocabulary: Empire & provinces",
+  "unitSlug": "18-place",
+  "order": 5,
+  "standardSummary": "Master this vocabulary set (10 words): match both directions and pass drills.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "match-l2e-0"
+      },
+      {
+        "type": "skill_count",
+        "skill": "vocabulary",
+        "n": 5,
+        "label": "vocab items"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match-e2l"
+      }
+    ]
+  },
+  "teach": "Vocabulary batch v12-empire: prōvincia, imperium, Gallia, Hispānia, Ītalia, annus, diēs, hōra, nox, locus",
+  "allowList": {
+    "lemmas": [
+      "prōvincia",
+      "imperium",
+      "Gallia",
+      "Hispānia",
+      "Ītalia",
+      "annus",
+      "diēs",
+      "hōra",
+      "nox",
+      "locus"
+    ],
+    "constructions": [
+      "vocabulary",
+      "vocab drill",
+      "v12-empire"
+    ],
+    "activityTypes": [
+      "matching",
+      "multiple_choice",
+      "single_form",
+      "translate",
+      "multi_select",
+      "cloze",
+      "short_answer"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "match-l2e-0",
+      "type": "matching",
+      "prompt": "Match each Latin word to its English meaning. (set 1)",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v12-empire"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "leftLabel": "Latin",
+        "rightLabel": "English",
+        "left": [
+          {
+            "id": "l0",
+            "label": "prōvincia"
+          },
+          {
+            "id": "l1",
+            "label": "imperium"
+          },
+          {
+            "id": "l2",
+            "label": "Gallia"
+          },
+          {
+            "id": "l3",
+            "label": "Hispānia"
+          },
+          {
+            "id": "l4",
+            "label": "Ītalia"
+          }
+        ],
+        "right": [
+          {
+            "id": "r0",
+            "label": "province"
+          },
+          {
+            "id": "r1",
+            "label": "command, empire, power"
+          },
+          {
+            "id": "r2",
+            "label": "Gaul"
+          },
+          {
+            "id": "r3",
+            "label": "Spain"
+          },
+          {
+            "id": "r4",
+            "label": "Italy"
+          }
+        ],
+        "pairs": {
+          "l0": "r0",
+          "l1": "r1",
+          "l2": "r2",
+          "l3": "r3",
+          "l4": "r4"
+        }
+      }
+    },
+    {
+      "id": "match-l2e-1",
+      "type": "matching",
+      "prompt": "Match each Latin word to its English meaning. (set 2)",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v12-empire"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "leftLabel": "Latin",
+        "rightLabel": "English",
+        "left": [
+          {
+            "id": "l0",
+            "label": "annus"
+          },
+          {
+            "id": "l1",
+            "label": "diēs"
+          },
+          {
+            "id": "l2",
+            "label": "hōra"
+          },
+          {
+            "id": "l3",
+            "label": "nox"
+          },
+          {
+            "id": "l4",
+            "label": "locus"
+          }
+        ],
+        "right": [
+          {
+            "id": "r0",
+            "label": "year"
+          },
+          {
+            "id": "r1",
+            "label": "day"
+          },
+          {
+            "id": "r2",
+            "label": "hour"
+          },
+          {
+            "id": "r3",
+            "label": "night"
+          },
+          {
+            "id": "r4",
+            "label": "place"
+          }
+        ],
+        "pairs": {
+          "l0": "r0",
+          "l1": "r1",
+          "l2": "r2",
+          "l3": "r3",
+          "l4": "r4"
+        }
+      }
+    },
+    {
+      "id": "match-e2l",
+      "type": "matching",
+      "prompt": "Match English meaning to Latin (produce recognition both ways).",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v12-empire"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "leftLabel": "English",
+        "rightLabel": "Latin",
+        "left": [
+          {
+            "id": "l0",
+            "label": "province"
+          },
+          {
+            "id": "l1",
+            "label": "command, empire, power"
+          },
+          {
+            "id": "l2",
+            "label": "Gaul"
+          },
+          {
+            "id": "l3",
+            "label": "Spain"
+          },
+          {
+            "id": "l4",
+            "label": "Italy"
+          },
+          {
+            "id": "l5",
+            "label": "year"
+          }
+        ],
+        "right": [
+          {
+            "id": "r0",
+            "label": "prōvincia"
+          },
+          {
+            "id": "r1",
+            "label": "imperium"
+          },
+          {
+            "id": "r2",
+            "label": "Gallia"
+          },
+          {
+            "id": "r3",
+            "label": "Hispānia"
+          },
+          {
+            "id": "r4",
+            "label": "Ītalia"
+          },
+          {
+            "id": "r5",
+            "label": "annus"
+          }
+        ],
+        "pairs": {
+          "l0": "r0",
+          "l1": "r1",
+          "l2": "r2",
+          "l3": "r3",
+          "l4": "r4",
+          "l5": "r5"
+        }
+      }
+    },
+    {
+      "id": "mc-0",
+      "type": "multiple_choice",
+      "prompt": "What does **prōvincia** mean?",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v12-empire"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "Gaul"
+          },
+          {
+            "id": "b",
+            "label": "Spain"
+          },
+          {
+            "id": "c",
+            "label": "province"
+          },
+          {
+            "id": "d",
+            "label": "command, empire, power"
+          }
+        ],
+        "correctOptionId": "c"
+      }
+    },
+    {
+      "id": "mc-1",
+      "type": "multiple_choice",
+      "prompt": "What does **imperium** mean?",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v12-empire"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "Spain"
+          },
+          {
+            "id": "b",
+            "label": "command, empire, power"
+          },
+          {
+            "id": "c",
+            "label": "province"
+          },
+          {
+            "id": "d",
+            "label": "Gaul"
+          }
+        ],
+        "correctOptionId": "b"
+      }
+    },
+    {
+      "id": "mc-2",
+      "type": "multiple_choice",
+      "prompt": "What does **Gallia** mean?",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v12-empire"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "Spain"
+          },
+          {
+            "id": "b",
+            "label": "Gaul"
+          },
+          {
+            "id": "c",
+            "label": "province"
+          },
+          {
+            "id": "d",
+            "label": "command, empire, power"
+          }
+        ],
+        "correctOptionId": "b"
+      }
+    },
+    {
+      "id": "mc-3",
+      "type": "multiple_choice",
+      "prompt": "What does **Hispānia** mean?",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v12-empire"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "Spain"
+          },
+          {
+            "id": "b",
+            "label": "province"
+          },
+          {
+            "id": "c",
+            "label": "command, empire, power"
+          },
+          {
+            "id": "d",
+            "label": "Gaul"
+          }
+        ],
+        "correctOptionId": "a"
+      }
+    },
+    {
+      "id": "mc-4",
+      "type": "multiple_choice",
+      "prompt": "What does **Ītalia** mean?",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v12-empire"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "command, empire, power"
+          },
+          {
+            "id": "b",
+            "label": "Gaul"
+          },
+          {
+            "id": "c",
+            "label": "Italy"
+          },
+          {
+            "id": "d",
+            "label": "province"
+          }
+        ],
+        "correctOptionId": "c"
+      }
+    },
+    {
+      "id": "sf-gloss-0",
+      "type": "single_form",
+      "prompt": "English meaning of **annus**:",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v12-empire"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "accept": [
+          "year"
+        ],
+        "hint": "annī m."
+      }
+    },
+    {
+      "id": "sf-gloss-1",
+      "type": "single_form",
+      "prompt": "English meaning of **diēs**:",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v12-empire"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "accept": [
+          "day"
+        ],
+        "hint": "diēī m./f."
+      }
+    },
+    {
+      "id": "sf-gloss-2",
+      "type": "single_form",
+      "prompt": "English meaning of **hōra**:",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v12-empire"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "accept": [
+          "hour"
+        ],
+        "hint": "hōrae f."
+      }
+    },
+    {
+      "id": "tr-0",
+      "type": "translate",
+      "prompt": "Translate: **nox**",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v12-empire"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "direction": "L2E",
+        "length": "word",
+        "sampleAnswers": [
+          "night"
+        ],
+        "rubric": "Accept common gloss synonyms; macrons optional for Latin."
+      }
+    },
+    {
+      "id": "tr-1",
+      "type": "translate",
+      "prompt": "Translate: **locus**",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v12-empire"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "direction": "L2E",
+        "length": "word",
+        "sampleAnswers": [
+          "place"
+        ],
+        "rubric": "Accept common gloss synonyms; macrons optional for Latin."
+      }
+    },
+    {
+      "id": "sa-use",
+      "type": "short_answer",
+      "prompt": "Pick any 3 words from this list and write a tiny English sentence that could use each (or one sentence using two). Theme: Place and imperial geography.",
+      "targets": [
+        "vocabulary",
+        "v12-empire"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "sampleAnswers": [
+          "Any sensible English using three of the batch meanings.",
+          "Student sentences using batch glosses."
+        ]
+      }
+    }
+  ]
+}

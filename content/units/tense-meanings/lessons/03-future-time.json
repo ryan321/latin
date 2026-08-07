@@ -1,0 +1,169 @@
+{
+  "slug": "03-future-time",
+  "title": "Future time",
+  "unitSlug": "tense-meanings",
+  "order": 3,
+  "standardSummary": "Identify will/shall and going-to future; contrast with present and past.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-fut"
+      },
+      {
+        "type": "skill_count",
+        "skill": "future meaning",
+        "n": 3,
+        "label": "future meaning"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match-f"
+      }
+    ]
+  },
+  "teach": "Future time: will / shall / going to. Latin future will encode this.",
+  "allowList": {
+    "lemmas": [],
+    "constructions": [
+      "future meaning",
+      "tense meanings"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "matching",
+      "short_answer",
+      "multi_select"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-fut",
+      "type": "multiple_choice",
+      "prompt": "“They will sail at dawn” is…",
+      "targets": [
+        "future meaning"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "present"
+          },
+          {
+            "id": "b",
+            "label": "past ongoing"
+          },
+          {
+            "id": "c",
+            "label": "future"
+          },
+          {
+            "id": "d",
+            "label": "pluperfect"
+          }
+        ],
+        "correctOptionId": "c"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match-f",
+      "type": "matching",
+      "prompt": "Match.",
+      "targets": [
+        "future meaning"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "We will win."
+          },
+          {
+            "id": "b",
+            "label": "We are going to win."
+          },
+          {
+            "id": "c",
+            "label": "We won."
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "future (will)"
+          },
+          {
+            "id": "2",
+            "label": "future (going to)"
+          },
+          {
+            "id": "3",
+            "label": "past completed"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "ms1",
+      "type": "multi_select",
+      "prompt": "Select future-time sentences.",
+      "targets": [
+        "future meaning"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "She will hear the speech."
+          },
+          {
+            "id": "b",
+            "label": "She heard the speech."
+          },
+          {
+            "id": "c",
+            "label": "She is going to hear it."
+          },
+          {
+            "id": "d",
+            "label": "She was hearing it."
+          }
+        ],
+        "correctOptionIds": [
+          "a",
+          "c"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sa1",
+      "type": "short_answer",
+      "prompt": "How does English often mark future that Latin may mark with one verb form?",
+      "targets": [
+        "future meaning"
+      ],
+      "payload": {
+        "sampleAnswers": [
+          "With helpers like will or going to; Latin uses future endings on the verb.",
+          "Helper verbs (will); Latin uses endings."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

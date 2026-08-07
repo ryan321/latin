@@ -1,0 +1,211 @@
+{
+  "slug": "05-passage-se",
+  "title": "Passage: Himself and his own",
+  "unitSlug": "more-pronouns",
+  "order": 6,
+  "standardSummary": "Read a short pronoun-rich passage; answer questions on sē, suus, and quis.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-who"
+      },
+      {
+        "type": "skill_count",
+        "skill": "passage reading",
+        "n": 3,
+        "label": "passage"
+      },
+      {
+        "type": "skill_count",
+        "skill": "reflexive",
+        "n": 1,
+        "label": "sē in context"
+      }
+    ]
+  },
+  "teach": "Passage using reflexive, possessive, and interrogative pronouns.",
+  "allowList": {
+    "lemmas": [
+      "se",
+      "suus",
+      "quis",
+      "is",
+      "noster",
+      "miles",
+      "bellum",
+      "gladius"
+    ],
+    "constructions": [
+      "reflexive",
+      "possessive",
+      "interrogative",
+      "passage reading"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "translate",
+      "short_answer"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-who",
+      "type": "multiple_choice",
+      "prompt": "Who prepares himself for war?",
+      "targets": [
+        "passage reading",
+        "reflexive"
+      ],
+      "source": "seed",
+      "required": true,
+      "passage": {
+        "title": "He prepares himself",
+        "latin": "Mīles sē ad bellum parat.\nIs gladium suum tenet.\nQuis cum eō venit?\nNōs cum amīcīs nostrīs venīmus.",
+        "notes": "sē = himself · suum = his own · quis = who? · nostrīs = our"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "A girl only"
+          },
+          {
+            "id": "b",
+            "label": "A soldier"
+          },
+          {
+            "id": "c",
+            "label": "We"
+          },
+          {
+            "id": "d",
+            "label": "No one"
+          }
+        ],
+        "correctOptionId": "b"
+      }
+    },
+    {
+      "id": "mc-sword",
+      "type": "multiple_choice",
+      "prompt": "What sword does he hold?",
+      "targets": [
+        "passage reading",
+        "possessive"
+      ],
+      "source": "seed",
+      "required": true,
+      "passage": {
+        "title": "He prepares himself",
+        "latin": "Mīles sē ad bellum parat.\nIs gladium suum tenet.\nQuis cum eō venit?\nNōs cum amīcīs nostrīs venīmus.",
+        "notes": "sē = himself · suum = his own · quis = who? · nostrīs = our"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "Someone else’s only (eius)"
+          },
+          {
+            "id": "b",
+            "label": "His own (suum)"
+          },
+          {
+            "id": "c",
+            "label": "Our sword"
+          },
+          {
+            "id": "d",
+            "label": "No sword"
+          }
+        ],
+        "correctOptionId": "b"
+      }
+    },
+    {
+      "id": "mc-quis",
+      "type": "multiple_choice",
+      "prompt": "“Quis cum eō venit?” asks…",
+      "targets": [
+        "passage reading",
+        "interrogative"
+      ],
+      "source": "seed",
+      "required": true,
+      "passage": {
+        "title": "He prepares himself",
+        "latin": "Mīles sē ad bellum parat.\nIs gladium suum tenet.\nQuis cum eō venit?\nNōs cum amīcīs nostrīs venīmus.",
+        "notes": "sē = himself · suum = his own · quis = who? · nostrīs = our"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "Where is he?"
+          },
+          {
+            "id": "b",
+            "label": "Who is coming with him?"
+          },
+          {
+            "id": "c",
+            "label": "What is a camp?"
+          },
+          {
+            "id": "d",
+            "label": "When is war?"
+          }
+        ],
+        "correctOptionId": "b"
+      }
+    },
+    {
+      "id": "tr1",
+      "type": "translate",
+      "prompt": "Translate from the passage:\nNōs cum amīcīs nostrīs venīmus.",
+      "targets": [
+        "passage reading",
+        "possessive"
+      ],
+      "source": "seed",
+      "required": true,
+      "passage": {
+        "title": "He prepares himself",
+        "latin": "Mīles sē ad bellum parat.\nIs gladium suum tenet.\nQuis cum eō venit?\nNōs cum amīcīs nostrīs venīmus.",
+        "notes": "sē = himself · suum = his own · quis = who? · nostrīs = our"
+      },
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "We come with our friends.",
+          "We are coming with our friends."
+        ]
+      }
+    },
+    {
+      "id": "sa1",
+      "type": "short_answer",
+      "prompt": "Point out one reflexive and one possessive in the passage.",
+      "targets": [
+        "passage reading",
+        "reflexive",
+        "possessive"
+      ],
+      "source": "seed",
+      "required": true,
+      "passage": {
+        "title": "He prepares himself",
+        "latin": "Mīles sē ad bellum parat.\nIs gladium suum tenet.\nQuis cum eō venit?\nNōs cum amīcīs nostrīs venīmus.",
+        "notes": "sē = himself · suum = his own · quis = who? · nostrīs = our"
+      },
+      "payload": {
+        "sampleAnswers": [
+          "sē reflexive; suum or nostrīs possessive",
+          "sē and suum"
+        ]
+      }
+    }
+  ]
+}

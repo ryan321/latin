@@ -1,0 +1,154 @@
+{
+  "slug": "02-antecedent",
+  "title": "The antecedent",
+  "unitSlug": "relative-concepts",
+  "order": 2,
+  "standardSummary": "Name the antecedent of a relative pronoun; explain that the relative refers back to it.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-ant"
+      },
+      {
+        "type": "skill_count",
+        "skill": "antecedent",
+        "n": 3,
+        "label": "antecedent"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match-a"
+      }
+    ]
+  },
+  "teach": "Antecedent = the noun the relative clause describes; relative refers back to it.",
+  "allowList": {
+    "lemmas": [],
+    "constructions": [
+      "antecedent",
+      "relative clause concept"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "matching",
+      "short_answer",
+      "cloze"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-ant",
+      "type": "multiple_choice",
+      "prompt": "In “The girls who work are tired,” the antecedent of who is…",
+      "targets": [
+        "antecedent"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "work"
+          },
+          {
+            "id": "b",
+            "label": "tired"
+          },
+          {
+            "id": "c",
+            "label": "girls"
+          },
+          {
+            "id": "d",
+            "label": "are"
+          }
+        ],
+        "correctOptionId": "c"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match-a",
+      "type": "matching",
+      "prompt": "Match relative clause to its antecedent noun.",
+      "targets": [
+        "antecedent"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "who carries water — in “the girl who carries water”"
+          },
+          {
+            "id": "b",
+            "label": "which is long — in “the road which is long”"
+          },
+          {
+            "id": "c",
+            "label": "that we fear — in “the war that we fear”"
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "girl"
+          },
+          {
+            "id": "2",
+            "label": "road"
+          },
+          {
+            "id": "3",
+            "label": "war"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "cl1",
+      "type": "cloze",
+      "prompt": "Name the antecedent (one word).",
+      "targets": [
+        "antecedent"
+      ],
+      "payload": {
+        "template": "The soldiers who fled returned. Antecedent: {{1}}",
+        "blanks": {
+          "1": [
+            "soldiers",
+            "Soldiers"
+          ]
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sa1",
+      "type": "short_answer",
+      "prompt": "In Latin, the relative will match the antecedent in gender and number. Why does that make sense?",
+      "targets": [
+        "antecedent"
+      ],
+      "payload": {
+        "sampleAnswers": [
+          "Because the relative points back to that noun—it must “fit” it.",
+          "Agreement shows which noun the relative belongs to."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

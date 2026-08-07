@@ -1,0 +1,229 @@
+{
+  "slug": "01-person-number",
+  "title": "Person and number",
+  "unitSlug": "verb-concepts",
+  "order": 1,
+  "standardSummary": "Identify first, second, and third person; singular vs plural in English verb situations.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-person"
+      },
+      {
+        "type": "skill_count",
+        "skill": "person and number",
+        "n": 4,
+        "label": "person/number"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match-pn"
+      }
+    ]
+  },
+  "teach": "Verbs show who acts (person) and how many (number). English uses pronouns; Latin will use endings.",
+  "allowList": {
+    "lemmas": [],
+    "constructions": [
+      "person and number",
+      "verb concepts"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "matching",
+      "short_answer",
+      "multi_select",
+      "ordering"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-person",
+      "type": "multiple_choice",
+      "prompt": "In “They walk,” the person and number are…",
+      "targets": [
+        "person and number"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "1st singular"
+          },
+          {
+            "id": "b",
+            "label": "2nd singular"
+          },
+          {
+            "id": "c",
+            "label": "3rd plural"
+          },
+          {
+            "id": "d",
+            "label": "1st plural"
+          }
+        ],
+        "correctOptionId": "c"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match-pn",
+      "type": "matching",
+      "prompt": "Match pronoun idea to person/number.",
+      "targets": [
+        "person and number"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "I"
+          },
+          {
+            "id": "b",
+            "label": "you (one person)"
+          },
+          {
+            "id": "c",
+            "label": "we"
+          },
+          {
+            "id": "d",
+            "label": "they"
+          },
+          {
+            "id": "e",
+            "label": "he/she/it"
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "1st singular"
+          },
+          {
+            "id": "2",
+            "label": "2nd singular"
+          },
+          {
+            "id": "3",
+            "label": "1st plural"
+          },
+          {
+            "id": "4",
+            "label": "3rd plural"
+          },
+          {
+            "id": "5",
+            "label": "3rd singular"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3",
+          "d": "4",
+          "e": "5"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "ms1",
+      "type": "multi_select",
+      "prompt": "Which are plural?",
+      "targets": [
+        "person and number"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "I run"
+          },
+          {
+            "id": "b",
+            "label": "We run"
+          },
+          {
+            "id": "c",
+            "label": "They run"
+          },
+          {
+            "id": "d",
+            "label": "She runs"
+          }
+        ],
+        "correctOptionIds": [
+          "b",
+          "c"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "ord1",
+      "type": "ordering",
+      "prompt": "Order: 1sg, 2sg, 3sg, 1pl, 3pl",
+      "targets": [
+        "person and number"
+      ],
+      "payload": {
+        "items": [
+          {
+            "id": "a",
+            "label": "they love"
+          },
+          {
+            "id": "b",
+            "label": "I love"
+          },
+          {
+            "id": "c",
+            "label": "we love"
+          },
+          {
+            "id": "d",
+            "label": "you (sing.) love"
+          },
+          {
+            "id": "e",
+            "label": "he loves"
+          }
+        ],
+        "correctOrder": [
+          "b",
+          "d",
+          "e",
+          "c",
+          "a"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sa1",
+      "type": "short_answer",
+      "prompt": "Why does Latin care about person and number on verbs?",
+      "targets": [
+        "person and number"
+      ],
+      "payload": {
+        "sampleAnswers": [
+          "The ending shows who is the subject (I/you/he… and singular/plural).",
+          "Person and number are built into verb endings so subjects can be clear without separate words."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

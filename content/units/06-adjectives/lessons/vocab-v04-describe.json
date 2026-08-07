@@ -1,0 +1,606 @@
+{
+  "slug": "vocab-v04-describe",
+  "title": "Vocabulary: Describing words",
+  "unitSlug": "06-adjectives",
+  "order": 3,
+  "standardSummary": "Master this vocabulary set (10 words): match both directions and pass drills.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "match-l2e-0"
+      },
+      {
+        "type": "skill_count",
+        "skill": "vocabulary",
+        "n": 5,
+        "label": "vocab items"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match-e2l"
+      }
+    ]
+  },
+  "teach": "Vocabulary batch v04-describe: bonus, malus, magnus, parvus, multus, longus, altus, novus, vērus, pulcher",
+  "allowList": {
+    "lemmas": [
+      "bonus",
+      "malus",
+      "magnus",
+      "parvus",
+      "multus",
+      "longus",
+      "altus",
+      "novus",
+      "vērus",
+      "pulcher"
+    ],
+    "constructions": [
+      "vocabulary",
+      "vocab drill",
+      "v04-describe"
+    ],
+    "activityTypes": [
+      "matching",
+      "multiple_choice",
+      "single_form",
+      "translate",
+      "multi_select",
+      "cloze",
+      "short_answer"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "match-l2e-0",
+      "type": "matching",
+      "prompt": "Match each Latin word to its English meaning. (set 1)",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v04-describe"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "leftLabel": "Latin",
+        "rightLabel": "English",
+        "left": [
+          {
+            "id": "l0",
+            "label": "bonus"
+          },
+          {
+            "id": "l1",
+            "label": "malus"
+          },
+          {
+            "id": "l2",
+            "label": "magnus"
+          },
+          {
+            "id": "l3",
+            "label": "parvus"
+          },
+          {
+            "id": "l4",
+            "label": "multus"
+          }
+        ],
+        "right": [
+          {
+            "id": "r0",
+            "label": "good"
+          },
+          {
+            "id": "r1",
+            "label": "bad, evil"
+          },
+          {
+            "id": "r2",
+            "label": "great, large"
+          },
+          {
+            "id": "r3",
+            "label": "small, little"
+          },
+          {
+            "id": "r4",
+            "label": "much, many"
+          }
+        ],
+        "pairs": {
+          "l0": "r0",
+          "l1": "r1",
+          "l2": "r2",
+          "l3": "r3",
+          "l4": "r4"
+        }
+      }
+    },
+    {
+      "id": "match-l2e-1",
+      "type": "matching",
+      "prompt": "Match each Latin word to its English meaning. (set 2)",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v04-describe"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "leftLabel": "Latin",
+        "rightLabel": "English",
+        "left": [
+          {
+            "id": "l0",
+            "label": "longus"
+          },
+          {
+            "id": "l1",
+            "label": "altus"
+          },
+          {
+            "id": "l2",
+            "label": "novus"
+          },
+          {
+            "id": "l3",
+            "label": "vērus"
+          },
+          {
+            "id": "l4",
+            "label": "pulcher"
+          }
+        ],
+        "right": [
+          {
+            "id": "r0",
+            "label": "long"
+          },
+          {
+            "id": "r1",
+            "label": "high, deep"
+          },
+          {
+            "id": "r2",
+            "label": "new"
+          },
+          {
+            "id": "r3",
+            "label": "true"
+          },
+          {
+            "id": "r4",
+            "label": "beautiful, handsome"
+          }
+        ],
+        "pairs": {
+          "l0": "r0",
+          "l1": "r1",
+          "l2": "r2",
+          "l3": "r3",
+          "l4": "r4"
+        }
+      }
+    },
+    {
+      "id": "match-e2l",
+      "type": "matching",
+      "prompt": "Match English meaning to Latin (produce recognition both ways).",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v04-describe"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "leftLabel": "English",
+        "rightLabel": "Latin",
+        "left": [
+          {
+            "id": "l0",
+            "label": "good"
+          },
+          {
+            "id": "l1",
+            "label": "bad, evil"
+          },
+          {
+            "id": "l2",
+            "label": "great, large"
+          },
+          {
+            "id": "l3",
+            "label": "small, little"
+          },
+          {
+            "id": "l4",
+            "label": "much, many"
+          },
+          {
+            "id": "l5",
+            "label": "long"
+          }
+        ],
+        "right": [
+          {
+            "id": "r0",
+            "label": "bonus"
+          },
+          {
+            "id": "r1",
+            "label": "malus"
+          },
+          {
+            "id": "r2",
+            "label": "magnus"
+          },
+          {
+            "id": "r3",
+            "label": "parvus"
+          },
+          {
+            "id": "r4",
+            "label": "multus"
+          },
+          {
+            "id": "r5",
+            "label": "longus"
+          }
+        ],
+        "pairs": {
+          "l0": "r0",
+          "l1": "r1",
+          "l2": "r2",
+          "l3": "r3",
+          "l4": "r4",
+          "l5": "r5"
+        }
+      }
+    },
+    {
+      "id": "mc-0",
+      "type": "multiple_choice",
+      "prompt": "What does **bonus** mean?",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v04-describe"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "bad, evil"
+          },
+          {
+            "id": "b",
+            "label": "great, large"
+          },
+          {
+            "id": "c",
+            "label": "small, little"
+          },
+          {
+            "id": "d",
+            "label": "good"
+          }
+        ],
+        "correctOptionId": "d"
+      }
+    },
+    {
+      "id": "mc-1",
+      "type": "multiple_choice",
+      "prompt": "What does **malus** mean?",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v04-describe"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "great, large"
+          },
+          {
+            "id": "b",
+            "label": "small, little"
+          },
+          {
+            "id": "c",
+            "label": "bad, evil"
+          },
+          {
+            "id": "d",
+            "label": "good"
+          }
+        ],
+        "correctOptionId": "c"
+      }
+    },
+    {
+      "id": "mc-2",
+      "type": "multiple_choice",
+      "prompt": "What does **magnus** mean?",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v04-describe"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "good"
+          },
+          {
+            "id": "b",
+            "label": "bad, evil"
+          },
+          {
+            "id": "c",
+            "label": "small, little"
+          },
+          {
+            "id": "d",
+            "label": "great, large"
+          }
+        ],
+        "correctOptionId": "d"
+      }
+    },
+    {
+      "id": "mc-3",
+      "type": "multiple_choice",
+      "prompt": "What does **parvus** mean?",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v04-describe"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "bad, evil"
+          },
+          {
+            "id": "b",
+            "label": "great, large"
+          },
+          {
+            "id": "c",
+            "label": "small, little"
+          },
+          {
+            "id": "d",
+            "label": "good"
+          }
+        ],
+        "correctOptionId": "c"
+      }
+    },
+    {
+      "id": "mc-4",
+      "type": "multiple_choice",
+      "prompt": "What does **multus** mean?",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v04-describe"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "much, many"
+          },
+          {
+            "id": "b",
+            "label": "good"
+          },
+          {
+            "id": "c",
+            "label": "bad, evil"
+          },
+          {
+            "id": "d",
+            "label": "great, large"
+          }
+        ],
+        "correctOptionId": "a"
+      }
+    },
+    {
+      "id": "sf-gloss-0",
+      "type": "single_form",
+      "prompt": "English meaning of **longus**:",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v04-describe"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "accept": [
+          "long"
+        ],
+        "hint": "longa, longum"
+      }
+    },
+    {
+      "id": "sf-gloss-1",
+      "type": "single_form",
+      "prompt": "English meaning of **altus**:",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v04-describe"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "accept": [
+          "high",
+          "deep"
+        ],
+        "hint": "alta, altum"
+      }
+    },
+    {
+      "id": "sf-gloss-2",
+      "type": "single_form",
+      "prompt": "English meaning of **novus**:",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v04-describe"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "accept": [
+          "new"
+        ],
+        "hint": "nova, novum"
+      }
+    },
+    {
+      "id": "tr-0",
+      "type": "translate",
+      "prompt": "Translate: **vērus**",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v04-describe"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "direction": "L2E",
+        "length": "word",
+        "sampleAnswers": [
+          "true"
+        ],
+        "rubric": "Accept common gloss synonyms; macrons optional for Latin."
+      }
+    },
+    {
+      "id": "tr-1",
+      "type": "translate",
+      "prompt": "Translate: **pulcher**",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v04-describe"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "direction": "L2E",
+        "length": "word",
+        "sampleAnswers": [
+          "beautiful",
+          "handsome"
+        ],
+        "rubric": "Accept common gloss synonyms; macrons optional for Latin."
+      }
+    },
+    {
+      "id": "ms-adj",
+      "type": "multi_select",
+      "prompt": "Select all words that mean something **positive / favorable** (or large/good).",
+      "targets": [
+        "vocabulary",
+        "v04-describe"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a0",
+            "label": "bonus — good"
+          },
+          {
+            "id": "a1",
+            "label": "malus — bad, evil"
+          },
+          {
+            "id": "a2",
+            "label": "magnus — great, large"
+          },
+          {
+            "id": "a3",
+            "label": "parvus — small, little"
+          },
+          {
+            "id": "a4",
+            "label": "multus — much, many"
+          },
+          {
+            "id": "a5",
+            "label": "longus — long"
+          },
+          {
+            "id": "a6",
+            "label": "altus — high, deep"
+          },
+          {
+            "id": "a7",
+            "label": "novus — new"
+          },
+          {
+            "id": "a8",
+            "label": "vērus — true"
+          },
+          {
+            "id": "a9",
+            "label": "pulcher — beautiful, handsome"
+          }
+        ],
+        "correctOptionIds": [
+          "a0",
+          "a2",
+          "a7",
+          "a8",
+          "a9"
+        ]
+      }
+    },
+    {
+      "id": "sa-use",
+      "type": "short_answer",
+      "prompt": "Pick any 3 words from this list and write a tiny English sentence that could use each (or one sentence using two). Theme: 1st/2nd adjectives.",
+      "targets": [
+        "vocabulary",
+        "v04-describe"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "sampleAnswers": [
+          "Any sensible English using three of the batch meanings.",
+          "Student sentences using batch glosses."
+        ]
+      }
+    }
+  ]
+}

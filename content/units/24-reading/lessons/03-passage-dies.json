@@ -1,0 +1,250 @@
+{
+  "slug": "03-passage-dies",
+  "title": "Passage: A Roman day",
+  "unitSlug": "24-reading",
+  "order": 4,
+  "standardSummary": "Read a longer mixed-grammar passage; answer detailed comprehension questions.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-morning"
+      },
+      {
+        "type": "skill_count",
+        "skill": "passage reading",
+        "n": 4,
+        "label": "long passage"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "sa-summary"
+      },
+      {
+        "type": "translate_count",
+        "n": 1
+      }
+    ]
+  },
+  "teach": "Longer connected Latin for reading power.",
+  "allowList": {
+    "lemmas": [
+      "servus",
+      "villa",
+      "dominus",
+      "forum",
+      "civis",
+      "miles",
+      "pax",
+      "qui"
+    ],
+    "constructions": [
+      "reading",
+      "relative pronoun",
+      "perfect",
+      "passage reading"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "short_answer",
+      "translate",
+      "multi_select"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-morning",
+      "type": "multiple_choice",
+      "prompt": "In the morning the servant…",
+      "targets": [
+        "passage reading"
+      ],
+      "passage": {
+        "title": "A short Roman day",
+        "latin": "Māne servus aquam ad vīllam portat.\nDominus, quī in urbe habitat, ad forum venit.\nMultī cīvēs lēgēs audiunt.\nPosteā mīlitēs, quī arma ceperant, ad castra redeunt.\nNocte pāx in viīs est — sed nōn semper.",
+        "notes": "māne = morning · posteā = afterward · nocte = at night · viīs = streets/roads · Use known vocabulary; guess from context only if needed."
+      },
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "fights in Gaul"
+          },
+          {
+            "id": "b",
+            "label": "carries water to the villa"
+          },
+          {
+            "id": "c",
+            "label": "hears laws as consul only"
+          },
+          {
+            "id": "d",
+            "label": "sleeps at sea"
+          }
+        ],
+        "correctOptionId": "b"
+      }
+    },
+    {
+      "id": "mc-master",
+      "type": "multiple_choice",
+      "prompt": "The master who lives in the city…",
+      "targets": [
+        "passage reading",
+        "relative pronoun"
+      ],
+      "passage": {
+        "title": "A short Roman day",
+        "latin": "Māne servus aquam ad vīllam portat.\nDominus, quī in urbe habitat, ad forum venit.\nMultī cīvēs lēgēs audiunt.\nPosteā mīlitēs, quī arma ceperant, ad castra redeunt.\nNocte pāx in viīs est — sed nōn semper.",
+        "notes": "māne = morning · posteā = afterward · nocte = at night · viīs = streets/roads · Use known vocabulary; guess from context only if needed."
+      },
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "never leaves"
+          },
+          {
+            "id": "b",
+            "label": "comes to the forum"
+          },
+          {
+            "id": "c",
+            "label": "is a soldier only"
+          },
+          {
+            "id": "d",
+            "label": "is water"
+          }
+        ],
+        "correctOptionId": "b"
+      }
+    },
+    {
+      "id": "mc-soldiers",
+      "type": "multiple_choice",
+      "prompt": "The soldiers who had taken arms…",
+      "targets": [
+        "passage reading",
+        "pluperfect"
+      ],
+      "passage": {
+        "title": "A short Roman day",
+        "latin": "Māne servus aquam ad vīllam portat.\nDominus, quī in urbe habitat, ad forum venit.\nMultī cīvēs lēgēs audiunt.\nPosteā mīlitēs, quī arma ceperant, ad castra redeunt.\nNocte pāx in viīs est — sed nōn semper.",
+        "notes": "māne = morning · posteā = afterward · nocte = at night · viīs = streets/roads · Use known vocabulary; guess from context only if needed."
+      },
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "sail to Egypt only"
+          },
+          {
+            "id": "b",
+            "label": "return to camp"
+          },
+          {
+            "id": "c",
+            "label": "write letters only"
+          },
+          {
+            "id": "d",
+            "label": "are not in the passage"
+          }
+        ],
+        "correctOptionId": "b"
+      }
+    },
+    {
+      "id": "ms-true",
+      "type": "multi_select",
+      "prompt": "Select what the passage supports.",
+      "targets": [
+        "passage reading"
+      ],
+      "passage": {
+        "title": "A short Roman day",
+        "latin": "Māne servus aquam ad vīllam portat.\nDominus, quī in urbe habitat, ad forum venit.\nMultī cīvēs lēgēs audiunt.\nPosteā mīlitēs, quī arma ceperant, ad castra redeunt.\nNocte pāx in viīs est — sed nōn semper.",
+        "notes": "māne = morning · posteā = afterward · nocte = at night · viīs = streets/roads · Use known vocabulary; guess from context only if needed."
+      },
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "Citizens hear laws."
+          },
+          {
+            "id": "b",
+            "label": "Peace is always guaranteed forever with no exception."
+          },
+          {
+            "id": "c",
+            "label": "A relative clause describes the master."
+          },
+          {
+            "id": "d",
+            "label": "Soldiers return after taking arms."
+          }
+        ],
+        "correctOptionIds": [
+          "a",
+          "c",
+          "d"
+        ]
+      }
+    },
+    {
+      "id": "tr1",
+      "type": "translate",
+      "prompt": "Translate:\nMultī cīvēs lēgēs audiunt.",
+      "targets": [
+        "passage reading"
+      ],
+      "passage": {
+        "title": "A short Roman day",
+        "latin": "Māne servus aquam ad vīllam portat.\nDominus, quī in urbe habitat, ad forum venit.\nMultī cīvēs lēgēs audiunt.\nPosteā mīlitēs, quī arma ceperant, ad castra redeunt.\nNocte pāx in viīs est — sed nōn semper.",
+        "notes": "māne = morning · posteā = afterward · nocte = at night · viīs = streets/roads · Use known vocabulary; guess from context only if needed."
+      },
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "Many citizens hear the laws.",
+          "Many citizens listen to the laws."
+        ]
+      }
+    },
+    {
+      "id": "sa-summary",
+      "type": "short_answer",
+      "prompt": "Summarize the passage in 2–3 English sentences.",
+      "targets": [
+        "passage reading"
+      ],
+      "passage": {
+        "title": "A short Roman day",
+        "latin": "Māne servus aquam ad vīllam portat.\nDominus, quī in urbe habitat, ad forum venit.\nMultī cīvēs lēgēs audiunt.\nPosteā mīlitēs, quī arma ceperant, ad castra redeunt.\nNocte pāx in viīs est — sed nōn semper.",
+        "notes": "māne = morning · posteā = afterward · nocte = at night · viīs = streets/roads · Use known vocabulary; guess from context only if needed."
+      },
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "sampleAnswers": [
+          "In the morning a servant brings water. The master goes to the forum; citizens hear laws. Soldiers who had taken arms return to camp; at night there is peace—but not always.",
+          "Daily life then soldiers and fragile peace."
+        ]
+      }
+    }
+  ]
+}

@@ -2,7 +2,7 @@
   "slug": "05-checkpoint",
   "title": "Checkpoint — Passive",
   "unitSlug": "19-passive",
-  "order": 5,
+  "order": 7,
   "standardSummary": "Form present-system passives and translate with agent/means.",
   "standard": {
     "requirements": [

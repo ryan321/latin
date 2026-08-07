@@ -1,0 +1,550 @@
+{
+  "slug": "vocab-vr03-late",
+  "title": "Vocabulary quiz: Public life & empire",
+  "unitSlug": "19-passive",
+  "order": 5,
+  "standardSummary": "Pass a cumulative vocabulary quiz (32 words in play) with matching, MC, and production drills.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "q-match-0"
+      },
+      {
+        "type": "skill_count",
+        "skill": "vocabulary",
+        "n": 6,
+        "label": "quiz items"
+      },
+      {
+        "type": "skill_count",
+        "skill": "vocab quiz",
+        "n": 4,
+        "label": "quiz focus"
+      }
+    ]
+  },
+  "teach": "Cumulative vocab quiz vr03-late",
+  "allowList": {
+    "lemmas": [
+      "ad",
+      "in",
+      "ab / ā",
+      "ex / ē",
+      "cum",
+      "per",
+      "sine",
+      "prō",
+      "iter",
+      "mare",
+      "mōns",
+      "cīvis",
+      "senātus",
+      "cōnsul",
+      "forum",
+      "templum",
+      "dea",
+      "iūdex",
+      "liber",
+      "littera",
+      "virtūs",
+      "glōria",
+      "prōvincia",
+      "imperium",
+      "Gallia",
+      "Hispānia",
+      "Ītalia",
+      "annus",
+      "diēs",
+      "hōra",
+      "nox",
+      "locus"
+    ],
+    "constructions": [
+      "vocabulary",
+      "vocab quiz"
+    ],
+    "activityTypes": [
+      "matching",
+      "multiple_choice",
+      "single_form",
+      "translate",
+      "multi_select",
+      "cloze",
+      "short_answer"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "q-match-0",
+      "type": "matching",
+      "prompt": "Quiz: match Latin → English (set 1).",
+      "targets": [
+        "vocabulary",
+        "vocab quiz"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "leftLabel": "Latin",
+        "rightLabel": "English",
+        "left": [
+          {
+            "id": "l0",
+            "label": "ad"
+          },
+          {
+            "id": "l1",
+            "label": "in"
+          },
+          {
+            "id": "l2",
+            "label": "ab / ā"
+          },
+          {
+            "id": "l3",
+            "label": "ex / ē"
+          },
+          {
+            "id": "l4",
+            "label": "cum"
+          },
+          {
+            "id": "l5",
+            "label": "per"
+          }
+        ],
+        "right": [
+          {
+            "id": "r0",
+            "label": "to, toward"
+          },
+          {
+            "id": "r1",
+            "label": "in, on, into"
+          },
+          {
+            "id": "r2",
+            "label": "from, by (agent)"
+          },
+          {
+            "id": "r3",
+            "label": "out of, from"
+          },
+          {
+            "id": "r4",
+            "label": "with"
+          },
+          {
+            "id": "r5",
+            "label": "through, along"
+          }
+        ],
+        "pairs": {
+          "l0": "r0",
+          "l1": "r1",
+          "l2": "r2",
+          "l3": "r3",
+          "l4": "r4",
+          "l5": "r5"
+        }
+      }
+    },
+    {
+      "id": "q-match-6",
+      "type": "matching",
+      "prompt": "Quiz: match Latin → English (set 2).",
+      "targets": [
+        "vocabulary",
+        "vocab quiz"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "leftLabel": "Latin",
+        "rightLabel": "English",
+        "left": [
+          {
+            "id": "l0",
+            "label": "sine"
+          },
+          {
+            "id": "l1",
+            "label": "prō"
+          },
+          {
+            "id": "l2",
+            "label": "iter"
+          },
+          {
+            "id": "l3",
+            "label": "mare"
+          },
+          {
+            "id": "l4",
+            "label": "mōns"
+          },
+          {
+            "id": "l5",
+            "label": "cīvis"
+          }
+        ],
+        "right": [
+          {
+            "id": "r0",
+            "label": "without"
+          },
+          {
+            "id": "r1",
+            "label": "for, on behalf of, in front of"
+          },
+          {
+            "id": "r2",
+            "label": "journey, march, route"
+          },
+          {
+            "id": "r3",
+            "label": "sea"
+          },
+          {
+            "id": "r4",
+            "label": "mountain"
+          },
+          {
+            "id": "r5",
+            "label": "citizen"
+          }
+        ],
+        "pairs": {
+          "l0": "r0",
+          "l1": "r1",
+          "l2": "r2",
+          "l3": "r3",
+          "l4": "r4",
+          "l5": "r5"
+        }
+      }
+    },
+    {
+      "id": "q-mc-0",
+      "type": "multiple_choice",
+      "prompt": "Quiz: **ad** means…",
+      "targets": [
+        "vocabulary",
+        "vocab quiz"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "to, toward"
+          },
+          {
+            "id": "b",
+            "label": "in, on, into"
+          },
+          {
+            "id": "c",
+            "label": "from, by (agent)"
+          },
+          {
+            "id": "d",
+            "label": "out of, from"
+          }
+        ],
+        "correctOptionId": "a"
+      }
+    },
+    {
+      "id": "q-mc-1",
+      "type": "multiple_choice",
+      "prompt": "Quiz: **in** means…",
+      "targets": [
+        "vocabulary",
+        "vocab quiz"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "in, on, into"
+          },
+          {
+            "id": "b",
+            "label": "from, by (agent)"
+          },
+          {
+            "id": "c",
+            "label": "out of, from"
+          },
+          {
+            "id": "d",
+            "label": "with"
+          }
+        ],
+        "correctOptionId": "a"
+      }
+    },
+    {
+      "id": "q-mc-2",
+      "type": "multiple_choice",
+      "prompt": "Quiz: **ab / ā** means…",
+      "targets": [
+        "vocabulary",
+        "vocab quiz"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "from, by (agent)"
+          },
+          {
+            "id": "b",
+            "label": "out of, from"
+          },
+          {
+            "id": "c",
+            "label": "with"
+          },
+          {
+            "id": "d",
+            "label": "through, along"
+          }
+        ],
+        "correctOptionId": "a"
+      }
+    },
+    {
+      "id": "q-mc-3",
+      "type": "multiple_choice",
+      "prompt": "Quiz: **ex / ē** means…",
+      "targets": [
+        "vocabulary",
+        "vocab quiz"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "out of, from"
+          },
+          {
+            "id": "b",
+            "label": "with"
+          },
+          {
+            "id": "c",
+            "label": "through, along"
+          },
+          {
+            "id": "d",
+            "label": "without"
+          }
+        ],
+        "correctOptionId": "a"
+      }
+    },
+    {
+      "id": "q-mc-4",
+      "type": "multiple_choice",
+      "prompt": "Quiz: **cum** means…",
+      "targets": [
+        "vocabulary",
+        "vocab quiz"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "with"
+          },
+          {
+            "id": "b",
+            "label": "through, along"
+          },
+          {
+            "id": "c",
+            "label": "without"
+          },
+          {
+            "id": "d",
+            "label": "for, on behalf of, in front of"
+          }
+        ],
+        "correctOptionId": "a"
+      }
+    },
+    {
+      "id": "q-mc-5",
+      "type": "multiple_choice",
+      "prompt": "Quiz: **per** means…",
+      "targets": [
+        "vocabulary",
+        "vocab quiz"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "through, along"
+          },
+          {
+            "id": "b",
+            "label": "without"
+          },
+          {
+            "id": "c",
+            "label": "for, on behalf of, in front of"
+          },
+          {
+            "id": "d",
+            "label": "journey, march, route"
+          }
+        ],
+        "correctOptionId": "a"
+      }
+    },
+    {
+      "id": "q-sf-0",
+      "type": "single_form",
+      "prompt": "Quiz — English for **sine**:",
+      "targets": [
+        "vocabulary",
+        "vocab quiz"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "accept": [
+          "without"
+        ]
+      }
+    },
+    {
+      "id": "q-sf-1",
+      "type": "single_form",
+      "prompt": "Quiz — English for **prō**:",
+      "targets": [
+        "vocabulary",
+        "vocab quiz"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "accept": [
+          "for",
+          "on behalf of",
+          "in front of"
+        ]
+      }
+    },
+    {
+      "id": "q-sf-2",
+      "type": "single_form",
+      "prompt": "Quiz — English for **iter**:",
+      "targets": [
+        "vocabulary",
+        "vocab quiz"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "accept": [
+          "journey",
+          "march",
+          "route"
+        ]
+      }
+    },
+    {
+      "id": "q-sf-3",
+      "type": "single_form",
+      "prompt": "Quiz — English for **mare**:",
+      "targets": [
+        "vocabulary",
+        "vocab quiz"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "accept": [
+          "sea"
+        ]
+      }
+    },
+    {
+      "id": "q-e2l-0",
+      "type": "translate",
+      "prompt": "Quiz — Latin for: **mountain**",
+      "targets": [
+        "vocabulary",
+        "vocab quiz"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "direction": "E2L",
+        "length": "word",
+        "sampleAnswers": [
+          "mōns",
+          "mons",
+          "mōns",
+          "mons"
+        ],
+        "rubric": "Accept common gloss synonyms; macrons optional for Latin."
+      }
+    },
+    {
+      "id": "q-e2l-1",
+      "type": "translate",
+      "prompt": "Quiz — Latin for: **citizen**",
+      "targets": [
+        "vocabulary",
+        "vocab quiz"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "direction": "E2L",
+        "length": "word",
+        "sampleAnswers": [
+          "cīvis",
+          "civis",
+          "cīvis",
+          "civis"
+        ],
+        "rubric": "Accept common gloss synonyms; macrons optional for Latin."
+      }
+    },
+    {
+      "id": "q-reflect",
+      "type": "short_answer",
+      "prompt": "Which 3 words from this quiz are still hardest for you? Write them and one trick to remember each.",
+      "targets": [
+        "vocabulary",
+        "vocab quiz"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "sampleAnswers": [
+          "Honest list of three hard words with memory tips.",
+          "Student metacognition on vocab."
+        ]
+      }
+    }
+  ]
+}

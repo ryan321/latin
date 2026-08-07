@@ -601,6 +601,84 @@ export function ExampleSentence({
   );
 }
 
+/** Vocabulary list cards for vocab lessons. items: "lemma — gloss (info)|..." */
+export function VocabList({ items = "" }: { items?: string }) {
+  const rows = items
+    .split("|")
+    .map((x) => x.trim())
+    .filter(Boolean)
+    .map((row) => {
+      const [left, glossPart] = row.split("—").map((s) => s.trim());
+      const lemma = left ?? row;
+      let gloss = glossPart ?? "";
+      let info = "";
+      const m = gloss.match(/^(.*?)\s*\((.*)\)\s*$/);
+      if (m) {
+        gloss = m[1]!.trim();
+        info = m[2]!.trim();
+      }
+      return { lemma, gloss, info };
+    });
+  return (
+    <ul className="not-prose my-5 grid gap-2 sm:grid-cols-2">
+      {rows.map((r, i) => (
+        <li
+          key={i}
+          className="rounded-xl border border-stone-200 bg-white px-3 py-2.5 shadow-sm dark:border-stone-700 dark:bg-stone-900"
+        >
+          <p className="font-serif text-lg font-semibold text-stone-900 dark:text-stone-50">
+            {r.lemma}
+          </p>
+          {r.info && (
+            <p className="text-[11px] font-medium uppercase tracking-wide text-stone-500 dark:text-stone-400">
+              {r.info}
+            </p>
+          )}
+          <p className="mt-0.5 text-sm text-stone-700 dark:text-stone-300">
+            {r.gloss}
+          </p>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+/** Continuous Latin for reading lessons (teach section). */
+export function ReadingPassage({
+  title = "Reading passage",
+  latin = "",
+  notes,
+}: {
+  title?: string;
+  /** Use | for line breaks */
+  latin?: string;
+  notes?: string;
+}) {
+  const lines = latin
+    .split("|")
+    .map((x) => x.trim())
+    .filter(Boolean);
+  return (
+    <figure className="not-prose my-6 overflow-hidden rounded-xl border border-amber-200/80 bg-gradient-to-br from-amber-50/90 to-stone-50 shadow-sm dark:border-amber-900/50 dark:from-amber-950/30 dark:to-stone-950">
+      <figcaption className="border-b border-amber-200/60 px-4 py-2 text-[11px] font-bold uppercase tracking-wider text-amber-900/70 dark:border-amber-900/40 dark:text-amber-300/80">
+        {title}
+      </figcaption>
+      <blockquote className="space-y-2 px-4 py-4 font-serif text-[18px] leading-relaxed text-stone-900 dark:text-stone-100">
+        {lines.map((line, i) => (
+          <p key={i} className="my-0">
+            {line}
+          </p>
+        ))}
+      </blockquote>
+      {notes && (
+        <p className="border-t border-amber-200/50 px-4 py-2.5 text-xs leading-relaxed text-stone-600 dark:border-amber-900/30 dark:text-stone-400">
+          {notes}
+        </p>
+      )}
+    </figure>
+  );
+}
+
 export const lessonComponents = {
   KeyTerm,
   Latin,
@@ -620,4 +698,6 @@ export const lessonComponents = {
   LetterRow,
   PosCards,
   ExampleSentence,
+  ReadingPassage,
+  VocabList,
 };

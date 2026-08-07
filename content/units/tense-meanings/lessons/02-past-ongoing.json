@@ -1,0 +1,190 @@
+{
+  "slug": "02-past-ongoing",
+  "title": "Past ongoing and habitual",
+  "unitSlug": "tense-meanings",
+  "order": 2,
+  "standardSummary": "Identify was/were …ing and used to; contrast with simple completed past.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-imp"
+      },
+      {
+        "type": "skill_count",
+        "skill": "imperfect meaning",
+        "n": 4,
+        "label": "past ongoing"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match-i"
+      }
+    ]
+  },
+  "teach": "Past ongoing/habitual (English) maps to Latin imperfect. Simple completed past maps more often to perfect later.",
+  "allowList": {
+    "lemmas": [],
+    "constructions": [
+      "imperfect meaning",
+      "tense meanings"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "matching",
+      "short_answer",
+      "multi_select",
+      "cloze"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-imp",
+      "type": "multiple_choice",
+      "prompt": "“She was carrying water when it rained” highlights…",
+      "targets": [
+        "imperfect meaning"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "a completed past only"
+          },
+          {
+            "id": "b",
+            "label": "past ongoing background"
+          },
+          {
+            "id": "c",
+            "label": "future"
+          },
+          {
+            "id": "d",
+            "label": "present habit only"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match-i",
+      "type": "matching",
+      "prompt": "Match English to idea.",
+      "targets": [
+        "imperfect meaning"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "They used to live in Rome."
+          },
+          {
+            "id": "b",
+            "label": "They lived in Rome for one year and left."
+          },
+          {
+            "id": "c",
+            "label": "They were living there when the war began."
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "habitual past"
+          },
+          {
+            "id": "2",
+            "label": "simple completed past span"
+          },
+          {
+            "id": "3",
+            "label": "ongoing past background"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "ms1",
+      "type": "multi_select",
+      "prompt": "Which fit “past ongoing / habitual” better than “one completed event”?",
+      "targets": [
+        "imperfect meaning"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "He was fighting all morning."
+          },
+          {
+            "id": "b",
+            "label": "He used to train daily."
+          },
+          {
+            "id": "c",
+            "label": "He conquered the city in 146."
+          },
+          {
+            "id": "d",
+            "label": "They were marching when night fell."
+          }
+        ],
+        "correctOptionIds": [
+          "a",
+          "b",
+          "d"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "cl1",
+      "type": "cloze",
+      "prompt": "Fill with was or were + -ing idea (write: was walking).",
+      "targets": [
+        "imperfect meaning"
+      ],
+      "payload": {
+        "template": "While the girls {{1}}, the boy slept.",
+        "blanks": {
+          "1": [
+            "were walking",
+            "was walking"
+          ]
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sa1",
+      "type": "short_answer",
+      "prompt": "The Latin tense that will carry “was …ing / used to” is called what?",
+      "targets": [
+        "imperfect meaning"
+      ],
+      "payload": {
+        "sampleAnswers": [
+          "imperfect",
+          "the imperfect tense"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

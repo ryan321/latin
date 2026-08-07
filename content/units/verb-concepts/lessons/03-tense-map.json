@@ -1,0 +1,210 @@
+{
+  "slug": "03-tense-map",
+  "title": "What is tense? (map)",
+  "unitSlug": "verb-concepts",
+  "order": 3,
+  "standardSummary": "Define tense as time/aspect of the verb; label present, past, and future ideas in English examples.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-tense"
+      },
+      {
+        "type": "skill_count",
+        "skill": "tense map",
+        "n": 4,
+        "label": "tense map"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match-t"
+      }
+    ]
+  },
+  "teach": "Tense places the action in time (and often shows aspect: ongoing vs completed). Year 1 will use several tenses.",
+  "allowList": {
+    "lemmas": [],
+    "constructions": [
+      "tense map",
+      "verb concepts"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "matching",
+      "short_answer",
+      "multi_select",
+      "ordering"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-tense",
+      "type": "multiple_choice",
+      "prompt": "Tense mainly tells you…",
+      "targets": [
+        "tense map"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "whether a word is a noun"
+          },
+          {
+            "id": "b",
+            "label": "when / how the action is viewed in time"
+          },
+          {
+            "id": "c",
+            "label": "only the gender of the subject"
+          },
+          {
+            "id": "d",
+            "label": "spelling rules only"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match-t",
+      "type": "matching",
+      "prompt": "Match English sentence to time idea.",
+      "targets": [
+        "tense map"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "She walks to school."
+          },
+          {
+            "id": "b",
+            "label": "She walked to school yesterday."
+          },
+          {
+            "id": "c",
+            "label": "She will walk tomorrow."
+          },
+          {
+            "id": "d",
+            "label": "She was walking when it rained."
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "present"
+          },
+          {
+            "id": "2",
+            "label": "simple past"
+          },
+          {
+            "id": "3",
+            "label": "future"
+          },
+          {
+            "id": "4",
+            "label": "past ongoing"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3",
+          "d": "4"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "ms1",
+      "type": "multi_select",
+      "prompt": "Which show past time?",
+      "targets": [
+        "tense map"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "They are fighting."
+          },
+          {
+            "id": "b",
+            "label": "They fought."
+          },
+          {
+            "id": "c",
+            "label": "They were fighting."
+          },
+          {
+            "id": "d",
+            "label": "They will fight."
+          }
+        ],
+        "correctOptionIds": [
+          "b",
+          "c"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "ord1",
+      "type": "ordering",
+      "prompt": "Order by time: past → present → future",
+      "targets": [
+        "tense map"
+      ],
+      "payload": {
+        "items": [
+          {
+            "id": "a",
+            "label": "We will sail."
+          },
+          {
+            "id": "b",
+            "label": "We sailed."
+          },
+          {
+            "id": "c",
+            "label": "We sail."
+          }
+        ],
+        "correctOrder": [
+          "b",
+          "c",
+          "a"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sa1",
+      "type": "short_answer",
+      "prompt": "In one sentence, what will Latin tense endings do for you?",
+      "targets": [
+        "tense map"
+      ],
+      "payload": {
+        "sampleAnswers": [
+          "They mark whether the action is present, past, future, completed, etc., without always needing extra English helper words.",
+          "Show time and aspect of the verb."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

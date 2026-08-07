@@ -1,0 +1,173 @@
+{
+  "slug": "03-checkpoint",
+  "title": "Checkpoint — Relative concepts",
+  "unitSlug": "relative-concepts",
+  "order": 3,
+  "standardSummary": "Identify relative clauses and antecedents in English before Latin quī.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc1"
+      },
+      {
+        "type": "skill_count",
+        "skill": "relative clause concept",
+        "n": 2,
+        "label": "rel"
+      },
+      {
+        "type": "skill_count",
+        "skill": "antecedent",
+        "n": 2,
+        "label": "ant"
+      }
+    ]
+  },
+  "teach": "Checkpoint before Latin relative pronoun.",
+  "allowList": {
+    "lemmas": [],
+    "constructions": [
+      "relative clause concept",
+      "antecedent"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "matching",
+      "short_answer",
+      "multi_select"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc1",
+      "type": "multiple_choice",
+      "prompt": "The antecedent is…",
+      "targets": [
+        "antecedent"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "always the main verb"
+          },
+          {
+            "id": "b",
+            "label": "the noun the relative clause describes"
+          },
+          {
+            "id": "c",
+            "label": "only a future tense"
+          },
+          {
+            "id": "d",
+            "label": "a type of preposition"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match1",
+      "type": "matching",
+      "prompt": "Match.",
+      "targets": [
+        "relative clause concept"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "who"
+          },
+          {
+            "id": "b",
+            "label": "which/that (things)"
+          },
+          {
+            "id": "c",
+            "label": "whose"
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "people (subject style)"
+          },
+          {
+            "id": "2",
+            "label": "things"
+          },
+          {
+            "id": "3",
+            "label": "possession"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "ms1",
+      "type": "multi_select",
+      "prompt": "Select true statements.",
+      "targets": [
+        "relative clause concept"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "A relative clause describes a noun."
+          },
+          {
+            "id": "b",
+            "label": "Latin quī will do the job of who/which/that."
+          },
+          {
+            "id": "c",
+            "label": "Antecedents are always verbs."
+          },
+          {
+            "id": "d",
+            "label": "The relative can be the object inside its clause."
+          }
+        ],
+        "correctOptionIds": [
+          "a",
+          "b",
+          "d"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sa1",
+      "type": "short_answer",
+      "prompt": "Underline mentally: “I love the land that is free.” What is the relative clause? What is the antecedent?",
+      "targets": [
+        "relative clause concept",
+        "antecedent"
+      ],
+      "payload": {
+        "sampleAnswers": [
+          "Clause: that is free; antecedent: land",
+          "that is free describes land"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

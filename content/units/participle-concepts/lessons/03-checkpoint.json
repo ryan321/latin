@@ -1,0 +1,169 @@
+{
+  "slug": "03-checkpoint",
+  "title": "Checkpoint — Participle concepts",
+  "unitSlug": "participle-concepts",
+  "order": 3,
+  "standardSummary": "Identify and explain English participles before Latin participle morphology.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc1"
+      },
+      {
+        "type": "skill_count",
+        "skill": "participle concept",
+        "n": 3,
+        "label": "part cp"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match1"
+      }
+    ]
+  },
+  "teach": "Checkpoint before Latin present and perfect participles.",
+  "allowList": {
+    "lemmas": [],
+    "constructions": [
+      "participle concept"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "matching",
+      "short_answer",
+      "multi_select"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc1",
+      "type": "multiple_choice",
+      "prompt": "A participle is…",
+      "targets": [
+        "participle concept"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "only a conjunction"
+          },
+          {
+            "id": "b",
+            "label": "a verb form often used like an adjective"
+          },
+          {
+            "id": "c",
+            "label": "always future indicative"
+          },
+          {
+            "id": "d",
+            "label": "a type of case"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match1",
+      "type": "matching",
+      "prompt": "Match.",
+      "targets": [
+        "participle concept"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "-ing form describing a noun"
+          },
+          {
+            "id": "b",
+            "label": "captured / written"
+          },
+          {
+            "id": "c",
+            "label": "finite: she writes"
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "present participle idea"
+          },
+          {
+            "id": "2",
+            "label": "past participle idea"
+          },
+          {
+            "id": "3",
+            "label": "not a participle"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "ms1",
+      "type": "multi_select",
+      "prompt": "Select true statements.",
+      "targets": [
+        "participle concept"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "Participles can describe nouns."
+          },
+          {
+            "id": "b",
+            "label": "Past participles often feel passive/completed."
+          },
+          {
+            "id": "c",
+            "label": "Latin will have participles too."
+          },
+          {
+            "id": "d",
+            "label": "Participles never relate to time."
+          }
+        ],
+        "correctOptionIds": [
+          "a",
+          "b",
+          "c"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sa1",
+      "type": "short_answer",
+      "prompt": "Why study English participles before Latin amāns / amātus?",
+      "targets": [
+        "participle concept"
+      ],
+      "payload": {
+        "sampleAnswers": [
+          "So Latin forms map to jobs you already understand (-ing vs -ed).",
+          "Meaning and use first; then morphology."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

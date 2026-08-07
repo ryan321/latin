@@ -1,0 +1,533 @@
+{
+  "slug": "vocab-vr04-capstone",
+  "title": "Vocabulary quiz: Year 1 core",
+  "unitSlug": "25-capstone",
+  "order": 4,
+  "standardSummary": "Pass a cumulative vocabulary quiz (16 words in play) with matching, MC, and production drills.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "q-match-0"
+      },
+      {
+        "type": "skill_count",
+        "skill": "vocabulary",
+        "n": 6,
+        "label": "quiz items"
+      },
+      {
+        "type": "skill_count",
+        "skill": "vocab quiz",
+        "n": 4,
+        "label": "quiz focus"
+      }
+    ]
+  },
+  "teach": "Cumulative vocab quiz vr04-capstone",
+  "allowList": {
+    "lemmas": [
+      "pater",
+      "longus",
+      "iam",
+      "petō",
+      "condō",
+      "equus",
+      "ager",
+      "magnus",
+      "in",
+      "māter",
+      "via",
+      "agō",
+      "urbs",
+      "sciō",
+      "sum",
+      "portō"
+    ],
+    "constructions": [
+      "vocabulary",
+      "vocab quiz"
+    ],
+    "activityTypes": [
+      "matching",
+      "multiple_choice",
+      "single_form",
+      "translate",
+      "multi_select",
+      "cloze",
+      "short_answer"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "q-match-0",
+      "type": "matching",
+      "prompt": "Quiz: match Latin → English (set 1).",
+      "targets": [
+        "vocabulary",
+        "vocab quiz"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "leftLabel": "Latin",
+        "rightLabel": "English",
+        "left": [
+          {
+            "id": "l0",
+            "label": "pater"
+          },
+          {
+            "id": "l1",
+            "label": "longus"
+          },
+          {
+            "id": "l2",
+            "label": "iam"
+          },
+          {
+            "id": "l3",
+            "label": "petō"
+          },
+          {
+            "id": "l4",
+            "label": "condō"
+          },
+          {
+            "id": "l5",
+            "label": "equus"
+          }
+        ],
+        "right": [
+          {
+            "id": "r0",
+            "label": "father"
+          },
+          {
+            "id": "r1",
+            "label": "long"
+          },
+          {
+            "id": "r2",
+            "label": "already, now"
+          },
+          {
+            "id": "r3",
+            "label": "seek, attack, ask for"
+          },
+          {
+            "id": "r4",
+            "label": "found, establish"
+          },
+          {
+            "id": "r5",
+            "label": "horse"
+          }
+        ],
+        "pairs": {
+          "l0": "r0",
+          "l1": "r1",
+          "l2": "r2",
+          "l3": "r3",
+          "l4": "r4",
+          "l5": "r5"
+        }
+      }
+    },
+    {
+      "id": "q-match-6",
+      "type": "matching",
+      "prompt": "Quiz: match Latin → English (set 2).",
+      "targets": [
+        "vocabulary",
+        "vocab quiz"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "leftLabel": "Latin",
+        "rightLabel": "English",
+        "left": [
+          {
+            "id": "l0",
+            "label": "ager"
+          },
+          {
+            "id": "l1",
+            "label": "magnus"
+          },
+          {
+            "id": "l2",
+            "label": "in"
+          },
+          {
+            "id": "l3",
+            "label": "māter"
+          },
+          {
+            "id": "l4",
+            "label": "via"
+          },
+          {
+            "id": "l5",
+            "label": "agō"
+          }
+        ],
+        "right": [
+          {
+            "id": "r0",
+            "label": "field"
+          },
+          {
+            "id": "r1",
+            "label": "great, large"
+          },
+          {
+            "id": "r2",
+            "label": "in, on, into"
+          },
+          {
+            "id": "r3",
+            "label": "mother"
+          },
+          {
+            "id": "r4",
+            "label": "road, way"
+          },
+          {
+            "id": "r5",
+            "label": "do, drive, act"
+          }
+        ],
+        "pairs": {
+          "l0": "r0",
+          "l1": "r1",
+          "l2": "r2",
+          "l3": "r3",
+          "l4": "r4",
+          "l5": "r5"
+        }
+      }
+    },
+    {
+      "id": "q-mc-0",
+      "type": "multiple_choice",
+      "prompt": "Quiz: **pater** means…",
+      "targets": [
+        "vocabulary",
+        "vocab quiz"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "father"
+          },
+          {
+            "id": "b",
+            "label": "long"
+          },
+          {
+            "id": "c",
+            "label": "already, now"
+          },
+          {
+            "id": "d",
+            "label": "seek, attack, ask for"
+          }
+        ],
+        "correctOptionId": "a"
+      }
+    },
+    {
+      "id": "q-mc-1",
+      "type": "multiple_choice",
+      "prompt": "Quiz: **longus** means…",
+      "targets": [
+        "vocabulary",
+        "vocab quiz"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "long"
+          },
+          {
+            "id": "b",
+            "label": "already, now"
+          },
+          {
+            "id": "c",
+            "label": "seek, attack, ask for"
+          },
+          {
+            "id": "d",
+            "label": "found, establish"
+          }
+        ],
+        "correctOptionId": "a"
+      }
+    },
+    {
+      "id": "q-mc-2",
+      "type": "multiple_choice",
+      "prompt": "Quiz: **iam** means…",
+      "targets": [
+        "vocabulary",
+        "vocab quiz"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "already, now"
+          },
+          {
+            "id": "b",
+            "label": "seek, attack, ask for"
+          },
+          {
+            "id": "c",
+            "label": "found, establish"
+          },
+          {
+            "id": "d",
+            "label": "horse"
+          }
+        ],
+        "correctOptionId": "a"
+      }
+    },
+    {
+      "id": "q-mc-3",
+      "type": "multiple_choice",
+      "prompt": "Quiz: **petō** means…",
+      "targets": [
+        "vocabulary",
+        "vocab quiz"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "seek, attack, ask for"
+          },
+          {
+            "id": "b",
+            "label": "found, establish"
+          },
+          {
+            "id": "c",
+            "label": "horse"
+          },
+          {
+            "id": "d",
+            "label": "field"
+          }
+        ],
+        "correctOptionId": "a"
+      }
+    },
+    {
+      "id": "q-mc-4",
+      "type": "multiple_choice",
+      "prompt": "Quiz: **condō** means…",
+      "targets": [
+        "vocabulary",
+        "vocab quiz"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "found, establish"
+          },
+          {
+            "id": "b",
+            "label": "horse"
+          },
+          {
+            "id": "c",
+            "label": "field"
+          },
+          {
+            "id": "d",
+            "label": "great, large"
+          }
+        ],
+        "correctOptionId": "a"
+      }
+    },
+    {
+      "id": "q-mc-5",
+      "type": "multiple_choice",
+      "prompt": "Quiz: **equus** means…",
+      "targets": [
+        "vocabulary",
+        "vocab quiz"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "horse"
+          },
+          {
+            "id": "b",
+            "label": "field"
+          },
+          {
+            "id": "c",
+            "label": "great, large"
+          },
+          {
+            "id": "d",
+            "label": "in, on, into"
+          }
+        ],
+        "correctOptionId": "a"
+      }
+    },
+    {
+      "id": "q-sf-0",
+      "type": "single_form",
+      "prompt": "Quiz — English for **ager**:",
+      "targets": [
+        "vocabulary",
+        "vocab quiz"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "accept": [
+          "field"
+        ]
+      }
+    },
+    {
+      "id": "q-sf-1",
+      "type": "single_form",
+      "prompt": "Quiz — English for **magnus**:",
+      "targets": [
+        "vocabulary",
+        "vocab quiz"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "accept": [
+          "great",
+          "large"
+        ]
+      }
+    },
+    {
+      "id": "q-sf-2",
+      "type": "single_form",
+      "prompt": "Quiz — English for **in**:",
+      "targets": [
+        "vocabulary",
+        "vocab quiz"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "accept": [
+          "in",
+          "on",
+          "into"
+        ]
+      }
+    },
+    {
+      "id": "q-sf-3",
+      "type": "single_form",
+      "prompt": "Quiz — English for **māter**:",
+      "targets": [
+        "vocabulary",
+        "vocab quiz"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "accept": [
+          "mother"
+        ]
+      }
+    },
+    {
+      "id": "q-e2l-0",
+      "type": "translate",
+      "prompt": "Quiz — Latin for: **road**",
+      "targets": [
+        "vocabulary",
+        "vocab quiz"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "direction": "E2L",
+        "length": "word",
+        "sampleAnswers": [
+          "via",
+          "via",
+          "via",
+          "via"
+        ],
+        "rubric": "Accept common gloss synonyms; macrons optional for Latin."
+      }
+    },
+    {
+      "id": "q-e2l-1",
+      "type": "translate",
+      "prompt": "Quiz — Latin for: **do**",
+      "targets": [
+        "vocabulary",
+        "vocab quiz"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "direction": "E2L",
+        "length": "word",
+        "sampleAnswers": [
+          "agō",
+          "ago",
+          "agō",
+          "ago"
+        ],
+        "rubric": "Accept common gloss synonyms; macrons optional for Latin."
+      }
+    },
+    {
+      "id": "q-reflect",
+      "type": "short_answer",
+      "prompt": "Which 3 words from this quiz are still hardest for you? Write them and one trick to remember each.",
+      "targets": [
+        "vocabulary",
+        "vocab quiz"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "sampleAnswers": [
+          "Honest list of three hard words with memory tips.",
+          "Student metacognition on vocab."
+        ]
+      }
+    }
+  ]
+}

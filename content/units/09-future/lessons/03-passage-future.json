@@ -1,0 +1,202 @@
+{
+  "slug": "03-passage-future",
+  "title": "Passage: Tomorrow",
+  "unitSlug": "09-future",
+  "order": 3,
+  "standardSummary": "Read a future-tense passage; answer what will happen.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-when"
+      },
+      {
+        "type": "skill_count",
+        "skill": "passage reading",
+        "n": 3,
+        "label": "passage"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "tr1"
+      }
+    ]
+  },
+  "teach": "Future forms in continuous Latin.",
+  "allowList": {
+    "lemmas": [
+      "venio",
+      "porto",
+      "laboro",
+      "sum",
+      "urbs",
+      "cras"
+    ],
+    "constructions": [
+      "future",
+      "passage reading"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "short_answer",
+      "translate",
+      "multi_select"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-when",
+      "type": "multiple_choice",
+      "prompt": "When will they come to the city?",
+      "targets": [
+        "passage reading",
+        "future"
+      ],
+      "passage": {
+        "title": "What will happen",
+        "latin": "Crās ad urbem veniēmus.\nPuella aquam portābit.\nServī in agrō labōrābunt.\nRōma clara erit.",
+        "notes": "Future: will … · Use known vocabulary; guess from context only if needed."
+      },
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "Yesterday"
+          },
+          {
+            "id": "b",
+            "label": "Tomorrow (crās)"
+          },
+          {
+            "id": "c",
+            "label": "Never"
+          },
+          {
+            "id": "d",
+            "label": "Only in the perfect"
+          }
+        ],
+        "correctOptionId": "b"
+      }
+    },
+    {
+      "id": "mc-girl",
+      "type": "multiple_choice",
+      "prompt": "The girl will…",
+      "targets": [
+        "passage reading"
+      ],
+      "passage": {
+        "title": "What will happen",
+        "latin": "Crās ad urbem veniēmus.\nPuella aquam portābit.\nServī in agrō labōrābunt.\nRōma clara erit.",
+        "notes": "Future: will … · Use known vocabulary; guess from context only if needed."
+      },
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "carry water"
+          },
+          {
+            "id": "b",
+            "label": "have already carried only"
+          },
+          {
+            "id": "c",
+            "label": "be a horse"
+          },
+          {
+            "id": "d",
+            "label": "not appear"
+          }
+        ],
+        "correctOptionId": "a"
+      }
+    },
+    {
+      "id": "mc-rome",
+      "type": "multiple_choice",
+      "prompt": "Rome will be…",
+      "targets": [
+        "passage reading"
+      ],
+      "passage": {
+        "title": "What will happen",
+        "latin": "Crās ad urbem veniēmus.\nPuella aquam portābit.\nServī in agrō labōrābunt.\nRōma clara erit.",
+        "notes": "Future: will … · Use known vocabulary; guess from context only if needed."
+      },
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "hidden"
+          },
+          {
+            "id": "b",
+            "label": "famous/clear (clāra)"
+          },
+          {
+            "id": "c",
+            "label": "destroyed in this sentence"
+          },
+          {
+            "id": "d",
+            "label": "a servant"
+          }
+        ],
+        "correctOptionId": "b"
+      }
+    },
+    {
+      "id": "tr1",
+      "type": "translate",
+      "prompt": "Translate:\nServī in agrō labōrābunt.",
+      "targets": [
+        "passage reading",
+        "future"
+      ],
+      "passage": {
+        "title": "What will happen",
+        "latin": "Crās ad urbem veniēmus.\nPuella aquam portābit.\nServī in agrō labōrābunt.\nRōma clara erit.",
+        "notes": "Future: will … · Use known vocabulary; guess from context only if needed."
+      },
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "The servants will work in the field."
+        ],
+        "rubric": "Use the passage; accurate meaning; macrons optional."
+      }
+    },
+    {
+      "id": "sa1",
+      "type": "short_answer",
+      "prompt": "List two future events from the passage.",
+      "targets": [
+        "passage reading"
+      ],
+      "passage": {
+        "title": "What will happen",
+        "latin": "Crās ad urbem veniēmus.\nPuella aquam portābit.\nServī in agrō labōrābunt.\nRōma clara erit.",
+        "notes": "Future: will … · Use known vocabulary; guess from context only if needed."
+      },
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "sampleAnswers": [
+          "Come to the city; girl will carry water; servants will work; Rome will be famous.",
+          "veniēmus and portābit etc."
+        ]
+      }
+    }
+  ]
+}

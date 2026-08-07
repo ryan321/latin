@@ -2,21 +2,23 @@
 
 Henle-inspired, original sequence. Classical pronunciation. Grammar first, with Roman Empire context in every unit.
 
-**Design:** many short lessons (≈10–20 min). Each unit ends with a **checkpoint** lesson (mixed review; must meet standard to unlock the next unit).
+**Standing rule (all years):** teach grammar **concepts in English** with enough practice to grasp them **before** the Latin forms that use them. See `docs/curriculum-principles.md` and product pedagogy.
 
-**Estimated load:** ~28–32 weeks of school-year pace (≈4–5 short lessons/week), or self-paced. Roughly **120–140 lessons** including checkpoints and culture segments — adjustable as we write content.
+**Design:** many short lessons (≈10–20 min). Concept units + Latin units; checkpoints mix review.
+
+**Estimated load:** school-year pace (≈4–5 short lessons/week), or self-paced.
 
 **Notation**
-
 - **G** = grammar / forms focus  
+- **E** = English / plain-language **concept** (before Latin)  
 - **V** = vocabulary heavy  
 - **T** = translation / reading  
 - **C** = Roman context  
 - **R** = review / checkpoint  
 
-**Shipped content (app):** Units **0–25** complete — **120 lessons** covering a full Henle First Year–aligned arc (original content, not copyrighted Henle text). Unlock-all is on by default for personal pacing.
+**Shipped content (app):** Full Year 1 arc with **English-first concept units** before major Latin morphology. **33 units · ~177 lessons** (includes vocab batches, passages, concept units). Original content (not copyrighted Henle text). Unlock-all on by default.
 
-**Every lesson** (see product doc): stated **standard** + teach + seed activities + AI may add more **Activity** objects (grids, translates, etc.) until the standard is met.
+**Every lesson** (see product doc): stated **standard** + teach + seed activities + AI may add more until the standard is met.
 
 ---
 
@@ -33,43 +35,56 @@ By the end of the course the student should be able to:
 7. State and use **principal parts** as a habit.
 8. Read and write **short connected Latin** (sentences → brief paragraphs) within known grammar.
 9. Place language work in a basic **map of Roman history and life** (Republic → early Empire, institutions, daily life, army, provinces).
+10. Explain core grammar concepts in English (tense, voice, agreement, relative clauses, degree, participles) before applying Latin forms.
 
 ---
 
 ## Unit map (overview) — shipped
 
-| Unit | Slug | Title | Core grammar | Culture thread | Lessons |
-|------|------|--------|--------------|----------------|---------|
-| 0 | `00-foundations` | Foundations | Course norms; classical pronunciation | Latin as Rome’s language | 5 |
-| 1 | `01-parts-of-speech` | Parts of speech | Noun, verb, adjective; supporting cast | Grammar as word-jobs | 5 |
-| 2 | `02-noun-cases` | Noun cases | Nom, gen, dat, acc, abl **meanings** | Inflection vs English word order | 6 |
-| 3 | `03-first-declension` | First declension & *sum* | 1st-decl endings + *sum* | Family & household | 6 |
-| 4 | `04-first-conjugation` | First conjugation present | *amō* type; subject–verb | Daily routine & work | 5 |
-| 5 | `05-second-declension` | Second declension | *-us/-um* nouns | Men, tools, city places | 4 |
-| 6 | `06-adjectives` | 1st/2nd adjectives | Agreement | Names, descriptions | 3 |
-| 7 | `07-second-conjugation` | Second conjugation | *moneō* present | Education (light) | 3 |
-| 8 | `08-imperfect` | Imperfect | *eram*; *-bam* | Past ongoing / habitual | 3 |
-| 9 | `09-future` | Future | *erō*; *-bō* vs 3rd/4th *-am* later | Will / shall | 3 |
-| 10 | `10-third-declension` | Third declension | Stem from gen.; neuter; i-stems | Geography of Italy | 5 |
-| 11 | `11-third-conjugation` | Third conjugation | *regō* / *capiō*; impf/fut | Army: legion & camp | 5 |
-| 12 | `12-perfect-system` | Perfect system (active) | Perfect, pluperfect, future perfect | Kings & foundation stories | 5 |
-| 13 | `13-fourth-conjugation` | Fourth conjugation | *audiō*; mixed conjugations | Republic institutions | 5 |
-| 14 | `14-prep-pronouns` | Prepositions & personal pronouns | *ad/in/cum…*; *ego/tū/is* | Travel, roads | 5 |
-| 15 | `15-demonstratives` | Demonstratives | *hic, ille* vs *is* | Forum, temples | 5 |
-| 16 | `16-relative` | Relative pronoun | *quī, quae, quod*; agreement | Citizenship & law | 5 |
-| 17 | `17-ablative-dative` | Ablative & dative uses | Means, agent, accompaniment; IO | Religion & ritual | 5 |
-| 18 | `18-place` | Place & accusative uses | Where / to / from; locative; extent | Provinces & empire | 5 |
-| 19 | `19-passive` | Passive (present system) | *-r -ris -tur…*; agent | Status & labor | 5 |
-| 20 | `20-fourth-fifth` | 4th & 5th declensions | *frūctus*, *diēs*, *rēs* | Games & triumphs | 4 |
-| 21 | `21-comparison` | Comparison of adjectives | *-ior*, *-issimus*; irregulars | Virtues & *exempla* | 5 |
-| 22 | `22-numerals` | Numerals & time | Cardinals/ordinals; calendar | Census & administration | 5 |
-| 23 | `23-participles` | Participles (intro) | Pres. act.; PPP; abl. abs. intro | Storytelling | 4 |
-| 24 | `24-reading` | Reading power | Multi-clause; mixed review | Augustus & principate | 5 |
-| 25 | `25-capstone` | Year 1 capstone | Full mixed mastery | Roman self-image | 4 |
+Concept units (**E**) sit immediately before the Latin that depends on them.
 
-**Total: 120 lessons** across 26 units (0–25).
+| Order | Slug | Title | Focus | Lessons |
+|------:|------|--------|--------|--------:|
+| 0 | `00-foundations` | Foundations | Course norms; classical pronunciation | 5 |
+| 1 | `01-parts-of-speech` | Parts of speech | **E** Word jobs | 5 |
+| 2 | `02-noun-cases` | Noun cases | **E** Case meanings before charts | 6 |
+| 3 | `03-first-declension` | First declension & *sum* | Latin 1st decl + *sum* | 6 |
+| 4 | `verb-concepts` | Verb concepts | **E** Person, number, subject–verb, tense map | 4 |
+| 5 | `04-first-conjugation` | First conjugation present | Latin *amō* present | 5 |
+| 6 | `05-second-declension` | Second declension | Latin *-us/-um* | 4 |
+| 7 | `agreement-concepts` | Agreement concepts | **E** Agreement; describing nouns | 3 |
+| 8 | `06-adjectives` | 1st/2nd adjectives | Latin *bonus* agreement | 3 |
+| 9 | `07-second-conjugation` | Second conjugation | Latin *moneō* | 3 |
+| 10 | `tense-meanings` | Tense meanings | **E** Present, past ongoing, future, completed | 6 |
+| 11 | `08-imperfect` | Imperfect | Latin imperfect | 3 |
+| 12 | `09-future` | Future | Latin future | 3 |
+| 13 | `10-third-declension` | Third declension | Latin 3rd decl | 5 |
+| 14 | `11-third-conjugation` | Third conjugation | Latin 3rd / *-iō* | 5 |
+| 15 | `12-perfect-system` | Perfect system | Latin perfect / pluperfect / fut. perf. | 5 |
+| 16 | `13-fourth-conjugation` | Fourth conjugation | Latin *audiō* | 5 |
+| 17 | `14-prep-pronouns` | Prep & personal pronouns | *ad/cum…*; *ego/tū/is* | 5 |
+| 18 | `15-demonstratives` | Demonstratives | *hic / ille* | 5 |
+| 19 | `relative-concepts` | Relative clauses | **E** Who/which/that; antecedent | 3 |
+| 20 | `16-relative` | Relative pronoun | Latin *quī* | 5 |
+| 21 | `17-ablative-dative` | Ablative & dative uses | Means, agent, IO | 5 |
+| 22 | `18-place` | Place constructions | Where / to / from; locative | 5 |
+| 23 | `voice-concepts` | Voice | **E** Active/passive; agent | 4 |
+| 24 | `19-passive` | Passive | Latin present-system passive | 5 |
+| 25 | `20-fourth-fifth` | 4th & 5th declensions | *frūctus*, *diēs* | 4 |
+| 26 | `degree-concepts` | Degree of adjectives | **E** Comparative / superlative | 3 |
+| 27 | `21-comparison` | Comparison (Latin) | *-ior*, *-issimus*; irregulars | 5 |
+| 28 | `22-numerals` | Numerals & time | Cardinals/ordinals; calendar | 5 |
+| 29 | `participle-concepts` | Participles | **E** *-ing* / *-ed*; phrases | 3 |
+| 30 | `23-participles` | Participles (Latin) | Pres. act.; PPP; abl. abs. intro | 4 |
+| 31 | `24-reading` | Reading power | Multi-clause reading | 5 |
+| 32 | `25-capstone` | Year 1 capstone | Mixed mastery | 4 |
 
-**Pedagogy:** Teach **parts of speech** (Unit 1), then **case meanings** (Unit 2), then **1st-declension forms** (Unit 3). Do not skip to charts without jobs and cases.
+**Total: ~177 lessons** across **33 units** (grammar + English concepts + vocabulary + passages).
+
+**Pedagogy chain:** parts of speech → case meanings → noun forms → **verb concepts** → conjugations → **agreement** → adjectives → **tense meanings** → imperfect/future/perfect → **relative concepts** → *quī* → **voice** → passive → **degree** → comparison → **participle concepts** → Latin participles → reading → capstone.
+
+**Vocabulary strand:** 12 word-batches + 4 cumulative quizzes (`content/vocab/year1-batches.json`). Pattern inside units: grammar → **vocab drills** → **passage** → checkpoint. See `docs/vocabulary.md`.
+
 
 ---
 

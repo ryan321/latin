@@ -1,0 +1,169 @@
+{
+  "slug": "03-checkpoint",
+  "title": "Checkpoint — Degree concepts",
+  "unitSlug": "degree-concepts",
+  "order": 3,
+  "standardSummary": "Master positive/comparative/superlative labels before Latin comparison morphology.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc1"
+      },
+      {
+        "type": "skill_count",
+        "skill": "degree concept",
+        "n": 3,
+        "label": "degree cp"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match1"
+      }
+    ]
+  },
+  "teach": "Checkpoint before Latin comparative and superlative forms.",
+  "allowList": {
+    "lemmas": [],
+    "constructions": [
+      "degree concept"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "matching",
+      "short_answer",
+      "multi_select"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc1",
+      "type": "multiple_choice",
+      "prompt": "“Most famous” is…",
+      "targets": [
+        "degree concept"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "positive"
+          },
+          {
+            "id": "b",
+            "label": "comparative"
+          },
+          {
+            "id": "c",
+            "label": "superlative"
+          },
+          {
+            "id": "d",
+            "label": "passive voice"
+          }
+        ],
+        "correctOptionId": "c"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match1",
+      "type": "matching",
+      "prompt": "Match.",
+      "targets": [
+        "degree concept"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "-er / more"
+          },
+          {
+            "id": "b",
+            "label": "-est / most"
+          },
+          {
+            "id": "c",
+            "label": "base adjective"
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "comparative tools"
+          },
+          {
+            "id": "2",
+            "label": "superlative tools"
+          },
+          {
+            "id": "3",
+            "label": "positive"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "ms1",
+      "type": "multi_select",
+      "prompt": "Select true statements.",
+      "targets": [
+        "degree concept"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "Comparative often compares two."
+          },
+          {
+            "id": "b",
+            "label": "Superlative can mean 'very'."
+          },
+          {
+            "id": "c",
+            "label": "Degree only applies to prepositions."
+          },
+          {
+            "id": "d",
+            "label": "Latin will mark degree with special endings."
+          }
+        ],
+        "correctOptionIds": [
+          "a",
+          "b",
+          "d"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sa1",
+      "type": "short_answer",
+      "prompt": "Label: long, longer, longest.",
+      "targets": [
+        "degree concept"
+      ],
+      "payload": {
+        "sampleAnswers": [
+          "positive, comparative, superlative",
+          "positive / comparative / superlative"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

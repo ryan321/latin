@@ -1,0 +1,206 @@
+{
+  "slug": "05-passage-via",
+  "title": "Passage: Road to Rome",
+  "unitSlug": "14-prep-pronouns",
+  "order": 6,
+  "standardSummary": "Read a travel passage with prepositions and pronouns; answer who goes where.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-with"
+      },
+      {
+        "type": "skill_count",
+        "skill": "passage reading",
+        "n": 3,
+        "label": "passage"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "tr1"
+      }
+    ]
+  },
+  "teach": "Travel Latin with ad/ab/per/cum and ego/tū/is.",
+  "allowList": {
+    "lemmas": [
+      "ego",
+      "tu",
+      "is",
+      "ad",
+      "ab",
+      "per",
+      "cum",
+      "via",
+      "Roma"
+    ],
+    "constructions": [
+      "prepositions",
+      "personal pronouns",
+      "passage reading"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "short_answer",
+      "translate",
+      "multi_select"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-with",
+      "type": "multiple_choice",
+      "prompt": "With whom do I come toward Rome?",
+      "targets": [
+        "passage reading",
+        "prepositions"
+      ],
+      "passage": {
+        "title": "On the road",
+        "latin": "Ego cum amīcīs ad Rōmam veniō.\nTū mēcum in viā ambulās.\nIs ab urbe ad mare contendit.\nNōs per Italiam iter facimus.",
+        "notes": "Prepositions + personal pronouns · Use known vocabulary; guess from context only if needed."
+      },
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "With enemies"
+          },
+          {
+            "id": "b",
+            "label": "With friends"
+          },
+          {
+            "id": "c",
+            "label": "Alone only"
+          },
+          {
+            "id": "d",
+            "label": "With the sea"
+          }
+        ],
+        "correctOptionId": "b"
+      }
+    },
+    {
+      "id": "mc-you",
+      "type": "multiple_choice",
+      "prompt": "You walk…",
+      "targets": [
+        "passage reading"
+      ],
+      "passage": {
+        "title": "On the road",
+        "latin": "Ego cum amīcīs ad Rōmam veniō.\nTū mēcum in viā ambulās.\nIs ab urbe ad mare contendit.\nNōs per Italiam iter facimus.",
+        "notes": "Prepositions + personal pronouns · Use known vocabulary; guess from context only if needed."
+      },
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "against me"
+          },
+          {
+            "id": "b",
+            "label": "with me on the road"
+          },
+          {
+            "id": "c",
+            "label": "from Spain only"
+          },
+          {
+            "id": "d",
+            "label": "never"
+          }
+        ],
+        "correctOptionId": "b"
+      }
+    },
+    {
+      "id": "mc-he",
+      "type": "multiple_choice",
+      "prompt": "He hurries…",
+      "targets": [
+        "passage reading",
+        "place"
+      ],
+      "passage": {
+        "title": "On the road",
+        "latin": "Ego cum amīcīs ad Rōmam veniō.\nTū mēcum in viā ambulās.\nIs ab urbe ad mare contendit.\nNōs per Italiam iter facimus.",
+        "notes": "Prepositions + personal pronouns · Use known vocabulary; guess from context only if needed."
+      },
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "from the city toward the sea"
+          },
+          {
+            "id": "b",
+            "label": "into a book"
+          },
+          {
+            "id": "c",
+            "label": "only in the future perfect"
+          },
+          {
+            "id": "d",
+            "label": "nowhere"
+          }
+        ],
+        "correctOptionId": "a"
+      }
+    },
+    {
+      "id": "tr1",
+      "type": "translate",
+      "prompt": "Translate:\nNōs per Italiam iter facimus.",
+      "targets": [
+        "passage reading"
+      ],
+      "passage": {
+        "title": "On the road",
+        "latin": "Ego cum amīcīs ad Rōmam veniō.\nTū mēcum in viā ambulās.\nIs ab urbe ad mare contendit.\nNōs per Italiam iter facimus.",
+        "notes": "Prepositions + personal pronouns · Use known vocabulary; guess from context only if needed."
+      },
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "We make a journey through Italy.",
+          "We travel through Italy."
+        ]
+      }
+    },
+    {
+      "id": "sa1",
+      "type": "short_answer",
+      "prompt": "List three prepositions in the passage and what they mark.",
+      "targets": [
+        "passage reading"
+      ],
+      "passage": {
+        "title": "On the road",
+        "latin": "Ego cum amīcīs ad Rōmam veniō.\nTū mēcum in viā ambulās.\nIs ab urbe ad mare contendit.\nNōs per Italiam iter facimus.",
+        "notes": "Prepositions + personal pronouns · Use known vocabulary; guess from context only if needed."
+      },
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "sampleAnswers": [
+          "cum (with), ad (to), ab (from), per (through)…",
+          "cum ad ab per"
+        ]
+      }
+    }
+  ]
+}

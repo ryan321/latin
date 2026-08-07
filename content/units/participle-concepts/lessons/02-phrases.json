@@ -1,0 +1,159 @@
+{
+  "slug": "02-phrases",
+  "title": "Participial phrases",
+  "unitSlug": "participle-concepts",
+  "order": 2,
+  "standardSummary": "Parse a noun + participle phrase; rewrite as a who/which or when/after clause.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-ph"
+      },
+      {
+        "type": "skill_count",
+        "skill": "participle concept",
+        "n": 3,
+        "label": "phrases"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match-ph"
+      }
+    ]
+  },
+  "teach": "Participial phrases pack a clause’s idea into a describing phrase.",
+  "allowList": {
+    "lemmas": [],
+    "constructions": [
+      "participle concept"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "matching",
+      "short_answer",
+      "multi_select"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-ph",
+      "type": "multiple_choice",
+      "prompt": "“The soldiers, having taken the camp, rested” is closest to…",
+      "targets": [
+        "participle concept"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "a future only idea"
+          },
+          {
+            "id": "b",
+            "label": "after they took the camp, they rested"
+          },
+          {
+            "id": "c",
+            "label": "they never took the camp"
+          },
+          {
+            "id": "d",
+            "label": "a genitive of possession only"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match-ph",
+      "type": "matching",
+      "prompt": "Match phrase to clause rewrite.",
+      "targets": [
+        "participle concept"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "the girl carrying water"
+          },
+          {
+            "id": "b",
+            "label": "the city having been captured"
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "the girl who is/was carrying water"
+          },
+          {
+            "id": "2",
+            "label": "the city that had been / was captured"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sa1",
+      "type": "short_answer",
+      "prompt": "Rewrite with who/which: “the messenger sending the letter”",
+      "targets": [
+        "participle concept"
+      ],
+      "payload": {
+        "sampleAnswers": [
+          "the messenger who is sending the letter",
+          "the messenger who sends the letter"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "ms1",
+      "type": "multi_select",
+      "prompt": "Why do writers like participles?",
+      "targets": [
+        "participle concept"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "They pack description tightly."
+          },
+          {
+            "id": "b",
+            "label": "They always replace nouns forever."
+          },
+          {
+            "id": "c",
+            "label": "They can show time relationships (while/after)."
+          },
+          {
+            "id": "d",
+            "label": "They remove all need for verbs."
+          }
+        ],
+        "correctOptionIds": [
+          "a",
+          "c"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

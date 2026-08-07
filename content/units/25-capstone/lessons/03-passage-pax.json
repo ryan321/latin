@@ -1,0 +1,232 @@
+{
+  "slug": "03-passage-pax",
+  "title": "Passage: Peace and glory",
+  "unitSlug": "25-capstone",
+  "order": 5,
+  "standardSummary": "Read a capstone mixed passage; show comprehension across Year 1 grammar.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-aug"
+      },
+      {
+        "type": "skill_count",
+        "skill": "passage reading",
+        "n": 4,
+        "label": "capstone passage"
+      },
+      {
+        "type": "skill_count",
+        "skill": "year1 mastery",
+        "n": 2,
+        "label": "mixed"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "sa1"
+      }
+    ]
+  },
+  "teach": "Final-style connected Latin.",
+  "allowList": {
+    "lemmas": [
+      "Augustus",
+      "pax",
+      "populus",
+      "miles",
+      "gloria",
+      "qui",
+      "hic"
+    ],
+    "constructions": [
+      "year1 mastery",
+      "passage reading",
+      "passage reading"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "short_answer",
+      "translate",
+      "multi_select"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-aug",
+      "type": "multiple_choice",
+      "prompt": "Augustus, who was princeps, …",
+      "targets": [
+        "passage reading"
+      ],
+      "passage": {
+        "title": "Peace and fame",
+        "latin": "Augustus, quī prīnceps erat, pācem populō Rōmānō dedit.\nHaec pāx ā multīs laudāta est.\nMīlitēs quī in prōvinciīs pugnāverant Rōmam redierunt.\nGlōria Rōmae per terrās nārrātur.\nNōs hanc fāmam memoriā tenēmus.",
+        "notes": "Capstone mixed reading · Use known vocabulary; guess from context only if needed."
+      },
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "destroyed all peace"
+          },
+          {
+            "id": "b",
+            "label": "gave peace to the Roman people"
+          },
+          {
+            "id": "c",
+            "label": "never existed in the passage"
+          },
+          {
+            "id": "d",
+            "label": "only built a villa in this text"
+          }
+        ],
+        "correctOptionId": "b"
+      }
+    },
+    {
+      "id": "mc-pass",
+      "type": "multiple_choice",
+      "prompt": "“Haec pāx ā multīs laudāta est” is…",
+      "targets": [
+        "passage reading",
+        "passive"
+      ],
+      "passage": {
+        "title": "Peace and fame",
+        "latin": "Augustus, quī prīnceps erat, pācem populō Rōmānō dedit.\nHaec pāx ā multīs laudāta est.\nMīlitēs quī in prōvinciīs pugnāverant Rōmam redierunt.\nGlōria Rōmae per terrās nārrātur.\nNōs hanc fāmam memoriā tenēmus.",
+        "notes": "Capstone mixed reading · Use known vocabulary; guess from context only if needed."
+      },
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "active present"
+          },
+          {
+            "id": "b",
+            "label": "perfect passive idea: this peace was praised by many"
+          },
+          {
+            "id": "c",
+            "label": "future of sum only"
+          },
+          {
+            "id": "d",
+            "label": "a preposition"
+          }
+        ],
+        "correctOptionId": "b"
+      }
+    },
+    {
+      "id": "mc-soldiers",
+      "type": "multiple_choice",
+      "prompt": "Soldiers who had fought in the provinces…",
+      "targets": [
+        "passage reading"
+      ],
+      "passage": {
+        "title": "Peace and fame",
+        "latin": "Augustus, quī prīnceps erat, pācem populō Rōmānō dedit.\nHaec pāx ā multīs laudāta est.\nMīlitēs quī in prōvinciīs pugnāverant Rōmam redierunt.\nGlōria Rōmae per terrās nārrātur.\nNōs hanc fāmam memoriā tenēmus.",
+        "notes": "Capstone mixed reading · Use known vocabulary; guess from context only if needed."
+      },
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "stayed away forever"
+          },
+          {
+            "id": "b",
+            "label": "returned to Rome"
+          },
+          {
+            "id": "c",
+            "label": "are the peace"
+          },
+          {
+            "id": "d",
+            "label": "wrote no history"
+          }
+        ],
+        "correctOptionId": "b"
+      }
+    },
+    {
+      "id": "tr1",
+      "type": "translate",
+      "prompt": "Translate:\nGlōria Rōmae per terrās nārrātur.",
+      "targets": [
+        "passage reading"
+      ],
+      "passage": {
+        "title": "Peace and fame",
+        "latin": "Augustus, quī prīnceps erat, pācem populō Rōmānō dedit.\nHaec pāx ā multīs laudāta est.\nMīlitēs quī in prōvinciīs pugnāverant Rōmam redierunt.\nGlōria Rōmae per terrās nārrātur.\nNōs hanc fāmam memoriā tenēmus.",
+        "notes": "Capstone mixed reading · Use known vocabulary; guess from context only if needed."
+      },
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "The glory of Rome is told throughout the lands.",
+          "Rome's glory is narrated through the lands."
+        ]
+      }
+    },
+    {
+      "id": "sa1",
+      "type": "short_answer",
+      "prompt": "What Roman self-image does this passage push (peace, glory, memory)?",
+      "targets": [
+        "passage reading",
+        "culture"
+      ],
+      "passage": {
+        "title": "Peace and fame",
+        "latin": "Augustus, quī prīnceps erat, pācem populō Rōmānō dedit.\nHaec pāx ā multīs laudāta est.\nMīlitēs quī in prōvinciīs pugnāverant Rōmam redierunt.\nGlōria Rōmae per terrās nārrātur.\nNōs hanc fāmam memoriā tenēmus.",
+        "notes": "Capstone mixed reading · Use known vocabulary; guess from context only if needed."
+      },
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "sampleAnswers": [
+          "Rome under Augustus gives peace; glory is spread; we keep the fame in memory.",
+          "Peace, imperial glory, remembered fame."
+        ]
+      }
+    },
+    {
+      "id": "sa2",
+      "type": "short_answer",
+      "prompt": "Name two grammar features you used to unlock meaning.",
+      "targets": [
+        "passage reading",
+        "year1 mastery"
+      ],
+      "passage": {
+        "title": "Peace and fame",
+        "latin": "Augustus, quī prīnceps erat, pācem populō Rōmānō dedit.\nHaec pāx ā multīs laudāta est.\nMīlitēs quī in prōvinciīs pugnāverant Rōmam redierunt.\nGlōria Rōmae per terrās nārrātur.\nNōs hanc fāmam memoriā tenēmus.",
+        "notes": "Capstone mixed reading · Use known vocabulary; guess from context only if needed."
+      },
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "sampleAnswers": [
+          "Relative quī; perfect passive; present passive nārrātur; demonstrative haec…",
+          "relatives and passive"
+        ]
+      }
+    }
+  ]
+}

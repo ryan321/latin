@@ -1,0 +1,544 @@
+{
+  "slug": "vocab-v06-time-words",
+  "title": "Vocabulary: Time words",
+  "unitSlug": "08-imperfect",
+  "order": 3,
+  "standardSummary": "Master this vocabulary set (10 words): match both directions and pass drills.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "match-l2e-0"
+      },
+      {
+        "type": "skill_count",
+        "skill": "vocabulary",
+        "n": 5,
+        "label": "vocab items"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match-e2l"
+      }
+    ]
+  },
+  "teach": "Vocabulary batch v06-time-words: hodiē, crās, heri, nunc, tum, diū, saepe, cotīdiē, mox, iam",
+  "allowList": {
+    "lemmas": [
+      "hodiē",
+      "crās",
+      "heri",
+      "nunc",
+      "tum",
+      "diū",
+      "saepe",
+      "cotīdiē",
+      "mox",
+      "iam"
+    ],
+    "constructions": [
+      "vocabulary",
+      "vocab drill",
+      "v06-time-words"
+    ],
+    "activityTypes": [
+      "matching",
+      "multiple_choice",
+      "single_form",
+      "translate",
+      "multi_select",
+      "cloze",
+      "short_answer"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "match-l2e-0",
+      "type": "matching",
+      "prompt": "Match each Latin word to its English meaning. (set 1)",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v06-time-words"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "leftLabel": "Latin",
+        "rightLabel": "English",
+        "left": [
+          {
+            "id": "l0",
+            "label": "hodiē"
+          },
+          {
+            "id": "l1",
+            "label": "crās"
+          },
+          {
+            "id": "l2",
+            "label": "heri"
+          },
+          {
+            "id": "l3",
+            "label": "nunc"
+          },
+          {
+            "id": "l4",
+            "label": "tum"
+          }
+        ],
+        "right": [
+          {
+            "id": "r0",
+            "label": "today"
+          },
+          {
+            "id": "r1",
+            "label": "tomorrow"
+          },
+          {
+            "id": "r2",
+            "label": "yesterday"
+          },
+          {
+            "id": "r3",
+            "label": "now"
+          },
+          {
+            "id": "r4",
+            "label": "then, at that time"
+          }
+        ],
+        "pairs": {
+          "l0": "r0",
+          "l1": "r1",
+          "l2": "r2",
+          "l3": "r3",
+          "l4": "r4"
+        }
+      }
+    },
+    {
+      "id": "match-l2e-1",
+      "type": "matching",
+      "prompt": "Match each Latin word to its English meaning. (set 2)",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v06-time-words"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "leftLabel": "Latin",
+        "rightLabel": "English",
+        "left": [
+          {
+            "id": "l0",
+            "label": "diū"
+          },
+          {
+            "id": "l1",
+            "label": "saepe"
+          },
+          {
+            "id": "l2",
+            "label": "cotīdiē"
+          },
+          {
+            "id": "l3",
+            "label": "mox"
+          },
+          {
+            "id": "l4",
+            "label": "iam"
+          }
+        ],
+        "right": [
+          {
+            "id": "r0",
+            "label": "for a long time"
+          },
+          {
+            "id": "r1",
+            "label": "often"
+          },
+          {
+            "id": "r2",
+            "label": "daily, every day"
+          },
+          {
+            "id": "r3",
+            "label": "soon"
+          },
+          {
+            "id": "r4",
+            "label": "already, now"
+          }
+        ],
+        "pairs": {
+          "l0": "r0",
+          "l1": "r1",
+          "l2": "r2",
+          "l3": "r3",
+          "l4": "r4"
+        }
+      }
+    },
+    {
+      "id": "match-e2l",
+      "type": "matching",
+      "prompt": "Match English meaning to Latin (produce recognition both ways).",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v06-time-words"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "leftLabel": "English",
+        "rightLabel": "Latin",
+        "left": [
+          {
+            "id": "l0",
+            "label": "today"
+          },
+          {
+            "id": "l1",
+            "label": "tomorrow"
+          },
+          {
+            "id": "l2",
+            "label": "yesterday"
+          },
+          {
+            "id": "l3",
+            "label": "now"
+          },
+          {
+            "id": "l4",
+            "label": "then, at that time"
+          },
+          {
+            "id": "l5",
+            "label": "for a long time"
+          }
+        ],
+        "right": [
+          {
+            "id": "r0",
+            "label": "hodiē"
+          },
+          {
+            "id": "r1",
+            "label": "crās"
+          },
+          {
+            "id": "r2",
+            "label": "heri"
+          },
+          {
+            "id": "r3",
+            "label": "nunc"
+          },
+          {
+            "id": "r4",
+            "label": "tum"
+          },
+          {
+            "id": "r5",
+            "label": "diū"
+          }
+        ],
+        "pairs": {
+          "l0": "r0",
+          "l1": "r1",
+          "l2": "r2",
+          "l3": "r3",
+          "l4": "r4",
+          "l5": "r5"
+        }
+      }
+    },
+    {
+      "id": "mc-0",
+      "type": "multiple_choice",
+      "prompt": "What does **hodiē** mean?",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v06-time-words"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "tomorrow"
+          },
+          {
+            "id": "b",
+            "label": "yesterday"
+          },
+          {
+            "id": "c",
+            "label": "now"
+          },
+          {
+            "id": "d",
+            "label": "today"
+          }
+        ],
+        "correctOptionId": "d"
+      }
+    },
+    {
+      "id": "mc-1",
+      "type": "multiple_choice",
+      "prompt": "What does **crās** mean?",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v06-time-words"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "today"
+          },
+          {
+            "id": "b",
+            "label": "yesterday"
+          },
+          {
+            "id": "c",
+            "label": "now"
+          },
+          {
+            "id": "d",
+            "label": "tomorrow"
+          }
+        ],
+        "correctOptionId": "d"
+      }
+    },
+    {
+      "id": "mc-2",
+      "type": "multiple_choice",
+      "prompt": "What does **heri** mean?",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v06-time-words"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "tomorrow"
+          },
+          {
+            "id": "b",
+            "label": "now"
+          },
+          {
+            "id": "c",
+            "label": "yesterday"
+          },
+          {
+            "id": "d",
+            "label": "today"
+          }
+        ],
+        "correctOptionId": "c"
+      }
+    },
+    {
+      "id": "mc-3",
+      "type": "multiple_choice",
+      "prompt": "What does **nunc** mean?",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v06-time-words"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "today"
+          },
+          {
+            "id": "b",
+            "label": "tomorrow"
+          },
+          {
+            "id": "c",
+            "label": "yesterday"
+          },
+          {
+            "id": "d",
+            "label": "now"
+          }
+        ],
+        "correctOptionId": "d"
+      }
+    },
+    {
+      "id": "mc-4",
+      "type": "multiple_choice",
+      "prompt": "What does **tum** mean?",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v06-time-words"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "then, at that time"
+          },
+          {
+            "id": "b",
+            "label": "today"
+          },
+          {
+            "id": "c",
+            "label": "tomorrow"
+          },
+          {
+            "id": "d",
+            "label": "yesterday"
+          }
+        ],
+        "correctOptionId": "a"
+      }
+    },
+    {
+      "id": "sf-gloss-0",
+      "type": "single_form",
+      "prompt": "English meaning of **diū**:",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v06-time-words"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "accept": [
+          "for a long time"
+        ],
+        "hint": "indeclinable"
+      }
+    },
+    {
+      "id": "sf-gloss-1",
+      "type": "single_form",
+      "prompt": "English meaning of **saepe**:",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v06-time-words"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "accept": [
+          "often"
+        ],
+        "hint": "indeclinable"
+      }
+    },
+    {
+      "id": "sf-gloss-2",
+      "type": "single_form",
+      "prompt": "English meaning of **cotīdiē**:",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v06-time-words"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "accept": [
+          "daily",
+          "every day"
+        ],
+        "hint": "indeclinable"
+      }
+    },
+    {
+      "id": "tr-0",
+      "type": "translate",
+      "prompt": "Translate: **mox**",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v06-time-words"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "direction": "L2E",
+        "length": "word",
+        "sampleAnswers": [
+          "soon"
+        ],
+        "rubric": "Accept common gloss synonyms; macrons optional for Latin."
+      }
+    },
+    {
+      "id": "tr-1",
+      "type": "translate",
+      "prompt": "Translate: **iam**",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v06-time-words"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "direction": "L2E",
+        "length": "word",
+        "sampleAnswers": [
+          "already",
+          "now"
+        ],
+        "rubric": "Accept common gloss synonyms; macrons optional for Latin."
+      }
+    },
+    {
+      "id": "sa-use",
+      "type": "short_answer",
+      "prompt": "Pick any 3 words from this list and write a tiny English sentence that could use each (or one sentence using two). Theme: Adverbs & time expressions for tense stories.",
+      "targets": [
+        "vocabulary",
+        "v06-time-words"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "sampleAnswers": [
+          "Any sensible English using three of the batch meanings.",
+          "Student sentences using batch glosses."
+        ]
+      }
+    }
+  ]
+}

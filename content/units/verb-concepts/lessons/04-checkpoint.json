@@ -1,0 +1,188 @@
+{
+  "slug": "04-checkpoint",
+  "title": "Checkpoint — Verb concepts",
+  "unitSlug": "verb-concepts",
+  "order": 4,
+  "standardSummary": "Show mastery of person, number, subject–verb agreement, and basic tense labels in English.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc1"
+      },
+      {
+        "type": "skill_count",
+        "skill": "person and number",
+        "n": 2,
+        "label": "pn"
+      },
+      {
+        "type": "skill_count",
+        "skill": "tense map",
+        "n": 2,
+        "label": "tense"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match1"
+      }
+    ]
+  },
+  "teach": "Checkpoint before Latin personal endings and present tense.",
+  "allowList": {
+    "lemmas": [],
+    "constructions": [
+      "person and number",
+      "subject-verb",
+      "tense map"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "matching",
+      "short_answer",
+      "multi_select"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc1",
+      "type": "multiple_choice",
+      "prompt": "“You (plural) are reading” is…",
+      "targets": [
+        "person and number",
+        "tense map"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "1st singular present"
+          },
+          {
+            "id": "b",
+            "label": "2nd plural present"
+          },
+          {
+            "id": "c",
+            "label": "3rd singular past"
+          },
+          {
+            "id": "d",
+            "label": "1st plural future"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match1",
+      "type": "matching",
+      "prompt": "Match.",
+      "targets": [
+        "person and number",
+        "tense map"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "We love Rome."
+          },
+          {
+            "id": "b",
+            "label": "She will come."
+          },
+          {
+            "id": "c",
+            "label": "The boy runs."
+          },
+          {
+            "id": "d",
+            "label": "They were running."
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "1st pl. present"
+          },
+          {
+            "id": "2",
+            "label": "3rd sg. future"
+          },
+          {
+            "id": "3",
+            "label": "3rd sg. present"
+          },
+          {
+            "id": "4",
+            "label": "3rd pl. past ongoing"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3",
+          "d": "4"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "ms1",
+      "type": "multi_select",
+      "prompt": "Select true statements.",
+      "targets": [
+        "verb concepts"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "Subject and verb should agree."
+          },
+          {
+            "id": "b",
+            "label": "Tense only affects nouns."
+          },
+          {
+            "id": "c",
+            "label": "3rd person is he/she/it/they (or a noun)."
+          },
+          {
+            "id": "d",
+            "label": "Latin will mark person on the verb ending."
+          }
+        ],
+        "correctOptionIds": [
+          "a",
+          "c",
+          "d"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sa1",
+      "type": "short_answer",
+      "prompt": "Name the six person/number slots Latin verbs will use.",
+      "targets": [
+        "person and number"
+      ],
+      "payload": {
+        "sampleAnswers": [
+          "I, you (sg), he/she/it, we, you (pl), they",
+          "1sg 2sg 3sg 1pl 2pl 3pl"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

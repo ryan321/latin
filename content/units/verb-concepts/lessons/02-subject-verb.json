@@ -1,0 +1,192 @@
+{
+  "slug": "02-subject-verb",
+  "title": "Subject and verb",
+  "unitSlug": "verb-concepts",
+  "order": 2,
+  "standardSummary": "Find the subject and the verb in English sentences; state that they must agree in person and number.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-subj"
+      },
+      {
+        "type": "skill_count",
+        "skill": "subject-verb",
+        "n": 3,
+        "label": "subject–verb"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match-sv"
+      }
+    ]
+  },
+  "teach": "Subject = who/what the verb is about. Subject and verb agree in person and number.",
+  "allowList": {
+    "lemmas": [],
+    "constructions": [
+      "subject-verb",
+      "person and number"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "matching",
+      "short_answer",
+      "cloze",
+      "multi_select"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-subj",
+      "type": "multiple_choice",
+      "prompt": "In “The girls carry water,” the subject is…",
+      "targets": [
+        "subject-verb"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "carry"
+          },
+          {
+            "id": "b",
+            "label": "water"
+          },
+          {
+            "id": "c",
+            "label": "The girls"
+          },
+          {
+            "id": "d",
+            "label": "the"
+          }
+        ],
+        "correctOptionId": "c"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match-sv",
+      "type": "matching",
+      "prompt": "Match sentence to subject.",
+      "targets": [
+        "subject-verb"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "Marcus walks."
+          },
+          {
+            "id": "b",
+            "label": "The soldiers fight."
+          },
+          {
+            "id": "c",
+            "label": "I see the city."
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "Marcus"
+          },
+          {
+            "id": "2",
+            "label": "The soldiers"
+          },
+          {
+            "id": "3",
+            "label": "I"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "ms1",
+      "type": "multi_select",
+      "prompt": "Which pairs agree?",
+      "targets": [
+        "subject-verb"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "The boy run"
+          },
+          {
+            "id": "b",
+            "label": "The boy runs"
+          },
+          {
+            "id": "c",
+            "label": "The boys run"
+          },
+          {
+            "id": "d",
+            "label": "I runs"
+          }
+        ],
+        "correctOptionIds": [
+          "b",
+          "c"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "cl1",
+      "type": "cloze",
+      "prompt": "Choose runs or run.",
+      "targets": [
+        "subject-verb"
+      ],
+      "payload": {
+        "template": "The girl {{1}} home.",
+        "blanks": {
+          "1": [
+            "runs"
+          ]
+        },
+        "wordBank": [
+          "runs",
+          "run"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sa1",
+      "type": "short_answer",
+      "prompt": "What does “subject–verb agreement” mean in plain English?",
+      "targets": [
+        "subject-verb"
+      ],
+      "payload": {
+        "sampleAnswers": [
+          "The verb form matches the subject’s person and number.",
+          "If the subject is singular 3rd person, the verb must be the singular form, etc."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

@@ -1,0 +1,177 @@
+{
+  "slug": "01-ing-ed",
+  "title": "Participles in English: -ing and -ed",
+  "unitSlug": "participle-concepts",
+  "order": 1,
+  "standardSummary": "Identify present participles (-ing) and past participles (-ed/en) and their basic meanings.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-p"
+      },
+      {
+        "type": "skill_count",
+        "skill": "participle concept",
+        "n": 4,
+        "label": "participles EN"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match-p"
+      }
+    ]
+  },
+  "teach": "Present participle: loving/fighting (ongoing). Past participle: loved/captured (often passive/completed).",
+  "allowList": {
+    "lemmas": [],
+    "constructions": [
+      "participle concept"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "matching",
+      "short_answer",
+      "multi_select"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-p",
+      "type": "multiple_choice",
+      "prompt": "In “the fighting soldier,” fighting is…",
+      "targets": [
+        "participle concept"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "a finite past tense only"
+          },
+          {
+            "id": "b",
+            "label": "a present participle describing soldier"
+          },
+          {
+            "id": "c",
+            "label": "a preposition"
+          },
+          {
+            "id": "d",
+            "label": "always future perfect"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match-p",
+      "type": "matching",
+      "prompt": "Match form to label.",
+      "targets": [
+        "participle concept"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "running"
+          },
+          {
+            "id": "b",
+            "label": "captured"
+          },
+          {
+            "id": "c",
+            "label": "having been warned (idea)"
+          },
+          {
+            "id": "d",
+            "label": "writes"
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "present participle"
+          },
+          {
+            "id": "2",
+            "label": "past participle"
+          },
+          {
+            "id": "3",
+            "label": "perfect passive idea"
+          },
+          {
+            "id": "4",
+            "label": "finite verb (not a participle)"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3",
+          "d": "4"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "ms1",
+      "type": "multi_select",
+      "prompt": "Select participles (not finite main verbs alone).",
+      "targets": [
+        "participle concept"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "the broken gate"
+          },
+          {
+            "id": "b",
+            "label": "They break the gate."
+          },
+          {
+            "id": "c",
+            "label": "children laughing"
+          },
+          {
+            "id": "d",
+            "label": "She laughed."
+          }
+        ],
+        "correctOptionIds": [
+          "a",
+          "c"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sa1",
+      "type": "short_answer",
+      "prompt": "Difference: “the conquering army” vs “the conquered city”?",
+      "targets": [
+        "participle concept"
+      ],
+      "payload": {
+        "sampleAnswers": [
+          "Conquering = doing the action; conquered = having received the action.",
+          "Active ongoing vs passive/completed description."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

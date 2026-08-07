@@ -1,0 +1,563 @@
+{
+  "slug": "vocab-v07-third-nouns",
+  "title": "Vocabulary: Kings, soldiers & nature",
+  "unitSlug": "10-third-declension",
+  "order": 5,
+  "standardSummary": "Master this vocabulary set (12 words): match both directions and pass drills.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "match-l2e-0"
+      },
+      {
+        "type": "skill_count",
+        "skill": "vocabulary",
+        "n": 5,
+        "label": "vocab items"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match-e2l"
+      }
+    ]
+  },
+  "teach": "Vocabulary batch v07-third-nouns: rēx, mīles, dux, urbs, lēx, vōx, pater, māter, corpus, nōmen, flūmen, caput",
+  "allowList": {
+    "lemmas": [
+      "rēx",
+      "mīles",
+      "dux",
+      "urbs",
+      "lēx",
+      "vōx",
+      "pater",
+      "māter",
+      "corpus",
+      "nōmen",
+      "flūmen",
+      "caput"
+    ],
+    "constructions": [
+      "vocabulary",
+      "vocab drill",
+      "v07-third-nouns"
+    ],
+    "activityTypes": [
+      "matching",
+      "multiple_choice",
+      "single_form",
+      "translate",
+      "multi_select",
+      "cloze",
+      "short_answer"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "match-l2e-0",
+      "type": "matching",
+      "prompt": "Match each Latin word to its English meaning. (set 1)",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v07-third-nouns"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "leftLabel": "Latin",
+        "rightLabel": "English",
+        "left": [
+          {
+            "id": "l0",
+            "label": "rēx"
+          },
+          {
+            "id": "l1",
+            "label": "mīles"
+          },
+          {
+            "id": "l2",
+            "label": "dux"
+          },
+          {
+            "id": "l3",
+            "label": "urbs"
+          },
+          {
+            "id": "l4",
+            "label": "lēx"
+          },
+          {
+            "id": "l5",
+            "label": "vōx"
+          }
+        ],
+        "right": [
+          {
+            "id": "r0",
+            "label": "king"
+          },
+          {
+            "id": "r1",
+            "label": "soldier"
+          },
+          {
+            "id": "r2",
+            "label": "leader, general"
+          },
+          {
+            "id": "r3",
+            "label": "city"
+          },
+          {
+            "id": "r4",
+            "label": "law"
+          },
+          {
+            "id": "r5",
+            "label": "voice"
+          }
+        ],
+        "pairs": {
+          "l0": "r0",
+          "l1": "r1",
+          "l2": "r2",
+          "l3": "r3",
+          "l4": "r4",
+          "l5": "r5"
+        }
+      }
+    },
+    {
+      "id": "match-l2e-1",
+      "type": "matching",
+      "prompt": "Match each Latin word to its English meaning. (set 2)",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v07-third-nouns"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "leftLabel": "Latin",
+        "rightLabel": "English",
+        "left": [
+          {
+            "id": "l0",
+            "label": "pater"
+          },
+          {
+            "id": "l1",
+            "label": "māter"
+          },
+          {
+            "id": "l2",
+            "label": "corpus"
+          },
+          {
+            "id": "l3",
+            "label": "nōmen"
+          },
+          {
+            "id": "l4",
+            "label": "flūmen"
+          },
+          {
+            "id": "l5",
+            "label": "caput"
+          }
+        ],
+        "right": [
+          {
+            "id": "r0",
+            "label": "father"
+          },
+          {
+            "id": "r1",
+            "label": "mother"
+          },
+          {
+            "id": "r2",
+            "label": "body"
+          },
+          {
+            "id": "r3",
+            "label": "name"
+          },
+          {
+            "id": "r4",
+            "label": "river"
+          },
+          {
+            "id": "r5",
+            "label": "head, capital"
+          }
+        ],
+        "pairs": {
+          "l0": "r0",
+          "l1": "r1",
+          "l2": "r2",
+          "l3": "r3",
+          "l4": "r4",
+          "l5": "r5"
+        }
+      }
+    },
+    {
+      "id": "match-e2l",
+      "type": "matching",
+      "prompt": "Match English meaning to Latin (produce recognition both ways).",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v07-third-nouns"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "leftLabel": "English",
+        "rightLabel": "Latin",
+        "left": [
+          {
+            "id": "l0",
+            "label": "king"
+          },
+          {
+            "id": "l1",
+            "label": "soldier"
+          },
+          {
+            "id": "l2",
+            "label": "leader, general"
+          },
+          {
+            "id": "l3",
+            "label": "city"
+          },
+          {
+            "id": "l4",
+            "label": "law"
+          },
+          {
+            "id": "l5",
+            "label": "voice"
+          }
+        ],
+        "right": [
+          {
+            "id": "r0",
+            "label": "rēx"
+          },
+          {
+            "id": "r1",
+            "label": "mīles"
+          },
+          {
+            "id": "r2",
+            "label": "dux"
+          },
+          {
+            "id": "r3",
+            "label": "urbs"
+          },
+          {
+            "id": "r4",
+            "label": "lēx"
+          },
+          {
+            "id": "r5",
+            "label": "vōx"
+          }
+        ],
+        "pairs": {
+          "l0": "r0",
+          "l1": "r1",
+          "l2": "r2",
+          "l3": "r3",
+          "l4": "r4",
+          "l5": "r5"
+        }
+      }
+    },
+    {
+      "id": "mc-0",
+      "type": "multiple_choice",
+      "prompt": "What does **rēx** mean?",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v07-third-nouns"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "king"
+          },
+          {
+            "id": "b",
+            "label": "soldier"
+          },
+          {
+            "id": "c",
+            "label": "leader, general"
+          },
+          {
+            "id": "d",
+            "label": "city"
+          }
+        ],
+        "correctOptionId": "a"
+      }
+    },
+    {
+      "id": "mc-1",
+      "type": "multiple_choice",
+      "prompt": "What does **mīles** mean?",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v07-third-nouns"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "soldier"
+          },
+          {
+            "id": "b",
+            "label": "king"
+          },
+          {
+            "id": "c",
+            "label": "leader, general"
+          },
+          {
+            "id": "d",
+            "label": "city"
+          }
+        ],
+        "correctOptionId": "a"
+      }
+    },
+    {
+      "id": "mc-2",
+      "type": "multiple_choice",
+      "prompt": "What does **dux** mean?",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v07-third-nouns"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "soldier"
+          },
+          {
+            "id": "b",
+            "label": "city"
+          },
+          {
+            "id": "c",
+            "label": "leader, general"
+          },
+          {
+            "id": "d",
+            "label": "king"
+          }
+        ],
+        "correctOptionId": "c"
+      }
+    },
+    {
+      "id": "mc-3",
+      "type": "multiple_choice",
+      "prompt": "What does **urbs** mean?",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v07-third-nouns"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "soldier"
+          },
+          {
+            "id": "b",
+            "label": "leader, general"
+          },
+          {
+            "id": "c",
+            "label": "city"
+          },
+          {
+            "id": "d",
+            "label": "king"
+          }
+        ],
+        "correctOptionId": "c"
+      }
+    },
+    {
+      "id": "mc-4",
+      "type": "multiple_choice",
+      "prompt": "What does **lēx** mean?",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v07-third-nouns"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "soldier"
+          },
+          {
+            "id": "b",
+            "label": "leader, general"
+          },
+          {
+            "id": "c",
+            "label": "law"
+          },
+          {
+            "id": "d",
+            "label": "king"
+          }
+        ],
+        "correctOptionId": "c"
+      }
+    },
+    {
+      "id": "sf-gloss-0",
+      "type": "single_form",
+      "prompt": "English meaning of **vōx**:",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v07-third-nouns"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "accept": [
+          "voice"
+        ],
+        "hint": "vōcis f."
+      }
+    },
+    {
+      "id": "sf-gloss-1",
+      "type": "single_form",
+      "prompt": "English meaning of **pater**:",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v07-third-nouns"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "accept": [
+          "father"
+        ],
+        "hint": "patris m."
+      }
+    },
+    {
+      "id": "sf-gloss-2",
+      "type": "single_form",
+      "prompt": "English meaning of **māter**:",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v07-third-nouns"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "accept": [
+          "mother"
+        ],
+        "hint": "mātris f."
+      }
+    },
+    {
+      "id": "tr-0",
+      "type": "translate",
+      "prompt": "Translate: **flūmen**",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v07-third-nouns"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "direction": "L2E",
+        "length": "word",
+        "sampleAnswers": [
+          "river"
+        ],
+        "rubric": "Accept common gloss synonyms; macrons optional for Latin."
+      }
+    },
+    {
+      "id": "tr-1",
+      "type": "translate",
+      "prompt": "Translate: **caput**",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v07-third-nouns"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "direction": "L2E",
+        "length": "word",
+        "sampleAnswers": [
+          "head",
+          "capital"
+        ],
+        "rubric": "Accept common gloss synonyms; macrons optional for Latin."
+      }
+    },
+    {
+      "id": "sa-use",
+      "type": "short_answer",
+      "prompt": "Pick any 3 words from this list and write a tiny English sentence that could use each (or one sentence using two). Theme: 3rd-declension high-frequency nouns.",
+      "targets": [
+        "vocabulary",
+        "v07-third-nouns"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "sampleAnswers": [
+          "Any sensible English using three of the batch meanings.",
+          "Student sentences using batch glosses."
+        ]
+      }
+    }
+  ]
+}

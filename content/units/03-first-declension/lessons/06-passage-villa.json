@@ -1,0 +1,211 @@
+{
+  "slug": "06-passage-villa",
+  "title": "Passage: In the villa",
+  "unitSlug": "03-first-declension",
+  "order": 7,
+  "standardSummary": "Read a short 1st-declension passage with sum; answer who/where questions and translate one sentence.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-where"
+      },
+      {
+        "type": "skill_count",
+        "skill": "passage reading",
+        "n": 3,
+        "label": "passage"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "tr-sent"
+      }
+    ]
+  },
+  "teach": "Read continuous Latin: subjects with est/sunt and place with in + abl.",
+  "allowList": {
+    "lemmas": [
+      "puella",
+      "femina",
+      "villa",
+      "aqua",
+      "mensa",
+      "sum"
+    ],
+    "constructions": [
+      "1st declension",
+      "sum",
+      "ablative",
+      "passage reading"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "short_answer",
+      "translate",
+      "multi_select",
+      "cloze",
+      "matching"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-where",
+      "type": "multiple_choice",
+      "prompt": "According to the passage, where is the girl?",
+      "targets": [
+        "passage reading",
+        "ablative"
+      ],
+      "passage": {
+        "title": "In the villa",
+        "latin": "Puella in villā est.\nFēmina quoque in villā est.\nAqua in mēnsā est.\nPuellae sunt laetae.",
+        "notes": "villa = country house · mēnsa = table · laetae = happy (f. pl.) · Use known vocabulary; guess from context only if needed."
+      },
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "In the forest"
+          },
+          {
+            "id": "b",
+            "label": "In the villa"
+          },
+          {
+            "id": "c",
+            "label": "On the road only"
+          },
+          {
+            "id": "d",
+            "label": "In Rome only"
+          }
+        ],
+        "correctOptionId": "b"
+      }
+    },
+    {
+      "id": "mc-who",
+      "type": "multiple_choice",
+      "prompt": "Who else is in the villa?",
+      "targets": [
+        "passage reading"
+      ],
+      "passage": {
+        "title": "In the villa",
+        "latin": "Puella in villā est.\nFēmina quoque in villā est.\nAqua in mēnsā est.\nPuellae sunt laetae.",
+        "notes": "villa = country house · mēnsa = table · laetae = happy (f. pl.) · Use known vocabulary; guess from context only if needed."
+      },
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "Only a poet"
+          },
+          {
+            "id": "b",
+            "label": "A woman (fēmina)"
+          },
+          {
+            "id": "c",
+            "label": "No one"
+          },
+          {
+            "id": "d",
+            "label": "Only water as a person"
+          }
+        ],
+        "correctOptionId": "b"
+      }
+    },
+    {
+      "id": "ms-true",
+      "type": "multi_select",
+      "prompt": "What does the passage say is true?",
+      "targets": [
+        "passage reading"
+      ],
+      "passage": {
+        "title": "In the villa",
+        "latin": "Puella in villā est.\nFēmina quoque in villā est.\nAqua in mēnsā est.\nPuellae sunt laetae.",
+        "notes": "villa = country house · mēnsa = table · laetae = happy (f. pl.) · Use known vocabulary; guess from context only if needed."
+      },
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "There is water on the table."
+          },
+          {
+            "id": "b",
+            "label": "The girls are happy."
+          },
+          {
+            "id": "c",
+            "label": "The girl is alone in Italy forever."
+          },
+          {
+            "id": "d",
+            "label": "A woman is also in the villa."
+          }
+        ],
+        "correctOptionIds": [
+          "a",
+          "b",
+          "d"
+        ]
+      }
+    },
+    {
+      "id": "tr-sent",
+      "type": "translate",
+      "prompt": "Translate this sentence from the passage:\nPuella in villā est.",
+      "targets": [
+        "passage reading",
+        "sum"
+      ],
+      "passage": {
+        "title": "In the villa",
+        "latin": "Puella in villā est.\nFēmina quoque in villā est.\nAqua in mēnsā est.\nPuellae sunt laetae.",
+        "notes": "villa = country house · mēnsa = table · laetae = happy (f. pl.) · Use known vocabulary; guess from context only if needed."
+      },
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "The girl is in the villa.",
+          "The girl is in the country house."
+        ],
+        "rubric": "Use the passage; accurate meaning; macrons optional."
+      }
+    },
+    {
+      "id": "sa-main",
+      "type": "short_answer",
+      "prompt": "In one sentence, what is this passage mainly about?",
+      "targets": [
+        "passage reading"
+      ],
+      "passage": {
+        "title": "In the villa",
+        "latin": "Puella in villā est.\nFēmina quoque in villā est.\nAqua in mēnsā est.\nPuellae sunt laetae.",
+        "notes": "villa = country house · mēnsa = table · laetae = happy (f. pl.) · Use known vocabulary; guess from context only if needed."
+      },
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "sampleAnswers": [
+          "A girl and a woman are in a villa; water is on the table; the girls are happy.",
+          "People in a villa and water on a table."
+        ]
+      }
+    }
+  ]
+}

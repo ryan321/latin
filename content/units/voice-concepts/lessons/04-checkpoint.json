@@ -1,0 +1,181 @@
+{
+  "slug": "04-checkpoint",
+  "title": "Checkpoint — Voice concepts",
+  "unitSlug": "voice-concepts",
+  "order": 4,
+  "standardSummary": "Master active/passive labels, agents, and simple transforms before Latin passive.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc1"
+      },
+      {
+        "type": "skill_count",
+        "skill": "voice concept",
+        "n": 3,
+        "label": "voice cp"
+      },
+      {
+        "type": "skill_count",
+        "skill": "agent concept",
+        "n": 2,
+        "label": "agent cp"
+      }
+    ]
+  },
+  "teach": "Checkpoint before Latin present-system passive.",
+  "allowList": {
+    "lemmas": [],
+    "constructions": [
+      "voice concept",
+      "agent concept"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "matching",
+      "short_answer",
+      "multi_select"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc1",
+      "type": "multiple_choice",
+      "prompt": "Passive voice means the subject…",
+      "targets": [
+        "voice concept"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "always does the action"
+          },
+          {
+            "id": "b",
+            "label": "receives the action"
+          },
+          {
+            "id": "c",
+            "label": "must be plural"
+          },
+          {
+            "id": "d",
+            "label": "cannot have an agent"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match1",
+      "type": "matching",
+      "prompt": "Match.",
+      "targets": [
+        "voice concept"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "is loved"
+          },
+          {
+            "id": "b",
+            "label": "loves"
+          },
+          {
+            "id": "c",
+            "label": "by the queen"
+          },
+          {
+            "id": "d",
+            "label": "with a spear"
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "passive verb idea"
+          },
+          {
+            "id": "2",
+            "label": "active verb idea"
+          },
+          {
+            "id": "3",
+            "label": "agent phrase"
+          },
+          {
+            "id": "4",
+            "label": "means/instrument"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3",
+          "d": "4"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "ms1",
+      "type": "multi_select",
+      "prompt": "Select correct statements.",
+      "targets": [
+        "voice concept"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "Active: subject does the action."
+          },
+          {
+            "id": "b",
+            "label": "Passive can omit the agent."
+          },
+          {
+            "id": "c",
+            "label": "Agent is always a tense."
+          },
+          {
+            "id": "d",
+            "label": "Latin will use special passive endings."
+          }
+        ],
+        "correctOptionIds": [
+          "a",
+          "b",
+          "d"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sa1",
+      "type": "short_answer",
+      "prompt": "Why learn voice in English before Latin -tur endings?",
+      "targets": [
+        "voice concept"
+      ],
+      "payload": {
+        "sampleAnswers": [
+          "So -tur means something you already understand (is …ed), not a mystery ending.",
+          "Meaning first; morphology second."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

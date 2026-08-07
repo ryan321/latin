@@ -1,0 +1,180 @@
+{
+  "slug": "05-choose-tense",
+  "title": "Choosing the right tense",
+  "unitSlug": "tense-meanings",
+  "order": 5,
+  "standardSummary": "Given a situation, choose the best English tense label Year 1 Latin will need.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-ch"
+      },
+      {
+        "type": "skill_count",
+        "skill": "tense meanings",
+        "n": 4,
+        "label": "choose tense"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match-ch"
+      }
+    ]
+  },
+  "teach": "Apply the full Year 1 tense map to new English sentences.",
+  "allowList": {
+    "lemmas": [],
+    "constructions": [
+      "tense meanings",
+      "imperfect meaning",
+      "perfect meaning",
+      "future meaning"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "matching",
+      "short_answer",
+      "multi_select"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-ch",
+      "type": "multiple_choice",
+      "prompt": "Background: “While the army was approaching…” — best label:",
+      "targets": [
+        "imperfect meaning"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "future perfect"
+          },
+          {
+            "id": "b",
+            "label": "past ongoing (imperfect idea)"
+          },
+          {
+            "id": "c",
+            "label": "present only"
+          },
+          {
+            "id": "d",
+            "label": "noun case"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match-ch",
+      "type": "matching",
+      "prompt": "Best label for each.",
+      "targets": [
+        "tense meanings"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "Rome will be great."
+          },
+          {
+            "id": "b",
+            "label": "Rome was being built for years."
+          },
+          {
+            "id": "c",
+            "label": "Romulus founded the city."
+          },
+          {
+            "id": "d",
+            "label": "They had fled before dawn."
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "future"
+          },
+          {
+            "id": "2",
+            "label": "past ongoing"
+          },
+          {
+            "id": "3",
+            "label": "completed past"
+          },
+          {
+            "id": "4",
+            "label": "pluperfect idea"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3",
+          "d": "4"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "ms1",
+      "type": "multi_select",
+      "prompt": "Select pairs that contrast ongoing vs completed past.",
+      "targets": [
+        "tense meanings"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "was fighting vs fought"
+          },
+          {
+            "id": "b",
+            "label": "will fight vs will have fought"
+          },
+          {
+            "id": "c",
+            "label": "is a noun vs is a verb"
+          },
+          {
+            "id": "d",
+            "label": "used to train vs trained once and stopped"
+          }
+        ],
+        "correctOptionIds": [
+          "a",
+          "d"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sa1",
+      "type": "short_answer",
+      "prompt": "List the Year 1 tense ideas in plain English.",
+      "targets": [
+        "tense meanings"
+      ],
+      "payload": {
+        "sampleAnswers": [
+          "present; past ongoing/habitual; future; completed past; had done; will have done",
+          "present, imperfect idea, future, perfect, pluperfect, future perfect"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

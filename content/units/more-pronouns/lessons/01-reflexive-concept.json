@@ -1,0 +1,169 @@
+{
+  "slug": "01-reflexive-concept",
+  "title": "Reflexive meaning (English first)",
+  "unitSlug": "more-pronouns",
+  "order": 1,
+  "standardSummary": "Explain reflexive pronouns in English (himself/herself/themselves) vs ordinary object pronouns.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-ref"
+      },
+      {
+        "type": "skill_count",
+        "skill": "reflexive concept",
+        "n": 3,
+        "label": "reflexive idea"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match-r"
+      }
+    ]
+  },
+  "teach": "Reflexive: object refers to the same person as the subject (he sees himself).",
+  "allowList": {
+    "lemmas": [],
+    "constructions": [
+      "reflexive concept",
+      "pronouns"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "matching",
+      "short_answer",
+      "multi_select"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-ref",
+      "type": "multiple_choice",
+      "prompt": "In “Marcus sees himself,” himself is…",
+      "targets": [
+        "reflexive concept"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "a different person from Marcus"
+          },
+          {
+            "id": "b",
+            "label": "the same person as the subject"
+          },
+          {
+            "id": "c",
+            "label": "always a tense"
+          },
+          {
+            "id": "d",
+            "label": "a preposition"
+          }
+        ],
+        "correctOptionId": "b"
+      }
+    },
+    {
+      "id": "match-r",
+      "type": "matching",
+      "prompt": "Match.",
+      "targets": [
+        "reflexive concept"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "She teaches them."
+          },
+          {
+            "id": "b",
+            "label": "She teaches herself."
+          },
+          {
+            "id": "c",
+            "label": "They wash themselves."
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "ordinary object (other people)"
+          },
+          {
+            "id": "2",
+            "label": "reflexive (same as subject)"
+          },
+          {
+            "id": "3",
+            "label": "reflexive plural"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3"
+        }
+      }
+    },
+    {
+      "id": "ms1",
+      "type": "multi_select",
+      "prompt": "Which English sentences use a reflexive idea?",
+      "targets": [
+        "reflexive concept"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "The boy washes himself."
+          },
+          {
+            "id": "b",
+            "label": "The boy washes the horse."
+          },
+          {
+            "id": "c",
+            "label": "They prepared themselves."
+          },
+          {
+            "id": "d",
+            "label": "They prepared dinner for us."
+          }
+        ],
+        "correctOptionIds": [
+          "a",
+          "c"
+        ]
+      }
+    },
+    {
+      "id": "sa1",
+      "type": "short_answer",
+      "prompt": "In one sentence: what makes a pronoun reflexive?",
+      "targets": [
+        "reflexive concept"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "sampleAnswers": [
+          "It refers back to the subject of its clause.",
+          "Object is the same person/thing as the subject."
+        ]
+      }
+    }
+  ]
+}

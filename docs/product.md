@@ -31,6 +31,18 @@ Take inspiration from Henle’s grammar-first high-school style:
 
 Do **not** mimic Henle’s exact unit layout, exercise wording, or copyrighted content. Lessons and questions are original.
 
+### English grammar before Latin (standing rule — all years)
+
+**Never assume the student already understands a grammar concept at the depth Latin will require.**
+
+When introducing a new *type* of idea (tense, voice, agreement, relative clauses, comparison, participles, mood later, etc.):
+
+1. Teach and practice it in **English / plain language** until the lesson standard is met.  
+2. Only then teach the **Latin forms or syntax** that encode that idea.  
+3. Give **enough lessons** for real grasp—not a one-line “reminder” before a full paradigm.
+
+Models already in the course: **parts of speech** and **case meanings** before charts. Extend that pattern everywhere (see `docs/curriculum-principles.md`).
+
 ### Pronunciation
 
 **Classical** pronunciation. Early lessons introduce vowels, consonants, stress, and macrons. Spoken audio is optional later; written guidance is enough for v1.
@@ -56,7 +68,8 @@ Exact lesson count can grow over time. The curriculum should eventually cover ro
 | Pronouns | Personal, demonstrative, relative (intro) |
 | Verbs | Present system through perfect system for regular conjugations; *sum* / *possum*; principal parts habit |
 | Syntax | Basic sentence patterns; prepositional phrases; agreement; intro to subordinate ideas as appropriate |
-| Skills | Read short Latin sentences; write short Latin; parse forms; vocabulary retention |
+| Vocabulary | Periodic batches + drills/quizzes; recycled in passages |
+| Skills | Read short Latin **sentences and passages**; answer comprehension questions; write short Latin; parse forms; vocabulary retention |
 | Culture | Republic → early Empire snapshot; daily life; key figures/places; army & provinces at a high level |
 
 v1 implementation can ship a **strong first arc** (e.g. 1st declension, *sum*, basic cases, intro culture) while the full Year 1 outline remains the product north star.

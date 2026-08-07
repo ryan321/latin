@@ -1,0 +1,565 @@
+{
+  "slug": "vocab-v02-being-action",
+  "title": "Vocabulary: Being & daily actions",
+  "unitSlug": "04-first-conjugation",
+  "order": 5,
+  "standardSummary": "Master this vocabulary set (12 words): match both directions and pass drills.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "match-l2e-0"
+      },
+      {
+        "type": "skill_count",
+        "skill": "vocabulary",
+        "n": 5,
+        "label": "vocab items"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match-e2l"
+      }
+    ]
+  },
+  "teach": "Vocabulary batch v02-being-action: sum, amō, portō, labōrō, habitō, spectō, vocō, parō, servō, nāvigō, superō, nōn",
+  "allowList": {
+    "lemmas": [
+      "sum",
+      "amō",
+      "portō",
+      "labōrō",
+      "habitō",
+      "spectō",
+      "vocō",
+      "parō",
+      "servō",
+      "nāvigō",
+      "superō",
+      "nōn"
+    ],
+    "constructions": [
+      "vocabulary",
+      "vocab drill",
+      "v02-being-action"
+    ],
+    "activityTypes": [
+      "matching",
+      "multiple_choice",
+      "single_form",
+      "translate",
+      "multi_select",
+      "cloze",
+      "short_answer"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "match-l2e-0",
+      "type": "matching",
+      "prompt": "Match each Latin word to its English meaning. (set 1)",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v02-being-action"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "leftLabel": "Latin",
+        "rightLabel": "English",
+        "left": [
+          {
+            "id": "l0",
+            "label": "sum"
+          },
+          {
+            "id": "l1",
+            "label": "amō"
+          },
+          {
+            "id": "l2",
+            "label": "portō"
+          },
+          {
+            "id": "l3",
+            "label": "labōrō"
+          },
+          {
+            "id": "l4",
+            "label": "habitō"
+          },
+          {
+            "id": "l5",
+            "label": "spectō"
+          }
+        ],
+        "right": [
+          {
+            "id": "r0",
+            "label": "be, exist"
+          },
+          {
+            "id": "r1",
+            "label": "love, like"
+          },
+          {
+            "id": "r2",
+            "label": "carry, bring"
+          },
+          {
+            "id": "r3",
+            "label": "work"
+          },
+          {
+            "id": "r4",
+            "label": "live, dwell"
+          },
+          {
+            "id": "r5",
+            "label": "watch, look at"
+          }
+        ],
+        "pairs": {
+          "l0": "r0",
+          "l1": "r1",
+          "l2": "r2",
+          "l3": "r3",
+          "l4": "r4",
+          "l5": "r5"
+        }
+      }
+    },
+    {
+      "id": "match-l2e-1",
+      "type": "matching",
+      "prompt": "Match each Latin word to its English meaning. (set 2)",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v02-being-action"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "leftLabel": "Latin",
+        "rightLabel": "English",
+        "left": [
+          {
+            "id": "l0",
+            "label": "vocō"
+          },
+          {
+            "id": "l1",
+            "label": "parō"
+          },
+          {
+            "id": "l2",
+            "label": "servō"
+          },
+          {
+            "id": "l3",
+            "label": "nāvigō"
+          },
+          {
+            "id": "l4",
+            "label": "superō"
+          },
+          {
+            "id": "l5",
+            "label": "nōn"
+          }
+        ],
+        "right": [
+          {
+            "id": "r0",
+            "label": "call"
+          },
+          {
+            "id": "r1",
+            "label": "prepare, get ready"
+          },
+          {
+            "id": "r2",
+            "label": "save, keep, guard"
+          },
+          {
+            "id": "r3",
+            "label": "sail"
+          },
+          {
+            "id": "r4",
+            "label": "overcome, surpass"
+          },
+          {
+            "id": "r5",
+            "label": "not"
+          }
+        ],
+        "pairs": {
+          "l0": "r0",
+          "l1": "r1",
+          "l2": "r2",
+          "l3": "r3",
+          "l4": "r4",
+          "l5": "r5"
+        }
+      }
+    },
+    {
+      "id": "match-e2l",
+      "type": "matching",
+      "prompt": "Match English meaning to Latin (produce recognition both ways).",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v02-being-action"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "leftLabel": "English",
+        "rightLabel": "Latin",
+        "left": [
+          {
+            "id": "l0",
+            "label": "be, exist"
+          },
+          {
+            "id": "l1",
+            "label": "love, like"
+          },
+          {
+            "id": "l2",
+            "label": "carry, bring"
+          },
+          {
+            "id": "l3",
+            "label": "work"
+          },
+          {
+            "id": "l4",
+            "label": "live, dwell"
+          },
+          {
+            "id": "l5",
+            "label": "watch, look at"
+          }
+        ],
+        "right": [
+          {
+            "id": "r0",
+            "label": "sum"
+          },
+          {
+            "id": "r1",
+            "label": "amō"
+          },
+          {
+            "id": "r2",
+            "label": "portō"
+          },
+          {
+            "id": "r3",
+            "label": "labōrō"
+          },
+          {
+            "id": "r4",
+            "label": "habitō"
+          },
+          {
+            "id": "r5",
+            "label": "spectō"
+          }
+        ],
+        "pairs": {
+          "l0": "r0",
+          "l1": "r1",
+          "l2": "r2",
+          "l3": "r3",
+          "l4": "r4",
+          "l5": "r5"
+        }
+      }
+    },
+    {
+      "id": "mc-0",
+      "type": "multiple_choice",
+      "prompt": "What does **sum** mean?",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v02-being-action"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "carry, bring"
+          },
+          {
+            "id": "b",
+            "label": "work"
+          },
+          {
+            "id": "c",
+            "label": "be, exist"
+          },
+          {
+            "id": "d",
+            "label": "love, like"
+          }
+        ],
+        "correctOptionId": "c"
+      }
+    },
+    {
+      "id": "mc-1",
+      "type": "multiple_choice",
+      "prompt": "What does **amō** mean?",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v02-being-action"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "be, exist"
+          },
+          {
+            "id": "b",
+            "label": "carry, bring"
+          },
+          {
+            "id": "c",
+            "label": "work"
+          },
+          {
+            "id": "d",
+            "label": "love, like"
+          }
+        ],
+        "correctOptionId": "d"
+      }
+    },
+    {
+      "id": "mc-2",
+      "type": "multiple_choice",
+      "prompt": "What does **portō** mean?",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v02-being-action"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "carry, bring"
+          },
+          {
+            "id": "b",
+            "label": "be, exist"
+          },
+          {
+            "id": "c",
+            "label": "love, like"
+          },
+          {
+            "id": "d",
+            "label": "work"
+          }
+        ],
+        "correctOptionId": "a"
+      }
+    },
+    {
+      "id": "mc-3",
+      "type": "multiple_choice",
+      "prompt": "What does **labōrō** mean?",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v02-being-action"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "work"
+          },
+          {
+            "id": "b",
+            "label": "be, exist"
+          },
+          {
+            "id": "c",
+            "label": "love, like"
+          },
+          {
+            "id": "d",
+            "label": "carry, bring"
+          }
+        ],
+        "correctOptionId": "a"
+      }
+    },
+    {
+      "id": "mc-4",
+      "type": "multiple_choice",
+      "prompt": "What does **habitō** mean?",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v02-being-action"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "be, exist"
+          },
+          {
+            "id": "b",
+            "label": "love, like"
+          },
+          {
+            "id": "c",
+            "label": "carry, bring"
+          },
+          {
+            "id": "d",
+            "label": "live, dwell"
+          }
+        ],
+        "correctOptionId": "d"
+      }
+    },
+    {
+      "id": "sf-gloss-0",
+      "type": "single_form",
+      "prompt": "English meaning of **spectō**:",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v02-being-action"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "accept": [
+          "watch",
+          "look at"
+        ],
+        "hint": "spectāre"
+      }
+    },
+    {
+      "id": "sf-gloss-1",
+      "type": "single_form",
+      "prompt": "English meaning of **vocō**:",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v02-being-action"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "accept": [
+          "call"
+        ],
+        "hint": "vocāre"
+      }
+    },
+    {
+      "id": "sf-gloss-2",
+      "type": "single_form",
+      "prompt": "English meaning of **parō**:",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v02-being-action"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "accept": [
+          "prepare",
+          "get ready"
+        ],
+        "hint": "parāre"
+      }
+    },
+    {
+      "id": "tr-0",
+      "type": "translate",
+      "prompt": "Translate: **superō**",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v02-being-action"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "direction": "L2E",
+        "length": "word",
+        "sampleAnswers": [
+          "overcome",
+          "surpass"
+        ],
+        "rubric": "Accept common gloss synonyms; macrons optional for Latin."
+      }
+    },
+    {
+      "id": "tr-1",
+      "type": "translate",
+      "prompt": "Translate: **nōn**",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v02-being-action"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "direction": "L2E",
+        "length": "word",
+        "sampleAnswers": [
+          "not"
+        ],
+        "rubric": "Accept common gloss synonyms; macrons optional for Latin."
+      }
+    },
+    {
+      "id": "sa-use",
+      "type": "short_answer",
+      "prompt": "Pick any 3 words from this list and write a tiny English sentence that could use each (or one sentence using two). Theme: sum + 1st conjugation verbs.",
+      "targets": [
+        "vocabulary",
+        "v02-being-action"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "sampleAnswers": [
+          "Any sensible English using three of the batch meanings.",
+          "Student sentences using batch glosses."
+        ]
+      }
+    }
+  ]
+}

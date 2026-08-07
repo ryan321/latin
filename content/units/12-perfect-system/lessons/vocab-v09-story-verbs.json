@@ -1,0 +1,589 @@
+{
+  "slug": "vocab-v09-story-verbs",
+  "title": "Vocabulary: Story & foundation",
+  "unitSlug": "12-perfect-system",
+  "order": 5,
+  "standardSummary": "Master this vocabulary set (10 words): match both directions and pass drills.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "match-l2e-0"
+      },
+      {
+        "type": "skill_count",
+        "skill": "vocabulary",
+        "n": 5,
+        "label": "vocab items"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match-e2l"
+      }
+    ]
+  },
+  "teach": "Vocabulary batch v09-story-verbs: veniō, audiō, inveniō, mūniō, sciō, condō, pugnō, pāx, hostis, arma",
+  "allowList": {
+    "lemmas": [
+      "veniō",
+      "audiō",
+      "inveniō",
+      "mūniō",
+      "sciō",
+      "condō",
+      "pugnō",
+      "pāx",
+      "hostis",
+      "arma"
+    ],
+    "constructions": [
+      "vocabulary",
+      "vocab drill",
+      "v09-story-verbs"
+    ],
+    "activityTypes": [
+      "matching",
+      "multiple_choice",
+      "single_form",
+      "translate",
+      "multi_select",
+      "cloze",
+      "short_answer"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "match-l2e-0",
+      "type": "matching",
+      "prompt": "Match each Latin word to its English meaning. (set 1)",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v09-story-verbs"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "leftLabel": "Latin",
+        "rightLabel": "English",
+        "left": [
+          {
+            "id": "l0",
+            "label": "veniō"
+          },
+          {
+            "id": "l1",
+            "label": "audiō"
+          },
+          {
+            "id": "l2",
+            "label": "inveniō"
+          },
+          {
+            "id": "l3",
+            "label": "mūniō"
+          },
+          {
+            "id": "l4",
+            "label": "sciō"
+          }
+        ],
+        "right": [
+          {
+            "id": "r0",
+            "label": "come"
+          },
+          {
+            "id": "r1",
+            "label": "hear, listen"
+          },
+          {
+            "id": "r2",
+            "label": "find, invent"
+          },
+          {
+            "id": "r3",
+            "label": "fortify, build (walls)"
+          },
+          {
+            "id": "r4",
+            "label": "know"
+          }
+        ],
+        "pairs": {
+          "l0": "r0",
+          "l1": "r1",
+          "l2": "r2",
+          "l3": "r3",
+          "l4": "r4"
+        }
+      }
+    },
+    {
+      "id": "match-l2e-1",
+      "type": "matching",
+      "prompt": "Match each Latin word to its English meaning. (set 2)",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v09-story-verbs"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "leftLabel": "Latin",
+        "rightLabel": "English",
+        "left": [
+          {
+            "id": "l0",
+            "label": "condō"
+          },
+          {
+            "id": "l1",
+            "label": "pugnō"
+          },
+          {
+            "id": "l2",
+            "label": "pāx"
+          },
+          {
+            "id": "l3",
+            "label": "hostis"
+          },
+          {
+            "id": "l4",
+            "label": "arma"
+          }
+        ],
+        "right": [
+          {
+            "id": "r0",
+            "label": "found, establish"
+          },
+          {
+            "id": "r1",
+            "label": "fight"
+          },
+          {
+            "id": "r2",
+            "label": "peace"
+          },
+          {
+            "id": "r3",
+            "label": "enemy"
+          },
+          {
+            "id": "r4",
+            "label": "arms, weapons"
+          }
+        ],
+        "pairs": {
+          "l0": "r0",
+          "l1": "r1",
+          "l2": "r2",
+          "l3": "r3",
+          "l4": "r4"
+        }
+      }
+    },
+    {
+      "id": "match-e2l",
+      "type": "matching",
+      "prompt": "Match English meaning to Latin (produce recognition both ways).",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v09-story-verbs"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "leftLabel": "English",
+        "rightLabel": "Latin",
+        "left": [
+          {
+            "id": "l0",
+            "label": "come"
+          },
+          {
+            "id": "l1",
+            "label": "hear, listen"
+          },
+          {
+            "id": "l2",
+            "label": "find, invent"
+          },
+          {
+            "id": "l3",
+            "label": "fortify, build (walls)"
+          },
+          {
+            "id": "l4",
+            "label": "know"
+          },
+          {
+            "id": "l5",
+            "label": "found, establish"
+          }
+        ],
+        "right": [
+          {
+            "id": "r0",
+            "label": "veniō"
+          },
+          {
+            "id": "r1",
+            "label": "audiō"
+          },
+          {
+            "id": "r2",
+            "label": "inveniō"
+          },
+          {
+            "id": "r3",
+            "label": "mūniō"
+          },
+          {
+            "id": "r4",
+            "label": "sciō"
+          },
+          {
+            "id": "r5",
+            "label": "condō"
+          }
+        ],
+        "pairs": {
+          "l0": "r0",
+          "l1": "r1",
+          "l2": "r2",
+          "l3": "r3",
+          "l4": "r4",
+          "l5": "r5"
+        }
+      }
+    },
+    {
+      "id": "mc-0",
+      "type": "multiple_choice",
+      "prompt": "What does **veniō** mean?",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v09-story-verbs"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "find, invent"
+          },
+          {
+            "id": "b",
+            "label": "fortify, build (walls)"
+          },
+          {
+            "id": "c",
+            "label": "come"
+          },
+          {
+            "id": "d",
+            "label": "hear, listen"
+          }
+        ],
+        "correctOptionId": "c"
+      }
+    },
+    {
+      "id": "mc-1",
+      "type": "multiple_choice",
+      "prompt": "What does **audiō** mean?",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v09-story-verbs"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "fortify, build (walls)"
+          },
+          {
+            "id": "b",
+            "label": "hear, listen"
+          },
+          {
+            "id": "c",
+            "label": "come"
+          },
+          {
+            "id": "d",
+            "label": "find, invent"
+          }
+        ],
+        "correctOptionId": "b"
+      }
+    },
+    {
+      "id": "mc-2",
+      "type": "multiple_choice",
+      "prompt": "What does **inveniō** mean?",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v09-story-verbs"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "find, invent"
+          },
+          {
+            "id": "b",
+            "label": "come"
+          },
+          {
+            "id": "c",
+            "label": "hear, listen"
+          },
+          {
+            "id": "d",
+            "label": "fortify, build (walls)"
+          }
+        ],
+        "correctOptionId": "a"
+      }
+    },
+    {
+      "id": "mc-3",
+      "type": "multiple_choice",
+      "prompt": "What does **mūniō** mean?",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v09-story-verbs"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "fortify, build (walls)"
+          },
+          {
+            "id": "b",
+            "label": "come"
+          },
+          {
+            "id": "c",
+            "label": "hear, listen"
+          },
+          {
+            "id": "d",
+            "label": "find, invent"
+          }
+        ],
+        "correctOptionId": "a"
+      }
+    },
+    {
+      "id": "mc-4",
+      "type": "multiple_choice",
+      "prompt": "What does **sciō** mean?",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v09-story-verbs"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "find, invent"
+          },
+          {
+            "id": "b",
+            "label": "know"
+          },
+          {
+            "id": "c",
+            "label": "come"
+          },
+          {
+            "id": "d",
+            "label": "hear, listen"
+          }
+        ],
+        "correctOptionId": "b"
+      }
+    },
+    {
+      "id": "sf-gloss-0",
+      "type": "single_form",
+      "prompt": "English meaning of **condō**:",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v09-story-verbs"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "accept": [
+          "found",
+          "establish"
+        ],
+        "hint": "condere, condidī"
+      }
+    },
+    {
+      "id": "sf-gloss-1",
+      "type": "single_form",
+      "prompt": "English meaning of **pugnō**:",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v09-story-verbs"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "accept": [
+          "fight"
+        ],
+        "hint": "pugnāre"
+      }
+    },
+    {
+      "id": "sf-gloss-2",
+      "type": "single_form",
+      "prompt": "English meaning of **pāx**:",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v09-story-verbs"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "accept": [
+          "peace"
+        ],
+        "hint": "pācis f."
+      }
+    },
+    {
+      "id": "tr-0",
+      "type": "translate",
+      "prompt": "Translate: **hostis**",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v09-story-verbs"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "direction": "L2E",
+        "length": "word",
+        "sampleAnswers": [
+          "enemy"
+        ],
+        "rubric": "Accept common gloss synonyms; macrons optional for Latin."
+      }
+    },
+    {
+      "id": "tr-1",
+      "type": "translate",
+      "prompt": "Translate: **arma**",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v09-story-verbs"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "direction": "L2E",
+        "length": "word",
+        "sampleAnswers": [
+          "arms",
+          "weapons"
+        ],
+        "rubric": "Accept common gloss synonyms; macrons optional for Latin."
+      }
+    },
+    {
+      "id": "ms-verbs",
+      "type": "multi_select",
+      "prompt": "Select all **verbs** in this list.",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v09-story-verbs"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "n0",
+            "label": "pāx"
+          },
+          {
+            "id": "n1",
+            "label": "hostis"
+          },
+          {
+            "id": "n2",
+            "label": "arma"
+          },
+          {
+            "id": "v0",
+            "label": "veniō"
+          },
+          {
+            "id": "v1",
+            "label": "audiō"
+          },
+          {
+            "id": "v2",
+            "label": "inveniō"
+          }
+        ],
+        "correctOptionIds": [
+          "v0",
+          "v1",
+          "v2"
+        ]
+      }
+    },
+    {
+      "id": "sa-use",
+      "type": "short_answer",
+      "prompt": "Pick any 3 words from this list and write a tiny English sentence that could use each (or one sentence using two). Theme: Perfect-system storytelling words.",
+      "targets": [
+        "vocabulary",
+        "v09-story-verbs"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "sampleAnswers": [
+          "Any sensible English using three of the batch meanings.",
+          "Student sentences using batch glosses."
+        ]
+      }
+    }
+  ]
+}

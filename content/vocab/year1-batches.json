@@ -1,0 +1,1049 @@
+{
+  "version": 1,
+  "batches": [
+    {
+      "id": "v01-family-place",
+      "insertInUnit": "03-first-declension",
+      "order": 5,
+      "title": "Vocabulary: Family & places",
+      "theme": "1st-declension core nouns",
+      "entries": [
+        {
+          "lemma": "puella",
+          "pos": "noun",
+          "info": "puellae f.",
+          "gloss": "girl"
+        },
+        {
+          "lemma": "fēmina",
+          "pos": "noun",
+          "info": "fēminae f.",
+          "gloss": "woman"
+        },
+        {
+          "lemma": "terra",
+          "pos": "noun",
+          "info": "terrae f.",
+          "gloss": "land, earth, country"
+        },
+        {
+          "lemma": "aqua",
+          "pos": "noun",
+          "info": "aquae f.",
+          "gloss": "water"
+        },
+        {
+          "lemma": "via",
+          "pos": "noun",
+          "info": "viae f.",
+          "gloss": "road, way"
+        },
+        {
+          "lemma": "villa",
+          "pos": "noun",
+          "info": "villae f.",
+          "gloss": "country house, villa"
+        },
+        {
+          "lemma": "silva",
+          "pos": "noun",
+          "info": "silvae f.",
+          "gloss": "forest, woods"
+        },
+        {
+          "lemma": "patria",
+          "pos": "noun",
+          "info": "patriae f.",
+          "gloss": "fatherland, country"
+        },
+        {
+          "lemma": "porta",
+          "pos": "noun",
+          "info": "portae f.",
+          "gloss": "gate"
+        },
+        {
+          "lemma": "mēnsa",
+          "pos": "noun",
+          "info": "mēnsae f.",
+          "gloss": "table"
+        },
+        {
+          "lemma": "Rōma",
+          "pos": "noun",
+          "info": "Rōmae f.",
+          "gloss": "Rome"
+        },
+        {
+          "lemma": "pecūnia",
+          "pos": "noun",
+          "info": "pecūniae f.",
+          "gloss": "money"
+        }
+      ]
+    },
+    {
+      "id": "v02-being-action",
+      "insertInUnit": "04-first-conjugation",
+      "order": 4,
+      "title": "Vocabulary: Being & daily actions",
+      "theme": "sum + 1st conjugation verbs",
+      "entries": [
+        {
+          "lemma": "sum",
+          "pos": "verb",
+          "info": "esse, fuī",
+          "gloss": "be, exist"
+        },
+        {
+          "lemma": "amō",
+          "pos": "verb",
+          "info": "amāre, amāvī",
+          "gloss": "love, like"
+        },
+        {
+          "lemma": "portō",
+          "pos": "verb",
+          "info": "portāre",
+          "gloss": "carry, bring"
+        },
+        {
+          "lemma": "labōrō",
+          "pos": "verb",
+          "info": "labōrāre",
+          "gloss": "work"
+        },
+        {
+          "lemma": "habitō",
+          "pos": "verb",
+          "info": "habitāre",
+          "gloss": "live, dwell"
+        },
+        {
+          "lemma": "spectō",
+          "pos": "verb",
+          "info": "spectāre",
+          "gloss": "watch, look at"
+        },
+        {
+          "lemma": "vocō",
+          "pos": "verb",
+          "info": "vocāre",
+          "gloss": "call"
+        },
+        {
+          "lemma": "parō",
+          "pos": "verb",
+          "info": "parāre",
+          "gloss": "prepare, get ready"
+        },
+        {
+          "lemma": "servō",
+          "pos": "verb",
+          "info": "servāre",
+          "gloss": "save, keep, guard"
+        },
+        {
+          "lemma": "nāvigō",
+          "pos": "verb",
+          "info": "nāvigāre",
+          "gloss": "sail"
+        },
+        {
+          "lemma": "superō",
+          "pos": "verb",
+          "info": "superāre",
+          "gloss": "overcome, surpass"
+        },
+        {
+          "lemma": "nōn",
+          "pos": "adverb",
+          "info": "indeclinable",
+          "gloss": "not"
+        }
+      ]
+    },
+    {
+      "id": "v03-men-tools",
+      "insertInUnit": "05-second-declension",
+      "order": 3,
+      "title": "Vocabulary: Men, tools & war",
+      "theme": "2nd-declension nouns",
+      "entries": [
+        {
+          "lemma": "servus",
+          "pos": "noun",
+          "info": "servī m.",
+          "gloss": "slave, servant"
+        },
+        {
+          "lemma": "dominus",
+          "pos": "noun",
+          "info": "dominī m.",
+          "gloss": "master, lord"
+        },
+        {
+          "lemma": "amīcus",
+          "pos": "noun",
+          "info": "amīcī m.",
+          "gloss": "friend"
+        },
+        {
+          "lemma": "equus",
+          "pos": "noun",
+          "info": "equī m.",
+          "gloss": "horse"
+        },
+        {
+          "lemma": "ager",
+          "pos": "noun",
+          "info": "agrī m.",
+          "gloss": "field"
+        },
+        {
+          "lemma": "bellum",
+          "pos": "noun",
+          "info": "bellī n.",
+          "gloss": "war"
+        },
+        {
+          "lemma": "oppidum",
+          "pos": "noun",
+          "info": "oppidī n.",
+          "gloss": "town"
+        },
+        {
+          "lemma": "verbum",
+          "pos": "noun",
+          "info": "verbī n.",
+          "gloss": "word"
+        },
+        {
+          "lemma": "gladius",
+          "pos": "noun",
+          "info": "gladiī m.",
+          "gloss": "sword"
+        },
+        {
+          "lemma": "fīlius",
+          "pos": "noun",
+          "info": "fīliī m.",
+          "gloss": "son"
+        },
+        {
+          "lemma": "deus",
+          "pos": "noun",
+          "info": "deī m.",
+          "gloss": "god"
+        },
+        {
+          "lemma": "populus",
+          "pos": "noun",
+          "info": "populī m.",
+          "gloss": "people, nation"
+        }
+      ]
+    },
+    {
+      "id": "v04-describe",
+      "insertInUnit": "06-adjectives",
+      "order": 2,
+      "title": "Vocabulary: Describing words",
+      "theme": "1st/2nd adjectives",
+      "entries": [
+        {
+          "lemma": "bonus",
+          "pos": "adj",
+          "info": "bona, bonum",
+          "gloss": "good"
+        },
+        {
+          "lemma": "malus",
+          "pos": "adj",
+          "info": "mala, malum",
+          "gloss": "bad, evil"
+        },
+        {
+          "lemma": "magnus",
+          "pos": "adj",
+          "info": "magna, magnum",
+          "gloss": "great, large"
+        },
+        {
+          "lemma": "parvus",
+          "pos": "adj",
+          "info": "parva, parvum",
+          "gloss": "small, little"
+        },
+        {
+          "lemma": "multus",
+          "pos": "adj",
+          "info": "multa, multum",
+          "gloss": "much, many"
+        },
+        {
+          "lemma": "longus",
+          "pos": "adj",
+          "info": "longa, longum",
+          "gloss": "long"
+        },
+        {
+          "lemma": "altus",
+          "pos": "adj",
+          "info": "alta, altum",
+          "gloss": "high, deep"
+        },
+        {
+          "lemma": "novus",
+          "pos": "adj",
+          "info": "nova, novum",
+          "gloss": "new"
+        },
+        {
+          "lemma": "vērus",
+          "pos": "adj",
+          "info": "vēra, vērum",
+          "gloss": "true"
+        },
+        {
+          "lemma": "pulcher",
+          "pos": "adj",
+          "info": "pulchra, pulchrum",
+          "gloss": "beautiful, handsome"
+        }
+      ]
+    },
+    {
+      "id": "v05-warn-see",
+      "insertInUnit": "07-second-conjugation",
+      "order": 2,
+      "title": "Vocabulary: Warn, see, have",
+      "theme": "2nd conjugation & related",
+      "entries": [
+        {
+          "lemma": "moneō",
+          "pos": "verb",
+          "info": "monēre, monuī",
+          "gloss": "warn, advise"
+        },
+        {
+          "lemma": "videō",
+          "pos": "verb",
+          "info": "vidēre, vīdī",
+          "gloss": "see"
+        },
+        {
+          "lemma": "habeō",
+          "pos": "verb",
+          "info": "habēre, habuī",
+          "gloss": "have, hold"
+        },
+        {
+          "lemma": "timeō",
+          "pos": "verb",
+          "info": "timēre",
+          "gloss": "fear"
+        },
+        {
+          "lemma": "teneō",
+          "pos": "verb",
+          "info": "tenēre, tenuī",
+          "gloss": "hold, keep"
+        },
+        {
+          "lemma": "doceō",
+          "pos": "verb",
+          "info": "docēre, docuī",
+          "gloss": "teach"
+        },
+        {
+          "lemma": "respondeō",
+          "pos": "verb",
+          "info": "respondēre",
+          "gloss": "answer, reply"
+        },
+        {
+          "lemma": "manēō",
+          "pos": "verb",
+          "info": "manēre, mānsī",
+          "gloss": "remain, stay"
+        },
+        {
+          "lemma": "iubeō",
+          "pos": "verb",
+          "info": "iubēre, iussī",
+          "gloss": "order, command"
+        },
+        {
+          "lemma": "semper",
+          "pos": "adverb",
+          "info": "indeclinable",
+          "gloss": "always"
+        }
+      ]
+    },
+    {
+      "id": "v06-time-words",
+      "insertInUnit": "08-imperfect",
+      "order": 2,
+      "title": "Vocabulary: Time words",
+      "theme": "Adverbs & time expressions for tense stories",
+      "entries": [
+        {
+          "lemma": "hodiē",
+          "pos": "adverb",
+          "info": "indeclinable",
+          "gloss": "today"
+        },
+        {
+          "lemma": "crās",
+          "pos": "adverb",
+          "info": "indeclinable",
+          "gloss": "tomorrow"
+        },
+        {
+          "lemma": "heri",
+          "pos": "adverb",
+          "info": "indeclinable",
+          "gloss": "yesterday"
+        },
+        {
+          "lemma": "nunc",
+          "pos": "adverb",
+          "info": "indeclinable",
+          "gloss": "now"
+        },
+        {
+          "lemma": "tum",
+          "pos": "adverb",
+          "info": "indeclinable",
+          "gloss": "then, at that time"
+        },
+        {
+          "lemma": "diū",
+          "pos": "adverb",
+          "info": "indeclinable",
+          "gloss": "for a long time"
+        },
+        {
+          "lemma": "saepe",
+          "pos": "adverb",
+          "info": "indeclinable",
+          "gloss": "often"
+        },
+        {
+          "lemma": "cotīdiē",
+          "pos": "adverb",
+          "info": "indeclinable",
+          "gloss": "daily, every day"
+        },
+        {
+          "lemma": "mox",
+          "pos": "adverb",
+          "info": "indeclinable",
+          "gloss": "soon"
+        },
+        {
+          "lemma": "iam",
+          "pos": "adverb",
+          "info": "indeclinable",
+          "gloss": "already, now"
+        }
+      ]
+    },
+    {
+      "id": "v07-third-nouns",
+      "insertInUnit": "10-third-declension",
+      "order": 4,
+      "title": "Vocabulary: Kings, soldiers & nature",
+      "theme": "3rd-declension high-frequency nouns",
+      "entries": [
+        {
+          "lemma": "rēx",
+          "pos": "noun",
+          "info": "rēgis m.",
+          "gloss": "king"
+        },
+        {
+          "lemma": "mīles",
+          "pos": "noun",
+          "info": "mīlitis m.",
+          "gloss": "soldier"
+        },
+        {
+          "lemma": "dux",
+          "pos": "noun",
+          "info": "ducis m.",
+          "gloss": "leader, general"
+        },
+        {
+          "lemma": "urbs",
+          "pos": "noun",
+          "info": "urbis f.",
+          "gloss": "city"
+        },
+        {
+          "lemma": "lēx",
+          "pos": "noun",
+          "info": "lēgis f.",
+          "gloss": "law"
+        },
+        {
+          "lemma": "vōx",
+          "pos": "noun",
+          "info": "vōcis f.",
+          "gloss": "voice"
+        },
+        {
+          "lemma": "pater",
+          "pos": "noun",
+          "info": "patris m.",
+          "gloss": "father"
+        },
+        {
+          "lemma": "māter",
+          "pos": "noun",
+          "info": "mātris f.",
+          "gloss": "mother"
+        },
+        {
+          "lemma": "corpus",
+          "pos": "noun",
+          "info": "corporis n.",
+          "gloss": "body"
+        },
+        {
+          "lemma": "nōmen",
+          "pos": "noun",
+          "info": "nōminis n.",
+          "gloss": "name"
+        },
+        {
+          "lemma": "flūmen",
+          "pos": "noun",
+          "info": "flūminis n.",
+          "gloss": "river"
+        },
+        {
+          "lemma": "caput",
+          "pos": "noun",
+          "info": "capitis n.",
+          "gloss": "head, capital"
+        }
+      ]
+    },
+    {
+      "id": "v08-army-verbs",
+      "insertInUnit": "11-third-conjugation",
+      "order": 4,
+      "title": "Vocabulary: Army & action verbs",
+      "theme": "3rd conjugation high-frequency",
+      "entries": [
+        {
+          "lemma": "dūcō",
+          "pos": "verb",
+          "info": "dūcere, dūxī",
+          "gloss": "lead"
+        },
+        {
+          "lemma": "dīcō",
+          "pos": "verb",
+          "info": "dīcere, dīxī",
+          "gloss": "say, speak"
+        },
+        {
+          "lemma": "mittō",
+          "pos": "verb",
+          "info": "mittere, mīsī",
+          "gloss": "send"
+        },
+        {
+          "lemma": "vincō",
+          "pos": "verb",
+          "info": "vincere, vīcī",
+          "gloss": "conquer, defeat"
+        },
+        {
+          "lemma": "scrībō",
+          "pos": "verb",
+          "info": "scrībere, scrīpsī",
+          "gloss": "write"
+        },
+        {
+          "lemma": "petō",
+          "pos": "verb",
+          "info": "petere, petīvī",
+          "gloss": "seek, attack, ask for"
+        },
+        {
+          "lemma": "agō",
+          "pos": "verb",
+          "info": "agere, ēgī",
+          "gloss": "do, drive, act"
+        },
+        {
+          "lemma": "pōnō",
+          "pos": "verb",
+          "info": "pōnere, posuī",
+          "gloss": "put, place"
+        },
+        {
+          "lemma": "capiō",
+          "pos": "verb",
+          "info": "capere, cēpī",
+          "gloss": "take, capture"
+        },
+        {
+          "lemma": "faciō",
+          "pos": "verb",
+          "info": "facere, fēcī",
+          "gloss": "make, do"
+        },
+        {
+          "lemma": "fugiō",
+          "pos": "verb",
+          "info": "fugere, fūgī",
+          "gloss": "flee"
+        },
+        {
+          "lemma": "castra",
+          "pos": "noun",
+          "info": "castrōrum n. pl.",
+          "gloss": "camp"
+        }
+      ]
+    },
+    {
+      "id": "v09-story-verbs",
+      "insertInUnit": "12-perfect-system",
+      "order": 3,
+      "title": "Vocabulary: Story & foundation",
+      "theme": "Perfect-system storytelling words",
+      "entries": [
+        {
+          "lemma": "veniō",
+          "pos": "verb",
+          "info": "venīre, vēnī",
+          "gloss": "come"
+        },
+        {
+          "lemma": "audiō",
+          "pos": "verb",
+          "info": "audīre, audīvī",
+          "gloss": "hear, listen"
+        },
+        {
+          "lemma": "inveniō",
+          "pos": "verb",
+          "info": "invenīre, invēnī",
+          "gloss": "find, invent"
+        },
+        {
+          "lemma": "mūniō",
+          "pos": "verb",
+          "info": "mūnīre",
+          "gloss": "fortify, build (walls)"
+        },
+        {
+          "lemma": "sciō",
+          "pos": "verb",
+          "info": "scīre",
+          "gloss": "know"
+        },
+        {
+          "lemma": "condō",
+          "pos": "verb",
+          "info": "condere, condidī",
+          "gloss": "found, establish"
+        },
+        {
+          "lemma": "pugnō",
+          "pos": "verb",
+          "info": "pugnāre",
+          "gloss": "fight"
+        },
+        {
+          "lemma": "pāx",
+          "pos": "noun",
+          "info": "pācis f.",
+          "gloss": "peace"
+        },
+        {
+          "lemma": "hostis",
+          "pos": "noun",
+          "info": "hostis m.",
+          "gloss": "enemy"
+        },
+        {
+          "lemma": "arma",
+          "pos": "noun",
+          "info": "armōrum n. pl.",
+          "gloss": "arms, weapons"
+        }
+      ]
+    },
+    {
+      "id": "v10-travel-people",
+      "insertInUnit": "14-prep-pronouns",
+      "order": 4,
+      "title": "Vocabulary: Travel & people words",
+      "theme": "Prepositions, place, people",
+      "entries": [
+        {
+          "lemma": "ad",
+          "pos": "prep",
+          "info": "+ acc",
+          "gloss": "to, toward"
+        },
+        {
+          "lemma": "in",
+          "pos": "prep",
+          "info": "+ acc into / + abl in",
+          "gloss": "in, on, into"
+        },
+        {
+          "lemma": "ab / ā",
+          "pos": "prep",
+          "info": "+ abl",
+          "gloss": "from, by (agent)"
+        },
+        {
+          "lemma": "ex / ē",
+          "pos": "prep",
+          "info": "+ abl",
+          "gloss": "out of, from"
+        },
+        {
+          "lemma": "cum",
+          "pos": "prep",
+          "info": "+ abl",
+          "gloss": "with"
+        },
+        {
+          "lemma": "per",
+          "pos": "prep",
+          "info": "+ acc",
+          "gloss": "through, along"
+        },
+        {
+          "lemma": "sine",
+          "pos": "prep",
+          "info": "+ abl",
+          "gloss": "without"
+        },
+        {
+          "lemma": "prō",
+          "pos": "prep",
+          "info": "+ abl",
+          "gloss": "for, on behalf of, in front of"
+        },
+        {
+          "lemma": "iter",
+          "pos": "noun",
+          "info": "itineris n.",
+          "gloss": "journey, march, route"
+        },
+        {
+          "lemma": "mare",
+          "pos": "noun",
+          "info": "maris n.",
+          "gloss": "sea"
+        },
+        {
+          "lemma": "mōns",
+          "pos": "noun",
+          "info": "montis m.",
+          "gloss": "mountain"
+        },
+        {
+          "lemma": "cīvis",
+          "pos": "noun",
+          "info": "cīvis m./f.",
+          "gloss": "citizen"
+        }
+      ]
+    },
+    {
+      "id": "v11-public-life",
+      "insertInUnit": "16-relative",
+      "order": 4,
+      "title": "Vocabulary: Public life & law",
+      "theme": "Citizenship, law, public spaces",
+      "entries": [
+        {
+          "lemma": "senātus",
+          "pos": "noun",
+          "info": "senātūs m.",
+          "gloss": "senate"
+        },
+        {
+          "lemma": "cōnsul",
+          "pos": "noun",
+          "info": "cōnsulis m.",
+          "gloss": "consul"
+        },
+        {
+          "lemma": "forum",
+          "pos": "noun",
+          "info": "forī n.",
+          "gloss": "forum, marketplace"
+        },
+        {
+          "lemma": "templum",
+          "pos": "noun",
+          "info": "templī n.",
+          "gloss": "temple"
+        },
+        {
+          "lemma": "dea",
+          "pos": "noun",
+          "info": "deae f.",
+          "gloss": "goddess"
+        },
+        {
+          "lemma": "iūdex",
+          "pos": "noun",
+          "info": "iūdicis m.",
+          "gloss": "judge"
+        },
+        {
+          "lemma": "liber",
+          "pos": "noun",
+          "info": "librī m.",
+          "gloss": "book"
+        },
+        {
+          "lemma": "littera",
+          "pos": "noun",
+          "info": "litterae f. (often pl.)",
+          "gloss": "letter (of alphabet); pl. letter/epistle, literature"
+        },
+        {
+          "lemma": "virtūs",
+          "pos": "noun",
+          "info": "virtūtis f.",
+          "gloss": "courage, virtue, excellence"
+        },
+        {
+          "lemma": "glōria",
+          "pos": "noun",
+          "info": "glōriae f.",
+          "gloss": "glory, fame"
+        }
+      ]
+    },
+    {
+      "id": "v12-empire",
+      "insertInUnit": "18-place",
+      "order": 4,
+      "title": "Vocabulary: Empire & provinces",
+      "theme": "Place and imperial geography",
+      "entries": [
+        {
+          "lemma": "prōvincia",
+          "pos": "noun",
+          "info": "prōvinciae f.",
+          "gloss": "province"
+        },
+        {
+          "lemma": "imperium",
+          "pos": "noun",
+          "info": "imperiī n.",
+          "gloss": "command, empire, power"
+        },
+        {
+          "lemma": "Gallia",
+          "pos": "noun",
+          "info": "Galliae f.",
+          "gloss": "Gaul"
+        },
+        {
+          "lemma": "Hispānia",
+          "pos": "noun",
+          "info": "Hispāniae f.",
+          "gloss": "Spain"
+        },
+        {
+          "lemma": "Ītalia",
+          "pos": "noun",
+          "info": "Ītaliae f.",
+          "gloss": "Italy"
+        },
+        {
+          "lemma": "annus",
+          "pos": "noun",
+          "info": "annī m.",
+          "gloss": "year"
+        },
+        {
+          "lemma": "diēs",
+          "pos": "noun",
+          "info": "diēī m./f.",
+          "gloss": "day"
+        },
+        {
+          "lemma": "hōra",
+          "pos": "noun",
+          "info": "hōrae f.",
+          "gloss": "hour"
+        },
+        {
+          "lemma": "nox",
+          "pos": "noun",
+          "info": "noctis f.",
+          "gloss": "night"
+        },
+        {
+          "lemma": "locus",
+          "pos": "noun",
+          "info": "locī m.",
+          "gloss": "place"
+        }
+      ]
+    },
+    {
+      "id": "v13-pronouns",
+      "insertInUnit": "more-pronouns",
+      "order": 4,
+      "title": "Vocabulary: Pronoun toolkit",
+      "theme": "Personal, demonstrative, relative, reflexive, possessive, interrogative labels",
+      "entries": [
+        {
+          "lemma": "ego",
+          "pos": "pronoun",
+          "info": "meī",
+          "gloss": "I"
+        },
+        {
+          "lemma": "tū",
+          "pos": "pronoun",
+          "info": "tuī",
+          "gloss": "you (sg.)"
+        },
+        {
+          "lemma": "is",
+          "pos": "pronoun",
+          "info": "ea, id",
+          "gloss": "he, she, it; that"
+        },
+        {
+          "lemma": "hic",
+          "pos": "pronoun",
+          "info": "haec, hoc",
+          "gloss": "this"
+        },
+        {
+          "lemma": "ille",
+          "pos": "pronoun",
+          "info": "illa, illud",
+          "gloss": "that"
+        },
+        {
+          "lemma": "quī",
+          "pos": "pronoun",
+          "info": "quae, quod",
+          "gloss": "who, which, that (relative)"
+        },
+        {
+          "lemma": "sē",
+          "pos": "pronoun",
+          "info": "suī, sibi, sē",
+          "gloss": "himself, herself, itself, themselves"
+        },
+        {
+          "lemma": "meus",
+          "pos": "adj",
+          "info": "mea, meum",
+          "gloss": "my"
+        },
+        {
+          "lemma": "tuus",
+          "pos": "adj",
+          "info": "tua, tuum",
+          "gloss": "your (sg.)"
+        },
+        {
+          "lemma": "suus",
+          "pos": "adj",
+          "info": "sua, suum",
+          "gloss": "his/her/its/their own"
+        },
+        {
+          "lemma": "noster",
+          "pos": "adj",
+          "info": "nostra, nostrum",
+          "gloss": "our"
+        },
+        {
+          "lemma": "quis",
+          "pos": "pronoun",
+          "info": "quid",
+          "gloss": "who? what?"
+        }
+      ]
+    }
+  ],
+  "reviews": [
+    {
+      "id": "vr01-early",
+      "insertInUnit": "06-adjectives",
+      "order": 3,
+      "title": "Vocabulary quiz: Early core",
+      "batchIds": [
+        "v01-family-place",
+        "v02-being-action",
+        "v03-men-tools",
+        "v04-describe"
+      ],
+      "quiz": true
+    },
+    {
+      "id": "vr02-mid",
+      "insertInUnit": "12-perfect-system",
+      "order": 4,
+      "title": "Vocabulary quiz: Mid-year",
+      "batchIds": [
+        "v05-warn-see",
+        "v06-time-words",
+        "v07-third-nouns",
+        "v08-army-verbs",
+        "v09-story-verbs"
+      ],
+      "quiz": true
+    },
+    {
+      "id": "vr03-late",
+      "insertInUnit": "19-passive",
+      "order": 4,
+      "title": "Vocabulary quiz: Public life & empire",
+      "batchIds": [
+        "v10-travel-people",
+        "v11-public-life",
+        "v12-empire"
+      ],
+      "quiz": true
+    },
+    {
+      "id": "vr04-capstone",
+      "insertInUnit": "25-capstone",
+      "order": 2,
+      "title": "Vocabulary quiz: Year 1 core",
+      "batchIds": [
+        "v01-family-place",
+        "v02-being-action",
+        "v03-men-tools",
+        "v04-describe",
+        "v05-warn-see",
+        "v06-time-words",
+        "v07-third-nouns",
+        "v08-army-verbs",
+        "v09-story-verbs",
+        "v10-travel-people",
+        "v11-public-life",
+        "v12-empire"
+      ],
+      "quiz": true,
+      "sampleSize": 16
+    }
+  ]
+}

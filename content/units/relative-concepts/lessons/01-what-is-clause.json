@@ -1,0 +1,168 @@
+{
+  "slug": "01-what-is-clause",
+  "title": "Clauses and who/which/that",
+  "unitSlug": "relative-concepts",
+  "order": 1,
+  "standardSummary": "Identify a relative clause in English; state that it describes a noun.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-cl"
+      },
+      {
+        "type": "skill_count",
+        "skill": "relative clause concept",
+        "n": 3,
+        "label": "clause"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match-c"
+      }
+    ]
+  },
+  "teach": "A relative clause starts with who/which/that (etc.) and describes a noun.",
+  "allowList": {
+    "lemmas": [],
+    "constructions": [
+      "relative clause concept"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "matching",
+      "short_answer",
+      "multi_select"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-cl",
+      "type": "multiple_choice",
+      "prompt": "In “The soldier who won is brave,” the words “who won” are…",
+      "targets": [
+        "relative clause concept"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "the main verb only"
+          },
+          {
+            "id": "b",
+            "label": "a relative clause describing soldier"
+          },
+          {
+            "id": "c",
+            "label": "a prepositional phrase"
+          },
+          {
+            "id": "d",
+            "label": "future tense"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match-c",
+      "type": "matching",
+      "prompt": "Match sentence to relative word.",
+      "targets": [
+        "relative clause concept"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "the girl who runs"
+          },
+          {
+            "id": "b",
+            "label": "the book that I read"
+          },
+          {
+            "id": "c",
+            "label": "the city which fell"
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "who"
+          },
+          {
+            "id": "2",
+            "label": "that"
+          },
+          {
+            "id": "3",
+            "label": "which"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "ms1",
+      "type": "multi_select",
+      "prompt": "Which contain a relative clause?",
+      "targets": [
+        "relative clause concept"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "The king who rules is just."
+          },
+          {
+            "id": "b",
+            "label": "The king rules justly."
+          },
+          {
+            "id": "c",
+            "label": "I see the man that you called."
+          },
+          {
+            "id": "d",
+            "label": "I see the man."
+          }
+        ],
+        "correctOptionIds": [
+          "a",
+          "c"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sa1",
+      "type": "short_answer",
+      "prompt": "What job does a relative clause do?",
+      "targets": [
+        "relative clause concept"
+      ],
+      "payload": {
+        "sampleAnswers": [
+          "It describes or identifies a noun (the antecedent).",
+          "Adds information about a noun using who/which/that."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

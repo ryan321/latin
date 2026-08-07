@@ -1,0 +1,567 @@
+{
+  "slug": "vocab-v08-army-verbs",
+  "title": "Vocabulary: Army & action verbs",
+  "unitSlug": "11-third-conjugation",
+  "order": 5,
+  "standardSummary": "Master this vocabulary set (12 words): match both directions and pass drills.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "match-l2e-0"
+      },
+      {
+        "type": "skill_count",
+        "skill": "vocabulary",
+        "n": 5,
+        "label": "vocab items"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match-e2l"
+      }
+    ]
+  },
+  "teach": "Vocabulary batch v08-army-verbs: dūcō, dīcō, mittō, vincō, scrībō, petō, agō, pōnō, capiō, faciō, fugiō, castra",
+  "allowList": {
+    "lemmas": [
+      "dūcō",
+      "dīcō",
+      "mittō",
+      "vincō",
+      "scrībō",
+      "petō",
+      "agō",
+      "pōnō",
+      "capiō",
+      "faciō",
+      "fugiō",
+      "castra"
+    ],
+    "constructions": [
+      "vocabulary",
+      "vocab drill",
+      "v08-army-verbs"
+    ],
+    "activityTypes": [
+      "matching",
+      "multiple_choice",
+      "single_form",
+      "translate",
+      "multi_select",
+      "cloze",
+      "short_answer"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "match-l2e-0",
+      "type": "matching",
+      "prompt": "Match each Latin word to its English meaning. (set 1)",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v08-army-verbs"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "leftLabel": "Latin",
+        "rightLabel": "English",
+        "left": [
+          {
+            "id": "l0",
+            "label": "dūcō"
+          },
+          {
+            "id": "l1",
+            "label": "dīcō"
+          },
+          {
+            "id": "l2",
+            "label": "mittō"
+          },
+          {
+            "id": "l3",
+            "label": "vincō"
+          },
+          {
+            "id": "l4",
+            "label": "scrībō"
+          },
+          {
+            "id": "l5",
+            "label": "petō"
+          }
+        ],
+        "right": [
+          {
+            "id": "r0",
+            "label": "lead"
+          },
+          {
+            "id": "r1",
+            "label": "say, speak"
+          },
+          {
+            "id": "r2",
+            "label": "send"
+          },
+          {
+            "id": "r3",
+            "label": "conquer, defeat"
+          },
+          {
+            "id": "r4",
+            "label": "write"
+          },
+          {
+            "id": "r5",
+            "label": "seek, attack, ask for"
+          }
+        ],
+        "pairs": {
+          "l0": "r0",
+          "l1": "r1",
+          "l2": "r2",
+          "l3": "r3",
+          "l4": "r4",
+          "l5": "r5"
+        }
+      }
+    },
+    {
+      "id": "match-l2e-1",
+      "type": "matching",
+      "prompt": "Match each Latin word to its English meaning. (set 2)",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v08-army-verbs"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "leftLabel": "Latin",
+        "rightLabel": "English",
+        "left": [
+          {
+            "id": "l0",
+            "label": "agō"
+          },
+          {
+            "id": "l1",
+            "label": "pōnō"
+          },
+          {
+            "id": "l2",
+            "label": "capiō"
+          },
+          {
+            "id": "l3",
+            "label": "faciō"
+          },
+          {
+            "id": "l4",
+            "label": "fugiō"
+          },
+          {
+            "id": "l5",
+            "label": "castra"
+          }
+        ],
+        "right": [
+          {
+            "id": "r0",
+            "label": "do, drive, act"
+          },
+          {
+            "id": "r1",
+            "label": "put, place"
+          },
+          {
+            "id": "r2",
+            "label": "take, capture"
+          },
+          {
+            "id": "r3",
+            "label": "make, do"
+          },
+          {
+            "id": "r4",
+            "label": "flee"
+          },
+          {
+            "id": "r5",
+            "label": "camp"
+          }
+        ],
+        "pairs": {
+          "l0": "r0",
+          "l1": "r1",
+          "l2": "r2",
+          "l3": "r3",
+          "l4": "r4",
+          "l5": "r5"
+        }
+      }
+    },
+    {
+      "id": "match-e2l",
+      "type": "matching",
+      "prompt": "Match English meaning to Latin (produce recognition both ways).",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v08-army-verbs"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "leftLabel": "English",
+        "rightLabel": "Latin",
+        "left": [
+          {
+            "id": "l0",
+            "label": "lead"
+          },
+          {
+            "id": "l1",
+            "label": "say, speak"
+          },
+          {
+            "id": "l2",
+            "label": "send"
+          },
+          {
+            "id": "l3",
+            "label": "conquer, defeat"
+          },
+          {
+            "id": "l4",
+            "label": "write"
+          },
+          {
+            "id": "l5",
+            "label": "seek, attack, ask for"
+          }
+        ],
+        "right": [
+          {
+            "id": "r0",
+            "label": "dūcō"
+          },
+          {
+            "id": "r1",
+            "label": "dīcō"
+          },
+          {
+            "id": "r2",
+            "label": "mittō"
+          },
+          {
+            "id": "r3",
+            "label": "vincō"
+          },
+          {
+            "id": "r4",
+            "label": "scrībō"
+          },
+          {
+            "id": "r5",
+            "label": "petō"
+          }
+        ],
+        "pairs": {
+          "l0": "r0",
+          "l1": "r1",
+          "l2": "r2",
+          "l3": "r3",
+          "l4": "r4",
+          "l5": "r5"
+        }
+      }
+    },
+    {
+      "id": "mc-0",
+      "type": "multiple_choice",
+      "prompt": "What does **dūcō** mean?",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v08-army-verbs"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "conquer, defeat"
+          },
+          {
+            "id": "b",
+            "label": "lead"
+          },
+          {
+            "id": "c",
+            "label": "say, speak"
+          },
+          {
+            "id": "d",
+            "label": "send"
+          }
+        ],
+        "correctOptionId": "b"
+      }
+    },
+    {
+      "id": "mc-1",
+      "type": "multiple_choice",
+      "prompt": "What does **dīcō** mean?",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v08-army-verbs"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "send"
+          },
+          {
+            "id": "b",
+            "label": "conquer, defeat"
+          },
+          {
+            "id": "c",
+            "label": "say, speak"
+          },
+          {
+            "id": "d",
+            "label": "lead"
+          }
+        ],
+        "correctOptionId": "c"
+      }
+    },
+    {
+      "id": "mc-2",
+      "type": "multiple_choice",
+      "prompt": "What does **mittō** mean?",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v08-army-verbs"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "lead"
+          },
+          {
+            "id": "b",
+            "label": "say, speak"
+          },
+          {
+            "id": "c",
+            "label": "conquer, defeat"
+          },
+          {
+            "id": "d",
+            "label": "send"
+          }
+        ],
+        "correctOptionId": "d"
+      }
+    },
+    {
+      "id": "mc-3",
+      "type": "multiple_choice",
+      "prompt": "What does **vincō** mean?",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v08-army-verbs"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "conquer, defeat"
+          },
+          {
+            "id": "b",
+            "label": "lead"
+          },
+          {
+            "id": "c",
+            "label": "say, speak"
+          },
+          {
+            "id": "d",
+            "label": "send"
+          }
+        ],
+        "correctOptionId": "a"
+      }
+    },
+    {
+      "id": "mc-4",
+      "type": "multiple_choice",
+      "prompt": "What does **scrībō** mean?",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v08-army-verbs"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "lead"
+          },
+          {
+            "id": "b",
+            "label": "say, speak"
+          },
+          {
+            "id": "c",
+            "label": "send"
+          },
+          {
+            "id": "d",
+            "label": "write"
+          }
+        ],
+        "correctOptionId": "d"
+      }
+    },
+    {
+      "id": "sf-gloss-0",
+      "type": "single_form",
+      "prompt": "English meaning of **petō**:",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v08-army-verbs"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "accept": [
+          "seek",
+          "attack",
+          "ask for"
+        ],
+        "hint": "petere, petīvī"
+      }
+    },
+    {
+      "id": "sf-gloss-1",
+      "type": "single_form",
+      "prompt": "English meaning of **agō**:",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v08-army-verbs"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "accept": [
+          "do",
+          "drive",
+          "act"
+        ],
+        "hint": "agere, ēgī"
+      }
+    },
+    {
+      "id": "sf-gloss-2",
+      "type": "single_form",
+      "prompt": "English meaning of **pōnō**:",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v08-army-verbs"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "accept": [
+          "put",
+          "place"
+        ],
+        "hint": "pōnere, posuī"
+      }
+    },
+    {
+      "id": "tr-0",
+      "type": "translate",
+      "prompt": "Translate: **fugiō**",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v08-army-verbs"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "direction": "L2E",
+        "length": "word",
+        "sampleAnswers": [
+          "flee"
+        ],
+        "rubric": "Accept common gloss synonyms; macrons optional for Latin."
+      }
+    },
+    {
+      "id": "tr-1",
+      "type": "translate",
+      "prompt": "Translate: **castra**",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v08-army-verbs"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "direction": "L2E",
+        "length": "word",
+        "sampleAnswers": [
+          "camp"
+        ],
+        "rubric": "Accept common gloss synonyms; macrons optional for Latin."
+      }
+    },
+    {
+      "id": "sa-use",
+      "type": "short_answer",
+      "prompt": "Pick any 3 words from this list and write a tiny English sentence that could use each (or one sentence using two). Theme: 3rd conjugation high-frequency.",
+      "targets": [
+        "vocabulary",
+        "v08-army-verbs"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "sampleAnswers": [
+          "Any sensible English using three of the batch meanings.",
+          "Student sentences using batch glosses."
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,176 @@
+{
+  "slug": "03-transform",
+  "title": "Active ↔ passive transforms",
+  "unitSlug": "voice-concepts",
+  "order": 3,
+  "standardSummary": "Transform simple English sentences between active and passive; keep meaning.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-tr"
+      },
+      {
+        "type": "skill_count",
+        "skill": "voice concept",
+        "n": 3,
+        "label": "transform"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match-t"
+      }
+    ]
+  },
+  "teach": "Practice flipping active and passive while tracking subject and agent.",
+  "allowList": {
+    "lemmas": [],
+    "constructions": [
+      "voice concept",
+      "agent concept"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "matching",
+      "short_answer",
+      "multi_select"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-tr",
+      "type": "multiple_choice",
+      "prompt": "Active “The girl carries water” → best passive:",
+      "targets": [
+        "voice concept"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "Water carries the girl."
+          },
+          {
+            "id": "b",
+            "label": "Water is carried (by the girl)."
+          },
+          {
+            "id": "c",
+            "label": "The girl is water."
+          },
+          {
+            "id": "d",
+            "label": "Carries is water."
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match-t",
+      "type": "matching",
+      "prompt": "Match active to passive.",
+      "targets": [
+        "voice concept"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "The teacher praises the boy."
+          },
+          {
+            "id": "b",
+            "label": "The Romans conquer Gaul."
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "The boy is praised by the teacher."
+          },
+          {
+            "id": "2",
+            "label": "Gaul is conquered by the Romans."
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sa1",
+      "type": "short_answer",
+      "prompt": "Make passive: “The messenger sends the letter.”",
+      "targets": [
+        "voice concept"
+      ],
+      "payload": {
+        "sampleAnswers": [
+          "The letter is sent by the messenger.",
+          "The letter is sent."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sa2",
+      "type": "short_answer",
+      "prompt": "Make active: “The road was built by soldiers.”",
+      "targets": [
+        "voice concept"
+      ],
+      "payload": {
+        "sampleAnswers": [
+          "Soldiers built the road.",
+          "The soldiers built the road."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "ms1",
+      "type": "multi_select",
+      "prompt": "When you switch to passive, what becomes the subject?",
+      "targets": [
+        "voice concept"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "Always the old verb"
+          },
+          {
+            "id": "b",
+            "label": "Usually the old direct object"
+          },
+          {
+            "id": "c",
+            "label": "Always a preposition"
+          },
+          {
+            "id": "d",
+            "label": "The receiver of the action"
+          }
+        ],
+        "correctOptionIds": [
+          "b",
+          "d"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

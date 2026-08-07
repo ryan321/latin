@@ -1,0 +1,206 @@
+{
+  "slug": "05-passage-cives",
+  "title": "Passage: Citizens and laws",
+  "unitSlug": "16-relative",
+  "order": 6,
+  "standardSummary": "Read a relative-clause passage; identify antecedents and answer comprehension.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-who"
+      },
+      {
+        "type": "skill_count",
+        "skill": "passage reading",
+        "n": 3,
+        "label": "passage"
+      },
+      {
+        "type": "skill_count",
+        "skill": "relative pronoun",
+        "n": 2,
+        "label": "rel forms"
+      }
+    ]
+  },
+  "teach": "Connected Latin with quī clauses.",
+  "allowList": {
+    "lemmas": [
+      "civis",
+      "lex",
+      "qui",
+      "Roma",
+      "consul",
+      "amo"
+    ],
+    "constructions": [
+      "relative pronoun",
+      "passage reading",
+      "passage reading"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "short_answer",
+      "translate",
+      "multi_select"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-who",
+      "type": "multiple_choice",
+      "prompt": "Who hear the laws?",
+      "targets": [
+        "passage reading",
+        "relative pronoun"
+      ],
+      "passage": {
+        "title": "Citizens who hear",
+        "latin": "Cīvēs quī Rōmae habitant lēgēs audiunt.\nLēx quae iūsta est populum servat.\nVir quem vidēmus est cōnsul.\nUrbs quam amāmus magna est.",
+        "notes": "Relative clauses + antecedents · Use known vocabulary; guess from context only if needed."
+      },
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "All animals"
+          },
+          {
+            "id": "b",
+            "label": "Citizens who live at Rome"
+          },
+          {
+            "id": "c",
+            "label": "Only the laws themselves"
+          },
+          {
+            "id": "d",
+            "label": "No one"
+          }
+        ],
+        "correctOptionId": "b"
+      }
+    },
+    {
+      "id": "mc-ant",
+      "type": "multiple_choice",
+      "prompt": "In “vir quem vidēmus,” the antecedent of quem is…",
+      "targets": [
+        "passage reading",
+        "antecedent"
+      ],
+      "passage": {
+        "title": "Citizens who hear",
+        "latin": "Cīvēs quī Rōmae habitant lēgēs audiunt.\nLēx quae iūsta est populum servat.\nVir quem vidēmus est cōnsul.\nUrbs quam amāmus magna est.",
+        "notes": "Relative clauses + antecedents · Use known vocabulary; guess from context only if needed."
+      },
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "vidēmus"
+          },
+          {
+            "id": "b",
+            "label": "vir"
+          },
+          {
+            "id": "c",
+            "label": "cōnsul only as verb"
+          },
+          {
+            "id": "d",
+            "label": "lēx"
+          }
+        ],
+        "correctOptionId": "b"
+      }
+    },
+    {
+      "id": "mc-law",
+      "type": "multiple_choice",
+      "prompt": "The law that is just…",
+      "targets": [
+        "passage reading"
+      ],
+      "passage": {
+        "title": "Citizens who hear",
+        "latin": "Cīvēs quī Rōmae habitant lēgēs audiunt.\nLēx quae iūsta est populum servat.\nVir quem vidēmus est cōnsul.\nUrbs quam amāmus magna est.",
+        "notes": "Relative clauses + antecedents · Use known vocabulary; guess from context only if needed."
+      },
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "destroys the people"
+          },
+          {
+            "id": "b",
+            "label": "protects/saves the people"
+          },
+          {
+            "id": "c",
+            "label": "is not in the passage"
+          },
+          {
+            "id": "d",
+            "label": "is a consul"
+          }
+        ],
+        "correctOptionId": "b"
+      }
+    },
+    {
+      "id": "tr1",
+      "type": "translate",
+      "prompt": "Translate:\nUrbs quam amāmus magna est.",
+      "targets": [
+        "passage reading",
+        "relative pronoun"
+      ],
+      "passage": {
+        "title": "Citizens who hear",
+        "latin": "Cīvēs quī Rōmae habitant lēgēs audiunt.\nLēx quae iūsta est populum servat.\nVir quem vidēmus est cōnsul.\nUrbs quam amāmus magna est.",
+        "notes": "Relative clauses + antecedents · Use known vocabulary; guess from context only if needed."
+      },
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "The city that we love is great.",
+          "The city which we love is large."
+        ]
+      }
+    },
+    {
+      "id": "sa1",
+      "type": "short_answer",
+      "prompt": "Pick one relative clause and name its antecedent.",
+      "targets": [
+        "passage reading"
+      ],
+      "passage": {
+        "title": "Citizens who hear",
+        "latin": "Cīvēs quī Rōmae habitant lēgēs audiunt.\nLēx quae iūsta est populum servat.\nVir quem vidēmus est cōnsul.\nUrbs quam amāmus magna est.",
+        "notes": "Relative clauses + antecedents · Use known vocabulary; guess from context only if needed."
+      },
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "sampleAnswers": [
+          "quī Rōmae habitant → cīvēs; quae iūsta est → lēx; quem vidēmus → vir; quam amāmus → urbs",
+          "cīvēs is antecedent of quī…"
+        ]
+      }
+    }
+  ]
+}

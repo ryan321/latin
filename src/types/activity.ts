@@ -109,87 +109,72 @@ export const clozePayloadSchema = z.object({
 });
 export type ClozePayload = z.infer<typeof clozePayloadSchema>;
 
+/** Optional Latin passage shown above a question (reading comprehension). */
+export const passageRefSchema = z.object({
+  title: z.string().optional(),
+  /** Continuous Latin (use \n for line breaks). */
+  latin: z.string().min(1),
+  /** Optional glosses / help line (English). */
+  notes: z.string().optional(),
+});
+export type PassageRef = z.infer<typeof passageRefSchema>;
+
+/** Fields shared by every activity variant. */
+const activityBaseFields = {
+  id: z.string(),
+  source: z.enum(["seed", "generated"]).default("seed"),
+  prompt: z.string().optional(),
+  targets: z.array(z.string()).optional(),
+  required: z.boolean().default(true),
+  /** When set, UI shows this passage above the prompt (passage reading). */
+  passage: passageRefSchema.optional(),
+};
+
 /** Discriminated by type so payload shape is validated correctly (z.union was fragile). */
 export const activitySchema = z.discriminatedUnion("type", [
   z.object({
-    id: z.string(),
+    ...activityBaseFields,
     type: z.literal("paradigm_grid"),
-    source: z.enum(["seed", "generated"]).default("seed"),
-    prompt: z.string().optional(),
-    targets: z.array(z.string()).optional(),
-    required: z.boolean().default(true),
     payload: paradigmGridPayloadSchema,
   }),
   z.object({
-    id: z.string(),
+    ...activityBaseFields,
     type: z.literal("single_form"),
-    source: z.enum(["seed", "generated"]).default("seed"),
-    prompt: z.string().optional(),
-    targets: z.array(z.string()).optional(),
-    required: z.boolean().default(true),
     payload: singleFormPayloadSchema,
   }),
   z.object({
-    id: z.string(),
+    ...activityBaseFields,
     type: z.literal("translate"),
-    source: z.enum(["seed", "generated"]).default("seed"),
-    prompt: z.string().optional(),
-    targets: z.array(z.string()).optional(),
-    required: z.boolean().default(true),
     payload: translatePayloadSchema,
   }),
   z.object({
-    id: z.string(),
+    ...activityBaseFields,
     type: z.literal("multiple_choice"),
-    source: z.enum(["seed", "generated"]).default("seed"),
-    prompt: z.string().optional(),
-    targets: z.array(z.string()).optional(),
-    required: z.boolean().default(true),
     payload: multipleChoicePayloadSchema,
   }),
   z.object({
-    id: z.string(),
+    ...activityBaseFields,
     type: z.literal("short_answer"),
-    source: z.enum(["seed", "generated"]).default("seed"),
-    prompt: z.string().optional(),
-    targets: z.array(z.string()).optional(),
-    required: z.boolean().default(true),
     payload: shortAnswerPayloadSchema,
   }),
   z.object({
-    id: z.string(),
+    ...activityBaseFields,
     type: z.literal("matching"),
-    source: z.enum(["seed", "generated"]).default("seed"),
-    prompt: z.string().optional(),
-    targets: z.array(z.string()).optional(),
-    required: z.boolean().default(true),
     payload: matchingPayloadSchema,
   }),
   z.object({
-    id: z.string(),
+    ...activityBaseFields,
     type: z.literal("ordering"),
-    source: z.enum(["seed", "generated"]).default("seed"),
-    prompt: z.string().optional(),
-    targets: z.array(z.string()).optional(),
-    required: z.boolean().default(true),
     payload: orderingPayloadSchema,
   }),
   z.object({
-    id: z.string(),
+    ...activityBaseFields,
     type: z.literal("multi_select"),
-    source: z.enum(["seed", "generated"]).default("seed"),
-    prompt: z.string().optional(),
-    targets: z.array(z.string()).optional(),
-    required: z.boolean().default(true),
     payload: multiSelectPayloadSchema,
   }),
   z.object({
-    id: z.string(),
+    ...activityBaseFields,
     type: z.literal("cloze"),
-    source: z.enum(["seed", "generated"]).default("seed"),
-    prompt: z.string().optional(),
-    targets: z.array(z.string()).optional(),
-    required: z.boolean().default(true),
     payload: clozePayloadSchema,
   }),
 ]);

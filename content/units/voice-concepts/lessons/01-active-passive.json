@@ -1,0 +1,179 @@
+{
+  "slug": "01-active-passive",
+  "title": "Active vs passive",
+  "unitSlug": "voice-concepts",
+  "order": 1,
+  "standardSummary": "Label sentences as active or passive; state who does the action vs who receives it.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-v"
+      },
+      {
+        "type": "skill_count",
+        "skill": "voice concept",
+        "n": 4,
+        "label": "voice"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match-v"
+      }
+    ]
+  },
+  "teach": "Active: subject does the action. Passive: subject receives the action.",
+  "allowList": {
+    "lemmas": [],
+    "constructions": [
+      "voice concept",
+      "active",
+      "passive"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "matching",
+      "short_answer",
+      "multi_select"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-v",
+      "type": "multiple_choice",
+      "prompt": "In “The city is captured,” the subject (city)…",
+      "targets": [
+        "voice concept"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "does the capturing"
+          },
+          {
+            "id": "b",
+            "label": "receives the action"
+          },
+          {
+            "id": "c",
+            "label": "is always future"
+          },
+          {
+            "id": "d",
+            "label": "is a preposition"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match-v",
+      "type": "matching",
+      "prompt": "Label voice.",
+      "targets": [
+        "voice concept"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "The soldier conquers the enemy."
+          },
+          {
+            "id": "b",
+            "label": "The enemy is conquered."
+          },
+          {
+            "id": "c",
+            "label": "The girl carries water."
+          },
+          {
+            "id": "d",
+            "label": "Water is carried by the girl."
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "active"
+          },
+          {
+            "id": "2",
+            "label": "passive"
+          },
+          {
+            "id": "3",
+            "label": "active"
+          },
+          {
+            "id": "4",
+            "label": "passive"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3",
+          "d": "4"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "ms1",
+      "type": "multi_select",
+      "prompt": "Select passive sentences.",
+      "targets": [
+        "voice concept"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "Rome was founded."
+          },
+          {
+            "id": "b",
+            "label": "Romulus founded Rome."
+          },
+          {
+            "id": "c",
+            "label": "The letter is written."
+          },
+          {
+            "id": "d",
+            "label": "They write the letter."
+          }
+        ],
+        "correctOptionIds": [
+          "a",
+          "c"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sa1",
+      "type": "short_answer",
+      "prompt": "In your own words, what is passive voice?",
+      "targets": [
+        "voice concept"
+      ],
+      "payload": {
+        "sampleAnswers": [
+          "The subject receives the action instead of doing it.",
+          "Focus is on what happens to the subject; often with is/was + past participle."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

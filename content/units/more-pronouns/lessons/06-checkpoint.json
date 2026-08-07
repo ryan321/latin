@@ -1,0 +1,195 @@
+{
+  "slug": "06-checkpoint",
+  "title": "Checkpoint — More pronouns",
+  "unitSlug": "more-pronouns",
+  "order": 8,
+  "standardSummary": "Show mastery of sē, core possessives, and quis intro alongside earlier pronoun types.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc1"
+      },
+      {
+        "type": "skill_count",
+        "skill": "reflexive",
+        "n": 2,
+        "label": "sē"
+      },
+      {
+        "type": "skill_count",
+        "skill": "possessive",
+        "n": 2,
+        "label": "poss"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match1"
+      }
+    ]
+  },
+  "teach": "Checkpoint for added Year 1 pronoun essentials.",
+  "allowList": {
+    "lemmas": [
+      "se",
+      "suus",
+      "meus",
+      "quis",
+      "is",
+      "hic"
+    ],
+    "constructions": [
+      "reflexive",
+      "possessive",
+      "interrogative",
+      "pronouns"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "matching",
+      "single_form",
+      "translate",
+      "short_answer"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc1",
+      "type": "multiple_choice",
+      "prompt": "eius vs suus: eius is used when the possessor is…",
+      "targets": [
+        "possessive"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "always the subject"
+          },
+          {
+            "id": "b",
+            "label": "not the reflexive “own” of the subject (someone else)"
+          },
+          {
+            "id": "c",
+            "label": "only neuter nouns"
+          },
+          {
+            "id": "d",
+            "label": "only future tense"
+          }
+        ],
+        "correctOptionId": "b"
+      }
+    },
+    {
+      "id": "match1",
+      "type": "matching",
+      "prompt": "Match.",
+      "targets": [
+        "reflexive",
+        "possessive",
+        "interrogative"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "sibi"
+          },
+          {
+            "id": "b",
+            "label": "mea"
+          },
+          {
+            "id": "c",
+            "label": "quid"
+          },
+          {
+            "id": "d",
+            "label": "sē"
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "to/for himself"
+          },
+          {
+            "id": "2",
+            "label": "my (f.)"
+          },
+          {
+            "id": "3",
+            "label": "what?"
+          },
+          {
+            "id": "4",
+            "label": "himself (acc/abl)"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3",
+          "d": "4"
+        }
+      }
+    },
+    {
+      "id": "sf1",
+      "type": "single_form",
+      "prompt": "“Our” m. nom. sg. (noster):",
+      "targets": [
+        "possessive"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "accept": [
+          "noster"
+        ]
+      }
+    },
+    {
+      "id": "tr1",
+      "type": "translate",
+      "prompt": "Translate: Puer sē in aquā videt.",
+      "targets": [
+        "reflexive"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "The boy sees himself in the water."
+        ]
+      }
+    },
+    {
+      "id": "sa1",
+      "type": "short_answer",
+      "prompt": "Translate idea: “Who loves his own fatherland?” (Latin words OK if endings are right).",
+      "targets": [
+        "interrogative",
+        "possessive"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "sampleAnswers": [
+          "Quis patriam suam amat?",
+          "Quis suam patriam amat?"
+        ]
+      }
+    }
+  ]
+}

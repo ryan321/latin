@@ -16,6 +16,20 @@ All practice is an **Activity** object: seed or AI-generated. The UI and grader 
 | `multi_select` | Check all that apply | Rules | “Which letters stay hard?” |
 | `cloze` | Fill `{{1}}` blanks in a sentence | Rules | Guided production with word bank |
 
+### Optional `passage` on any activity
+
+Any activity may include a **`passage`** object so the student sees continuous Latin above the question (reading comprehension):
+
+```json
+"passage": {
+  "title": "In the villa",
+  "latin": "Puella in villā est.\nFēmina quoque est.",
+  "notes": "Optional gloss line"
+}
+```
+
+Use the same passage on every question in a passage lesson. See `docs/reading-passages.md`.
+
 ## Payload sketches
 
 ### matching

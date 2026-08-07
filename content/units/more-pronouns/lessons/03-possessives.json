@@ -1,0 +1,210 @@
+{
+  "slug": "03-possessives",
+  "title": "Possessive adjectives",
+  "unitSlug": "more-pronouns",
+  "order": 3,
+  "standardSummary": "Decline and use meus, tuus, suus, noster, vester in agreement; contrast suus vs eius.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-suus"
+      },
+      {
+        "type": "skill_count",
+        "skill": "possessive",
+        "n": 4,
+        "label": "possessives"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match-p"
+      }
+    ]
+  },
+  "teach": "Possessives agree like adjectives. suus = his/her/their own (reflexive possession); eius = his/her (of someone else).",
+  "allowList": {
+    "lemmas": [
+      "meus",
+      "tuus",
+      "suus",
+      "noster",
+      "vester",
+      "eius"
+    ],
+    "constructions": [
+      "possessive",
+      "pronouns",
+      "adjective agreement"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "matching",
+      "single_form",
+      "translate",
+      "short_answer"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-suus",
+      "type": "multiple_choice",
+      "prompt": "In “Marcus amat fīlium suum,” suum means…",
+      "targets": [
+        "possessive"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "someone else’s son"
+          },
+          {
+            "id": "b",
+            "label": "his own son"
+          },
+          {
+            "id": "c",
+            "label": "my son"
+          },
+          {
+            "id": "d",
+            "label": "your son"
+          }
+        ],
+        "correctOptionId": "b"
+      }
+    },
+    {
+      "id": "match-p",
+      "type": "matching",
+      "prompt": "Match possessive.",
+      "targets": [
+        "possessive"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "meus"
+          },
+          {
+            "id": "b",
+            "label": "tuus"
+          },
+          {
+            "id": "c",
+            "label": "noster"
+          },
+          {
+            "id": "d",
+            "label": "vester"
+          },
+          {
+            "id": "e",
+            "label": "suus"
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "my"
+          },
+          {
+            "id": "2",
+            "label": "your (sg.)"
+          },
+          {
+            "id": "3",
+            "label": "our"
+          },
+          {
+            "id": "4",
+            "label": "your (pl.)"
+          },
+          {
+            "id": "5",
+            "label": "his/her/its/their own"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3",
+          "d": "4",
+          "e": "5"
+        }
+      }
+    },
+    {
+      "id": "sf1",
+      "type": "single_form",
+      "prompt": "Feminine nom. sg. of meus:",
+      "targets": [
+        "possessive"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "accept": [
+          "mea"
+        ]
+      }
+    },
+    {
+      "id": "sf2",
+      "type": "single_form",
+      "prompt": "Neuter nom/acc sg. of noster:",
+      "targets": [
+        "possessive"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "accept": [
+          "nostrum"
+        ]
+      }
+    },
+    {
+      "id": "tr1",
+      "type": "translate",
+      "prompt": "Translate: Puella librum suum portat.",
+      "targets": [
+        "possessive"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "The girl carries her own book.",
+          "The girl carries her book."
+        ]
+      }
+    },
+    {
+      "id": "sa1",
+      "type": "short_answer",
+      "prompt": "When do you use suus instead of eius?",
+      "targets": [
+        "possessive"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "sampleAnswers": [
+          "When the possessor is the subject (his/her/their own). eius when the owner is someone else.",
+          "suus = own (reflexive possession); eius = of him/her (another person)."
+        ]
+      }
+    }
+  ]
+}

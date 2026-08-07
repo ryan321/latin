@@ -1,0 +1,208 @@
+{
+  "slug": "02-se-forms",
+  "title": "Reflexive sē (and mē/tē)",
+  "unitSlug": "more-pronouns",
+  "order": 2,
+  "standardSummary": "Form and translate sē / sibi; use mē/tē reflexively when subject is 1st/2nd person.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-se"
+      },
+      {
+        "type": "skill_count",
+        "skill": "reflexive",
+        "n": 4,
+        "label": "sē forms"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match-se"
+      }
+    ]
+  },
+  "teach": "3rd person reflexive: suī, sibi, sē, sē. No nominative. mē/tē can be reflexive for I/you.",
+  "allowList": {
+    "lemmas": [
+      "se",
+      "sibi",
+      "sui",
+      "me",
+      "te",
+      "is"
+    ],
+    "constructions": [
+      "reflexive",
+      "pronouns"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "matching",
+      "single_form",
+      "translate",
+      "cloze"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-se",
+      "type": "multiple_choice",
+      "prompt": "sē most often means…",
+      "targets": [
+        "reflexive"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "I/we as subject only"
+          },
+          {
+            "id": "b",
+            "label": "himself/herself/itself/themselves (object)"
+          },
+          {
+            "id": "c",
+            "label": "this near me"
+          },
+          {
+            "id": "d",
+            "label": "who?"
+          }
+        ],
+        "correctOptionId": "b"
+      }
+    },
+    {
+      "id": "match-se",
+      "type": "matching",
+      "prompt": "Match form.",
+      "targets": [
+        "reflexive"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "sē"
+          },
+          {
+            "id": "b",
+            "label": "sibi"
+          },
+          {
+            "id": "c",
+            "label": "suī"
+          },
+          {
+            "id": "d",
+            "label": "mē (with subject ego)"
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "acc/abl himself…"
+          },
+          {
+            "id": "2",
+            "label": "to/for himself…"
+          },
+          {
+            "id": "3",
+            "label": "of himself…"
+          },
+          {
+            "id": "4",
+            "label": "myself (reflexive object)"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3",
+          "d": "4"
+        }
+      }
+    },
+    {
+      "id": "sf1",
+      "type": "single_form",
+      "prompt": "Dative of the 3rd-person reflexive (to/for himself):",
+      "targets": [
+        "reflexive"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "accept": [
+          "sibi"
+        ]
+      }
+    },
+    {
+      "id": "sf2",
+      "type": "single_form",
+      "prompt": "Accusative reflexive for “yourself” (sg., subject tū):",
+      "targets": [
+        "reflexive"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "accept": [
+          "te",
+          "tē"
+        ]
+      }
+    },
+    {
+      "id": "tr1",
+      "type": "translate",
+      "prompt": "Translate: Mīles sē armāvit.",
+      "targets": [
+        "reflexive"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "The soldier armed himself.",
+          "The soldier equipped himself."
+        ]
+      }
+    },
+    {
+      "id": "cl1",
+      "type": "cloze",
+      "prompt": "They prepare themselves (acc. reflexive).",
+      "targets": [
+        "reflexive"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "template": "Sē {{1}}.",
+        "blanks": {
+          "1": [
+            "parant"
+          ]
+        },
+        "wordBank": [
+          "parant",
+          "parat",
+          "parāmus"
+        ]
+      }
+    }
+  ]
+}

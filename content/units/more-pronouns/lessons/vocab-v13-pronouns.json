@@ -1,0 +1,411 @@
+{
+  "slug": "vocab-v13-pronouns",
+  "title": "Vocabulary: Pronoun toolkit",
+  "unitSlug": "more-pronouns",
+  "order": 5,
+  "standardSummary": "Master pronoun toolkit vocabulary: match and quiz core pronoun words.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "match-0"
+      },
+      {
+        "type": "skill_count",
+        "skill": "vocabulary",
+        "n": 4,
+        "label": "vocab"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match-1"
+      }
+    ]
+  },
+  "teach": "Pronoun vocabulary toolkit for Year 1.",
+  "allowList": {
+    "lemmas": [
+      "ego",
+      "tū",
+      "is",
+      "hic",
+      "ille",
+      "quī",
+      "sē",
+      "meus",
+      "tuus",
+      "suus",
+      "noster",
+      "quis"
+    ],
+    "constructions": [
+      "vocabulary",
+      "pronouns"
+    ],
+    "activityTypes": [
+      "matching",
+      "multiple_choice",
+      "single_form"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "match-0",
+      "type": "matching",
+      "prompt": "Match pronoun toolkit words (set 1).",
+      "targets": [
+        "vocabulary",
+        "pronouns"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "leftLabel": "Latin",
+        "rightLabel": "English",
+        "left": [
+          {
+            "id": "l0",
+            "label": "ego"
+          },
+          {
+            "id": "l1",
+            "label": "tū"
+          },
+          {
+            "id": "l2",
+            "label": "is"
+          },
+          {
+            "id": "l3",
+            "label": "hic"
+          },
+          {
+            "id": "l4",
+            "label": "ille"
+          },
+          {
+            "id": "l5",
+            "label": "quī"
+          }
+        ],
+        "right": [
+          {
+            "id": "r0",
+            "label": "I"
+          },
+          {
+            "id": "r1",
+            "label": "you (sg.)"
+          },
+          {
+            "id": "r2",
+            "label": "he, she, it; that"
+          },
+          {
+            "id": "r3",
+            "label": "this"
+          },
+          {
+            "id": "r4",
+            "label": "that"
+          },
+          {
+            "id": "r5",
+            "label": "who, which, that (relative)"
+          }
+        ],
+        "pairs": {
+          "l0": "r0",
+          "l1": "r1",
+          "l2": "r2",
+          "l3": "r3",
+          "l4": "r4",
+          "l5": "r5"
+        }
+      }
+    },
+    {
+      "id": "match-1",
+      "type": "matching",
+      "prompt": "Match pronoun toolkit words (set 2).",
+      "targets": [
+        "vocabulary",
+        "pronouns"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "leftLabel": "Latin",
+        "rightLabel": "English",
+        "left": [
+          {
+            "id": "l0",
+            "label": "sē"
+          },
+          {
+            "id": "l1",
+            "label": "meus"
+          },
+          {
+            "id": "l2",
+            "label": "tuus"
+          },
+          {
+            "id": "l3",
+            "label": "suus"
+          },
+          {
+            "id": "l4",
+            "label": "noster"
+          },
+          {
+            "id": "l5",
+            "label": "quis"
+          }
+        ],
+        "right": [
+          {
+            "id": "r0",
+            "label": "himself, herself, itself, themselves"
+          },
+          {
+            "id": "r1",
+            "label": "my"
+          },
+          {
+            "id": "r2",
+            "label": "your (sg.)"
+          },
+          {
+            "id": "r3",
+            "label": "his/her/its/their own"
+          },
+          {
+            "id": "r4",
+            "label": "our"
+          },
+          {
+            "id": "r5",
+            "label": "who? what?"
+          }
+        ],
+        "pairs": {
+          "l0": "r0",
+          "l1": "r1",
+          "l2": "r2",
+          "l3": "r3",
+          "l4": "r4",
+          "l5": "r5"
+        }
+      }
+    },
+    {
+      "id": "mc-0",
+      "type": "multiple_choice",
+      "prompt": "What does **ego** mean?",
+      "targets": [
+        "vocabulary",
+        "pronouns"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "I"
+          },
+          {
+            "id": "b",
+            "label": "you (sg.)"
+          },
+          {
+            "id": "c",
+            "label": "he, she, it; that"
+          },
+          {
+            "id": "d",
+            "label": "this"
+          }
+        ],
+        "correctOptionId": "a"
+      }
+    },
+    {
+      "id": "mc-1",
+      "type": "multiple_choice",
+      "prompt": "What does **tū** mean?",
+      "targets": [
+        "vocabulary",
+        "pronouns"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "you (sg.)"
+          },
+          {
+            "id": "b",
+            "label": "he, she, it; that"
+          },
+          {
+            "id": "c",
+            "label": "this"
+          },
+          {
+            "id": "d",
+            "label": "that"
+          }
+        ],
+        "correctOptionId": "a"
+      }
+    },
+    {
+      "id": "mc-2",
+      "type": "multiple_choice",
+      "prompt": "What does **is** mean?",
+      "targets": [
+        "vocabulary",
+        "pronouns"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "he, she, it; that"
+          },
+          {
+            "id": "b",
+            "label": "this"
+          },
+          {
+            "id": "c",
+            "label": "that"
+          },
+          {
+            "id": "d",
+            "label": "who, which, that (relative)"
+          }
+        ],
+        "correctOptionId": "a"
+      }
+    },
+    {
+      "id": "mc-3",
+      "type": "multiple_choice",
+      "prompt": "What does **hic** mean?",
+      "targets": [
+        "vocabulary",
+        "pronouns"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "this"
+          },
+          {
+            "id": "b",
+            "label": "that"
+          },
+          {
+            "id": "c",
+            "label": "who, which, that (relative)"
+          },
+          {
+            "id": "d",
+            "label": "himself, herself, itself, themselves"
+          }
+        ],
+        "correctOptionId": "a"
+      }
+    },
+    {
+      "id": "mc-4",
+      "type": "multiple_choice",
+      "prompt": "What does **ille** mean?",
+      "targets": [
+        "vocabulary",
+        "pronouns"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "that"
+          },
+          {
+            "id": "b",
+            "label": "who, which, that (relative)"
+          },
+          {
+            "id": "c",
+            "label": "himself, herself, itself, themselves"
+          },
+          {
+            "id": "d",
+            "label": "my"
+          }
+        ],
+        "correctOptionId": "a"
+      }
+    },
+    {
+      "id": "sf-0",
+      "type": "single_form",
+      "prompt": "English for **quī**:",
+      "targets": [
+        "vocabulary"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "accept": [
+          "who, which, that (relative)",
+          "who"
+        ]
+      }
+    },
+    {
+      "id": "sf-1",
+      "type": "single_form",
+      "prompt": "English for **sē**:",
+      "targets": [
+        "vocabulary"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "accept": [
+          "himself, herself, itself, themselves",
+          "himself"
+        ]
+      }
+    },
+    {
+      "id": "sf-2",
+      "type": "single_form",
+      "prompt": "English for **meus**:",
+      "targets": [
+        "vocabulary"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "accept": [
+          "my",
+          "my"
+        ]
+      }
+    }
+  ]
+}

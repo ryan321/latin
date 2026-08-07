@@ -1,0 +1,240 @@
+{
+  "slug": "05-mixed-practice",
+  "title": "Pronoun mixed practice",
+  "unitSlug": "more-pronouns",
+  "order": 7,
+  "standardSummary": "Choose among personal, reflexive, demonstrative, relative, and possessive forms in short sentences.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-mix"
+      },
+      {
+        "type": "skill_count",
+        "skill": "pronouns",
+        "n": 4,
+        "label": "mixed pronouns"
+      },
+      {
+        "type": "translate_count",
+        "n": 2
+      }
+    ]
+  },
+  "teach": "Mixed Year 1 pronoun recognition and translation.",
+  "allowList": {
+    "lemmas": [
+      "ego",
+      "tu",
+      "is",
+      "se",
+      "hic",
+      "ille",
+      "qui",
+      "meus",
+      "suus",
+      "quis"
+    ],
+    "constructions": [
+      "pronouns",
+      "reflexive",
+      "possessive",
+      "demonstratives",
+      "relative pronoun"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "matching",
+      "translate",
+      "multi_select",
+      "short_answer"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-mix",
+      "type": "multiple_choice",
+      "prompt": "In “Is sē laudat,” sē is…",
+      "targets": [
+        "reflexive",
+        "pronouns"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "demonstrative ‘this’"
+          },
+          {
+            "id": "b",
+            "label": "reflexive himself"
+          },
+          {
+            "id": "c",
+            "label": "relative who"
+          },
+          {
+            "id": "d",
+            "label": "interrogative what"
+          }
+        ],
+        "correctOptionId": "b"
+      }
+    },
+    {
+      "id": "match-mix",
+      "type": "matching",
+      "prompt": "Match form family.",
+      "targets": [
+        "pronouns"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "hunc"
+          },
+          {
+            "id": "b",
+            "label": "quem (in a question)"
+          },
+          {
+            "id": "c",
+            "label": "suam"
+          },
+          {
+            "id": "d",
+            "label": "eum"
+          },
+          {
+            "id": "e",
+            "label": "mēcum"
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "demonstrative hic"
+          },
+          {
+            "id": "2",
+            "label": "interrogative"
+          },
+          {
+            "id": "3",
+            "label": "possessive suus"
+          },
+          {
+            "id": "4",
+            "label": "is/ea/id"
+          },
+          {
+            "id": "5",
+            "label": "personal + cum"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3",
+          "d": "4",
+          "e": "5"
+        }
+      }
+    },
+    {
+      "id": "ms1",
+      "type": "multi_select",
+      "prompt": "Which can mean “his own” (reflexive possession)?",
+      "targets": [
+        "possessive"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "suus"
+          },
+          {
+            "id": "b",
+            "label": "eius"
+          },
+          {
+            "id": "c",
+            "label": "meus"
+          },
+          {
+            "id": "d",
+            "label": "hic"
+          }
+        ],
+        "correctOptionIds": [
+          "a"
+        ]
+      }
+    },
+    {
+      "id": "tr1",
+      "type": "translate",
+      "prompt": "Translate: Haec est patria nostra.",
+      "targets": [
+        "possessive",
+        "hic"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "This is our fatherland.",
+          "This is our country."
+        ]
+      }
+    },
+    {
+      "id": "tr2",
+      "type": "translate",
+      "prompt": "Translate: Quis sē servat?",
+      "targets": [
+        "interrogative",
+        "reflexive"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "Who saves himself?",
+          "Who is saving himself?"
+        ]
+      }
+    },
+    {
+      "id": "sa1",
+      "type": "short_answer",
+      "prompt": "List five pronoun/adjective types you know in Latin (by name).",
+      "targets": [
+        "pronouns"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "sampleAnswers": [
+          "personal, demonstrative, relative, reflexive, possessive, interrogative",
+          "ego/tū; hic/ille; quī; sē; meus/suus; quis"
+        ]
+      }
+    }
+  ]
+}

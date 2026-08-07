@@ -1,0 +1,201 @@
+{
+  "slug": "05-passage-rex",
+  "title": "Passage: King and soldiers",
+  "unitSlug": "10-third-declension",
+  "order": 6,
+  "standardSummary": "Read a 3rd-declension passage; answer who/what and case-sense questions.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-king"
+      },
+      {
+        "type": "skill_count",
+        "skill": "passage reading",
+        "n": 3,
+        "label": "passage"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "tr1"
+      }
+    ]
+  },
+  "teach": "3rd declension nouns in context.",
+  "allowList": {
+    "lemmas": [
+      "rex",
+      "urbs",
+      "miles",
+      "nomen",
+      "dux",
+      "amo"
+    ],
+    "constructions": [
+      "3rd declension",
+      "passage reading"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "short_answer",
+      "translate",
+      "multi_select"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-king",
+      "type": "multiple_choice",
+      "prompt": "Where does the king live?",
+      "targets": [
+        "passage reading"
+      ],
+      "passage": {
+        "title": "King and city",
+        "latin": "Rēx in urbe habitat.\nMīlitēs rēgem amant.\nNōmen rēgis magnum est.\nVōx ducis in castrīs audītur? — Nōn semper.",
+        "notes": "rēx mīles nōmen dux urbs — 3rd declension · Use known vocabulary; guess from context only if needed."
+      },
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "In the city"
+          },
+          {
+            "id": "b",
+            "label": "Only at sea"
+          },
+          {
+            "id": "c",
+            "label": "In Gaul only"
+          },
+          {
+            "id": "d",
+            "label": "Not said"
+          }
+        ],
+        "correctOptionId": "a"
+      }
+    },
+    {
+      "id": "mc-gen",
+      "type": "multiple_choice",
+      "prompt": "“Nōmen rēgis” means the name…",
+      "targets": [
+        "passage reading",
+        "3rd declension"
+      ],
+      "passage": {
+        "title": "King and city",
+        "latin": "Rēx in urbe habitat.\nMīlitēs rēgem amant.\nNōmen rēgis magnum est.\nVōx ducis in castrīs audītur? — Nōn semper.",
+        "notes": "rēx mīles nōmen dux urbs — 3rd declension · Use known vocabulary; guess from context only if needed."
+      },
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "to the king"
+          },
+          {
+            "id": "b",
+            "label": "of the king"
+          },
+          {
+            "id": "c",
+            "label": "by the king as agent only"
+          },
+          {
+            "id": "d",
+            "label": "kings plural subject"
+          }
+        ],
+        "correctOptionId": "b"
+      }
+    },
+    {
+      "id": "mc-soldiers",
+      "type": "multiple_choice",
+      "prompt": "The soldiers…",
+      "targets": [
+        "passage reading"
+      ],
+      "passage": {
+        "title": "King and city",
+        "latin": "Rēx in urbe habitat.\nMīlitēs rēgem amant.\nNōmen rēgis magnum est.\nVōx ducis in castrīs audītur? — Nōn semper.",
+        "notes": "rēx mīles nōmen dux urbs — 3rd declension · Use known vocabulary; guess from context only if needed."
+      },
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "hate the king"
+          },
+          {
+            "id": "b",
+            "label": "love the king"
+          },
+          {
+            "id": "c",
+            "label": "are the name"
+          },
+          {
+            "id": "d",
+            "label": "are missing"
+          }
+        ],
+        "correctOptionId": "b"
+      }
+    },
+    {
+      "id": "tr1",
+      "type": "translate",
+      "prompt": "Translate:\nMīlitēs rēgem amant.",
+      "targets": [
+        "passage reading"
+      ],
+      "passage": {
+        "title": "King and city",
+        "latin": "Rēx in urbe habitat.\nMīlitēs rēgem amant.\nNōmen rēgis magnum est.\nVōx ducis in castrīs audītur? — Nōn semper.",
+        "notes": "rēx mīles nōmen dux urbs — 3rd declension · Use known vocabulary; guess from context only if needed."
+      },
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "The soldiers love the king."
+        ],
+        "rubric": "Use the passage; accurate meaning; macrons optional."
+      }
+    },
+    {
+      "id": "sa1",
+      "type": "short_answer",
+      "prompt": "Which 3rd-declension nouns appear? Name at least three.",
+      "targets": [
+        "passage reading"
+      ],
+      "passage": {
+        "title": "King and city",
+        "latin": "Rēx in urbe habitat.\nMīlitēs rēgem amant.\nNōmen rēgis magnum est.\nVōx ducis in castrīs audītur? — Nōn semper.",
+        "notes": "rēx mīles nōmen dux urbs — 3rd declension · Use known vocabulary; guess from context only if needed."
+      },
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "sampleAnswers": [
+          "rēx, urbs, mīlitēs, nōmen, dux, castrīs…",
+          "rex urbs miles nomen dux"
+        ]
+      }
+    }
+  ]
+}

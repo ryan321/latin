@@ -1,0 +1,212 @@
+{
+  "slug": "04-completed",
+  "title": "Completed action (perfect ideas)",
+  "unitSlug": "tense-meanings",
+  "order": 4,
+  "standardSummary": "Distinguish has/have done, had done, and will have done from ongoing past.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-perf"
+      },
+      {
+        "type": "skill_count",
+        "skill": "perfect meaning",
+        "n": 4,
+        "label": "completed"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match-c"
+      }
+    ]
+  },
+  "teach": "Completed aspect: perfect, pluperfect, future perfect ideas in English before Latin perfect system.",
+  "allowList": {
+    "lemmas": [],
+    "constructions": [
+      "perfect meaning",
+      "pluperfect meaning",
+      "tense meanings"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "matching",
+      "short_answer",
+      "multi_select",
+      "ordering"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-perf",
+      "type": "multiple_choice",
+      "prompt": "“She has conquered the city” presents the action as…",
+      "targets": [
+        "perfect meaning"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "only future"
+          },
+          {
+            "id": "b",
+            "label": "completed (with present relevance)"
+          },
+          {
+            "id": "c",
+            "label": "only ongoing past"
+          },
+          {
+            "id": "d",
+            "label": "a noun"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match-c",
+      "type": "matching",
+      "prompt": "Match English to label.",
+      "targets": [
+        "perfect meaning"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "They captured the camp."
+          },
+          {
+            "id": "b",
+            "label": "They had captured it before night."
+          },
+          {
+            "id": "c",
+            "label": "They will have captured it by dawn."
+          },
+          {
+            "id": "d",
+            "label": "They were capturing it."
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "simple completed past / perfect idea"
+          },
+          {
+            "id": "2",
+            "label": "had done (pluperfect idea)"
+          },
+          {
+            "id": "3",
+            "label": "will have done (future perfect idea)"
+          },
+          {
+            "id": "4",
+            "label": "past ongoing (not completed focus)"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3",
+          "d": "4"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "ms1",
+      "type": "multi_select",
+      "prompt": "Which stress completed action?",
+      "targets": [
+        "perfect meaning"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "He has written the letter."
+          },
+          {
+            "id": "b",
+            "label": "He was writing the letter."
+          },
+          {
+            "id": "c",
+            "label": "He had written it already."
+          },
+          {
+            "id": "d",
+            "label": "He used to write daily."
+          }
+        ],
+        "correctOptionIds": [
+          "a",
+          "c"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "ord1",
+      "type": "ordering",
+      "prompt": "Order events: earlier past → later past → present result",
+      "targets": [
+        "perfect meaning"
+      ],
+      "payload": {
+        "items": [
+          {
+            "id": "a",
+            "label": "She has arrived (and is here)."
+          },
+          {
+            "id": "b",
+            "label": "She had packed before she left."
+          },
+          {
+            "id": "c",
+            "label": "She left the city."
+          }
+        ],
+        "correctOrder": [
+          "b",
+          "c",
+          "a"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sa1",
+      "type": "short_answer",
+      "prompt": "Difference: “was conquering” vs “conquered / has conquered”?",
+      "targets": [
+        "perfect meaning",
+        "imperfect meaning"
+      ],
+      "payload": {
+        "sampleAnswers": [
+          "Was conquering = ongoing; conquered/has conquered = completed.",
+          "Ongoing vs finished action."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

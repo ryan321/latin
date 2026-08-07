@@ -1,0 +1,204 @@
+{
+  "slug": "05-passage-forum",
+  "title": "Passage: This and that",
+  "unitSlug": "15-demonstratives",
+  "order": 5,
+  "standardSummary": "Read a demonstrative-rich passage; answer which thing is near/far in the Latin.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-hoc"
+      },
+      {
+        "type": "skill_count",
+        "skill": "passage reading",
+        "n": 3,
+        "label": "passage"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "tr1"
+      }
+    ]
+  },
+  "teach": "hic/ille in civic setting.",
+  "allowList": {
+    "lemmas": [
+      "hic",
+      "ille",
+      "templum",
+      "forum",
+      "deus",
+      "amo"
+    ],
+    "constructions": [
+      "demonstratives",
+      "hic",
+      "ille",
+      "passage reading"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "short_answer",
+      "translate",
+      "multi_select"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-hoc",
+      "type": "multiple_choice",
+      "prompt": "“Hoc templum” points to…",
+      "targets": [
+        "passage reading",
+        "hic"
+      ],
+      "passage": {
+        "title": "This temple, that forum",
+        "latin": "Hoc templum magnum est.\nIllud forum plēnum est.\nHic vir illam deam amat.\nHaec templa Rōmānī aedificant.",
+        "notes": "hic vs ille · Use known vocabulary; guess from context only if needed."
+      },
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "that temple far away only"
+          },
+          {
+            "id": "b",
+            "label": "this temple"
+          },
+          {
+            "id": "c",
+            "label": "no temple"
+          },
+          {
+            "id": "d",
+            "label": "a verb"
+          }
+        ],
+        "correctOptionId": "b"
+      }
+    },
+    {
+      "id": "mc-ille",
+      "type": "multiple_choice",
+      "prompt": "The forum called “illud” is framed as…",
+      "targets": [
+        "passage reading",
+        "ille"
+      ],
+      "passage": {
+        "title": "This temple, that forum",
+        "latin": "Hoc templum magnum est.\nIllud forum plēnum est.\nHic vir illam deam amat.\nHaec templa Rōmānī aedificant.",
+        "notes": "hic vs ille · Use known vocabulary; guess from context only if needed."
+      },
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "this nearby only"
+          },
+          {
+            "id": "b",
+            "label": "that (more distant/emphatic)"
+          },
+          {
+            "id": "c",
+            "label": "a person nominative always"
+          },
+          {
+            "id": "d",
+            "label": "future tense"
+          }
+        ],
+        "correctOptionId": "b"
+      }
+    },
+    {
+      "id": "mc-man",
+      "type": "multiple_choice",
+      "prompt": "This man loves…",
+      "targets": [
+        "passage reading"
+      ],
+      "passage": {
+        "title": "This temple, that forum",
+        "latin": "Hoc templum magnum est.\nIllud forum plēnum est.\nHic vir illam deam amat.\nHaec templa Rōmānī aedificant.",
+        "notes": "hic vs ille · Use known vocabulary; guess from context only if needed."
+      },
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "this goddess nearby as haec only"
+          },
+          {
+            "id": "b",
+            "label": "that goddess (illam deam)"
+          },
+          {
+            "id": "c",
+            "label": "the forum as a goddess"
+          },
+          {
+            "id": "d",
+            "label": "nothing"
+          }
+        ],
+        "correctOptionId": "b"
+      }
+    },
+    {
+      "id": "tr1",
+      "type": "translate",
+      "prompt": "Translate:\nHaec templa Rōmānī aedificant.",
+      "targets": [
+        "passage reading"
+      ],
+      "passage": {
+        "title": "This temple, that forum",
+        "latin": "Hoc templum magnum est.\nIllud forum plēnum est.\nHic vir illam deam amat.\nHaec templa Rōmānī aedificant.",
+        "notes": "hic vs ille · Use known vocabulary; guess from context only if needed."
+      },
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "The Romans are building these temples.",
+          "Romans build these temples."
+        ]
+      }
+    },
+    {
+      "id": "sa1",
+      "type": "short_answer",
+      "prompt": "How does hic vs ille help you picture the scene?",
+      "targets": [
+        "passage reading"
+      ],
+      "passage": {
+        "title": "This temple, that forum",
+        "latin": "Hoc templum magnum est.\nIllud forum plēnum est.\nHic vir illam deam amat.\nHaec templa Rōmānī aedificant.",
+        "notes": "hic vs ille · Use known vocabulary; guess from context only if needed."
+      },
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "sampleAnswers": [
+          "Hic/hoc/haec = this (nearer); ille/illud/illa = that (farther/emphatic).",
+          "This vs that distance."
+        ]
+      }
+    }
+  ]
+}

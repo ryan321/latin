@@ -1,0 +1,168 @@
+{
+  "slug": "03-checkpoint",
+  "title": "Checkpoint — Agreement concepts",
+  "unitSlug": "agreement-concepts",
+  "order": 3,
+  "standardSummary": "Explain agreement and apply it to English before Latin adjective charts.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc1"
+      },
+      {
+        "type": "skill_count",
+        "skill": "agreement concept",
+        "n": 3,
+        "label": "agreement checkpoint"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match1"
+      }
+    ]
+  },
+  "teach": "Checkpoint before 1st/2nd declension adjectives in Latin.",
+  "allowList": {
+    "lemmas": [],
+    "constructions": [
+      "agreement concept"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "matching",
+      "short_answer",
+      "multi_select"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc1",
+      "type": "multiple_choice",
+      "prompt": "Latin adjectives will agree with nouns in…",
+      "targets": [
+        "agreement concept"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "spelling only"
+          },
+          {
+            "id": "b",
+            "label": "gender, number, and case"
+          },
+          {
+            "id": "c",
+            "label": "tense only"
+          },
+          {
+            "id": "d",
+            "label": "person only"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match1",
+      "type": "matching",
+      "prompt": "Match.",
+      "targets": [
+        "agreement concept"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "these temples"
+          },
+          {
+            "id": "b",
+            "label": "The temple is large."
+          },
+          {
+            "id": "c",
+            "label": "subject–verb pair"
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "number agreement on a demonstrative"
+          },
+          {
+            "id": "2",
+            "label": "predicate adjective"
+          },
+          {
+            "id": "3",
+            "label": "verb agreement (related idea)"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "ms1",
+      "type": "multi_select",
+      "prompt": "Select correct English.",
+      "targets": [
+        "agreement concept"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "this roads"
+          },
+          {
+            "id": "b",
+            "label": "these roads"
+          },
+          {
+            "id": "c",
+            "label": "that soldier"
+          },
+          {
+            "id": "d",
+            "label": "those soldier"
+          }
+        ],
+        "correctOptionIds": [
+          "b",
+          "c"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sa1",
+      "type": "short_answer",
+      "prompt": "In your own words: what is agreement?",
+      "targets": [
+        "agreement concept"
+      ],
+      "payload": {
+        "sampleAnswers": [
+          "Related words match features like number (and in Latin gender and case).",
+          "Words that go together share grammatical features."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

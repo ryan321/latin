@@ -1,0 +1,152 @@
+{
+  "slug": "02-than",
+  "title": "Than and comparisons",
+  "unitSlug": "degree-concepts",
+  "order": 2,
+  "standardSummary": "Parse “X is bigger than Y”; identify the two things compared.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-th"
+      },
+      {
+        "type": "skill_count",
+        "skill": "degree concept",
+        "n": 3,
+        "label": "than"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match-t"
+      }
+    ]
+  },
+  "teach": "Comparative needs a standard of comparison (than Y, or of two).",
+  "allowList": {
+    "lemmas": [],
+    "constructions": [
+      "degree concept"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "matching",
+      "short_answer",
+      "cloze"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-th",
+      "type": "multiple_choice",
+      "prompt": "In “This road is longer than that road,” we compare…",
+      "targets": [
+        "degree concept"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "three roads minimum"
+          },
+          {
+            "id": "b",
+            "label": "two roads"
+          },
+          {
+            "id": "c",
+            "label": "only verbs"
+          },
+          {
+            "id": "d",
+            "label": "tenses"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match-t",
+      "type": "matching",
+      "prompt": "Match.",
+      "targets": [
+        "degree concept"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "taller than Marcus"
+          },
+          {
+            "id": "b",
+            "label": "the tallest of the soldiers"
+          },
+          {
+            "id": "c",
+            "label": "very tall"
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "comparative + than"
+          },
+          {
+            "id": "2",
+            "label": "superlative in a group"
+          },
+          {
+            "id": "3",
+            "label": "superlative as 'very'"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "cl1",
+      "type": "cloze",
+      "prompt": "Complete with than.",
+      "targets": [
+        "degree concept"
+      ],
+      "payload": {
+        "template": "She is braver {{1}} her brother.",
+        "blanks": {
+          "1": [
+            "than"
+          ]
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sa1",
+      "type": "short_answer",
+      "prompt": "Irregular English: good → ? → ?",
+      "targets": [
+        "degree concept"
+      ],
+      "payload": {
+        "sampleAnswers": [
+          "better, best",
+          "better → best"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

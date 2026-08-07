@@ -1,0 +1,142 @@
+{
+  "slug": "02-describe-nouns",
+  "title": "Describing nouns",
+  "unitSlug": "agreement-concepts",
+  "order": 2,
+  "standardSummary": "Distinguish attributive vs predicate description in English; identify what is being described.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-attr"
+      },
+      {
+        "type": "skill_count",
+        "skill": "agreement concept",
+        "n": 3,
+        "label": "describe nouns"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match-d"
+      }
+    ]
+  },
+  "teach": "Adjectives describe nouns; they may sit next to the noun or after a linking verb.",
+  "allowList": {
+    "lemmas": [],
+    "constructions": [
+      "agreement concept",
+      "adjective"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "matching",
+      "short_answer",
+      "translate"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-attr",
+      "type": "multiple_choice",
+      "prompt": "In “The tall soldier fights,” tall is…",
+      "targets": [
+        "agreement concept"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "the verb"
+          },
+          {
+            "id": "b",
+            "label": "describing soldier"
+          },
+          {
+            "id": "c",
+            "label": "describing fights"
+          },
+          {
+            "id": "d",
+            "label": "a preposition"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match-d",
+      "type": "matching",
+      "prompt": "Match sentence to pattern.",
+      "targets": [
+        "agreement concept"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "The good queen rules."
+          },
+          {
+            "id": "b",
+            "label": "The queen is good."
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "adjective next to noun (attributive)"
+          },
+          {
+            "id": "2",
+            "label": "adjective after linking verb (predicate)"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sa1",
+      "type": "short_answer",
+      "prompt": "In “The roads are long,” what does long describe?",
+      "targets": [
+        "agreement concept"
+      ],
+      "payload": {
+        "sampleAnswers": [
+          "roads",
+          "The subject roads."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sa2",
+      "type": "short_answer",
+      "prompt": "Why must the describing word match the noun in Latin?",
+      "targets": [
+        "agreement concept"
+      ],
+      "payload": {
+        "sampleAnswers": [
+          "So you know which noun it belongs to when word order is free.",
+          "Agreement links adjective to its noun by shared endings."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

@@ -1,0 +1,202 @@
+{
+  "slug": "05-passage-work",
+  "title": "Passage: Work and water",
+  "unitSlug": "04-first-conjugation",
+  "order": 6,
+  "standardSummary": "Read a short present-tense passage; answer comprehension and translate from the text.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-what"
+      },
+      {
+        "type": "skill_count",
+        "skill": "passage reading",
+        "n": 3,
+        "label": "passage"
+      },
+      {
+        "type": "translate_count",
+        "n": 1
+      }
+    ]
+  },
+  "teach": "Connected present active sentences.",
+  "allowList": {
+    "lemmas": [
+      "puella",
+      "aqua",
+      "porto",
+      "laboro",
+      "amo",
+      "terra"
+    ],
+    "constructions": [
+      "1st conjugation",
+      "present",
+      "passage reading"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "short_answer",
+      "translate",
+      "multi_select"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-what",
+      "type": "multiple_choice",
+      "prompt": "What does the girl carry?",
+      "targets": [
+        "passage reading"
+      ],
+      "passage": {
+        "title": "A girl works",
+        "latin": "Puella aquam portat.\nFēmina in villā labōrat.\nPuellae terram amant.\nNōn semper labōrāmus.",
+        "notes": "portat = carries · labōrat = works · nōn = not · Use known vocabulary; guess from context only if needed."
+      },
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "Money"
+          },
+          {
+            "id": "b",
+            "label": "Water"
+          },
+          {
+            "id": "c",
+            "label": "A sword"
+          },
+          {
+            "id": "d",
+            "label": "Nothing"
+          }
+        ],
+        "correctOptionId": "b"
+      }
+    },
+    {
+      "id": "mc-where",
+      "type": "multiple_choice",
+      "prompt": "Where does the woman work?",
+      "targets": [
+        "passage reading"
+      ],
+      "passage": {
+        "title": "A girl works",
+        "latin": "Puella aquam portat.\nFēmina in villā labōrat.\nPuellae terram amant.\nNōn semper labōrāmus.",
+        "notes": "portat = carries · labōrat = works · nōn = not · Use known vocabulary; guess from context only if needed."
+      },
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "In the villa"
+          },
+          {
+            "id": "b",
+            "label": "In the camp"
+          },
+          {
+            "id": "c",
+            "label": "On a ship"
+          },
+          {
+            "id": "d",
+            "label": "Not said"
+          }
+        ],
+        "correctOptionId": "a"
+      }
+    },
+    {
+      "id": "mc-neg",
+      "type": "multiple_choice",
+      "prompt": "“Nōn semper labōrāmus” means we…",
+      "targets": [
+        "passage reading"
+      ],
+      "passage": {
+        "title": "A girl works",
+        "latin": "Puella aquam portat.\nFēmina in villā labōrat.\nPuellae terram amant.\nNōn semper labōrāmus.",
+        "notes": "portat = carries · labōrat = works · nōn = not · Use known vocabulary; guess from context only if needed."
+      },
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "always work"
+          },
+          {
+            "id": "b",
+            "label": "do not always work"
+          },
+          {
+            "id": "c",
+            "label": "never exist"
+          },
+          {
+            "id": "d",
+            "label": "only will work"
+          }
+        ],
+        "correctOptionId": "b"
+      }
+    },
+    {
+      "id": "tr1",
+      "type": "translate",
+      "prompt": "Translate from the passage:\nPuellae terram amant.",
+      "targets": [
+        "passage reading"
+      ],
+      "passage": {
+        "title": "A girl works",
+        "latin": "Puella aquam portat.\nFēmina in villā labōrat.\nPuellae terram amant.\nNōn semper labōrāmus.",
+        "notes": "portat = carries · labōrat = works · nōn = not · Use known vocabulary; guess from context only if needed."
+      },
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "The girls love the land.",
+          "The girls love the earth."
+        ],
+        "rubric": "Use the passage; accurate meaning; macrons optional."
+      }
+    },
+    {
+      "id": "sa1",
+      "type": "short_answer",
+      "prompt": "Who works in the villa?",
+      "targets": [
+        "passage reading"
+      ],
+      "passage": {
+        "title": "A girl works",
+        "latin": "Puella aquam portat.\nFēmina in villā labōrat.\nPuellae terram amant.\nNōn semper labōrāmus.",
+        "notes": "portat = carries · labōrat = works · nōn = not · Use known vocabulary; guess from context only if needed."
+      },
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "sampleAnswers": [
+          "The woman (fēmina).",
+          "A woman."
+        ]
+      }
+    }
+  ]
+}

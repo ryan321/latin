@@ -1,0 +1,565 @@
+{
+  "slug": "vocab-v10-travel-people",
+  "title": "Vocabulary: Travel & people words",
+  "unitSlug": "14-prep-pronouns",
+  "order": 5,
+  "standardSummary": "Master this vocabulary set (12 words): match both directions and pass drills.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "match-l2e-0"
+      },
+      {
+        "type": "skill_count",
+        "skill": "vocabulary",
+        "n": 5,
+        "label": "vocab items"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match-e2l"
+      }
+    ]
+  },
+  "teach": "Vocabulary batch v10-travel-people: ad, in, ab / ā, ex / ē, cum, per, sine, prō, iter, mare, mōns, cīvis",
+  "allowList": {
+    "lemmas": [
+      "ad",
+      "in",
+      "ab/ā",
+      "ex/ē",
+      "cum",
+      "per",
+      "sine",
+      "prō",
+      "iter",
+      "mare",
+      "mōns",
+      "cīvis"
+    ],
+    "constructions": [
+      "vocabulary",
+      "vocab drill",
+      "v10-travel-people"
+    ],
+    "activityTypes": [
+      "matching",
+      "multiple_choice",
+      "single_form",
+      "translate",
+      "multi_select",
+      "cloze",
+      "short_answer"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "match-l2e-0",
+      "type": "matching",
+      "prompt": "Match each Latin word to its English meaning. (set 1)",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v10-travel-people"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "leftLabel": "Latin",
+        "rightLabel": "English",
+        "left": [
+          {
+            "id": "l0",
+            "label": "ad"
+          },
+          {
+            "id": "l1",
+            "label": "in"
+          },
+          {
+            "id": "l2",
+            "label": "ab / ā"
+          },
+          {
+            "id": "l3",
+            "label": "ex / ē"
+          },
+          {
+            "id": "l4",
+            "label": "cum"
+          },
+          {
+            "id": "l5",
+            "label": "per"
+          }
+        ],
+        "right": [
+          {
+            "id": "r0",
+            "label": "to, toward"
+          },
+          {
+            "id": "r1",
+            "label": "in, on, into"
+          },
+          {
+            "id": "r2",
+            "label": "from, by (agent)"
+          },
+          {
+            "id": "r3",
+            "label": "out of, from"
+          },
+          {
+            "id": "r4",
+            "label": "with"
+          },
+          {
+            "id": "r5",
+            "label": "through, along"
+          }
+        ],
+        "pairs": {
+          "l0": "r0",
+          "l1": "r1",
+          "l2": "r2",
+          "l3": "r3",
+          "l4": "r4",
+          "l5": "r5"
+        }
+      }
+    },
+    {
+      "id": "match-l2e-1",
+      "type": "matching",
+      "prompt": "Match each Latin word to its English meaning. (set 2)",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v10-travel-people"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "leftLabel": "Latin",
+        "rightLabel": "English",
+        "left": [
+          {
+            "id": "l0",
+            "label": "sine"
+          },
+          {
+            "id": "l1",
+            "label": "prō"
+          },
+          {
+            "id": "l2",
+            "label": "iter"
+          },
+          {
+            "id": "l3",
+            "label": "mare"
+          },
+          {
+            "id": "l4",
+            "label": "mōns"
+          },
+          {
+            "id": "l5",
+            "label": "cīvis"
+          }
+        ],
+        "right": [
+          {
+            "id": "r0",
+            "label": "without"
+          },
+          {
+            "id": "r1",
+            "label": "for, on behalf of, in front of"
+          },
+          {
+            "id": "r2",
+            "label": "journey, march, route"
+          },
+          {
+            "id": "r3",
+            "label": "sea"
+          },
+          {
+            "id": "r4",
+            "label": "mountain"
+          },
+          {
+            "id": "r5",
+            "label": "citizen"
+          }
+        ],
+        "pairs": {
+          "l0": "r0",
+          "l1": "r1",
+          "l2": "r2",
+          "l3": "r3",
+          "l4": "r4",
+          "l5": "r5"
+        }
+      }
+    },
+    {
+      "id": "match-e2l",
+      "type": "matching",
+      "prompt": "Match English meaning to Latin (produce recognition both ways).",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v10-travel-people"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "leftLabel": "English",
+        "rightLabel": "Latin",
+        "left": [
+          {
+            "id": "l0",
+            "label": "to, toward"
+          },
+          {
+            "id": "l1",
+            "label": "in, on, into"
+          },
+          {
+            "id": "l2",
+            "label": "from, by (agent)"
+          },
+          {
+            "id": "l3",
+            "label": "out of, from"
+          },
+          {
+            "id": "l4",
+            "label": "with"
+          },
+          {
+            "id": "l5",
+            "label": "through, along"
+          }
+        ],
+        "right": [
+          {
+            "id": "r0",
+            "label": "ad"
+          },
+          {
+            "id": "r1",
+            "label": "in"
+          },
+          {
+            "id": "r2",
+            "label": "ab / ā"
+          },
+          {
+            "id": "r3",
+            "label": "ex / ē"
+          },
+          {
+            "id": "r4",
+            "label": "cum"
+          },
+          {
+            "id": "r5",
+            "label": "per"
+          }
+        ],
+        "pairs": {
+          "l0": "r0",
+          "l1": "r1",
+          "l2": "r2",
+          "l3": "r3",
+          "l4": "r4",
+          "l5": "r5"
+        }
+      }
+    },
+    {
+      "id": "mc-0",
+      "type": "multiple_choice",
+      "prompt": "What does **ad** mean?",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v10-travel-people"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "from, by (agent)"
+          },
+          {
+            "id": "b",
+            "label": "out of, from"
+          },
+          {
+            "id": "c",
+            "label": "to, toward"
+          },
+          {
+            "id": "d",
+            "label": "in, on, into"
+          }
+        ],
+        "correctOptionId": "c"
+      }
+    },
+    {
+      "id": "mc-1",
+      "type": "multiple_choice",
+      "prompt": "What does **in** mean?",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v10-travel-people"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "to, toward"
+          },
+          {
+            "id": "b",
+            "label": "from, by (agent)"
+          },
+          {
+            "id": "c",
+            "label": "out of, from"
+          },
+          {
+            "id": "d",
+            "label": "in, on, into"
+          }
+        ],
+        "correctOptionId": "d"
+      }
+    },
+    {
+      "id": "mc-2",
+      "type": "multiple_choice",
+      "prompt": "What does **ab / ā** mean?",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v10-travel-people"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "to, toward"
+          },
+          {
+            "id": "b",
+            "label": "in, on, into"
+          },
+          {
+            "id": "c",
+            "label": "out of, from"
+          },
+          {
+            "id": "d",
+            "label": "from, by (agent)"
+          }
+        ],
+        "correctOptionId": "d"
+      }
+    },
+    {
+      "id": "mc-3",
+      "type": "multiple_choice",
+      "prompt": "What does **ex / ē** mean?",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v10-travel-people"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "from, by (agent)"
+          },
+          {
+            "id": "b",
+            "label": "out of, from"
+          },
+          {
+            "id": "c",
+            "label": "to, toward"
+          },
+          {
+            "id": "d",
+            "label": "in, on, into"
+          }
+        ],
+        "correctOptionId": "b"
+      }
+    },
+    {
+      "id": "mc-4",
+      "type": "multiple_choice",
+      "prompt": "What does **cum** mean?",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v10-travel-people"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "in, on, into"
+          },
+          {
+            "id": "b",
+            "label": "from, by (agent)"
+          },
+          {
+            "id": "c",
+            "label": "with"
+          },
+          {
+            "id": "d",
+            "label": "to, toward"
+          }
+        ],
+        "correctOptionId": "c"
+      }
+    },
+    {
+      "id": "sf-gloss-0",
+      "type": "single_form",
+      "prompt": "English meaning of **per**:",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v10-travel-people"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "accept": [
+          "through",
+          "along"
+        ],
+        "hint": "+ acc"
+      }
+    },
+    {
+      "id": "sf-gloss-1",
+      "type": "single_form",
+      "prompt": "English meaning of **sine**:",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v10-travel-people"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "accept": [
+          "without"
+        ],
+        "hint": "+ abl"
+      }
+    },
+    {
+      "id": "sf-gloss-2",
+      "type": "single_form",
+      "prompt": "English meaning of **prō**:",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v10-travel-people"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "accept": [
+          "for",
+          "on behalf of",
+          "in front of"
+        ],
+        "hint": "+ abl"
+      }
+    },
+    {
+      "id": "tr-0",
+      "type": "translate",
+      "prompt": "Translate: **mōns**",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v10-travel-people"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "direction": "L2E",
+        "length": "word",
+        "sampleAnswers": [
+          "mountain"
+        ],
+        "rubric": "Accept common gloss synonyms; macrons optional for Latin."
+      }
+    },
+    {
+      "id": "tr-1",
+      "type": "translate",
+      "prompt": "Translate: **cīvis**",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v10-travel-people"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "direction": "L2E",
+        "length": "word",
+        "sampleAnswers": [
+          "citizen"
+        ],
+        "rubric": "Accept common gloss synonyms; macrons optional for Latin."
+      }
+    },
+    {
+      "id": "sa-use",
+      "type": "short_answer",
+      "prompt": "Pick any 3 words from this list and write a tiny English sentence that could use each (or one sentence using two). Theme: Prepositions, place, people.",
+      "targets": [
+        "vocabulary",
+        "v10-travel-people"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "sampleAnswers": [
+          "Any sensible English using three of the batch meanings.",
+          "Student sentences using batch glosses."
+        ]
+      }
+    }
+  ]
+}

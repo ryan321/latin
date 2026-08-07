@@ -1,0 +1,192 @@
+{
+  "slug": "01-what-is-agreement",
+  "title": "What is agreement?",
+  "unitSlug": "agreement-concepts",
+  "order": 1,
+  "standardSummary": "Define grammatical agreement; identify English examples where words must match in number.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-ag"
+      },
+      {
+        "type": "skill_count",
+        "skill": "agreement concept",
+        "n": 3,
+        "label": "agreement idea"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match-a"
+      }
+    ]
+  },
+  "teach": "Agreement: related words share features (number, and later gender and case in Latin).",
+  "allowList": {
+    "lemmas": [],
+    "constructions": [
+      "agreement concept"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "matching",
+      "short_answer",
+      "multi_select",
+      "cloze"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-ag",
+      "type": "multiple_choice",
+      "prompt": "Agreement means related words…",
+      "targets": [
+        "agreement concept"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "always rhyme"
+          },
+          {
+            "id": "b",
+            "label": "match in certain grammatical features"
+          },
+          {
+            "id": "c",
+            "label": "must be the same part of speech"
+          },
+          {
+            "id": "d",
+            "label": "cannot appear in one sentence"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match-a",
+      "type": "matching",
+      "prompt": "Match pair to why it agrees or fails.",
+      "targets": [
+        "agreement concept"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "this book / these books"
+          },
+          {
+            "id": "b",
+            "label": "he walks / they walk"
+          },
+          {
+            "id": "c",
+            "label": "a red cars (wrong)"
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "demonstrative matches number"
+          },
+          {
+            "id": "2",
+            "label": "verb matches subject number"
+          },
+          {
+            "id": "3",
+            "label": "article/adjective number clash"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "ms1",
+      "type": "multi_select",
+      "prompt": "Which show number agreement working?",
+      "targets": [
+        "agreement concept"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "those girls"
+          },
+          {
+            "id": "b",
+            "label": "those girl"
+          },
+          {
+            "id": "c",
+            "label": "this villa"
+          },
+          {
+            "id": "d",
+            "label": "these villa"
+          }
+        ],
+        "correctOptionIds": [
+          "a",
+          "c"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "cl1",
+      "type": "cloze",
+      "prompt": "Choose this or these.",
+      "targets": [
+        "agreement concept"
+      ],
+      "payload": {
+        "template": "{{1}} soldiers are brave.",
+        "blanks": {
+          "1": [
+            "These",
+            "these"
+          ]
+        },
+        "wordBank": [
+          "This",
+          "These"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sa1",
+      "type": "short_answer",
+      "prompt": "English shows some agreement; Latin will show more. What extra features will adjectives need to match?",
+      "targets": [
+        "agreement concept"
+      ],
+      "payload": {
+        "sampleAnswers": [
+          "Gender, number, and case—not just number.",
+          "Gender and case as well as number."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

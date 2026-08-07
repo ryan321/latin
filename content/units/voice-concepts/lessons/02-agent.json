@@ -1,0 +1,190 @@
+{
+  "slug": "02-agent",
+  "title": "Agent and “by…”",
+  "unitSlug": "voice-concepts",
+  "order": 2,
+  "standardSummary": "Identify the agent in passive sentences; connect “by the soldier” to who does the action.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-ag"
+      },
+      {
+        "type": "skill_count",
+        "skill": "agent concept",
+        "n": 3,
+        "label": "agent"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match-a"
+      }
+    ]
+  },
+  "teach": "Agent = doer in a passive sentence, often in a by-phrase. Means/instrument is a thing used.",
+  "allowList": {
+    "lemmas": [],
+    "constructions": [
+      "agent concept",
+      "voice concept"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "matching",
+      "short_answer",
+      "cloze",
+      "multi_select"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-ag",
+      "type": "multiple_choice",
+      "prompt": "In “The city was taken by the army,” the agent is…",
+      "targets": [
+        "agent concept"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "city"
+          },
+          {
+            "id": "b",
+            "label": "was"
+          },
+          {
+            "id": "c",
+            "label": "the army"
+          },
+          {
+            "id": "d",
+            "label": "taken only as a noun"
+          }
+        ],
+        "correctOptionId": "c"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match-a",
+      "type": "matching",
+      "prompt": "Match.",
+      "targets": [
+        "agent concept"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "by the king"
+          },
+          {
+            "id": "b",
+            "label": "with a sword"
+          },
+          {
+            "id": "c",
+            "label": "The letter was sent."
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "personal agent"
+          },
+          {
+            "id": "2",
+            "label": "means / instrument"
+          },
+          {
+            "id": "3",
+            "label": "passive without named agent"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "ms1",
+      "type": "multi_select",
+      "prompt": "Which name a person agent?",
+      "targets": [
+        "agent concept"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "praised by the teacher"
+          },
+          {
+            "id": "b",
+            "label": "built with stones"
+          },
+          {
+            "id": "c",
+            "label": "seen by the guards"
+          },
+          {
+            "id": "d",
+            "label": "opened by a key"
+          }
+        ],
+        "correctOptionIds": [
+          "a",
+          "c"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "cl1",
+      "type": "cloze",
+      "prompt": "Rewrite focus: who did it?",
+      "targets": [
+        "agent concept"
+      ],
+      "payload": {
+        "template": "Passive: The camp was captured by the soldiers. Agent: {{1}}",
+        "blanks": {
+          "1": [
+            "the soldiers",
+            "soldiers",
+            "the soldiers."
+          ]
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sa1",
+      "type": "short_answer",
+      "prompt": "Latin will mark personal agent with ā/ab + ablative. What English phrase does that match?",
+      "targets": [
+        "agent concept"
+      ],
+      "payload": {
+        "sampleAnswers": [
+          "by… (a person)",
+          "by the soldier / by them"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

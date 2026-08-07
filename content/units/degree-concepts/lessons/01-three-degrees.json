@@ -1,0 +1,168 @@
+{
+  "slug": "01-three-degrees",
+  "title": "Three degrees of adjectives",
+  "unitSlug": "degree-concepts",
+  "order": 1,
+  "standardSummary": "Label positive, comparative, and superlative forms in English.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-d"
+      },
+      {
+        "type": "skill_count",
+        "skill": "degree concept",
+        "n": 4,
+        "label": "degree"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match-d"
+      }
+    ]
+  },
+  "teach": "Positive = base; comparative = -er/more; superlative = -est/most/very.",
+  "allowList": {
+    "lemmas": [],
+    "constructions": [
+      "degree concept"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "matching",
+      "short_answer",
+      "multi_select"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-d",
+      "type": "multiple_choice",
+      "prompt": "“Longer” is…",
+      "targets": [
+        "degree concept"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "positive"
+          },
+          {
+            "id": "b",
+            "label": "comparative"
+          },
+          {
+            "id": "c",
+            "label": "superlative"
+          },
+          {
+            "id": "d",
+            "label": "a verb tense"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match-d",
+      "type": "matching",
+      "prompt": "Match degree.",
+      "targets": [
+        "degree concept"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "brave"
+          },
+          {
+            "id": "b",
+            "label": "braver / more brave"
+          },
+          {
+            "id": "c",
+            "label": "bravest / most brave"
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "positive"
+          },
+          {
+            "id": "2",
+            "label": "comparative"
+          },
+          {
+            "id": "3",
+            "label": "superlative"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "ms1",
+      "type": "multi_select",
+      "prompt": "Select superlatives.",
+      "targets": [
+        "degree concept"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "tallest"
+          },
+          {
+            "id": "b",
+            "label": "more careful"
+          },
+          {
+            "id": "c",
+            "label": "most careful"
+          },
+          {
+            "id": "d",
+            "label": "tall"
+          }
+        ],
+        "correctOptionIds": [
+          "a",
+          "c"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sa1",
+      "type": "short_answer",
+      "prompt": "What does the comparative degree do?",
+      "targets": [
+        "degree concept"
+      ],
+      "payload": {
+        "sampleAnswers": [
+          "Compares two things (higher degree than something).",
+          "Shows more of a quality relative to another."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

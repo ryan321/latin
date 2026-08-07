@@ -315,6 +315,9 @@ export function ActivityCard({
   const locked = status === "passed";
   const showKeyboard = NEEDS_MACRON_KB.has(activity.type) && !locked;
 
+  const passage =
+    "passage" in activity && activity.passage ? activity.passage : null;
+
   return (
     <li className="rounded-xl border border-stone-200 bg-white p-5 shadow-sm dark:border-stone-700 dark:bg-stone-900">
       <div className="mb-3 flex items-start justify-between gap-3">
@@ -337,6 +340,22 @@ export function ActivityCard({
           </span>
         )}
       </div>
+
+      {passage && (
+        <figure className="mb-4 overflow-hidden rounded-lg border border-amber-200/80 bg-gradient-to-br from-amber-50/90 to-stone-50 dark:border-amber-900/50 dark:from-amber-950/30 dark:to-stone-950">
+          <figcaption className="border-b border-amber-200/60 px-3 py-1.5 text-[11px] font-bold uppercase tracking-wider text-amber-900/70 dark:border-amber-900/40 dark:text-amber-300/80">
+            {passage.title ?? "Reading passage"}
+          </figcaption>
+          <blockquote className="whitespace-pre-line px-4 py-3 font-serif text-[17px] leading-relaxed text-stone-900 dark:text-stone-100">
+            {passage.latin}
+          </blockquote>
+          {passage.notes && (
+            <p className="border-t border-amber-200/50 px-4 py-2 text-xs leading-relaxed text-stone-600 dark:border-amber-900/30 dark:text-stone-400">
+              {passage.notes}
+            </p>
+          )}
+        </figure>
+      )}
 
       {activity.type === "paradigm_grid" && (
         <ParadigmGridEditor

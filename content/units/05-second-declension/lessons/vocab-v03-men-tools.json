@@ -1,0 +1,563 @@
+{
+  "slug": "vocab-v03-men-tools",
+  "title": "Vocabulary: Men, tools & war",
+  "unitSlug": "05-second-declension",
+  "order": 4,
+  "standardSummary": "Master this vocabulary set (12 words): match both directions and pass drills.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "match-l2e-0"
+      },
+      {
+        "type": "skill_count",
+        "skill": "vocabulary",
+        "n": 5,
+        "label": "vocab items"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match-e2l"
+      }
+    ]
+  },
+  "teach": "Vocabulary batch v03-men-tools: servus, dominus, amīcus, equus, ager, bellum, oppidum, verbum, gladius, fīlius, deus, populus",
+  "allowList": {
+    "lemmas": [
+      "servus",
+      "dominus",
+      "amīcus",
+      "equus",
+      "ager",
+      "bellum",
+      "oppidum",
+      "verbum",
+      "gladius",
+      "fīlius",
+      "deus",
+      "populus"
+    ],
+    "constructions": [
+      "vocabulary",
+      "vocab drill",
+      "v03-men-tools"
+    ],
+    "activityTypes": [
+      "matching",
+      "multiple_choice",
+      "single_form",
+      "translate",
+      "multi_select",
+      "cloze",
+      "short_answer"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "match-l2e-0",
+      "type": "matching",
+      "prompt": "Match each Latin word to its English meaning. (set 1)",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v03-men-tools"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "leftLabel": "Latin",
+        "rightLabel": "English",
+        "left": [
+          {
+            "id": "l0",
+            "label": "servus"
+          },
+          {
+            "id": "l1",
+            "label": "dominus"
+          },
+          {
+            "id": "l2",
+            "label": "amīcus"
+          },
+          {
+            "id": "l3",
+            "label": "equus"
+          },
+          {
+            "id": "l4",
+            "label": "ager"
+          },
+          {
+            "id": "l5",
+            "label": "bellum"
+          }
+        ],
+        "right": [
+          {
+            "id": "r0",
+            "label": "slave, servant"
+          },
+          {
+            "id": "r1",
+            "label": "master, lord"
+          },
+          {
+            "id": "r2",
+            "label": "friend"
+          },
+          {
+            "id": "r3",
+            "label": "horse"
+          },
+          {
+            "id": "r4",
+            "label": "field"
+          },
+          {
+            "id": "r5",
+            "label": "war"
+          }
+        ],
+        "pairs": {
+          "l0": "r0",
+          "l1": "r1",
+          "l2": "r2",
+          "l3": "r3",
+          "l4": "r4",
+          "l5": "r5"
+        }
+      }
+    },
+    {
+      "id": "match-l2e-1",
+      "type": "matching",
+      "prompt": "Match each Latin word to its English meaning. (set 2)",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v03-men-tools"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "leftLabel": "Latin",
+        "rightLabel": "English",
+        "left": [
+          {
+            "id": "l0",
+            "label": "oppidum"
+          },
+          {
+            "id": "l1",
+            "label": "verbum"
+          },
+          {
+            "id": "l2",
+            "label": "gladius"
+          },
+          {
+            "id": "l3",
+            "label": "fīlius"
+          },
+          {
+            "id": "l4",
+            "label": "deus"
+          },
+          {
+            "id": "l5",
+            "label": "populus"
+          }
+        ],
+        "right": [
+          {
+            "id": "r0",
+            "label": "town"
+          },
+          {
+            "id": "r1",
+            "label": "word"
+          },
+          {
+            "id": "r2",
+            "label": "sword"
+          },
+          {
+            "id": "r3",
+            "label": "son"
+          },
+          {
+            "id": "r4",
+            "label": "god"
+          },
+          {
+            "id": "r5",
+            "label": "people, nation"
+          }
+        ],
+        "pairs": {
+          "l0": "r0",
+          "l1": "r1",
+          "l2": "r2",
+          "l3": "r3",
+          "l4": "r4",
+          "l5": "r5"
+        }
+      }
+    },
+    {
+      "id": "match-e2l",
+      "type": "matching",
+      "prompt": "Match English meaning to Latin (produce recognition both ways).",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v03-men-tools"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "leftLabel": "English",
+        "rightLabel": "Latin",
+        "left": [
+          {
+            "id": "l0",
+            "label": "slave, servant"
+          },
+          {
+            "id": "l1",
+            "label": "master, lord"
+          },
+          {
+            "id": "l2",
+            "label": "friend"
+          },
+          {
+            "id": "l3",
+            "label": "horse"
+          },
+          {
+            "id": "l4",
+            "label": "field"
+          },
+          {
+            "id": "l5",
+            "label": "war"
+          }
+        ],
+        "right": [
+          {
+            "id": "r0",
+            "label": "servus"
+          },
+          {
+            "id": "r1",
+            "label": "dominus"
+          },
+          {
+            "id": "r2",
+            "label": "amīcus"
+          },
+          {
+            "id": "r3",
+            "label": "equus"
+          },
+          {
+            "id": "r4",
+            "label": "ager"
+          },
+          {
+            "id": "r5",
+            "label": "bellum"
+          }
+        ],
+        "pairs": {
+          "l0": "r0",
+          "l1": "r1",
+          "l2": "r2",
+          "l3": "r3",
+          "l4": "r4",
+          "l5": "r5"
+        }
+      }
+    },
+    {
+      "id": "mc-0",
+      "type": "multiple_choice",
+      "prompt": "What does **servus** mean?",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v03-men-tools"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "slave, servant"
+          },
+          {
+            "id": "b",
+            "label": "master, lord"
+          },
+          {
+            "id": "c",
+            "label": "friend"
+          },
+          {
+            "id": "d",
+            "label": "horse"
+          }
+        ],
+        "correctOptionId": "a"
+      }
+    },
+    {
+      "id": "mc-1",
+      "type": "multiple_choice",
+      "prompt": "What does **dominus** mean?",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v03-men-tools"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "friend"
+          },
+          {
+            "id": "b",
+            "label": "horse"
+          },
+          {
+            "id": "c",
+            "label": "master, lord"
+          },
+          {
+            "id": "d",
+            "label": "slave, servant"
+          }
+        ],
+        "correctOptionId": "c"
+      }
+    },
+    {
+      "id": "mc-2",
+      "type": "multiple_choice",
+      "prompt": "What does **amīcus** mean?",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v03-men-tools"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "master, lord"
+          },
+          {
+            "id": "b",
+            "label": "horse"
+          },
+          {
+            "id": "c",
+            "label": "friend"
+          },
+          {
+            "id": "d",
+            "label": "slave, servant"
+          }
+        ],
+        "correctOptionId": "c"
+      }
+    },
+    {
+      "id": "mc-3",
+      "type": "multiple_choice",
+      "prompt": "What does **equus** mean?",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v03-men-tools"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "friend"
+          },
+          {
+            "id": "b",
+            "label": "horse"
+          },
+          {
+            "id": "c",
+            "label": "slave, servant"
+          },
+          {
+            "id": "d",
+            "label": "master, lord"
+          }
+        ],
+        "correctOptionId": "b"
+      }
+    },
+    {
+      "id": "mc-4",
+      "type": "multiple_choice",
+      "prompt": "What does **ager** mean?",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v03-men-tools"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "field"
+          },
+          {
+            "id": "b",
+            "label": "slave, servant"
+          },
+          {
+            "id": "c",
+            "label": "master, lord"
+          },
+          {
+            "id": "d",
+            "label": "friend"
+          }
+        ],
+        "correctOptionId": "a"
+      }
+    },
+    {
+      "id": "sf-gloss-0",
+      "type": "single_form",
+      "prompt": "English meaning of **bellum**:",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v03-men-tools"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "accept": [
+          "war"
+        ],
+        "hint": "bellī n."
+      }
+    },
+    {
+      "id": "sf-gloss-1",
+      "type": "single_form",
+      "prompt": "English meaning of **oppidum**:",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v03-men-tools"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "accept": [
+          "town"
+        ],
+        "hint": "oppidī n."
+      }
+    },
+    {
+      "id": "sf-gloss-2",
+      "type": "single_form",
+      "prompt": "English meaning of **verbum**:",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v03-men-tools"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "accept": [
+          "word"
+        ],
+        "hint": "verbī n."
+      }
+    },
+    {
+      "id": "tr-0",
+      "type": "translate",
+      "prompt": "Translate: **deus**",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v03-men-tools"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "direction": "L2E",
+        "length": "word",
+        "sampleAnswers": [
+          "god"
+        ],
+        "rubric": "Accept common gloss synonyms; macrons optional for Latin."
+      }
+    },
+    {
+      "id": "tr-1",
+      "type": "translate",
+      "prompt": "Translate: **populus**",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v03-men-tools"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "direction": "L2E",
+        "length": "word",
+        "sampleAnswers": [
+          "people",
+          "nation"
+        ],
+        "rubric": "Accept common gloss synonyms; macrons optional for Latin."
+      }
+    },
+    {
+      "id": "sa-use",
+      "type": "short_answer",
+      "prompt": "Pick any 3 words from this list and write a tiny English sentence that could use each (or one sentence using two). Theme: 2nd-declension nouns.",
+      "targets": [
+        "vocabulary",
+        "v03-men-tools"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "sampleAnswers": [
+          "Any sensible English using three of the batch meanings.",
+          "Student sentences using batch glosses."
+        ]
+      }
+    }
+  ]
+}

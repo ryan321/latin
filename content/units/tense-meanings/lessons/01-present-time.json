@@ -1,0 +1,160 @@
+{
+  "slug": "01-present-time",
+  "title": "Present time",
+  "unitSlug": "tense-meanings",
+  "order": 1,
+  "standardSummary": "Distinguish simple present vs present progressive meaning in English.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-pres"
+      },
+      {
+        "type": "skill_count",
+        "skill": "present meaning",
+        "n": 3,
+        "label": "present"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match-p"
+      }
+    ]
+  },
+  "teach": "Present: general truths / habits vs right-now progressive. Latin present often covers both.",
+  "allowList": {
+    "lemmas": [],
+    "constructions": [
+      "present meaning",
+      "tense meanings"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "matching",
+      "short_answer",
+      "multi_select"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-pres",
+      "type": "multiple_choice",
+      "prompt": "“Water freezes at 0°C” is mainly…",
+      "targets": [
+        "present meaning"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "a one-time past event"
+          },
+          {
+            "id": "b",
+            "label": "a general present truth"
+          },
+          {
+            "id": "c",
+            "label": "future only"
+          },
+          {
+            "id": "d",
+            "label": "pluperfect"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match-p",
+      "type": "matching",
+      "prompt": "Match.",
+      "targets": [
+        "present meaning"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "She walks to school every day."
+          },
+          {
+            "id": "b",
+            "label": "She is walking right now."
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "habitual / general present"
+          },
+          {
+            "id": "2",
+            "label": "progressive present (right now)"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "ms1",
+      "type": "multi_select",
+      "prompt": "Which are present-time?",
+      "targets": [
+        "present meaning"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "They fight."
+          },
+          {
+            "id": "b",
+            "label": "They are fighting."
+          },
+          {
+            "id": "c",
+            "label": "They fought."
+          },
+          {
+            "id": "d",
+            "label": "They will fight."
+          }
+        ],
+        "correctOptionIds": [
+          "a",
+          "b"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sa1",
+      "type": "short_answer",
+      "prompt": "Latin present tense will often translate as which English ideas?",
+      "targets": [
+        "present meaning"
+      ],
+      "payload": {
+        "sampleAnswers": [
+          "Simple present or progressive present (walks / is walking).",
+          "Habitual or right-now present."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

@@ -1,0 +1,207 @@
+{
+  "slug": "05-passage-capitur",
+  "title": "Passage: Is captured",
+  "unitSlug": "19-passive",
+  "order": 6,
+  "standardSummary": "Read a passive passage; identify who receives the action and any agents.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-voice"
+      },
+      {
+        "type": "skill_count",
+        "skill": "passage reading",
+        "n": 3,
+        "label": "passage"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "tr1"
+      }
+    ]
+  },
+  "teach": "Present passive sentences with agents.",
+  "allowList": {
+    "lemmas": [
+      "urbs",
+      "miles",
+      "capio",
+      "colo",
+      "scribo",
+      "laudo",
+      "ab"
+    ],
+    "constructions": [
+      "passive",
+      "agent",
+      "passage reading"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "short_answer",
+      "translate",
+      "multi_select"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-voice",
+      "type": "multiple_choice",
+      "prompt": "“Urbs capitur” is…",
+      "targets": [
+        "passage reading",
+        "passive"
+      ],
+      "passage": {
+        "title": "What is done",
+        "latin": "Urbs ā mīlitibus capitur.\nAgrī ā servīs coluntur.\nLitterae ā puerō scrībuntur.\nBonus labor laudātur.",
+        "notes": "Passive + agent ā/ab · Use known vocabulary; guess from context only if needed."
+      },
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "active: the city captures"
+          },
+          {
+            "id": "b",
+            "label": "passive: the city is captured"
+          },
+          {
+            "id": "c",
+            "label": "a noun only"
+          },
+          {
+            "id": "d",
+            "label": "future perfect active"
+          }
+        ],
+        "correctOptionId": "b"
+      }
+    },
+    {
+      "id": "mc-agent",
+      "type": "multiple_choice",
+      "prompt": "By whom is the city captured?",
+      "targets": [
+        "passage reading",
+        "agent"
+      ],
+      "passage": {
+        "title": "What is done",
+        "latin": "Urbs ā mīlitibus capitur.\nAgrī ā servīs coluntur.\nLitterae ā puerō scrībuntur.\nBonus labor laudātur.",
+        "notes": "Passive + agent ā/ab · Use known vocabulary; guess from context only if needed."
+      },
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "By the boy only"
+          },
+          {
+            "id": "b",
+            "label": "By the soldiers"
+          },
+          {
+            "id": "c",
+            "label": "By the fields"
+          },
+          {
+            "id": "d",
+            "label": "No agent given"
+          }
+        ],
+        "correctOptionId": "b"
+      }
+    },
+    {
+      "id": "mc-fields",
+      "type": "multiple_choice",
+      "prompt": "The fields…",
+      "targets": [
+        "passage reading",
+        "passive"
+      ],
+      "passage": {
+        "title": "What is done",
+        "latin": "Urbs ā mīlitibus capitur.\nAgrī ā servīs coluntur.\nLitterae ā puerō scrībuntur.\nBonus labor laudātur.",
+        "notes": "Passive + agent ā/ab · Use known vocabulary; guess from context only if needed."
+      },
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "cultivate the slaves"
+          },
+          {
+            "id": "b",
+            "label": "are cultivated by slaves"
+          },
+          {
+            "id": "c",
+            "label": "write letters"
+          },
+          {
+            "id": "d",
+            "label": "are missing"
+          }
+        ],
+        "correctOptionId": "b"
+      }
+    },
+    {
+      "id": "tr1",
+      "type": "translate",
+      "prompt": "Translate:\nLitterae ā puerō scrībuntur.",
+      "targets": [
+        "passage reading",
+        "passive"
+      ],
+      "passage": {
+        "title": "What is done",
+        "latin": "Urbs ā mīlitibus capitur.\nAgrī ā servīs coluntur.\nLitterae ā puerō scrībuntur.\nBonus labor laudātur.",
+        "notes": "Passive + agent ā/ab · Use known vocabulary; guess from context only if needed."
+      },
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "The letter is written by the boy.",
+          "Letters are written by the boy."
+        ]
+      }
+    },
+    {
+      "id": "sa1",
+      "type": "short_answer",
+      "prompt": "Rewrite one passive sentence in English active voice.",
+      "targets": [
+        "passage reading",
+        "voice concept"
+      ],
+      "passage": {
+        "title": "What is done",
+        "latin": "Urbs ā mīlitibus capitur.\nAgrī ā servīs coluntur.\nLitterae ā puerō scrībuntur.\nBonus labor laudātur.",
+        "notes": "Passive + agent ā/ab · Use known vocabulary; guess from context only if needed."
+      },
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "sampleAnswers": [
+          "Soldiers capture the city. / Slaves cultivate the fields. / The boy writes the letter.",
+          "The soldiers capture the city."
+        ]
+      }
+    }
+  ]
+}

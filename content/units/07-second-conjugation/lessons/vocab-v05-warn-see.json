@@ -1,0 +1,545 @@
+{
+  "slug": "vocab-v05-warn-see",
+  "title": "Vocabulary: Warn, see, have",
+  "unitSlug": "07-second-conjugation",
+  "order": 3,
+  "standardSummary": "Master this vocabulary set (10 words): match both directions and pass drills.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "match-l2e-0"
+      },
+      {
+        "type": "skill_count",
+        "skill": "vocabulary",
+        "n": 5,
+        "label": "vocab items"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match-e2l"
+      }
+    ]
+  },
+  "teach": "Vocabulary batch v05-warn-see: moneō, videō, habeō, timeō, teneō, doceō, respondeō, manēō, iubeō, semper",
+  "allowList": {
+    "lemmas": [
+      "moneō",
+      "videō",
+      "habeō",
+      "timeō",
+      "teneō",
+      "doceō",
+      "respondeō",
+      "manēō",
+      "iubeō",
+      "semper"
+    ],
+    "constructions": [
+      "vocabulary",
+      "vocab drill",
+      "v05-warn-see"
+    ],
+    "activityTypes": [
+      "matching",
+      "multiple_choice",
+      "single_form",
+      "translate",
+      "multi_select",
+      "cloze",
+      "short_answer"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "match-l2e-0",
+      "type": "matching",
+      "prompt": "Match each Latin word to its English meaning. (set 1)",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v05-warn-see"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "leftLabel": "Latin",
+        "rightLabel": "English",
+        "left": [
+          {
+            "id": "l0",
+            "label": "moneō"
+          },
+          {
+            "id": "l1",
+            "label": "videō"
+          },
+          {
+            "id": "l2",
+            "label": "habeō"
+          },
+          {
+            "id": "l3",
+            "label": "timeō"
+          },
+          {
+            "id": "l4",
+            "label": "teneō"
+          }
+        ],
+        "right": [
+          {
+            "id": "r0",
+            "label": "warn, advise"
+          },
+          {
+            "id": "r1",
+            "label": "see"
+          },
+          {
+            "id": "r2",
+            "label": "have, hold"
+          },
+          {
+            "id": "r3",
+            "label": "fear"
+          },
+          {
+            "id": "r4",
+            "label": "hold, keep"
+          }
+        ],
+        "pairs": {
+          "l0": "r0",
+          "l1": "r1",
+          "l2": "r2",
+          "l3": "r3",
+          "l4": "r4"
+        }
+      }
+    },
+    {
+      "id": "match-l2e-1",
+      "type": "matching",
+      "prompt": "Match each Latin word to its English meaning. (set 2)",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v05-warn-see"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "leftLabel": "Latin",
+        "rightLabel": "English",
+        "left": [
+          {
+            "id": "l0",
+            "label": "doceō"
+          },
+          {
+            "id": "l1",
+            "label": "respondeō"
+          },
+          {
+            "id": "l2",
+            "label": "manēō"
+          },
+          {
+            "id": "l3",
+            "label": "iubeō"
+          },
+          {
+            "id": "l4",
+            "label": "semper"
+          }
+        ],
+        "right": [
+          {
+            "id": "r0",
+            "label": "teach"
+          },
+          {
+            "id": "r1",
+            "label": "answer, reply"
+          },
+          {
+            "id": "r2",
+            "label": "remain, stay"
+          },
+          {
+            "id": "r3",
+            "label": "order, command"
+          },
+          {
+            "id": "r4",
+            "label": "always"
+          }
+        ],
+        "pairs": {
+          "l0": "r0",
+          "l1": "r1",
+          "l2": "r2",
+          "l3": "r3",
+          "l4": "r4"
+        }
+      }
+    },
+    {
+      "id": "match-e2l",
+      "type": "matching",
+      "prompt": "Match English meaning to Latin (produce recognition both ways).",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v05-warn-see"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "leftLabel": "English",
+        "rightLabel": "Latin",
+        "left": [
+          {
+            "id": "l0",
+            "label": "warn, advise"
+          },
+          {
+            "id": "l1",
+            "label": "see"
+          },
+          {
+            "id": "l2",
+            "label": "have, hold"
+          },
+          {
+            "id": "l3",
+            "label": "fear"
+          },
+          {
+            "id": "l4",
+            "label": "hold, keep"
+          },
+          {
+            "id": "l5",
+            "label": "teach"
+          }
+        ],
+        "right": [
+          {
+            "id": "r0",
+            "label": "moneō"
+          },
+          {
+            "id": "r1",
+            "label": "videō"
+          },
+          {
+            "id": "r2",
+            "label": "habeō"
+          },
+          {
+            "id": "r3",
+            "label": "timeō"
+          },
+          {
+            "id": "r4",
+            "label": "teneō"
+          },
+          {
+            "id": "r5",
+            "label": "doceō"
+          }
+        ],
+        "pairs": {
+          "l0": "r0",
+          "l1": "r1",
+          "l2": "r2",
+          "l3": "r3",
+          "l4": "r4",
+          "l5": "r5"
+        }
+      }
+    },
+    {
+      "id": "mc-0",
+      "type": "multiple_choice",
+      "prompt": "What does **moneō** mean?",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v05-warn-see"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "fear"
+          },
+          {
+            "id": "b",
+            "label": "warn, advise"
+          },
+          {
+            "id": "c",
+            "label": "see"
+          },
+          {
+            "id": "d",
+            "label": "have, hold"
+          }
+        ],
+        "correctOptionId": "b"
+      }
+    },
+    {
+      "id": "mc-1",
+      "type": "multiple_choice",
+      "prompt": "What does **videō** mean?",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v05-warn-see"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "fear"
+          },
+          {
+            "id": "b",
+            "label": "see"
+          },
+          {
+            "id": "c",
+            "label": "warn, advise"
+          },
+          {
+            "id": "d",
+            "label": "have, hold"
+          }
+        ],
+        "correctOptionId": "b"
+      }
+    },
+    {
+      "id": "mc-2",
+      "type": "multiple_choice",
+      "prompt": "What does **habeō** mean?",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v05-warn-see"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "warn, advise"
+          },
+          {
+            "id": "b",
+            "label": "see"
+          },
+          {
+            "id": "c",
+            "label": "fear"
+          },
+          {
+            "id": "d",
+            "label": "have, hold"
+          }
+        ],
+        "correctOptionId": "d"
+      }
+    },
+    {
+      "id": "mc-3",
+      "type": "multiple_choice",
+      "prompt": "What does **timeō** mean?",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v05-warn-see"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "see"
+          },
+          {
+            "id": "b",
+            "label": "have, hold"
+          },
+          {
+            "id": "c",
+            "label": "fear"
+          },
+          {
+            "id": "d",
+            "label": "warn, advise"
+          }
+        ],
+        "correctOptionId": "c"
+      }
+    },
+    {
+      "id": "mc-4",
+      "type": "multiple_choice",
+      "prompt": "What does **teneō** mean?",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v05-warn-see"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "hold, keep"
+          },
+          {
+            "id": "b",
+            "label": "warn, advise"
+          },
+          {
+            "id": "c",
+            "label": "see"
+          },
+          {
+            "id": "d",
+            "label": "have, hold"
+          }
+        ],
+        "correctOptionId": "a"
+      }
+    },
+    {
+      "id": "sf-gloss-0",
+      "type": "single_form",
+      "prompt": "English meaning of **doceō**:",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v05-warn-see"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "accept": [
+          "teach"
+        ],
+        "hint": "docēre, docuī"
+      }
+    },
+    {
+      "id": "sf-gloss-1",
+      "type": "single_form",
+      "prompt": "English meaning of **respondeō**:",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v05-warn-see"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "accept": [
+          "answer",
+          "reply"
+        ],
+        "hint": "respondēre"
+      }
+    },
+    {
+      "id": "sf-gloss-2",
+      "type": "single_form",
+      "prompt": "English meaning of **manēō**:",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v05-warn-see"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "accept": [
+          "remain",
+          "stay"
+        ],
+        "hint": "manēre, mānsī"
+      }
+    },
+    {
+      "id": "tr-0",
+      "type": "translate",
+      "prompt": "Translate: **iubeō**",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v05-warn-see"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "direction": "L2E",
+        "length": "word",
+        "sampleAnswers": [
+          "order",
+          "command"
+        ],
+        "rubric": "Accept common gloss synonyms; macrons optional for Latin."
+      }
+    },
+    {
+      "id": "tr-1",
+      "type": "translate",
+      "prompt": "Translate: **semper**",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v05-warn-see"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "direction": "L2E",
+        "length": "word",
+        "sampleAnswers": [
+          "always"
+        ],
+        "rubric": "Accept common gloss synonyms; macrons optional for Latin."
+      }
+    },
+    {
+      "id": "sa-use",
+      "type": "short_answer",
+      "prompt": "Pick any 3 words from this list and write a tiny English sentence that could use each (or one sentence using two). Theme: 2nd conjugation & related.",
+      "targets": [
+        "vocabulary",
+        "v05-warn-see"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "sampleAnswers": [
+          "Any sensible English using three of the batch meanings.",
+          "Student sentences using batch glosses."
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,190 @@
+{
+  "slug": "06-checkpoint",
+  "title": "Checkpoint — Tense meanings",
+  "unitSlug": "tense-meanings",
+  "order": 6,
+  "standardSummary": "Master English tense/aspect labels used throughout Year 1 Latin verbs.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc1"
+      },
+      {
+        "type": "skill_count",
+        "skill": "tense meanings",
+        "n": 4,
+        "label": "tense checkpoint"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match1"
+      }
+    ]
+  },
+  "teach": "Checkpoint before Latin imperfect, future, and later perfect system.",
+  "allowList": {
+    "lemmas": [],
+    "constructions": [
+      "tense meanings",
+      "imperfect meaning",
+      "perfect meaning",
+      "future meaning"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "matching",
+      "short_answer",
+      "multi_select"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc1",
+      "type": "multiple_choice",
+      "prompt": "Latin imperfect will most often match English…",
+      "targets": [
+        "imperfect meaning"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "will have done"
+          },
+          {
+            "id": "b",
+            "label": "was …ing / used to"
+          },
+          {
+            "id": "c",
+            "label": "is …ing only forever"
+          },
+          {
+            "id": "d",
+            "label": "had done only"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match1",
+      "type": "matching",
+      "prompt": "Match Latin name (preview) to English.",
+      "targets": [
+        "tense meanings"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "present"
+          },
+          {
+            "id": "b",
+            "label": "imperfect"
+          },
+          {
+            "id": "c",
+            "label": "future"
+          },
+          {
+            "id": "d",
+            "label": "perfect"
+          },
+          {
+            "id": "e",
+            "label": "pluperfect"
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "walks / is walking"
+          },
+          {
+            "id": "2",
+            "label": "was walking / used to walk"
+          },
+          {
+            "id": "3",
+            "label": "will walk"
+          },
+          {
+            "id": "4",
+            "label": "walked / has walked"
+          },
+          {
+            "id": "5",
+            "label": "had walked"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3",
+          "d": "4",
+          "e": "5"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "ms1",
+      "type": "multi_select",
+      "prompt": "Completed-action family includes…",
+      "targets": [
+        "perfect meaning"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "has done"
+          },
+          {
+            "id": "b",
+            "label": "had done"
+          },
+          {
+            "id": "c",
+            "label": "will have done"
+          },
+          {
+            "id": "d",
+            "label": "was doing"
+          }
+        ],
+        "correctOptionIds": [
+          "a",
+          "b",
+          "c"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sa1",
+      "type": "short_answer",
+      "prompt": "Why learn tense meanings in English before Latin charts?",
+      "targets": [
+        "tense meanings"
+      ],
+      "payload": {
+        "sampleAnswers": [
+          "So endings map to ideas you already understand, not random labels.",
+          "Meaning first; forms second."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

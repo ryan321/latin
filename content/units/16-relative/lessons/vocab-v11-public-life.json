@@ -1,0 +1,547 @@
+{
+  "slug": "vocab-v11-public-life",
+  "title": "Vocabulary: Public life & law",
+  "unitSlug": "16-relative",
+  "order": 5,
+  "standardSummary": "Master this vocabulary set (10 words): match both directions and pass drills.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "match-l2e-0"
+      },
+      {
+        "type": "skill_count",
+        "skill": "vocabulary",
+        "n": 5,
+        "label": "vocab items"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match-e2l"
+      }
+    ]
+  },
+  "teach": "Vocabulary batch v11-public-life: senātus, cōnsul, forum, templum, dea, iūdex, liber, littera, virtūs, glōria",
+  "allowList": {
+    "lemmas": [
+      "senātus",
+      "cōnsul",
+      "forum",
+      "templum",
+      "dea",
+      "iūdex",
+      "liber",
+      "littera",
+      "virtūs",
+      "glōria"
+    ],
+    "constructions": [
+      "vocabulary",
+      "vocab drill",
+      "v11-public-life"
+    ],
+    "activityTypes": [
+      "matching",
+      "multiple_choice",
+      "single_form",
+      "translate",
+      "multi_select",
+      "cloze",
+      "short_answer"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "match-l2e-0",
+      "type": "matching",
+      "prompt": "Match each Latin word to its English meaning. (set 1)",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v11-public-life"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "leftLabel": "Latin",
+        "rightLabel": "English",
+        "left": [
+          {
+            "id": "l0",
+            "label": "senātus"
+          },
+          {
+            "id": "l1",
+            "label": "cōnsul"
+          },
+          {
+            "id": "l2",
+            "label": "forum"
+          },
+          {
+            "id": "l3",
+            "label": "templum"
+          },
+          {
+            "id": "l4",
+            "label": "dea"
+          }
+        ],
+        "right": [
+          {
+            "id": "r0",
+            "label": "senate"
+          },
+          {
+            "id": "r1",
+            "label": "consul"
+          },
+          {
+            "id": "r2",
+            "label": "forum, marketplace"
+          },
+          {
+            "id": "r3",
+            "label": "temple"
+          },
+          {
+            "id": "r4",
+            "label": "goddess"
+          }
+        ],
+        "pairs": {
+          "l0": "r0",
+          "l1": "r1",
+          "l2": "r2",
+          "l3": "r3",
+          "l4": "r4"
+        }
+      }
+    },
+    {
+      "id": "match-l2e-1",
+      "type": "matching",
+      "prompt": "Match each Latin word to its English meaning. (set 2)",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v11-public-life"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "leftLabel": "Latin",
+        "rightLabel": "English",
+        "left": [
+          {
+            "id": "l0",
+            "label": "iūdex"
+          },
+          {
+            "id": "l1",
+            "label": "liber"
+          },
+          {
+            "id": "l2",
+            "label": "littera"
+          },
+          {
+            "id": "l3",
+            "label": "virtūs"
+          },
+          {
+            "id": "l4",
+            "label": "glōria"
+          }
+        ],
+        "right": [
+          {
+            "id": "r0",
+            "label": "judge"
+          },
+          {
+            "id": "r1",
+            "label": "book"
+          },
+          {
+            "id": "r2",
+            "label": "letter (of alphabet); pl. letter/epistle, literature"
+          },
+          {
+            "id": "r3",
+            "label": "courage, virtue, excellence"
+          },
+          {
+            "id": "r4",
+            "label": "glory, fame"
+          }
+        ],
+        "pairs": {
+          "l0": "r0",
+          "l1": "r1",
+          "l2": "r2",
+          "l3": "r3",
+          "l4": "r4"
+        }
+      }
+    },
+    {
+      "id": "match-e2l",
+      "type": "matching",
+      "prompt": "Match English meaning to Latin (produce recognition both ways).",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v11-public-life"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "leftLabel": "English",
+        "rightLabel": "Latin",
+        "left": [
+          {
+            "id": "l0",
+            "label": "senate"
+          },
+          {
+            "id": "l1",
+            "label": "consul"
+          },
+          {
+            "id": "l2",
+            "label": "forum, marketplace"
+          },
+          {
+            "id": "l3",
+            "label": "temple"
+          },
+          {
+            "id": "l4",
+            "label": "goddess"
+          },
+          {
+            "id": "l5",
+            "label": "judge"
+          }
+        ],
+        "right": [
+          {
+            "id": "r0",
+            "label": "senātus"
+          },
+          {
+            "id": "r1",
+            "label": "cōnsul"
+          },
+          {
+            "id": "r2",
+            "label": "forum"
+          },
+          {
+            "id": "r3",
+            "label": "templum"
+          },
+          {
+            "id": "r4",
+            "label": "dea"
+          },
+          {
+            "id": "r5",
+            "label": "iūdex"
+          }
+        ],
+        "pairs": {
+          "l0": "r0",
+          "l1": "r1",
+          "l2": "r2",
+          "l3": "r3",
+          "l4": "r4",
+          "l5": "r5"
+        }
+      }
+    },
+    {
+      "id": "mc-0",
+      "type": "multiple_choice",
+      "prompt": "What does **senātus** mean?",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v11-public-life"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "senate"
+          },
+          {
+            "id": "b",
+            "label": "consul"
+          },
+          {
+            "id": "c",
+            "label": "forum, marketplace"
+          },
+          {
+            "id": "d",
+            "label": "temple"
+          }
+        ],
+        "correctOptionId": "a"
+      }
+    },
+    {
+      "id": "mc-1",
+      "type": "multiple_choice",
+      "prompt": "What does **cōnsul** mean?",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v11-public-life"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "temple"
+          },
+          {
+            "id": "b",
+            "label": "consul"
+          },
+          {
+            "id": "c",
+            "label": "senate"
+          },
+          {
+            "id": "d",
+            "label": "forum, marketplace"
+          }
+        ],
+        "correctOptionId": "b"
+      }
+    },
+    {
+      "id": "mc-2",
+      "type": "multiple_choice",
+      "prompt": "What does **forum** mean?",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v11-public-life"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "temple"
+          },
+          {
+            "id": "b",
+            "label": "forum, marketplace"
+          },
+          {
+            "id": "c",
+            "label": "senate"
+          },
+          {
+            "id": "d",
+            "label": "consul"
+          }
+        ],
+        "correctOptionId": "b"
+      }
+    },
+    {
+      "id": "mc-3",
+      "type": "multiple_choice",
+      "prompt": "What does **templum** mean?",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v11-public-life"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "consul"
+          },
+          {
+            "id": "b",
+            "label": "forum, marketplace"
+          },
+          {
+            "id": "c",
+            "label": "temple"
+          },
+          {
+            "id": "d",
+            "label": "senate"
+          }
+        ],
+        "correctOptionId": "c"
+      }
+    },
+    {
+      "id": "mc-4",
+      "type": "multiple_choice",
+      "prompt": "What does **dea** mean?",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v11-public-life"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "senate"
+          },
+          {
+            "id": "b",
+            "label": "consul"
+          },
+          {
+            "id": "c",
+            "label": "forum, marketplace"
+          },
+          {
+            "id": "d",
+            "label": "goddess"
+          }
+        ],
+        "correctOptionId": "d"
+      }
+    },
+    {
+      "id": "sf-gloss-0",
+      "type": "single_form",
+      "prompt": "English meaning of **iūdex**:",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v11-public-life"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "accept": [
+          "judge"
+        ],
+        "hint": "iūdicis m."
+      }
+    },
+    {
+      "id": "sf-gloss-1",
+      "type": "single_form",
+      "prompt": "English meaning of **liber**:",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v11-public-life"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "accept": [
+          "book"
+        ],
+        "hint": "librī m."
+      }
+    },
+    {
+      "id": "sf-gloss-2",
+      "type": "single_form",
+      "prompt": "English meaning of **littera**:",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v11-public-life"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "accept": [
+          "letter (of alphabet)",
+          "pl. letter/epistle",
+          "literature"
+        ],
+        "hint": "litterae f. (often pl.)"
+      }
+    },
+    {
+      "id": "tr-0",
+      "type": "translate",
+      "prompt": "Translate: **virtūs**",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v11-public-life"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "direction": "L2E",
+        "length": "word",
+        "sampleAnswers": [
+          "courage",
+          "virtue",
+          "excellence"
+        ],
+        "rubric": "Accept common gloss synonyms; macrons optional for Latin."
+      }
+    },
+    {
+      "id": "tr-1",
+      "type": "translate",
+      "prompt": "Translate: **glōria**",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v11-public-life"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "direction": "L2E",
+        "length": "word",
+        "sampleAnswers": [
+          "glory",
+          "fame"
+        ],
+        "rubric": "Accept common gloss synonyms; macrons optional for Latin."
+      }
+    },
+    {
+      "id": "sa-use",
+      "type": "short_answer",
+      "prompt": "Pick any 3 words from this list and write a tiny English sentence that could use each (or one sentence using two). Theme: Citizenship, law, public spaces.",
+      "targets": [
+        "vocabulary",
+        "v11-public-life"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "sampleAnswers": [
+          "Any sensible English using three of the batch meanings.",
+          "Student sentences using batch glosses."
+        ]
+      }
+    }
+  ]
+}

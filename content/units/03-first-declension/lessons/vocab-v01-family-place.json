@@ -1,0 +1,565 @@
+{
+  "slug": "vocab-v01-family-place",
+  "title": "Vocabulary: Family & places",
+  "unitSlug": "03-first-declension",
+  "order": 6,
+  "standardSummary": "Master this vocabulary set (12 words): match both directions and pass drills.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "match-l2e-0"
+      },
+      {
+        "type": "skill_count",
+        "skill": "vocabulary",
+        "n": 5,
+        "label": "vocab items"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match-e2l"
+      }
+    ]
+  },
+  "teach": "Vocabulary batch v01-family-place: puella, fēmina, terra, aqua, via, villa, silva, patria, porta, mēnsa, Rōma, pecūnia",
+  "allowList": {
+    "lemmas": [
+      "puella",
+      "fēmina",
+      "terra",
+      "aqua",
+      "via",
+      "villa",
+      "silva",
+      "patria",
+      "porta",
+      "mēnsa",
+      "Rōma",
+      "pecūnia"
+    ],
+    "constructions": [
+      "vocabulary",
+      "vocab drill",
+      "v01-family-place"
+    ],
+    "activityTypes": [
+      "matching",
+      "multiple_choice",
+      "single_form",
+      "translate",
+      "multi_select",
+      "cloze",
+      "short_answer"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "match-l2e-0",
+      "type": "matching",
+      "prompt": "Match each Latin word to its English meaning. (set 1)",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v01-family-place"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "leftLabel": "Latin",
+        "rightLabel": "English",
+        "left": [
+          {
+            "id": "l0",
+            "label": "puella"
+          },
+          {
+            "id": "l1",
+            "label": "fēmina"
+          },
+          {
+            "id": "l2",
+            "label": "terra"
+          },
+          {
+            "id": "l3",
+            "label": "aqua"
+          },
+          {
+            "id": "l4",
+            "label": "via"
+          },
+          {
+            "id": "l5",
+            "label": "villa"
+          }
+        ],
+        "right": [
+          {
+            "id": "r0",
+            "label": "girl"
+          },
+          {
+            "id": "r1",
+            "label": "woman"
+          },
+          {
+            "id": "r2",
+            "label": "land, earth, country"
+          },
+          {
+            "id": "r3",
+            "label": "water"
+          },
+          {
+            "id": "r4",
+            "label": "road, way"
+          },
+          {
+            "id": "r5",
+            "label": "country house, villa"
+          }
+        ],
+        "pairs": {
+          "l0": "r0",
+          "l1": "r1",
+          "l2": "r2",
+          "l3": "r3",
+          "l4": "r4",
+          "l5": "r5"
+        }
+      }
+    },
+    {
+      "id": "match-l2e-1",
+      "type": "matching",
+      "prompt": "Match each Latin word to its English meaning. (set 2)",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v01-family-place"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "leftLabel": "Latin",
+        "rightLabel": "English",
+        "left": [
+          {
+            "id": "l0",
+            "label": "silva"
+          },
+          {
+            "id": "l1",
+            "label": "patria"
+          },
+          {
+            "id": "l2",
+            "label": "porta"
+          },
+          {
+            "id": "l3",
+            "label": "mēnsa"
+          },
+          {
+            "id": "l4",
+            "label": "Rōma"
+          },
+          {
+            "id": "l5",
+            "label": "pecūnia"
+          }
+        ],
+        "right": [
+          {
+            "id": "r0",
+            "label": "forest, woods"
+          },
+          {
+            "id": "r1",
+            "label": "fatherland, country"
+          },
+          {
+            "id": "r2",
+            "label": "gate"
+          },
+          {
+            "id": "r3",
+            "label": "table"
+          },
+          {
+            "id": "r4",
+            "label": "Rome"
+          },
+          {
+            "id": "r5",
+            "label": "money"
+          }
+        ],
+        "pairs": {
+          "l0": "r0",
+          "l1": "r1",
+          "l2": "r2",
+          "l3": "r3",
+          "l4": "r4",
+          "l5": "r5"
+        }
+      }
+    },
+    {
+      "id": "match-e2l",
+      "type": "matching",
+      "prompt": "Match English meaning to Latin (produce recognition both ways).",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v01-family-place"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "leftLabel": "English",
+        "rightLabel": "Latin",
+        "left": [
+          {
+            "id": "l0",
+            "label": "girl"
+          },
+          {
+            "id": "l1",
+            "label": "woman"
+          },
+          {
+            "id": "l2",
+            "label": "land, earth, country"
+          },
+          {
+            "id": "l3",
+            "label": "water"
+          },
+          {
+            "id": "l4",
+            "label": "road, way"
+          },
+          {
+            "id": "l5",
+            "label": "country house, villa"
+          }
+        ],
+        "right": [
+          {
+            "id": "r0",
+            "label": "puella"
+          },
+          {
+            "id": "r1",
+            "label": "fēmina"
+          },
+          {
+            "id": "r2",
+            "label": "terra"
+          },
+          {
+            "id": "r3",
+            "label": "aqua"
+          },
+          {
+            "id": "r4",
+            "label": "via"
+          },
+          {
+            "id": "r5",
+            "label": "villa"
+          }
+        ],
+        "pairs": {
+          "l0": "r0",
+          "l1": "r1",
+          "l2": "r2",
+          "l3": "r3",
+          "l4": "r4",
+          "l5": "r5"
+        }
+      }
+    },
+    {
+      "id": "mc-0",
+      "type": "multiple_choice",
+      "prompt": "What does **puella** mean?",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v01-family-place"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "woman"
+          },
+          {
+            "id": "b",
+            "label": "land, earth, country"
+          },
+          {
+            "id": "c",
+            "label": "water"
+          },
+          {
+            "id": "d",
+            "label": "girl"
+          }
+        ],
+        "correctOptionId": "d"
+      }
+    },
+    {
+      "id": "mc-1",
+      "type": "multiple_choice",
+      "prompt": "What does **fēmina** mean?",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v01-family-place"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "woman"
+          },
+          {
+            "id": "b",
+            "label": "girl"
+          },
+          {
+            "id": "c",
+            "label": "land, earth, country"
+          },
+          {
+            "id": "d",
+            "label": "water"
+          }
+        ],
+        "correctOptionId": "a"
+      }
+    },
+    {
+      "id": "mc-2",
+      "type": "multiple_choice",
+      "prompt": "What does **terra** mean?",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v01-family-place"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "woman"
+          },
+          {
+            "id": "b",
+            "label": "water"
+          },
+          {
+            "id": "c",
+            "label": "land, earth, country"
+          },
+          {
+            "id": "d",
+            "label": "girl"
+          }
+        ],
+        "correctOptionId": "c"
+      }
+    },
+    {
+      "id": "mc-3",
+      "type": "multiple_choice",
+      "prompt": "What does **aqua** mean?",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v01-family-place"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "land, earth, country"
+          },
+          {
+            "id": "b",
+            "label": "water"
+          },
+          {
+            "id": "c",
+            "label": "girl"
+          },
+          {
+            "id": "d",
+            "label": "woman"
+          }
+        ],
+        "correctOptionId": "b"
+      }
+    },
+    {
+      "id": "mc-4",
+      "type": "multiple_choice",
+      "prompt": "What does **via** mean?",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v01-family-place"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "girl"
+          },
+          {
+            "id": "b",
+            "label": "woman"
+          },
+          {
+            "id": "c",
+            "label": "land, earth, country"
+          },
+          {
+            "id": "d",
+            "label": "road, way"
+          }
+        ],
+        "correctOptionId": "d"
+      }
+    },
+    {
+      "id": "sf-gloss-0",
+      "type": "single_form",
+      "prompt": "English meaning of **villa**:",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v01-family-place"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "accept": [
+          "country house",
+          "villa"
+        ],
+        "hint": "villae f."
+      }
+    },
+    {
+      "id": "sf-gloss-1",
+      "type": "single_form",
+      "prompt": "English meaning of **silva**:",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v01-family-place"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "accept": [
+          "forest",
+          "woods"
+        ],
+        "hint": "silvae f."
+      }
+    },
+    {
+      "id": "sf-gloss-2",
+      "type": "single_form",
+      "prompt": "English meaning of **patria**:",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v01-family-place"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "accept": [
+          "fatherland",
+          "country"
+        ],
+        "hint": "patriae f."
+      }
+    },
+    {
+      "id": "tr-0",
+      "type": "translate",
+      "prompt": "Translate: **Rōma**",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v01-family-place"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "direction": "L2E",
+        "length": "word",
+        "sampleAnswers": [
+          "Rome"
+        ],
+        "rubric": "Accept common gloss synonyms; macrons optional for Latin."
+      }
+    },
+    {
+      "id": "tr-1",
+      "type": "translate",
+      "prompt": "Translate: **pecūnia**",
+      "targets": [
+        "vocabulary",
+        "vocab drill",
+        "v01-family-place"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "direction": "L2E",
+        "length": "word",
+        "sampleAnswers": [
+          "money"
+        ],
+        "rubric": "Accept common gloss synonyms; macrons optional for Latin."
+      }
+    },
+    {
+      "id": "sa-use",
+      "type": "short_answer",
+      "prompt": "Pick any 3 words from this list and write a tiny English sentence that could use each (or one sentence using two). Theme: 1st-declension core nouns.",
+      "targets": [
+        "vocabulary",
+        "v01-family-place"
+      ],
+      "source": "seed",
+      "required": true,
+      "payload": {
+        "sampleAnswers": [
+          "Any sensible English using three of the batch meanings.",
+          "Student sentences using batch glosses."
+        ]
+      }
+    }
+  ]
+}
