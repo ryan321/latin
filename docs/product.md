@@ -104,11 +104,12 @@ The standard is the **contract**. Teaching and practice exist to meet it; AI doe
 
 ### 2. Standard ways to teach
 
-Teaching material is **authored and fixed** for the lesson:
+Teaching material is **authored and fixed** for the lesson, rendered as **rich MDX** (see [`rich-content.md`](./rich-content.md)):
 
-- Short readable body (grammar rule, worked examples, paradigm chart to study)
+- Headings, callouts, paradigm tables, pronunciation cards, Latin/English examples, case role cards, comparisons, steps, culture boxes, images/video
+- Sibling `.mdx` file preferred over plain JSON string for student-facing body
 - Vocab/construction **allow-list** for this lesson (what AI may use later)
-- Optional tips (classical pronunciation, common mistakes)
+- JSON `teach` kept as plain context for the AI tutor
 
 AI does not replace the teach step for v1; it can **explain** the same material in chat when asked.
 
@@ -297,11 +298,13 @@ Constraints for generated practice: only lemmas and constructions **already taug
 |--------|---------|------------|
 | **Ending / paradigm grid** | **Primary** — produce forms by adding endings | Deterministic cell match (see above) |
 | **Translate** (L→E / E→L) | **Primary** — word → phrase → sentence; adaptive reps | AI grade + guidance + optional generated follow-ups |
-| **Multiple choice** | Recognition, case use, “which form is correct” | Deterministic (correct option id) |
+| **Matching** | Left column ↔ right column (case↔job, word↔gloss, letter↔sound) | Deterministic pairs |
+| **Ordering** | Put steps/forms/principal parts in sequence | Deterministic order |
+| **Multi-select** | Select all that apply | Deterministic set equality |
+| **Cloze** | Fill blanks in a sentence (optional word bank) | Normalized blank match |
+| **Multiple choice** | Single best option | Deterministic (correct option id) |
 | **Short answer** | Explain a rule, identify syntax, culture reflection | AI grade + feedback |
 | **Single-form production** | One declined/conjugated form (quick rep) | Normalized match |
-| **Spelling / vocabulary** | Principal parts, genitive, gender, gloss | Normalized string match; AI for partial credit |
-| **Parse / identify** | Case, number, gender, person, tense, etc. | Structured fields or short answer + AI |
 | **Matching** (optional) | Vocab, form ↔ label | Deterministic |
 
 ### Two engines, one lesson

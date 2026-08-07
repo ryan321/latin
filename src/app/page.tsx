@@ -24,19 +24,27 @@ export default async function HomePage() {
             Signed in as {session.user.name ?? session.user.email}
           </p>
         </div>
-        <form
-          action={async () => {
-            "use server";
-            await signOut({ redirectTo: "/login" });
-          }}
-        >
-          <button
-            type="submit"
-            className="text-sm text-stone-500 underline hover:text-stone-800"
+        <div className="flex flex-col items-end gap-2">
+          <Link
+            href="/help/typing"
+            className="text-sm text-amber-800 underline hover:text-amber-950 dark:text-amber-400"
           >
-            Sign out
-          </button>
-        </form>
+            Typing help
+          </Link>
+          <form
+            action={async () => {
+              "use server";
+              await signOut({ redirectTo: "/login" });
+            }}
+          >
+            <button
+              type="submit"
+              className="text-sm text-stone-500 underline hover:text-stone-800"
+            >
+              Sign out
+            </button>
+          </form>
+        </div>
       </header>
 
       <div className="space-y-8">

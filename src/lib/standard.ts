@@ -90,12 +90,14 @@ export function evaluateStandard(
     if (req.type === "activity_passed") {
       const st = latestByActivity[req.activityId]?.status;
       const met = st === "passed";
+      const act = byId.get(req.activityId);
+      const label =
+        act?.prompt?.slice(0, 60) ||
+        req.activityId.replace(/-/g, " ");
       return {
         requirement: req,
         met,
-        detail: met
-          ? `Passed ${req.activityId}`
-          : `Need to pass activity ${req.activityId}`,
+        detail: met ? `Passed: ${label}` : `Need to pass: ${label}`,
       };
     }
     if (req.type === "count") {

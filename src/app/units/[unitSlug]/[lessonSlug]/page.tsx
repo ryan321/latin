@@ -7,6 +7,7 @@ import {
   getAdjacentLessons,
   listAllLessons,
   loadLesson,
+  loadTeachSource,
 } from "@/lib/content";
 import { expandFromPattern } from "@/lib/activities/templates";
 import {
@@ -15,6 +16,7 @@ import {
   recomputeStandard,
 } from "@/lib/standard";
 import { LessonClient } from "@/components/lesson/LessonClient";
+import { TeachBody } from "@/components/lesson/TeachBody";
 import type { Activity } from "@/types/activity";
 import Link from "next/link";
 
@@ -81,6 +83,12 @@ export default async function LessonPage({
     .orderBy(asc(chatMessages.createdAt));
 
   const { prev, next } = getAdjacentLessons(lesson.slug);
+  const { source: teachSource } = loadTeachSource(
+    unitSlug,
+    lessonSlug,
+    lesson.teach
+  );
+  const teachContent = await TeachBody({ source: teachSource });
 
   return (
     <LessonClient
@@ -88,7 +96,7 @@ export default async function LessonPage({
       unitSlug={lesson.unitSlug}
       title={lesson.title}
       standardSummary={lesson.standardSummary}
-      teach={lesson.teach}
+      teachContent={teachContent}
       seeds={lesson.seeds}
       generated={generated}
       initialLatest={progress.latestByActivity}

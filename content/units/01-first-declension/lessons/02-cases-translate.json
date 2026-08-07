@@ -6,6 +6,8 @@
   "standardSummary": "Translate short Latin→English and English→Latin items using 1st-declension forms and sum (est/sunt) as needed. Meet the translate counts.",
   "standard": {
     "requirements": [
+      { "type": "activity_passed", "activityId": "match-cases" },
+      { "type": "activity_passed", "activityId": "cloze-villa" },
       { "type": "translate_count", "direction": "L2E", "n": 2 },
       { "type": "translate_count", "direction": "E2L", "n": 1 },
       { "type": "activity_passed", "activityId": "mc-acc" }
@@ -15,9 +17,57 @@
   "allowList": {
     "lemmas": ["puella", "terra", "aqua", "silva", "villa", "via", "est", "sunt", "spectat", "habitat"],
     "constructions": ["1st declension", "nominative subject", "accusative object", "in + abl", "sum present"],
-    "activityTypes": ["translate", "multiple_choice", "single_form", "paradigm_grid"]
+    "activityTypes": [
+      "translate",
+      "multiple_choice",
+      "single_form",
+      "paradigm_grid",
+      "matching",
+      "cloze"
+    ]
   },
   "seeds": [
+    {
+      "id": "match-cases",
+      "type": "matching",
+      "source": "seed",
+      "prompt": "Match each case to its main job in a simple sentence.",
+      "required": true,
+      "payload": {
+        "leftLabel": "Case",
+        "rightLabel": "Job",
+        "left": [
+          { "id": "nom", "label": "Nominative" },
+          { "id": "acc", "label": "Accusative" },
+          { "id": "abl", "label": "Ablative (after in)" }
+        ],
+        "right": [
+          { "id": "subject", "label": "Subject of the verb" },
+          { "id": "object", "label": "Direct object" },
+          { "id": "place", "label": "Place where" }
+        ],
+        "pairs": {
+          "nom": "subject",
+          "acc": "object",
+          "abl": "place"
+        }
+      }
+    },
+    {
+      "id": "cloze-villa",
+      "type": "cloze",
+      "source": "seed",
+      "prompt": "Fill the blanks (use the word bank if you like).",
+      "required": true,
+      "payload": {
+        "template": "Puella in {{1}} {{2}}.",
+        "blanks": {
+          "1": ["villa", "villā"],
+          "2": ["est"]
+        },
+        "wordBank": ["est", "villa", "spectat", "puellae"]
+      }
+    },
     {
       "id": "mc-acc",
       "type": "multiple_choice",

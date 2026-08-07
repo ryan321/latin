@@ -1,7 +1,14 @@
 "use client";
 
 import Link from "next/link";
-import { useMemo, useRef, useState, useEffect, FormEvent } from "react";
+import {
+  useMemo,
+  useRef,
+  useState,
+  useEffect,
+  FormEvent,
+  type ReactNode,
+} from "react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { ActivityCard } from "@/components/activities/ActivityCard";
@@ -19,7 +26,8 @@ type Props = {
   unitSlug: string;
   title: string;
   standardSummary: string;
-  teach: string;
+  /** Server-rendered MDX teach body */
+  teachContent: ReactNode;
   seeds: Activity[];
   generated: Activity[];
   initialLatest: Record<
@@ -38,7 +46,7 @@ export function LessonClient({
   unitSlug,
   title,
   standardSummary,
-  teach,
+  teachContent,
   seeds,
   generated: initialGenerated,
   initialLatest,
@@ -164,8 +172,8 @@ export function LessonClient({
           </ul>
         </section>
 
-        <section className="prose prose-stone max-w-none rounded-xl border border-stone-200 bg-white p-5 dark:prose-invert dark:border-stone-700 dark:bg-stone-900 prose-headings:font-serif prose-p:text-sm prose-li:text-sm">
-          <ReactMarkdown remarkPlugins={[remarkGfm]}>{teach}</ReactMarkdown>
+        <section className="rounded-xl border border-stone-200 bg-white p-5 sm:p-6 dark:border-stone-700 dark:bg-stone-900">
+          {teachContent}
         </section>
 
         <section className="space-y-4">

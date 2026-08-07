@@ -9,6 +9,14 @@ export const activityTypeSchema = z.enum([
   "translate",
   "multiple_choice",
   "short_answer",
+  /** Match left prompts to right labels (dropdown per left item). */
+  "matching",
+  /** Put items in the correct sequence. */
+  "ordering",
+  /** Select all correct options (one or more). */
+  "multi_select",
+  /** Fill blanks in a sentence; optional word bank. */
+  "cloze",
 ]);
 export type ActivityType = z.infer<typeof activityTypeSchema>;
 
@@ -17,13 +25,11 @@ export const paradigmGridPayloadSchema = z.object({
   lemma: z.string(),
   stem: z.string().optional(),
   mode: z.enum(["full_form", "ending_only"]).default("full_form"),
-  /** Optional template id, e.g. first_declension */
   pattern: z.string().optional(),
   labels: z.object({
     rows: z.array(z.string()),
     cols: z.array(z.string()),
   }),
-  /** cellId → accepted answers */
   cells: z.record(z.string(), z.array(z.string())),
   prefill: z.record(z.string(), z.string()).optional(),
 });
@@ -60,21 +66,133 @@ export const shortAnswerPayloadSchema = z.object({
 });
 export type ShortAnswerPayload = z.infer<typeof shortAnswerPayloadSchema>;
 
-export const activitySchema = z.object({
-  id: z.string(),
-  type: activityTypeSchema,
-  source: z.enum(["seed", "generated"]).default("seed"),
-  prompt: z.string().optional(),
-  targets: z.array(z.string()).optional(),
-  required: z.boolean().default(true),
-  payload: z.union([
-    paradigmGridPayloadSchema,
-    singleFormPayloadSchema,
-    translatePayloadSchema,
-    multipleChoicePayloadSchema,
-    shortAnswerPayloadSchema,
-  ]),
+/** left id → correct right id */
+export const matchingPayloadSchema = z.object({
+  left: z.array(z.object({ id: z.string(), label: z.string() })).min(2),
+  right: z.array(z.object({ id: z.string(), label: z.string() })).min(2),
+  /** Map leftId → rightId */
+  pairs: z.record(z.string(), z.string()),
+  leftLabel: z.string().optional(),
+  rightLabel: z.string().optional(),
 });
+export type MatchingPayload = z.infer<typeof matchingPayloadSchema>;
+
+export const orderingPayloadSchema = z.object({
+  /** Items shown shuffled to the student */
+  items: z.array(z.object({ id: z.string(), label: z.string() })).min(2),
+  /** Correct order of item ids */
+  correctOrder: z.array(z.string()).min(2),
+});
+export type OrderingPayload = z.infer<typeof orderingPayloadSchema>;
+
+export const multiSelectPayloadSchema = z.object({
+  options: z.array(
+    z.object({
+      id: z.string(),
+      label: z.string(),
+    })
+  ),
+  correctOptionIds: z.array(z.string()).min(1),
+});
+export type MultiSelectPayload = z.infer<typeof multiSelectPayloadSchema>;
+
+export const clozePayloadSchema = z.object({
+  /**
+   * Template with blanks as {{1}}, {{2}}, …
+   * e.g. "Puella {{1}} villā {{2}}."
+   */
+  template: z.string(),
+  /** blank id ("1") → accepted answers */
+  blanks: z.record(z.string(), z.array(z.string())),
+  /** Optional bank of words shown as chips */
+  wordBank: z.array(z.string()).optional(),
+});
+export type ClozePayload = z.infer<typeof clozePayloadSchema>;
+
+/** Discriminated by type so payload shape is validated correctly (z.union was fragile). */
+export const activitySchema = z.discriminatedUnion("type", [
+  z.object({
+    id: z.string(),
+    type: z.literal("paradigm_grid"),
+    source: z.enum(["seed", "generated"]).default("seed"),
+    prompt: z.string().optional(),
+    targets: z.array(z.string()).optional(),
+    required: z.boolean().default(true),
+    payload: paradigmGridPayloadSchema,
+  }),
+  z.object({
+    id: z.string(),
+    type: z.literal("single_form"),
+    source: z.enum(["seed", "generated"]).default("seed"),
+    prompt: z.string().optional(),
+    targets: z.array(z.string()).optional(),
+    required: z.boolean().default(true),
+    payload: singleFormPayloadSchema,
+  }),
+  z.object({
+    id: z.string(),
+    type: z.literal("translate"),
+    source: z.enum(["seed", "generated"]).default("seed"),
+    prompt: z.string().optional(),
+    targets: z.array(z.string()).optional(),
+    required: z.boolean().default(true),
+    payload: translatePayloadSchema,
+  }),
+  z.object({
+    id: z.string(),
+    type: z.literal("multiple_choice"),
+    source: z.enum(["seed", "generated"]).default("seed"),
+    prompt: z.string().optional(),
+    targets: z.array(z.string()).optional(),
+    required: z.boolean().default(true),
+    payload: multipleChoicePayloadSchema,
+  }),
+  z.object({
+    id: z.string(),
+    type: z.literal("short_answer"),
+    source: z.enum(["seed", "generated"]).default("seed"),
+    prompt: z.string().optional(),
+    targets: z.array(z.string()).optional(),
+    required: z.boolean().default(true),
+    payload: shortAnswerPayloadSchema,
+  }),
+  z.object({
+    id: z.string(),
+    type: z.literal("matching"),
+    source: z.enum(["seed", "generated"]).default("seed"),
+    prompt: z.string().optional(),
+    targets: z.array(z.string()).optional(),
+    required: z.boolean().default(true),
+    payload: matchingPayloadSchema,
+  }),
+  z.object({
+    id: z.string(),
+    type: z.literal("ordering"),
+    source: z.enum(["seed", "generated"]).default("seed"),
+    prompt: z.string().optional(),
+    targets: z.array(z.string()).optional(),
+    required: z.boolean().default(true),
+    payload: orderingPayloadSchema,
+  }),
+  z.object({
+    id: z.string(),
+    type: z.literal("multi_select"),
+    source: z.enum(["seed", "generated"]).default("seed"),
+    prompt: z.string().optional(),
+    targets: z.array(z.string()).optional(),
+    required: z.boolean().default(true),
+    payload: multiSelectPayloadSchema,
+  }),
+  z.object({
+    id: z.string(),
+    type: z.literal("cloze"),
+    source: z.enum(["seed", "generated"]).default("seed"),
+    prompt: z.string().optional(),
+    targets: z.array(z.string()).optional(),
+    required: z.boolean().default(true),
+    payload: clozePayloadSchema,
+  }),
+]);
 export type Activity = z.infer<typeof activitySchema>;
 
 export const standardRequirementSchema = z.discriminatedUnion("type", [
@@ -131,6 +249,5 @@ export type GradeResult = {
   status: AnswerStatus;
   feedback: string;
   issues?: string[];
-  /** For paradigm grids: cellId → correct? */
   cellResults?: Record<string, boolean>;
 };

@@ -44,6 +44,28 @@ export function listLessonSlugs(unitSlug: string): string[] {
     .sort();
 }
 
+/**
+ * Teach body for display: prefers sibling `.mdx` (rich components),
+ * else the JSON `teach` string (markdown/MDX).
+ * AI tutor still uses `lesson.teach` from JSON (plain/markdown summary).
+ */
+export function loadTeachSource(
+  unitSlug: string,
+  lessonSlug: string,
+  fallbackTeach: string
+): { source: string; fromFile: boolean } {
+  const mdxPath = path.join(
+    CONTENT_ROOT,
+    unitSlug,
+    "lessons",
+    `${lessonSlug}.mdx`
+  );
+  if (fs.existsSync(mdxPath)) {
+    return { source: fs.readFileSync(mdxPath, "utf8"), fromFile: true };
+  }
+  return { source: fallbackTeach, fromFile: false };
+}
+
 export function loadLesson(
   unitSlug: string,
   lessonSlug: string
