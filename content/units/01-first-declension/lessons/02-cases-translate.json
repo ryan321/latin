@@ -1,0 +1,92 @@
+{
+  "slug": "02-cases-translate",
+  "title": "Cases in short sentences",
+  "unitSlug": "01-first-declension",
+  "order": 2,
+  "standardSummary": "Translate short Latin→English and English→Latin items using 1st-declension forms and sum (est/sunt) as needed. Meet the translate counts.",
+  "standard": {
+    "requirements": [
+      { "type": "translate_count", "direction": "L2E", "n": 2 },
+      { "type": "translate_count", "direction": "E2L", "n": 1 },
+      { "type": "activity_passed", "activityId": "mc-acc" }
+    ]
+  },
+  "teach": "## Using cases\n\nLatin shows the job of a noun with **endings**, not word order alone.\n\n- *Puella terram spectat.* — The girl looks at the land. (*puella* nom. subject; *terram* acc. object)\n- *Aqua est in silvā.* — Water is in the forest. (*in* + ablative for place where)\n\n### sum (present), quick look\n\n| | sg | pl |\n|--|----|----|\n| 1 | sum | sumus |\n| 2 | es | estis |\n| 3 | est | sunt |\n\n*Puella est in villā.* — The girl is in the country house.\n\n### Your job this lesson\n\nTranslate carefully. If you miss the standard, use **More practice** for extra items, or ask the tutor.",
+  "allowList": {
+    "lemmas": ["puella", "terra", "aqua", "silva", "villa", "via", "est", "sunt", "spectat", "habitat"],
+    "constructions": ["1st declension", "nominative subject", "accusative object", "in + abl", "sum present"],
+    "activityTypes": ["translate", "multiple_choice", "single_form", "paradigm_grid"]
+  },
+  "seeds": [
+    {
+      "id": "mc-acc",
+      "type": "multiple_choice",
+      "source": "seed",
+      "prompt": "In \"Puella terram spectat,\" what case is terram, and why?",
+      "required": true,
+      "payload": {
+        "options": [
+          { "id": "a", "label": "Nominative — it is the subject" },
+          { "id": "b", "label": "Accusative — direct object of spectat" },
+          { "id": "c", "label": "Genitive — possession" },
+          { "id": "d", "label": "Ablative — place where" }
+        ],
+        "correctOptionId": "b"
+      }
+    },
+    {
+      "id": "tr-l2e-1",
+      "type": "translate",
+      "source": "seed",
+      "prompt": "Puella in villā est.",
+      "targets": ["in + abl", "sum"],
+      "required": true,
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "The girl is in the country house.",
+          "The girl is in the villa.",
+          "A girl is in the farmhouse."
+        ],
+        "rubric": "Girl as subject; is/est; location in villa/country house/farmhouse. Articles a/the flexible."
+      }
+    },
+    {
+      "id": "tr-l2e-2",
+      "type": "translate",
+      "source": "seed",
+      "prompt": "Puella terram spectat.",
+      "targets": ["nom", "acc"],
+      "required": true,
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "The girl looks at the land.",
+          "The girl watches the earth/land.",
+          "A girl looks at the ground."
+        ],
+        "rubric": "Girl subject; looks at/watches/sees; land/earth/ground as object."
+      }
+    },
+    {
+      "id": "tr-e2l-1",
+      "type": "translate",
+      "source": "seed",
+      "prompt": "The water is in the forest.",
+      "targets": ["in + abl", "sum"],
+      "required": true,
+      "payload": {
+        "direction": "E2L",
+        "length": "sentence",
+        "sampleAnswers": [
+          "Aqua in silva est.",
+          "Aqua in silvā est.",
+          "Est aqua in silva."
+        ],
+        "rubric": "aqua nominative; in + abl silva/silvā; est. Word order flexible."
+      }
+    }
+  ]
+}

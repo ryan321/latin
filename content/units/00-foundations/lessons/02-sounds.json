@@ -1,0 +1,68 @@
+{
+  "slug": "02-sounds",
+  "title": "Alphabet & classical sounds",
+  "unitSlug": "00-foundations",
+  "order": 2,
+  "standardSummary": "Answer key questions about classical pronunciation (c/g, v, vowels).",
+  "standard": {
+    "requirements": [
+      { "type": "activity_passed", "activityId": "mc-c" },
+      { "type": "activity_passed", "activityId": "mc-v" },
+      { "type": "activity_passed", "activityId": "sa-macron" }
+    ]
+  },
+  "teach": "## Classical pronunciation (starter)\n\nWe use **classical** reconstruction (roughly the late Republic / early Empire), not ecclesiastical.\n\n### Consonants to watch\n\n- **c** and **g** are always hard: *Caesar* ~ \"Ky-sar\", *genus* with hard g.\n- **v** is like English **w**: *via* ~ \"wee-ah\".\n- **i** can be a vowel or a consonant (like y in *yes*) before another vowel: *Iūlius*.\n- **s** is always unvoiced (no \"z\" sound between vowels).\n\n### Vowels\n\nLatin has long and short vowels. We mark long vowels with a **macron** (ā ē ī ō ū) in teaching charts. For typing answers in this app, **macrons are optional** unless a lesson is specifically about quantity.\n\nDiphthongs: **ae**, **au**, **oe** (and **ei**, **eu**, **ui** in some words).\n\n### Stress\n\nStress usually falls on the **second-to-last** syllable if it is long, otherwise on the **third-to-last**. You will practice this more with real words soon.",
+  "allowList": {
+    "lemmas": ["Caesar", "via", "Roma"],
+    "constructions": ["pronunciation"],
+    "activityTypes": ["multiple_choice", "short_answer"]
+  },
+  "seeds": [
+    {
+      "id": "mc-c",
+      "type": "multiple_choice",
+      "source": "seed",
+      "prompt": "In classical pronunciation, how is the c in Caesar pronounced?",
+      "required": true,
+      "payload": {
+        "options": [
+          { "id": "a", "label": "Soft s, as in English \"center\"" },
+          { "id": "b", "label": "Hard k, as in \"kite\"" },
+          { "id": "c", "label": "Like ch in \"church\"" },
+          { "id": "d", "label": "Silent" }
+        ],
+        "correctOptionId": "b"
+      }
+    },
+    {
+      "id": "mc-v",
+      "type": "multiple_choice",
+      "source": "seed",
+      "prompt": "Classically, the letter v in via sounds most like:",
+      "required": true,
+      "payload": {
+        "options": [
+          { "id": "a", "label": "English v in \"very\"" },
+          { "id": "b", "label": "English w in \"we\"" },
+          { "id": "c", "label": "English b" },
+          { "id": "d", "label": "English f" }
+        ],
+        "correctOptionId": "b"
+      }
+    },
+    {
+      "id": "sa-macron",
+      "type": "short_answer",
+      "source": "seed",
+      "prompt": "What does a macron (¯) over a Latin vowel tell you? One sentence is enough.",
+      "required": true,
+      "payload": {
+        "sampleAnswers": [
+          "That the vowel is long",
+          "The vowel is pronounced long (longer duration)"
+        ],
+        "rubric": "Student says the vowel is long / lengthened / long quantity. Partial if they only say \"stress\" without length."
+      }
+    }
+  ]
+}

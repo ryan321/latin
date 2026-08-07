@@ -2,6 +2,8 @@
 
 Personal standalone app. Optimize for **fast iteration**, **clear AI loops**, and **eventual Fly.io deploy** — not multi-tenant scale.
 
+**How to build, run, and deploy day-to-day:** see [`build-and-run.md`](./build-and-run.md).
+
 ## Summary
 
 | Layer | Choice | Why |
@@ -12,7 +14,7 @@ Personal standalone app. Optimize for **fast iteration**, **clear AI loops**, an
 | UI | React + Tailwind CSS | Fast UI; education-like lesson layouts |
 | AI | **OpenRouter** → **DeepSeek V4 Pro 0731** | Requested; OpenAI-compatible API |
 | Config | **`.env` / `.env.local`** | Keys and model ids |
-| DB | **PostgreSQL** + **Drizzle ORM** | Progress, answers, chat; Fly-friendly (e.g. Neon/Fly Postgres) |
+| DB | **PostgreSQL** + **Drizzle** (`postgres.js`) | **Local Postgres** for dev; **Neon** for deploy |
 | Auth | Simple (single household) | Email/password or single shared login; no OAuth required for v1 |
 | Deploy | **Fly.io** when ready | Matches education ops experience |
 | Content | Files in-repo (MD/MDX or JSON) + DB metadata | Easy to edit lessons in git |
@@ -159,7 +161,7 @@ TUTOR_MODEL=          # optional override
 GRADER_MODEL=         # optional override
 DATABASE_URL=postgresql://...
 NEXTAUTH_SECRET=...   # or equivalent session secret
-NEXTAUTH_URL=http://localhost:3000
+AUTH_URL=http://localhost:3040
 ```
 
 Confirm the exact OpenRouter model slug at implementation time (`deepseek/deepseek-v4-pro-0731` or whatever OpenRouter lists).

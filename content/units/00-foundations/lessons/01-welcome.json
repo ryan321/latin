@@ -1,0 +1,51 @@
+{
+  "slug": "01-welcome",
+  "title": "Welcome & how mastery works",
+  "unitSlug": "00-foundations",
+  "order": 1,
+  "standardSummary": "Explain how a lesson standard works and answer one short question about the course.",
+  "standard": {
+    "requirements": [
+      { "type": "activity_passed", "activityId": "mc-standard" },
+      { "type": "activity_passed", "activityId": "sa-goal" }
+    ]
+  },
+  "teach": "## Welcome\n\nThis is your Year 1 high-school Latin course. Classical pronunciation. Grammar first, with Roman context along the way.\n\n### How each lesson works\n\n1. **Standard** — what you must show you can do before the next lesson unlocks.\n2. **Teach** — short explanation (this section).\n3. **Practice** — forms grids, translations, and other activities.\n4. **Check** — some items auto-check; free answers are graded by AI with feedback.\n5. **Help** — use the tutor chat anytime with questions.\n6. **More practice** — if you are not at standard yet, the app can give you more drills of the same types until you meet it.\n\nThere are **no letter grades**. You either meet the standard or keep practicing with guidance.\n\n### Two workhorses\n\n- **Ending grids** — add the right endings (you will do this a lot).\n- **Translate this** — Latin ↔ English, from words up to sentences.",
+  "allowList": {
+    "lemmas": [],
+    "constructions": ["course-meta"],
+    "activityTypes": ["multiple_choice", "short_answer"]
+  },
+  "seeds": [
+    {
+      "id": "mc-standard",
+      "type": "multiple_choice",
+      "source": "seed",
+      "prompt": "What must you do before the next lesson unlocks?",
+      "required": true,
+      "payload": {
+        "options": [
+          { "id": "a", "label": "Score 90% or higher on a percentage grade" },
+          { "id": "b", "label": "Meet the lesson's stated standard (pass the required practice)" },
+          { "id": "c", "label": "Only read the teach section" },
+          { "id": "d", "label": "Finish in under five minutes" }
+        ],
+        "correctOptionId": "b"
+      }
+    },
+    {
+      "id": "sa-goal",
+      "type": "short_answer",
+      "source": "seed",
+      "prompt": "In your own words: what are the two main practice types you will use most in this course?",
+      "required": true,
+      "payload": {
+        "sampleAnswers": [
+          "Ending grids (forms) and translation both ways",
+          "Paradigm/ending drills and Latin-English translation"
+        ],
+        "rubric": "Mentions forms/endings/paradigms AND translation (Latin-English or both directions). Wording can vary."
+      }
+    }
+  ]
+}
