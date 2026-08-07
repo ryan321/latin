@@ -1,0 +1,219 @@
+{
+  "slug": "02-ego-tu",
+  "title": "Personal pronouns ego & tū",
+  "unitSlug": "14-prep-pronouns",
+  "order": 2,
+  "standardSummary": "Decline ego and tū in major cases; use them as subjects/objects.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-me"
+      },
+      {
+        "type": "skill_count",
+        "skill": "personal pronouns",
+        "n": 3,
+        "label": "ego tū"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match-et"
+      }
+    ]
+  },
+  "teach": "ego meī mihi mē; tū tuī tibi tē; nōs vōs.",
+  "allowList": {
+    "lemmas": [
+      "ego",
+      "tu",
+      "me",
+      "te",
+      "nos",
+      "vos"
+    ],
+    "constructions": [
+      "personal pronouns"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "matching",
+      "single_form",
+      "translate",
+      "ordering"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-me",
+      "type": "multiple_choice",
+      "prompt": "mē as direct object means…",
+      "targets": [
+        "personal pronouns"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "I"
+          },
+          {
+            "id": "b",
+            "label": "me"
+          },
+          {
+            "id": "c",
+            "label": "to me"
+          },
+          {
+            "id": "d",
+            "label": "of me"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match-et",
+      "type": "matching",
+      "prompt": "Match form.",
+      "targets": [
+        "personal pronouns"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "ego"
+          },
+          {
+            "id": "b",
+            "label": "mihi"
+          },
+          {
+            "id": "c",
+            "label": "tē"
+          },
+          {
+            "id": "d",
+            "label": "nōs"
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "I (nom.)"
+          },
+          {
+            "id": "2",
+            "label": "to/for me"
+          },
+          {
+            "id": "3",
+            "label": "you (acc. sing.)"
+          },
+          {
+            "id": "4",
+            "label": "we/us"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3",
+          "d": "4"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sf1",
+      "type": "single_form",
+      "prompt": "Dative of tū:",
+      "targets": [
+        "personal pronouns"
+      ],
+      "payload": {
+        "accept": [
+          "tibi"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sf2",
+      "type": "single_form",
+      "prompt": "Ablative of ego:",
+      "targets": [
+        "personal pronouns"
+      ],
+      "payload": {
+        "accept": [
+          "me",
+          "mē"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "tr1",
+      "type": "translate",
+      "prompt": "Tū mē amās.",
+      "targets": [
+        "personal pronouns"
+      ],
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "You love me."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "ord1",
+      "type": "ordering",
+      "prompt": "Order ego: nom gen dat acc",
+      "targets": [
+        "personal pronouns"
+      ],
+      "payload": {
+        "items": [
+          {
+            "id": "a",
+            "label": "mē"
+          },
+          {
+            "id": "b",
+            "label": "ego"
+          },
+          {
+            "id": "c",
+            "label": "mihi"
+          },
+          {
+            "id": "d",
+            "label": "meī"
+          }
+        ],
+        "correctOrder": [
+          "b",
+          "d",
+          "c",
+          "a"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

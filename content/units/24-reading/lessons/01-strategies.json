@@ -1,0 +1,168 @@
+{
+  "slug": "01-strategies",
+  "title": "Reading strategies",
+  "unitSlug": "24-reading",
+  "order": 1,
+  "standardSummary": "Apply a parse-first strategy: verbs, subjects, agreements, then polish English.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-strat"
+      },
+      {
+        "type": "skill_count",
+        "skill": "reading strategies",
+        "n": 3,
+        "label": "strategies"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match-s"
+      }
+    ]
+  },
+  "teach": "Find main verb; match nominatives; resolve cases; then relative/participial phrases.",
+  "allowList": {
+    "lemmas": [
+      "qui",
+      "sum",
+      "video",
+      "urbs",
+      "rex"
+    ],
+    "constructions": [
+      "reading strategies"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "matching",
+      "short_answer",
+      "ordering",
+      "translate"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-strat",
+      "type": "multiple_choice",
+      "prompt": "A good first step in a Latin sentence is often…",
+      "targets": [
+        "reading strategies"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "ignore the verb"
+          },
+          {
+            "id": "b",
+            "label": "find the main verb and its subject"
+          },
+          {
+            "id": "c",
+            "label": "translate left-to-right only like English always"
+          },
+          {
+            "id": "d",
+            "label": "skip all endings"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match-s",
+      "type": "matching",
+      "prompt": "Match ending clue.",
+      "targets": [
+        "reading strategies"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "-t / -nt"
+          },
+          {
+            "id": "b",
+            "label": "-m / -ōs"
+          },
+          {
+            "id": "c",
+            "label": "-ae / -ī gen?"
+          },
+          {
+            "id": "d",
+            "label": "quī…"
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "verb person/number"
+          },
+          {
+            "id": "2",
+            "label": "possible acc"
+          },
+          {
+            "id": "3",
+            "label": "possible gen/dat"
+          },
+          {
+            "id": "4",
+            "label": "relative clause"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3",
+          "d": "4"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sa1",
+      "type": "short_answer",
+      "prompt": "List three steps you use when stuck on a sentence.",
+      "targets": [
+        "reading strategies"
+      ],
+      "payload": {
+        "sampleAnswers": [
+          "Find verb; find nominative; check agreements; parse subordinates.",
+          "verb, subject, cases, then clauses"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "tr1",
+      "type": "translate",
+      "prompt": "Rēx quī in urbe habitat mīlitēs videt.",
+      "targets": [
+        "reading strategies",
+        "relative pronoun"
+      ],
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "The king who lives in the city sees the soldiers."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

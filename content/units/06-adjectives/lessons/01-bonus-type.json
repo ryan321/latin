@@ -1,0 +1,261 @@
+{
+  "slug": "01-bonus-type",
+  "title": "bonus, bona, bonum",
+  "unitSlug": "06-adjectives",
+  "order": 1,
+  "standardSummary": "Decline a 1st/2nd-declension adjective and state the agreement rule.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-agree"
+      },
+      {
+        "type": "skill_count",
+        "skill": "adjective agreement",
+        "n": 3,
+        "label": "agreement"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match-end"
+      }
+    ]
+  },
+  "teach": "Adjectives of the first and second declensions: bonus -a -um. They agree with nouns in gender, number, and case.",
+  "allowList": {
+    "lemmas": [
+      "bonus",
+      "magnus",
+      "parvus",
+      "multus",
+      "malus",
+      "puella",
+      "servus",
+      "bellum"
+    ],
+    "constructions": [
+      "adjective agreement",
+      "1st declension",
+      "2nd declension"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "matching",
+      "single_form",
+      "multi_select",
+      "cloze"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-agree",
+      "type": "multiple_choice",
+      "prompt": "An adjective must agree with its noun in…",
+      "targets": [
+        "adjective agreement"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "Gender only"
+          },
+          {
+            "id": "b",
+            "label": "Gender, number, and case"
+          },
+          {
+            "id": "c",
+            "label": "Dictionary order only"
+          },
+          {
+            "id": "d",
+            "label": "Person and tense"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match-end",
+      "type": "matching",
+      "prompt": "Match adjective form idea to gender (nom. sing.).",
+      "targets": [
+        "adjective agreement"
+      ],
+      "payload": {
+        "leftLabel": "Form",
+        "rightLabel": "Gender",
+        "left": [
+          {
+            "id": "a",
+            "label": "bonus"
+          },
+          {
+            "id": "b",
+            "label": "bona"
+          },
+          {
+            "id": "c",
+            "label": "bonum"
+          }
+        ],
+        "right": [
+          {
+            "id": "m",
+            "label": "masculine"
+          },
+          {
+            "id": "f",
+            "label": "feminine"
+          },
+          {
+            "id": "n",
+            "label": "neuter"
+          }
+        ],
+        "pairs": {
+          "a": "m",
+          "b": "f",
+          "c": "n"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "form-bonam",
+      "type": "single_form",
+      "prompt": "Accusative singular feminine of bonus?",
+      "targets": [
+        "adjective agreement"
+      ],
+      "payload": {
+        "accept": [
+          "bonam"
+        ],
+        "hint": "like 1st decl. acc. sing."
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "form-bonos",
+      "type": "single_form",
+      "prompt": "Accusative plural masculine of bonus?",
+      "targets": [
+        "adjective agreement"
+      ],
+      "payload": {
+        "accept": [
+          "bonos",
+          "bonōs"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "form-bona-n",
+      "type": "single_form",
+      "prompt": "Nominative/accusative plural neuter of bonus?",
+      "targets": [
+        "adjective agreement",
+        "neuter"
+      ],
+      "payload": {
+        "accept": [
+          "bona"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "multi-agree",
+      "type": "multi_select",
+      "prompt": "Select ALL true: agreement means matching…",
+      "targets": [
+        "adjective agreement"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "g",
+            "label": "gender"
+          },
+          {
+            "id": "n",
+            "label": "number"
+          },
+          {
+            "id": "c",
+            "label": "case"
+          },
+          {
+            "id": "t",
+            "label": "tense of a nearby verb always"
+          }
+        ],
+        "correctOptionIds": [
+          "g",
+          "n",
+          "c"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "mc-pos",
+      "type": "multiple_choice",
+      "prompt": "In magna villa, magna is…",
+      "targets": [
+        "adjective agreement"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "a noun"
+          },
+          {
+            "id": "b",
+            "label": "an adjective describing villa"
+          },
+          {
+            "id": "c",
+            "label": "a verb"
+          },
+          {
+            "id": "d",
+            "label": "a preposition"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sa-rule",
+      "type": "short_answer",
+      "prompt": "In one sentence: what must a Latin adjective match on its noun?",
+      "targets": [
+        "adjective agreement"
+      ],
+      "payload": {
+        "sampleAnswers": [
+          "Gender, number, and case.",
+          "It agrees in gender, number, and case with the noun it modifies."
+        ],
+        "rubric": "States gender, number, and case."
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

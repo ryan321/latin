@@ -1,0 +1,217 @@
+{
+  "slug": "02-future-practice",
+  "title": "Future in sentences",
+  "unitSlug": "09-future",
+  "order": 2,
+  "standardSummary": "Translate short present/imperfect/future sentences and form future verbs correctly.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-tense"
+      },
+      {
+        "type": "skill_count",
+        "skill": "future",
+        "n": 3,
+        "label": "future use"
+      },
+      {
+        "type": "translate_count",
+        "n": 2
+      }
+    ]
+  },
+  "teach": "Choose tense carefully: present vs imperfect vs future.",
+  "allowList": {
+    "lemmas": [
+      "sum",
+      "amo",
+      "porto",
+      "moneo",
+      "puella",
+      "servus",
+      "aqua"
+    ],
+    "constructions": [
+      "future",
+      "imperfect",
+      "present"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "translate",
+      "single_form",
+      "cloze",
+      "matching"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-tense",
+      "type": "multiple_choice",
+      "prompt": "Puella aquam portābit. The verb is…",
+      "targets": [
+        "future"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "present"
+          },
+          {
+            "id": "b",
+            "label": "imperfect"
+          },
+          {
+            "id": "c",
+            "label": "future"
+          },
+          {
+            "id": "d",
+            "label": "perfect"
+          }
+        ],
+        "correctOptionId": "c"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match-tense",
+      "type": "matching",
+      "prompt": "Match form to tense label.",
+      "targets": [
+        "future",
+        "imperfect",
+        "present"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "portat"
+          },
+          {
+            "id": "b",
+            "label": "portābat"
+          },
+          {
+            "id": "c",
+            "label": "portābit"
+          },
+          {
+            "id": "d",
+            "label": "portābō"
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "present 3sg"
+          },
+          {
+            "id": "2",
+            "label": "imperfect 3sg"
+          },
+          {
+            "id": "3",
+            "label": "future 3sg"
+          },
+          {
+            "id": "4",
+            "label": "future 1sg"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3",
+          "d": "4"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "tr-l2e",
+      "type": "translate",
+      "prompt": "Servus labōrābit.",
+      "targets": [
+        "future"
+      ],
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "The slave will work.",
+          "The servant will work."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "tr-e2l",
+      "type": "translate",
+      "prompt": "The girl will love the fatherland.",
+      "targets": [
+        "future"
+      ],
+      "payload": {
+        "direction": "E2L",
+        "length": "sentence",
+        "sampleAnswers": [
+          "Puella patriam amabit.",
+          "Puella patriam amābit."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sf-erit",
+      "type": "single_form",
+      "prompt": "Fill: Rōma magna ___ . (will be) — 3sg of sum",
+      "targets": [
+        "future",
+        "sum"
+      ],
+      "payload": {
+        "accept": [
+          "erit"
+        ],
+        "hint": "future of sum"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "cl-fut",
+      "type": "cloze",
+      "prompt": "Complete with a future form of portō.",
+      "targets": [
+        "future"
+      ],
+      "payload": {
+        "template": "Puellae aquam {{1}}.",
+        "blanks": {
+          "1": [
+            "portabunt",
+            "portābunt"
+          ]
+        },
+        "wordBank": [
+          "portābunt",
+          "portant",
+          "portābant"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

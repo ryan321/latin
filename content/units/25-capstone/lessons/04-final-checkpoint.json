@@ -1,0 +1,254 @@
+{
+  "slug": "04-final-checkpoint",
+  "title": "Final checkpoint — Year 1",
+  "unitSlug": "25-capstone",
+  "order": 4,
+  "standardSummary": "Meet the Year 1 capstone standard: mixed forms, translation, and cultural literacy.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-final"
+      },
+      {
+        "type": "skill_count",
+        "skill": "year1 mastery",
+        "n": 5,
+        "label": "final mastery"
+      },
+      {
+        "type": "translate_count",
+        "n": 3
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match-final"
+      }
+    ]
+  },
+  "teach": "Final Year 1 mastery checkpoint.",
+  "allowList": {
+    "lemmas": [
+      "sum",
+      "amo",
+      "rego",
+      "capio",
+      "audio",
+      "qui",
+      "hic",
+      "ille",
+      "bonus",
+      "rex",
+      "urbs",
+      "pax"
+    ],
+    "constructions": [
+      "year1 mastery"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "matching",
+      "single_form",
+      "translate",
+      "short_answer"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-final",
+      "type": "multiple_choice",
+      "prompt": "Year 1 Latin should leave you able to…",
+      "targets": [
+        "year1 mastery"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "only recite the alphabet"
+          },
+          {
+            "id": "b",
+            "label": "handle core forms and short connected Latin with Roman context"
+          },
+          {
+            "id": "c",
+            "label": "speak fluent street Latin of 2026 Rome"
+          },
+          {
+            "id": "d",
+            "label": "skip all endings forever"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match-final",
+      "type": "matching",
+      "prompt": "Final form match.",
+      "targets": [
+        "year1 mastery"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "fuerimus"
+          },
+          {
+            "id": "b",
+            "label": "capiēbātur"
+          },
+          {
+            "id": "c",
+            "label": "quārum"
+          },
+          {
+            "id": "d",
+            "label": "optimus"
+          },
+          {
+            "id": "e",
+            "label": "Rōmae"
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "future perfect 1pl sum"
+          },
+          {
+            "id": "2",
+            "label": "impf passive 3sg capiō"
+          },
+          {
+            "id": "3",
+            "label": "gen f. pl. relative"
+          },
+          {
+            "id": "4",
+            "label": "superlative of bonus"
+          },
+          {
+            "id": "5",
+            "label": "locative at Rome"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3",
+          "d": "4",
+          "e": "5"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sf1",
+      "type": "single_form",
+      "prompt": "2sg present of audiō:",
+      "targets": [
+        "4th conjugation"
+      ],
+      "payload": {
+        "accept": [
+          "audis",
+          "audīs"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sf2",
+      "type": "single_form",
+      "prompt": "Nom n. pl. of hic:",
+      "targets": [
+        "hic"
+      ],
+      "payload": {
+        "accept": [
+          "haec"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "tr1",
+      "type": "translate",
+      "prompt": "Pāx quae ab Augustō data est longa erat.",
+      "targets": [
+        "year1 mastery"
+      ],
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "The peace which was given by Augustus was long."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "tr2",
+      "type": "translate",
+      "prompt": "We will hear the laws of the city.",
+      "targets": [
+        "year1 mastery"
+      ],
+      "payload": {
+        "direction": "E2L",
+        "length": "sentence",
+        "sampleAnswers": [
+          "Leges urbis audiemus.",
+          "Lēgēs urbis audiēmus."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "tr3",
+      "type": "translate",
+      "prompt": "Illī mīlitēs fortissimī erant.",
+      "targets": [
+        "year1 mastery"
+      ],
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "Those soldiers were the bravest.",
+          "Those soldiers were very brave."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sa1",
+      "type": "short_answer",
+      "prompt": "What are you most proud of learning this year?",
+      "targets": [
+        "year1 mastery"
+      ],
+      "payload": {
+        "sampleAnswers": [
+          "Personal reflection.",
+          "Any honest reflection on growth."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

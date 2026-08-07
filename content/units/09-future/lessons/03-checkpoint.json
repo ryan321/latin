@@ -1,0 +1,203 @@
+{
+  "slug": "03-checkpoint",
+  "title": "Checkpoint — Future",
+  "unitSlug": "09-future",
+  "order": 3,
+  "standardSummary": "Show mastery of future forms of sum and regular 1st/2nd conjugation verbs.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-stem"
+      },
+      {
+        "type": "skill_count",
+        "skill": "future",
+        "n": 4,
+        "label": "future checkpoint"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match-all"
+      }
+    ]
+  },
+  "teach": "Unit checkpoint: future of sum + 1st/2nd conjugation.",
+  "allowList": {
+    "lemmas": [
+      "sum",
+      "amo",
+      "moneo",
+      "laboro",
+      "video"
+    ],
+    "constructions": [
+      "future"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "matching",
+      "single_form",
+      "translate",
+      "short_answer"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-stem",
+      "type": "multiple_choice",
+      "prompt": "Future personal endings after -bi- (2sg–3pl style) include…",
+      "targets": [
+        "future"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "-bam -bās -bat"
+          },
+          {
+            "id": "b",
+            "label": "-bis -bit -bimus…"
+          },
+          {
+            "id": "c",
+            "label": "-ī -istī -it"
+          },
+          {
+            "id": "d",
+            "label": "-r -ris -tur"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match-all",
+      "type": "matching",
+      "prompt": "Match each form to its person/tense meaning.",
+      "targets": [
+        "future",
+        "imperfect",
+        "sum"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "erō"
+          },
+          {
+            "id": "b",
+            "label": "amābam"
+          },
+          {
+            "id": "c",
+            "label": "monēbit"
+          },
+          {
+            "id": "d",
+            "label": "erant"
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "I will be"
+          },
+          {
+            "id": "2",
+            "label": "I was loving"
+          },
+          {
+            "id": "3",
+            "label": "he will warn"
+          },
+          {
+            "id": "4",
+            "label": "they were"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3",
+          "d": "4"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sf1",
+      "type": "single_form",
+      "prompt": "2sg future of amō:",
+      "targets": [
+        "future"
+      ],
+      "payload": {
+        "accept": [
+          "amabis",
+          "amābis"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sf2",
+      "type": "single_form",
+      "prompt": "3pl future of sum:",
+      "targets": [
+        "future",
+        "sum"
+      ],
+      "payload": {
+        "accept": [
+          "erunt"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "tr1",
+      "type": "translate",
+      "prompt": "Monēbimus amīcōs.",
+      "targets": [
+        "future"
+      ],
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "We will warn the friends.",
+          "We shall advise the friends."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sa1",
+      "type": "short_answer",
+      "prompt": "Give the six future forms of sum (list them).",
+      "targets": [
+        "future",
+        "sum"
+      ],
+      "payload": {
+        "sampleAnswers": [
+          "ero eris erit erimus eritis erunt",
+          "erō eris erit erimus eritis erunt"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

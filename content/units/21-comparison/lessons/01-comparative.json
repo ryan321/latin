@@ -1,0 +1,200 @@
+{
+  "slug": "01-comparative",
+  "title": "Comparative degree",
+  "unitSlug": "21-comparison",
+  "order": 1,
+  "standardSummary": "Form regular comparatives (-ior -ius) and translate 'than' with quam or ablative.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-ior"
+      },
+      {
+        "type": "skill_count",
+        "skill": "comparative",
+        "n": 3,
+        "label": "comparative"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match-c"
+      }
+    ]
+  },
+  "teach": "Comparative: longior longius; than: quam + same case, or ablative of comparison.",
+  "allowList": {
+    "lemmas": [
+      "longus",
+      "altus",
+      "fortis",
+      "sapiens",
+      "quam"
+    ],
+    "constructions": [
+      "comparative",
+      "adjectives"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "matching",
+      "single_form",
+      "translate",
+      "cloze"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-ior",
+      "type": "multiple_choice",
+      "prompt": "The comparative of longus (m. nom. s.) is…",
+      "targets": [
+        "comparative"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "longissimus"
+          },
+          {
+            "id": "b",
+            "label": "longior"
+          },
+          {
+            "id": "c",
+            "label": "longē"
+          },
+          {
+            "id": "d",
+            "label": "longius only for m."
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match-c",
+      "type": "matching",
+      "prompt": "Match.",
+      "targets": [
+        "comparative"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "altior"
+          },
+          {
+            "id": "b",
+            "label": "fortius"
+          },
+          {
+            "id": "c",
+            "label": "quam"
+          },
+          {
+            "id": "d",
+            "label": "Rōmā altior"
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "higher (m/f)"
+          },
+          {
+            "id": "2",
+            "label": "more bravely / braver n."
+          },
+          {
+            "id": "3",
+            "label": "than"
+          },
+          {
+            "id": "4",
+            "label": "higher than Rome (abl. comp.)"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3",
+          "d": "4"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sf1",
+      "type": "single_form",
+      "prompt": "Comparative n. nom/acc of longus:",
+      "targets": [
+        "comparative"
+      ],
+      "payload": {
+        "accept": [
+          "longius"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sf2",
+      "type": "single_form",
+      "prompt": "Comparative of fortis (m. nom. s.):",
+      "targets": [
+        "comparative"
+      ],
+      "payload": {
+        "accept": [
+          "fortior"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "tr1",
+      "type": "translate",
+      "prompt": "Hic mōns altior est quam ille.",
+      "targets": [
+        "comparative"
+      ],
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "This mountain is higher than that one."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "cl1",
+      "type": "cloze",
+      "prompt": "Wiser (m. nom. s. of sapiens).",
+      "targets": [
+        "comparative"
+      ],
+      "payload": {
+        "template": "{{1}}",
+        "blanks": {
+          "1": [
+            "sapientior"
+          ]
+        }
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

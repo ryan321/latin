@@ -1,0 +1,182 @@
+{
+  "slug": "04-checkpoint",
+  "title": "Checkpoint — Reading power",
+  "unitSlug": "24-reading",
+  "order": 5,
+  "standardSummary": "Translate multi-clause Latin and explain key forms.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-f"
+      },
+      {
+        "type": "skill_count",
+        "skill": "reading",
+        "n": 3,
+        "label": "reading checkpoint"
+      },
+      {
+        "type": "translate_count",
+        "n": 2
+      }
+    ]
+  },
+  "teach": "Checkpoint: connected reading + form ID.",
+  "allowList": {
+    "lemmas": [
+      "rex",
+      "miles",
+      "urbs",
+      "qui",
+      "capio",
+      "sum",
+      "do"
+    ],
+    "constructions": [
+      "reading",
+      "relative pronoun",
+      "perfect"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "translate",
+      "short_answer",
+      "matching",
+      "cloze"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-f",
+      "type": "multiple_choice",
+      "prompt": "In a long sentence, after finding the main verb you should…",
+      "targets": [
+        "reading strategies"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "stop"
+          },
+          {
+            "id": "b",
+            "label": "find what agrees as subject and parse modifiers/clauses"
+          },
+          {
+            "id": "c",
+            "label": "delete all adjectives"
+          },
+          {
+            "id": "d",
+            "label": "read only the last word"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "tr1",
+      "type": "translate",
+      "prompt": "Mīlitēs quibus imperātor praeerat urbem cēpērunt.",
+      "targets": [
+        "reading"
+      ],
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "The soldiers whom the general commanded captured the city.",
+          "The soldiers over whom the commander was in charge took the city."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "tr2",
+      "type": "translate",
+      "prompt": "Pāx data est.",
+      "targets": [
+        "passive",
+        "perfect"
+      ],
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "Peace was given.",
+          "Peace has been given."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sa1",
+      "type": "short_answer",
+      "prompt": "Explain quibus in 'mīlitēs quibus…'.",
+      "targets": [
+        "relative pronoun"
+      ],
+      "payload": {
+        "sampleAnswers": [
+          "Dat/abl pl relative agreeing with mīlitēs; case from its clause.",
+          "Relative pl, case from clause use."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match1",
+      "type": "matching",
+      "prompt": "Match.",
+      "targets": [
+        "reading"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "cēpērunt"
+          },
+          {
+            "id": "b",
+            "label": "praeerat"
+          },
+          {
+            "id": "c",
+            "label": "data est"
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "perfect active"
+          },
+          {
+            "id": "2",
+            "label": "imperfect"
+          },
+          {
+            "id": "3",
+            "label": "perfect passive"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3"
+        }
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

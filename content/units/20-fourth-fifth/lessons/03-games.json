@@ -1,0 +1,207 @@
+{
+  "slug": "03-games",
+  "title": "Games & triumphs (light)",
+  "unitSlug": "20-fourth-fifth",
+  "order": 3,
+  "standardSummary": "Vocabulary of games/triumph with 4th/5th decl nouns in short sentences.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-lud"
+      },
+      {
+        "type": "skill_count",
+        "skill": "4th declension",
+        "n": 2,
+        "label": "games Latin"
+      },
+      {
+        "type": "translate_count",
+        "n": 2
+      }
+    ]
+  },
+  "teach": "lūdī, triumphus; army/public celebration vocabulary.",
+  "allowList": {
+    "lemmas": [
+      "ludus",
+      "triumphus",
+      "exercitus",
+      "dies",
+      "populus",
+      "specto"
+    ],
+    "constructions": [
+      "4th declension",
+      "5th declension",
+      "games"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "translate",
+      "matching",
+      "short_answer",
+      "cloze"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-lud",
+      "type": "multiple_choice",
+      "prompt": "lūdī often refers to…",
+      "targets": [
+        "games"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "only private board games at home exclusively"
+          },
+          {
+            "id": "b",
+            "label": "public games/shows"
+          },
+          {
+            "id": "c",
+            "label": "a type of case ending"
+          },
+          {
+            "id": "d",
+            "label": "only naval battles always"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match1",
+      "type": "matching",
+      "prompt": "Match.",
+      "targets": [
+        "games"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "exercitus"
+          },
+          {
+            "id": "b",
+            "label": "triumphus"
+          },
+          {
+            "id": "c",
+            "label": "lūdī"
+          },
+          {
+            "id": "d",
+            "label": "diēs"
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "army"
+          },
+          {
+            "id": "2",
+            "label": "triumph"
+          },
+          {
+            "id": "3",
+            "label": "games"
+          },
+          {
+            "id": "4",
+            "label": "day"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3",
+          "d": "4"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "tr1",
+      "type": "translate",
+      "prompt": "Populus lūdōs spectat.",
+      "targets": [
+        "games"
+      ],
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "The people watch the games."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "tr2",
+      "type": "translate",
+      "prompt": "On that day the army comes.",
+      "targets": [
+        "5th declension"
+      ],
+      "payload": {
+        "direction": "E2L",
+        "length": "sentence",
+        "sampleAnswers": [
+          "Eo die exercitus venit.",
+          "Eō diē exercitus venit."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "cl1",
+      "type": "cloze",
+      "prompt": "Of the army (gen).",
+      "targets": [
+        "4th declension"
+      ],
+      "payload": {
+        "template": "{{1}}",
+        "blanks": {
+          "1": [
+            "exercitus",
+            "exercitūs"
+          ]
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sa1",
+      "type": "short_answer",
+      "prompt": "What was a Roman triumph?",
+      "targets": [
+        "games"
+      ],
+      "payload": {
+        "sampleAnswers": [
+          "A ceremonial victory parade for a successful general.",
+          "Public celebration of military victory."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

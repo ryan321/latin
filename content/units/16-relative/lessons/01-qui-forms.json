@@ -1,0 +1,218 @@
+{
+  "slug": "01-qui-forms",
+  "title": "quī, quae, quod forms",
+  "unitSlug": "16-relative",
+  "order": 1,
+  "standardSummary": "Identify case/gender/number of relative pronoun forms.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-qui"
+      },
+      {
+        "type": "skill_count",
+        "skill": "relative pronoun",
+        "n": 4,
+        "label": "qui forms"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match-q"
+      }
+    ]
+  },
+  "teach": "Relative: quī quae quod.",
+  "allowList": {
+    "lemmas": [
+      "qui",
+      "quae",
+      "quod",
+      "quem",
+      "quam",
+      "cuius",
+      "cui"
+    ],
+    "constructions": [
+      "relative pronoun"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "matching",
+      "single_form",
+      "ordering",
+      "short_answer"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-qui",
+      "type": "multiple_choice",
+      "prompt": "quem is typically…",
+      "targets": [
+        "relative pronoun"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "nom. f. sing."
+          },
+          {
+            "id": "b",
+            "label": "acc. m. sing."
+          },
+          {
+            "id": "c",
+            "label": "gen. pl."
+          },
+          {
+            "id": "d",
+            "label": "abl. n. pl."
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match-q",
+      "type": "matching",
+      "prompt": "Match form.",
+      "targets": [
+        "relative pronoun"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "quī"
+          },
+          {
+            "id": "b",
+            "label": "quae"
+          },
+          {
+            "id": "c",
+            "label": "cuius"
+          },
+          {
+            "id": "d",
+            "label": "quibus"
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "who (m. nom.)"
+          },
+          {
+            "id": "2",
+            "label": "who (f. nom.)"
+          },
+          {
+            "id": "3",
+            "label": "whose"
+          },
+          {
+            "id": "4",
+            "label": "to/by whom (pl.)"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3",
+          "d": "4"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sf1",
+      "type": "single_form",
+      "prompt": "Acc f. sing. of quī:",
+      "targets": [
+        "relative pronoun"
+      ],
+      "payload": {
+        "accept": [
+          "quam"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sf2",
+      "type": "single_form",
+      "prompt": "Dative singular (to whom):",
+      "targets": [
+        "relative pronoun"
+      ],
+      "payload": {
+        "accept": [
+          "cui"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "ord1",
+      "type": "ordering",
+      "prompt": "Order m. sing.: nom gen dat acc",
+      "targets": [
+        "relative pronoun"
+      ],
+      "payload": {
+        "items": [
+          {
+            "id": "a",
+            "label": "quem"
+          },
+          {
+            "id": "b",
+            "label": "quī"
+          },
+          {
+            "id": "c",
+            "label": "cui"
+          },
+          {
+            "id": "d",
+            "label": "cuius"
+          }
+        ],
+        "correctOrder": [
+          "b",
+          "d",
+          "c",
+          "a"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sa1",
+      "type": "short_answer",
+      "prompt": "What does a relative pronoun do?",
+      "targets": [
+        "relative pronoun"
+      ],
+      "payload": {
+        "sampleAnswers": [
+          "Connects a clause to a noun with who/which/that.",
+          "Links a relative clause to its antecedent."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

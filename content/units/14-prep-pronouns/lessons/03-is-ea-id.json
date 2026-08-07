@@ -1,0 +1,203 @@
+{
+  "slug": "03-is-ea-id",
+  "title": "is, ea, id (intro)",
+  "unitSlug": "14-prep-pronouns",
+  "order": 3,
+  "standardSummary": "Use is/ea/id as he/she/it and that; match common forms to case/gender.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-id"
+      },
+      {
+        "type": "skill_count",
+        "skill": "is ea id",
+        "n": 3,
+        "label": "is ea id"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match-is"
+      }
+    ]
+  },
+  "teach": "is ea id; eum eam id; eius; eōs eās ea.",
+  "allowList": {
+    "lemmas": [
+      "is",
+      "ea",
+      "id",
+      "eum",
+      "eam",
+      "eius"
+    ],
+    "constructions": [
+      "is ea id",
+      "pronouns"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "matching",
+      "single_form",
+      "translate",
+      "cloze"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-id",
+      "type": "multiple_choice",
+      "prompt": "eum usually means…",
+      "targets": [
+        "is ea id"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "she (nom.)"
+          },
+          {
+            "id": "b",
+            "label": "him / that man (acc.)"
+          },
+          {
+            "id": "c",
+            "label": "to them"
+          },
+          {
+            "id": "d",
+            "label": "of herself"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match-is",
+      "type": "matching",
+      "prompt": "Match.",
+      "targets": [
+        "is ea id"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "is"
+          },
+          {
+            "id": "b",
+            "label": "ea"
+          },
+          {
+            "id": "c",
+            "label": "eius"
+          },
+          {
+            "id": "d",
+            "label": "eōs"
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "he (m. nom.)"
+          },
+          {
+            "id": "2",
+            "label": "she (f. nom.)"
+          },
+          {
+            "id": "3",
+            "label": "his/her/its"
+          },
+          {
+            "id": "4",
+            "label": "them (m. acc.)"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3",
+          "d": "4"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sf1",
+      "type": "single_form",
+      "prompt": "Acc f. sing.:",
+      "targets": [
+        "is ea id"
+      ],
+      "payload": {
+        "accept": [
+          "eam"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sf2",
+      "type": "single_form",
+      "prompt": "Gen. sing. his/her/its:",
+      "targets": [
+        "is ea id"
+      ],
+      "payload": {
+        "accept": [
+          "eius",
+          "eīus"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "tr1",
+      "type": "translate",
+      "prompt": "Eum videō.",
+      "targets": [
+        "is ea id"
+      ],
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "I see him.",
+          "I see that man."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "cl1",
+      "type": "cloze",
+      "prompt": "Her (acc.).",
+      "targets": [
+        "is ea id"
+      ],
+      "payload": {
+        "template": "videō {{1}}",
+        "blanks": {
+          "1": [
+            "eam"
+          ]
+        }
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

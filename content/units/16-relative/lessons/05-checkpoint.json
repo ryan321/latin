@@ -1,0 +1,190 @@
+{
+  "slug": "05-checkpoint",
+  "title": "Checkpoint — Relative pronoun",
+  "unitSlug": "16-relative",
+  "order": 5,
+  "standardSummary": "Parse and produce quī clauses with correct agreement.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc1"
+      },
+      {
+        "type": "skill_count",
+        "skill": "relative pronoun",
+        "n": 3,
+        "label": "rel checkpoint"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match1"
+      }
+    ]
+  },
+  "teach": "Checkpoint: forms + agreement + translation.",
+  "allowList": {
+    "lemmas": [
+      "qui",
+      "quae",
+      "quod",
+      "quem",
+      "quam",
+      "puella",
+      "rex",
+      "bellum"
+    ],
+    "constructions": [
+      "relative pronoun",
+      "relative agreement"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "matching",
+      "single_form",
+      "translate",
+      "cloze"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc1",
+      "type": "multiple_choice",
+      "prompt": "In 'bellum quod gessit', quod is neuter because…",
+      "targets": [
+        "relative agreement"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "gessit is neuter"
+          },
+          {
+            "id": "b",
+            "label": "bellum is neuter"
+          },
+          {
+            "id": "c",
+            "label": "all relatives are neuter"
+          },
+          {
+            "id": "d",
+            "label": "it is ablative"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match1",
+      "type": "matching",
+      "prompt": "Match.",
+      "targets": [
+        "relative pronoun"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "cuius"
+          },
+          {
+            "id": "b",
+            "label": "quō"
+          },
+          {
+            "id": "c",
+            "label": "quās"
+          },
+          {
+            "id": "d",
+            "label": "quod"
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "whose"
+          },
+          {
+            "id": "2",
+            "label": "abl. m/n sing."
+          },
+          {
+            "id": "3",
+            "label": "acc. f. pl."
+          },
+          {
+            "id": "4",
+            "label": "nom/acc n. sing."
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3",
+          "d": "4"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sf1",
+      "type": "single_form",
+      "prompt": "Nom pl m. of quī:",
+      "targets": [
+        "relative pronoun"
+      ],
+      "payload": {
+        "accept": [
+          "qui",
+          "quī"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "tr1",
+      "type": "translate",
+      "prompt": "Puella cui librum dō est laeta.",
+      "targets": [
+        "relative pronoun"
+      ],
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "The girl to whom I give the book is happy."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "cl1",
+      "type": "cloze",
+      "prompt": "The men who come.",
+      "targets": [
+        "relative pronoun"
+      ],
+      "payload": {
+        "template": "virī {{1}} veniunt",
+        "blanks": {
+          "1": [
+            "qui",
+            "quī"
+          ]
+        }
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

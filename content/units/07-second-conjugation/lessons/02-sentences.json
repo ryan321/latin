@@ -1,0 +1,246 @@
+{
+  "slug": "02-sentences",
+  "title": "Seeing and having — sentences",
+  "unitSlug": "07-second-conjugation",
+  "order": 2,
+  "standardSummary": "Translate sentences with 2nd-conjugation presents and 1st/2nd nouns.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "translate_count",
+        "n": 4
+      },
+      {
+        "type": "skill_count",
+        "skill": "2nd conjugation",
+        "n": 2,
+        "label": "2nd conj"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "mc-videt"
+      }
+    ]
+  },
+  "teach": "Reading practice with videō, habeō, moneō.",
+  "allowList": {
+    "lemmas": [
+      "video",
+      "habeo",
+      "moneo",
+      "puella",
+      "servus",
+      "bellum",
+      "amicus",
+      "terra"
+    ],
+    "constructions": [
+      "2nd conjugation",
+      "accusative"
+    ],
+    "activityTypes": [
+      "translate",
+      "multiple_choice",
+      "matching",
+      "cloze",
+      "single_form"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-videt",
+      "type": "multiple_choice",
+      "prompt": "Puella amīcum videt means…",
+      "targets": [
+        "2nd conjugation"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "The girl sees the friend."
+          },
+          {
+            "id": "b",
+            "label": "The friend sees the girl."
+          },
+          {
+            "id": "c",
+            "label": "The girls see friends."
+          },
+          {
+            "id": "d",
+            "label": "I see the girl."
+          }
+        ],
+        "correctOptionId": "a"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "f1",
+      "type": "single_form",
+      "prompt": "They see?",
+      "targets": [
+        "2nd conjugation"
+      ],
+      "payload": {
+        "accept": [
+          "vident"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "t1",
+      "type": "translate",
+      "prompt": "Servus magnum bellum timet.",
+      "targets": [
+        "2nd conjugation",
+        "adjective agreement"
+      ],
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "The servant fears a great war.",
+          "The slave fears the large war."
+        ],
+        "rubric": "Servant subject; fears; great war object."
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "t2",
+      "type": "translate",
+      "prompt": "Habēmus multam aquam.",
+      "targets": [
+        "2nd conjugation"
+      ],
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "We have much water.",
+          "We have a lot of water."
+        ],
+        "rubric": "We have; much water."
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "t3",
+      "type": "translate",
+      "prompt": "They warn the girls.",
+      "targets": [
+        "2nd conjugation"
+      ],
+      "payload": {
+        "direction": "E2L",
+        "length": "sentence",
+        "sampleAnswers": [
+          "Puellas monent.",
+          "Puellās monent."
+        ],
+        "rubric": "puellās acc; monent."
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "t4",
+      "type": "translate",
+      "prompt": "Amīcus fīlium docet.",
+      "targets": [
+        "2nd conjugation"
+      ],
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "The friend teaches the son.",
+          "A friend is teaching the son."
+        ],
+        "rubric": "Friend subject; teaches; son acc."
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "m1",
+      "type": "matching",
+      "prompt": "Match.",
+      "targets": [
+        "2nd conjugation"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "vidēs"
+          },
+          {
+            "id": "b",
+            "label": "vidētis"
+          },
+          {
+            "id": "c",
+            "label": "videō"
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "you (sing.) see"
+          },
+          {
+            "id": "2",
+            "label": "you (plural) see"
+          },
+          {
+            "id": "3",
+            "label": "I see"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "c1",
+      "type": "cloze",
+      "prompt": "Fill.",
+      "targets": [
+        "2nd conjugation"
+      ],
+      "payload": {
+        "template": "Puellae terram {{1}}.",
+        "blanks": {
+          "1": [
+            "vident",
+            "spectant",
+            "amant"
+          ]
+        },
+        "wordBank": [
+          "vident",
+          "videt",
+          "sumus"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

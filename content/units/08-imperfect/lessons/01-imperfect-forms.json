@@ -1,0 +1,305 @@
+{
+  "slug": "01-imperfect-forms",
+  "title": "Imperfect forms",
+  "unitSlug": "08-imperfect",
+  "order": 1,
+  "standardSummary": "Form the imperfect of sum and of a 1st-conjugation verb; state the meaning of the imperfect.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-mean"
+      },
+      {
+        "type": "skill_count",
+        "skill": "imperfect",
+        "n": 4,
+        "label": "imperfect forms"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match-sum"
+      }
+    ]
+  },
+  "teach": "Imperfect: ongoing/past habitual. eram; amābam; monēbam.",
+  "allowList": {
+    "lemmas": [
+      "sum",
+      "amo",
+      "moneo",
+      "porto",
+      "video"
+    ],
+    "constructions": [
+      "imperfect"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "matching",
+      "single_form",
+      "ordering",
+      "short_answer"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-mean",
+      "type": "multiple_choice",
+      "prompt": "The imperfect tense often means…",
+      "targets": [
+        "imperfect"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "will do (simple future)"
+          },
+          {
+            "id": "b",
+            "label": "was/were doing; used to do"
+          },
+          {
+            "id": "c",
+            "label": "has already done"
+          },
+          {
+            "id": "d",
+            "label": "must do"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match-sum",
+      "type": "matching",
+      "prompt": "Match imperfect of sum.",
+      "targets": [
+        "imperfect",
+        "sum"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "eram"
+          },
+          {
+            "id": "b",
+            "label": "erās"
+          },
+          {
+            "id": "c",
+            "label": "erat"
+          },
+          {
+            "id": "d",
+            "label": "erāmus"
+          },
+          {
+            "id": "e",
+            "label": "erant"
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "I was"
+          },
+          {
+            "id": "2",
+            "label": "you (sing.) were"
+          },
+          {
+            "id": "3",
+            "label": "he/she was"
+          },
+          {
+            "id": "4",
+            "label": "we were"
+          },
+          {
+            "id": "5",
+            "label": "they were"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3",
+          "d": "4",
+          "e": "5"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "f1",
+      "type": "single_form",
+      "prompt": "They were (sum, imperfect)?",
+      "targets": [
+        "imperfect",
+        "sum"
+      ],
+      "payload": {
+        "accept": [
+          "erant"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "f2",
+      "type": "single_form",
+      "prompt": "I was loving / I used to love (amō)?",
+      "targets": [
+        "imperfect",
+        "1st conjugation"
+      ],
+      "payload": {
+        "accept": [
+          "amabam",
+          "amābam"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "f3",
+      "type": "single_form",
+      "prompt": "He was warning (moneō)?",
+      "targets": [
+        "imperfect",
+        "2nd conjugation"
+      ],
+      "payload": {
+        "accept": [
+          "monebat",
+          "monēbat"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "f4",
+      "type": "single_form",
+      "prompt": "We were carrying (portō)?",
+      "targets": [
+        "imperfect"
+      ],
+      "payload": {
+        "accept": [
+          "portabamus",
+          "portābāmus"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "m-end",
+      "type": "matching",
+      "prompt": "Imperfect active markers (regular conj.).",
+      "targets": [
+        "imperfect"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "-ba- + personal endings"
+          },
+          {
+            "id": "b",
+            "label": "present -ō -s -t only"
+          },
+          {
+            "id": "c",
+            "label": "perfect -ī -istī"
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "imperfect of 1st/2nd conj."
+          },
+          {
+            "id": "2",
+            "label": "present system"
+          },
+          {
+            "id": "3",
+            "label": "perfect system"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "ord1",
+      "type": "ordering",
+      "prompt": "Build amābās conceptually (first → last).",
+      "targets": [
+        "imperfect"
+      ],
+      "payload": {
+        "items": [
+          {
+            "id": "a",
+            "label": "present stem amā-"
+          },
+          {
+            "id": "b",
+            "label": "imperfect marker -bā-"
+          },
+          {
+            "id": "c",
+            "label": "personal ending -s"
+          }
+        ],
+        "correctOrder": [
+          "a",
+          "b",
+          "c"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sa1",
+      "type": "short_answer",
+      "prompt": "When would you use imperfect instead of a simple “did once” perfect idea?",
+      "targets": [
+        "imperfect"
+      ],
+      "payload": {
+        "sampleAnswers": [
+          "For ongoing, repeated, or background past action (was doing / used to).",
+          "When the action was continuous or habitual in the past."
+        ],
+        "rubric": "Ongoing/habitual/background past."
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

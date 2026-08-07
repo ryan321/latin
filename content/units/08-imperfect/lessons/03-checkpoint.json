@@ -1,0 +1,231 @@
+{
+  "slug": "03-checkpoint",
+  "title": "Checkpoint — Imperfect",
+  "unitSlug": "08-imperfect",
+  "order": 3,
+  "standardSummary": "Form and translate imperfect of sum and regular 1st/2nd verbs.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "skill_count",
+        "skill": "imperfect",
+        "n": 4,
+        "label": "imperfect"
+      },
+      {
+        "type": "translate_count",
+        "n": 3
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "sa1"
+      }
+    ]
+  },
+  "teach": "Checkpoint imperfect.",
+  "allowList": {
+    "lemmas": [
+      "sum",
+      "amo",
+      "video",
+      "porto"
+    ],
+    "constructions": [
+      "imperfect"
+    ],
+    "activityTypes": [
+      "single_form",
+      "translate",
+      "matching",
+      "multiple_choice",
+      "short_answer"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "f1",
+      "type": "single_form",
+      "prompt": "He was (sum impf.)?",
+      "targets": [
+        "imperfect",
+        "sum"
+      ],
+      "payload": {
+        "accept": [
+          "erat"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "f2",
+      "type": "single_form",
+      "prompt": "They were loving (amō)?",
+      "targets": [
+        "imperfect"
+      ],
+      "payload": {
+        "accept": [
+          "amabant",
+          "amābant"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "f3",
+      "type": "single_form",
+      "prompt": "I was seeing (videō)?",
+      "targets": [
+        "imperfect"
+      ],
+      "payload": {
+        "accept": [
+          "videbam",
+          "vidēbam"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "f4",
+      "type": "single_form",
+      "prompt": "You (plural) were (sum)?",
+      "targets": [
+        "imperfect",
+        "sum"
+      ],
+      "payload": {
+        "accept": [
+          "eratis",
+          "erātis"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "t1",
+      "type": "translate",
+      "prompt": "Erāmus in Italiā.",
+      "targets": [
+        "imperfect"
+      ],
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "We were in Italy."
+        ],
+        "rubric": "We were; in Italy."
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "t2",
+      "type": "translate",
+      "prompt": "Puella nōn timēbat.",
+      "targets": [
+        "imperfect"
+      ],
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "The girl was not afraid.",
+          "The girl did not used to fear."
+        ],
+        "rubric": "Girl; imperfect timeō; nōn."
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "t3",
+      "type": "translate",
+      "prompt": "They were carrying gifts.",
+      "targets": [
+        "imperfect"
+      ],
+      "payload": {
+        "direction": "E2L",
+        "length": "sentence",
+        "sampleAnswers": [
+          "Dona portabant.",
+          "Dōna portābant."
+        ],
+        "rubric": "dōna; portābant."
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "m1",
+      "type": "matching",
+      "prompt": "Form → English.",
+      "targets": [
+        "imperfect"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "erant"
+          },
+          {
+            "id": "b",
+            "label": "amābās"
+          },
+          {
+            "id": "c",
+            "label": "vidēbātis"
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "they were"
+          },
+          {
+            "id": "2",
+            "label": "you (sing.) were loving"
+          },
+          {
+            "id": "3",
+            "label": "you (plural) were seeing"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sa1",
+      "type": "short_answer",
+      "prompt": "Translate the idea of -bā- in amābam in one short phrase.",
+      "targets": [
+        "imperfect"
+      ],
+      "payload": {
+        "sampleAnswers": [
+          "was loving / used to love",
+          "imperfect past ongoing"
+        ],
+        "rubric": "Ongoing or habitual past."
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

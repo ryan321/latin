@@ -1,0 +1,179 @@
+{
+  "slug": "03-dative-uses",
+  "title": "Dative: indirect object & interest",
+  "unitSlug": "17-ablative-dative",
+  "order": 3,
+  "standardSummary": "Use dative for to/for whom; recognize common dative with verbs of giving/showing/telling.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-dat"
+      },
+      {
+        "type": "skill_count",
+        "skill": "dative uses",
+        "n": 3,
+        "label": "dative"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match-d"
+      }
+    ]
+  },
+  "teach": "Dative: indirect object (to/for); verbs like dō, ostendō, dīcō, nārrō.",
+  "allowList": {
+    "lemmas": [
+      "do",
+      "dico",
+      "ostendo",
+      "puella",
+      "amicus",
+      "rex"
+    ],
+    "constructions": [
+      "dative uses",
+      "indirect object"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "matching",
+      "translate",
+      "cloze",
+      "single_form"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-dat",
+      "type": "multiple_choice",
+      "prompt": "In 'librum puellae dō', puellae is…",
+      "targets": [
+        "dative uses"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "genitive only"
+          },
+          {
+            "id": "b",
+            "label": "dative indirect object"
+          },
+          {
+            "id": "c",
+            "label": "ablative means"
+          },
+          {
+            "id": "d",
+            "label": "nominative subject"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match-d",
+      "type": "matching",
+      "prompt": "Match.",
+      "targets": [
+        "dative uses"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "mihi dīc"
+          },
+          {
+            "id": "b",
+            "label": "rēgī"
+          },
+          {
+            "id": "c",
+            "label": "nōbīs"
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "tell me"
+          },
+          {
+            "id": "2",
+            "label": "to/for the king"
+          },
+          {
+            "id": "3",
+            "label": "to/for us"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "tr1",
+      "type": "translate",
+      "prompt": "Pater fīliō pecūniam dat.",
+      "targets": [
+        "dative uses"
+      ],
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "The father gives money to his son.",
+          "Father gives his son money."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sf1",
+      "type": "single_form",
+      "prompt": "Dative sing. of amīcus:",
+      "targets": [
+        "dative uses"
+      ],
+      "payload": {
+        "accept": [
+          "amico",
+          "amīcō"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "cl1",
+      "type": "cloze",
+      "prompt": "I give the book to the girl.",
+      "targets": [
+        "dative uses"
+      ],
+      "payload": {
+        "template": "librum {{1}} dō",
+        "blanks": {
+          "1": [
+            "puellae"
+          ]
+        }
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

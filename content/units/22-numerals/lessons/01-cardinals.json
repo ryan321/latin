@@ -1,0 +1,199 @@
+{
+  "slug": "01-cardinals",
+  "title": "Cardinal numbers 1–10 and key teens",
+  "unitSlug": "22-numerals",
+  "order": 1,
+  "standardSummary": "Give Latin cardinals 1–10 and recognize 11–20 patterns; decline ūnus duo trēs.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-unus"
+      },
+      {
+        "type": "skill_count",
+        "skill": "cardinals",
+        "n": 4,
+        "label": "cardinals"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match-c"
+      }
+    ]
+  },
+  "teach": "ūnus duo trēs quattuor… decem; ūnus declines like adj; duo/trēs partial.",
+  "allowList": {
+    "lemmas": [
+      "unus",
+      "duo",
+      "tres",
+      "quattuor",
+      "quinque",
+      "sex",
+      "septem",
+      "octo",
+      "novem",
+      "decem"
+    ],
+    "constructions": [
+      "cardinals",
+      "numerals"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "matching",
+      "single_form",
+      "ordering",
+      "translate"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-unus",
+      "type": "multiple_choice",
+      "prompt": "ūnus, ūna, ūnum declines like…",
+      "targets": [
+        "cardinals"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "an adverb only"
+          },
+          {
+            "id": "b",
+            "label": "a 1st/2nd adjective"
+          },
+          {
+            "id": "c",
+            "label": "a 4th-decl noun only"
+          },
+          {
+            "id": "d",
+            "label": "never changes"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match-c",
+      "type": "matching",
+      "prompt": "Match number.",
+      "targets": [
+        "cardinals"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "ūnus"
+          },
+          {
+            "id": "b",
+            "label": "quīnque"
+          },
+          {
+            "id": "c",
+            "label": "septem"
+          },
+          {
+            "id": "d",
+            "label": "decem"
+          },
+          {
+            "id": "e",
+            "label": "duo"
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "1"
+          },
+          {
+            "id": "2",
+            "label": "5"
+          },
+          {
+            "id": "3",
+            "label": "7"
+          },
+          {
+            "id": "4",
+            "label": "10"
+          },
+          {
+            "id": "5",
+            "label": "2"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3",
+          "d": "4",
+          "e": "5"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sf1",
+      "type": "single_form",
+      "prompt": "Latin for 3:",
+      "targets": [
+        "cardinals"
+      ],
+      "payload": {
+        "accept": [
+          "tres",
+          "trēs"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sf2",
+      "type": "single_form",
+      "prompt": "Latin for 8:",
+      "targets": [
+        "cardinals"
+      ],
+      "payload": {
+        "accept": [
+          "octo",
+          "octō"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "tr1",
+      "type": "translate",
+      "prompt": "Trēs mīlitēs veniunt.",
+      "targets": [
+        "cardinals"
+      ],
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "Three soldiers come.",
+          "Three soldiers are coming."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

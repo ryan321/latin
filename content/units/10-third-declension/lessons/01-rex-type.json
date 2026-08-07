@@ -1,0 +1,260 @@
+{
+  "slug": "01-rex-type",
+  "title": "Third declension m/f (rēx type)",
+  "unitSlug": "10-third-declension",
+  "order": 1,
+  "standardSummary": "Identify the 3rd-declension stem from the genitive; decline a common m/f noun through major cases.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-stem"
+      },
+      {
+        "type": "skill_count",
+        "skill": "3rd declension",
+        "n": 4,
+        "label": "3rd decl m/f"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "grid-rex"
+      }
+    ]
+  },
+  "teach": "3rd decl: dictionary form nom + gen -is. Stem = gen minus -is.",
+  "allowList": {
+    "lemmas": [
+      "rex",
+      "miles",
+      "pater",
+      "mater",
+      "dux",
+      "urbs",
+      "lex",
+      "vox"
+    ],
+    "constructions": [
+      "3rd declension",
+      "stem"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "matching",
+      "single_form",
+      "paradigm_grid",
+      "short_answer"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-stem",
+      "type": "multiple_choice",
+      "prompt": "The stem of rēx, rēgis is…",
+      "targets": [
+        "3rd declension",
+        "stem"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "rēx-"
+          },
+          {
+            "id": "b",
+            "label": "rēg-"
+          },
+          {
+            "id": "c",
+            "label": "rēgis-"
+          },
+          {
+            "id": "d",
+            "label": "rēs-"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match-end",
+      "type": "matching",
+      "prompt": "Match 3rd-decl m/f ending idea.",
+      "targets": [
+        "3rd declension"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "-is (gen. sing.)"
+          },
+          {
+            "id": "b",
+            "label": "-em"
+          },
+          {
+            "id": "c",
+            "label": "-ibus"
+          },
+          {
+            "id": "d",
+            "label": "-ēs (nom. pl.)"
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "of the…"
+          },
+          {
+            "id": "2",
+            "label": "direct object sing."
+          },
+          {
+            "id": "3",
+            "label": "dat/abl plural"
+          },
+          {
+            "id": "4",
+            "label": "subject plural"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3",
+          "d": "4"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sf-regem",
+      "type": "single_form",
+      "prompt": "Accusative singular of rēx:",
+      "targets": [
+        "3rd declension"
+      ],
+      "payload": {
+        "accept": [
+          "regem",
+          "rēgem"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sf-regum",
+      "type": "single_form",
+      "prompt": "Genitive plural of rēx:",
+      "targets": [
+        "3rd declension"
+      ],
+      "payload": {
+        "accept": [
+          "regum",
+          "rēgum"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "grid-rex",
+      "type": "paradigm_grid",
+      "prompt": "Decline rēx (fill major cells).",
+      "targets": [
+        "3rd declension",
+        "paradigm"
+      ],
+      "payload": {
+        "kind": "noun",
+        "lemma": "rēx",
+        "mode": "full_form",
+        "labels": {
+          "rows": [
+            "Nominative",
+            "Genitive",
+            "Dative",
+            "Accusative",
+            "Ablative"
+          ],
+          "cols": [
+            "sing.",
+            "plural"
+          ]
+        },
+        "cells": {
+          "Nominative|sing.": [
+            "rex",
+            "rēx"
+          ],
+          "Nominative|plural": [
+            "reges",
+            "rēgēs"
+          ],
+          "Genitive|sing.": [
+            "regis",
+            "rēgis"
+          ],
+          "Genitive|plural": [
+            "regum",
+            "rēgum"
+          ],
+          "Dative|sing.": [
+            "regi",
+            "rēgī"
+          ],
+          "Dative|plural": [
+            "regibus",
+            "rēgibus"
+          ],
+          "Accusative|sing.": [
+            "regem",
+            "rēgem"
+          ],
+          "Accusative|plural": [
+            "reges",
+            "rēgēs"
+          ],
+          "Ablative|sing.": [
+            "rege",
+            "rēge"
+          ],
+          "Ablative|plural": [
+            "regibus",
+            "rēgibus"
+          ]
+        },
+        "stem": "rēg"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sa-dict",
+      "type": "short_answer",
+      "prompt": "Why must you learn genitive with the nominative for 3rd-declension nouns?",
+      "targets": [
+        "stem",
+        "3rd declension"
+      ],
+      "payload": {
+        "sampleAnswers": [
+          "The stem comes from the genitive (drop -is), not always from the nominative.",
+          "Genitive shows the stem."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

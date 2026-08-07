@@ -1,0 +1,204 @@
+{
+  "slug": "03-i-stems",
+  "title": "i-stems (intro)",
+  "unitSlug": "10-third-declension",
+  "order": 3,
+  "standardSummary": "Recognize common i-stem clues; form gen. pl. -ium and abl. -ī for typical i-stems.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-ium"
+      },
+      {
+        "type": "skill_count",
+        "skill": "i-stem",
+        "n": 3,
+        "label": "i-stems"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match-i"
+      }
+    ]
+  },
+  "teach": "Many 3rd-decl nouns are i-stems: gen pl -ium; some abl sing -ī; neuter pl -ia.",
+  "allowList": {
+    "lemmas": [
+      "urbs",
+      "hostis",
+      "mare",
+      "animal",
+      "civis",
+      "nox",
+      "pars"
+    ],
+    "constructions": [
+      "i-stem",
+      "3rd declension"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "matching",
+      "single_form",
+      "multi_select",
+      "short_answer"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-ium",
+      "type": "multiple_choice",
+      "prompt": "A hallmark genitive plural of many i-stems is…",
+      "targets": [
+        "i-stem"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "-um"
+          },
+          {
+            "id": "b",
+            "label": "-ium"
+          },
+          {
+            "id": "c",
+            "label": "-ōrum"
+          },
+          {
+            "id": "d",
+            "label": "-ārum"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match-i",
+      "type": "matching",
+      "prompt": "Match form.",
+      "targets": [
+        "i-stem"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "urbium"
+          },
+          {
+            "id": "b",
+            "label": "marī"
+          },
+          {
+            "id": "c",
+            "label": "maria"
+          },
+          {
+            "id": "d",
+            "label": "hostium"
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "of the cities"
+          },
+          {
+            "id": "2",
+            "label": "abl. sing. of mare"
+          },
+          {
+            "id": "3",
+            "label": "nom/acc pl. of mare"
+          },
+          {
+            "id": "4",
+            "label": "of the enemies"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3",
+          "d": "4"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sf-civium",
+      "type": "single_form",
+      "prompt": "Genitive plural of cīvis:",
+      "targets": [
+        "i-stem"
+      ],
+      "payload": {
+        "accept": [
+          "civium",
+          "cīvium"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "ms-i",
+      "type": "multi_select",
+      "prompt": "Which are typical i-stem signals? (select all that apply)",
+      "targets": [
+        "i-stem"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "gen. pl. -ium"
+          },
+          {
+            "id": "b",
+            "label": "abl. sing. sometimes -ī"
+          },
+          {
+            "id": "c",
+            "label": "nom. pl. always -a for m/f"
+          },
+          {
+            "id": "d",
+            "label": "neuter pl. -ia"
+          }
+        ],
+        "correctOptionIds": [
+          "a",
+          "b",
+          "d"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sa1",
+      "type": "short_answer",
+      "prompt": "Name one reason i-stems matter when reading.",
+      "targets": [
+        "i-stem"
+      ],
+      "payload": {
+        "sampleAnswers": [
+          "Genitive plural -ium and some ablatives look different from pure consonant stems.",
+          "They change endings you expect (-ium, -ī, -ia)."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

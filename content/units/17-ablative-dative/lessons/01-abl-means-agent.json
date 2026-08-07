@@ -1,0 +1,189 @@
+{
+  "slug": "01-abl-means-agent",
+  "title": "Ablative of means & agent",
+  "unitSlug": "17-ablative-dative",
+  "order": 1,
+  "standardSummary": "Distinguish ablative of means (no prep) from agent (ā/ab + abl with passive sense).",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-means"
+      },
+      {
+        "type": "skill_count",
+        "skill": "ablative uses",
+        "n": 3,
+        "label": "means agent"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match1"
+      }
+    ]
+  },
+  "teach": "Means: gladiō pugnat. Agent (with passive): ā mīlite occīsus est.",
+  "allowList": {
+    "lemmas": [
+      "gladius",
+      "miles",
+      "telum",
+      "ab",
+      "pugno",
+      "vincō"
+    ],
+    "constructions": [
+      "ablative uses",
+      "means",
+      "agent"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "matching",
+      "translate",
+      "short_answer",
+      "cloze"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-means",
+      "type": "multiple_choice",
+      "prompt": "In 'gladiō pugnat', gladiō is ablative of…",
+      "targets": [
+        "ablative uses"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "place where only"
+          },
+          {
+            "id": "b",
+            "label": "means/instrument"
+          },
+          {
+            "id": "c",
+            "label": "time when only"
+          },
+          {
+            "id": "d",
+            "label": "direct object"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match1",
+      "type": "matching",
+      "prompt": "Match use.",
+      "targets": [
+        "ablative uses"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "gladiō"
+          },
+          {
+            "id": "b",
+            "label": "ā duce"
+          },
+          {
+            "id": "c",
+            "label": "cum amīcō"
+          },
+          {
+            "id": "d",
+            "label": "magnā vōce"
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "means"
+          },
+          {
+            "id": "2",
+            "label": "agent (with ā/ab)"
+          },
+          {
+            "id": "3",
+            "label": "accompaniment"
+          },
+          {
+            "id": "4",
+            "label": "manner"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3",
+          "d": "4"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "tr1",
+      "type": "translate",
+      "prompt": "Mīles hastā pugnat.",
+      "targets": [
+        "ablative uses"
+      ],
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "The soldier fights with a spear.",
+          "The soldier fights by means of a spear."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "cl1",
+      "type": "cloze",
+      "prompt": "They conquer by courage.",
+      "targets": [
+        "ablative uses"
+      ],
+      "payload": {
+        "template": "virtūte {{1}}",
+        "blanks": {
+          "1": [
+            "vincunt"
+          ]
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sa1",
+      "type": "short_answer",
+      "prompt": "How does agent differ from means?",
+      "targets": [
+        "ablative uses"
+      ],
+      "payload": {
+        "sampleAnswers": [
+          "Agent is a person with ā/ab; means is a thing often without prep.",
+          "Agent: ā + person; means: instrument, often bare abl."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

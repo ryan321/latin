@@ -1,0 +1,172 @@
+{
+  "slug": "05-checkpoint",
+  "title": "Checkpoint — Place & accusative",
+  "unitSlug": "18-place",
+  "order": 5,
+  "standardSummary": "Handle place where/to/from, city-name pattern, and extent basics.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc1"
+      },
+      {
+        "type": "skill_count",
+        "skill": "place",
+        "n": 3,
+        "label": "place checkpoint"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match1"
+      }
+    ]
+  },
+  "teach": "Checkpoint: place constructions + locative + extent intro.",
+  "allowList": {
+    "lemmas": [
+      "Roma",
+      "in",
+      "ad",
+      "ab",
+      "urbs",
+      "annus"
+    ],
+    "constructions": [
+      "place",
+      "locative",
+      "extent"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "matching",
+      "single_form",
+      "translate",
+      "cloze"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc1",
+      "type": "multiple_choice",
+      "prompt": "ad + accusative most often shows…",
+      "targets": [
+        "place"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "place where"
+          },
+          {
+            "id": "b",
+            "label": "motion toward"
+          },
+          {
+            "id": "c",
+            "label": "means"
+          },
+          {
+            "id": "d",
+            "label": "agent"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match1",
+      "type": "matching",
+      "prompt": "Match.",
+      "targets": [
+        "place",
+        "locative",
+        "extent"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "in castrīs"
+          },
+          {
+            "id": "b",
+            "label": "Rōmam"
+          },
+          {
+            "id": "c",
+            "label": "multōs diēs"
+          },
+          {
+            "id": "d",
+            "label": "Rōmā"
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "in camp"
+          },
+          {
+            "id": "2",
+            "label": "to Rome"
+          },
+          {
+            "id": "3",
+            "label": "for many days"
+          },
+          {
+            "id": "4",
+            "label": "from Rome"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3",
+          "d": "4"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sf1",
+      "type": "single_form",
+      "prompt": "At Rome (locative):",
+      "targets": [
+        "locative"
+      ],
+      "payload": {
+        "accept": [
+          "Romae",
+          "Rōmae"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "tr1",
+      "type": "translate",
+      "prompt": "Ab urbe ad mare contendunt.",
+      "targets": [
+        "place"
+      ],
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "They hurry from the city to the sea."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

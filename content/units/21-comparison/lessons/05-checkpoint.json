@@ -1,0 +1,172 @@
+{
+  "slug": "05-checkpoint",
+  "title": "Checkpoint — Comparison",
+  "unitSlug": "21-comparison",
+  "order": 5,
+  "standardSummary": "Form comparatives/superlatives including irregulars; translate with quam.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc1"
+      },
+      {
+        "type": "skill_count",
+        "skill": "comparative",
+        "n": 2,
+        "label": "comp cp"
+      },
+      {
+        "type": "skill_count",
+        "skill": "superlative",
+        "n": 2,
+        "label": "sup cp"
+      }
+    ]
+  },
+  "teach": "Checkpoint: comparison of adjectives.",
+  "allowList": {
+    "lemmas": [
+      "longus",
+      "bonus",
+      "magnus",
+      "fortis",
+      "pulcher",
+      "facilis"
+    ],
+    "constructions": [
+      "comparative",
+      "superlative",
+      "irregular comparison"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "matching",
+      "single_form",
+      "translate",
+      "short_answer"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc1",
+      "type": "multiple_choice",
+      "prompt": "peior is comparative of…",
+      "targets": [
+        "irregular comparison"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "bonus"
+          },
+          {
+            "id": "b",
+            "label": "malus"
+          },
+          {
+            "id": "c",
+            "label": "parvus"
+          },
+          {
+            "id": "d",
+            "label": "multus"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match1",
+      "type": "matching",
+      "prompt": "Match.",
+      "targets": [
+        "comparative",
+        "superlative"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "longior"
+          },
+          {
+            "id": "b",
+            "label": "longissimus"
+          },
+          {
+            "id": "c",
+            "label": "maior"
+          },
+          {
+            "id": "d",
+            "label": "pulcherrimus"
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "longer"
+          },
+          {
+            "id": "2",
+            "label": "longest"
+          },
+          {
+            "id": "3",
+            "label": "greater"
+          },
+          {
+            "id": "4",
+            "label": "most beautiful"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3",
+          "d": "4"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sf1",
+      "type": "single_form",
+      "prompt": "Superlative of bonus (m.):",
+      "targets": [
+        "irregular comparison"
+      ],
+      "payload": {
+        "accept": [
+          "optimus"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "tr1",
+      "type": "translate",
+      "prompt": "Nihil melius est.",
+      "targets": [
+        "comparative"
+      ],
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "Nothing is better."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

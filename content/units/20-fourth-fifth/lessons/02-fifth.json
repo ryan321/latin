@@ -1,0 +1,202 @@
+{
+  "slug": "02-fifth",
+  "title": "Fifth declension (diēs)",
+  "unitSlug": "20-fourth-fifth",
+  "order": 2,
+  "standardSummary": "Decline diēs; note rēs; gender patterns (diēs m./f., rēs f.).",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-diei"
+      },
+      {
+        "type": "skill_count",
+        "skill": "5th declension",
+        "n": 3,
+        "label": "5th decl"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match-d"
+      }
+    ]
+  },
+  "teach": "5th: gen -ēī/-eī. diēs diēī diēī diem diē; rēs reī…",
+  "allowList": {
+    "lemmas": [
+      "dies",
+      "res",
+      "spes",
+      "fides"
+    ],
+    "constructions": [
+      "5th declension"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "matching",
+      "single_form",
+      "translate",
+      "cloze"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-diei",
+      "type": "multiple_choice",
+      "prompt": "Genitive singular of diēs is…",
+      "targets": [
+        "5th declension"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "diī"
+          },
+          {
+            "id": "b",
+            "label": "diēī"
+          },
+          {
+            "id": "c",
+            "label": "diērum only"
+          },
+          {
+            "id": "d",
+            "label": "diēis"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match-d",
+      "type": "matching",
+      "prompt": "Match.",
+      "targets": [
+        "5th declension"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "diem"
+          },
+          {
+            "id": "b",
+            "label": "rērum"
+          },
+          {
+            "id": "c",
+            "label": "fidē"
+          },
+          {
+            "id": "d",
+            "label": "speī"
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "acc. of diēs"
+          },
+          {
+            "id": "2",
+            "label": "gen. pl. of rēs"
+          },
+          {
+            "id": "3",
+            "label": "abl. of fidēs"
+          },
+          {
+            "id": "4",
+            "label": "dat/gen of spēs"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3",
+          "d": "4"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sf1",
+      "type": "single_form",
+      "prompt": "Abl sing of diēs:",
+      "targets": [
+        "5th declension"
+      ],
+      "payload": {
+        "accept": [
+          "die",
+          "diē"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sf2",
+      "type": "single_form",
+      "prompt": "Nom pl of rēs:",
+      "targets": [
+        "5th declension"
+      ],
+      "payload": {
+        "accept": [
+          "res",
+          "rēs"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "tr1",
+      "type": "translate",
+      "prompt": "Eō diē vēnit.",
+      "targets": [
+        "5th declension"
+      ],
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "He came on that day.",
+          "She came on that day."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "cl1",
+      "type": "cloze",
+      "prompt": "Of the matter/thing (gen of rēs).",
+      "targets": [
+        "5th declension"
+      ],
+      "payload": {
+        "template": "{{1}}",
+        "blanks": {
+          "1": [
+            "rei",
+            "reī"
+          ]
+        }
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

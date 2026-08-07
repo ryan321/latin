@@ -1,0 +1,230 @@
+{
+  "slug": "03-checkpoint",
+  "title": "Checkpoint — Adjectives",
+  "unitSlug": "06-adjectives",
+  "order": 3,
+  "standardSummary": "Show adjective agreement and translate noun+adjective sentences.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "skill_count",
+        "skill": "adjective agreement",
+        "n": 3,
+        "label": "agreement"
+      },
+      {
+        "type": "translate_count",
+        "n": 3
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "sa-agree"
+      }
+    ]
+  },
+  "teach": "Checkpoint for 1st/2nd adjectives.",
+  "allowList": {
+    "lemmas": [
+      "bonus",
+      "magnus",
+      "puella",
+      "servus",
+      "bellum"
+    ],
+    "constructions": [
+      "adjective agreement"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "translate",
+      "matching",
+      "short_answer",
+      "single_form"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc1",
+      "type": "multiple_choice",
+      "prompt": "bonōs servōs is…",
+      "targets": [
+        "adjective agreement"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "acc. pl. m."
+          },
+          {
+            "id": "b",
+            "label": "nom. sing. f."
+          },
+          {
+            "id": "c",
+            "label": "gen. sing. n."
+          },
+          {
+            "id": "d",
+            "label": "abl. sing. f."
+          }
+        ],
+        "correctOptionId": "a"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "f1",
+      "type": "single_form",
+      "prompt": "Nom. sing. f. of malus?",
+      "targets": [
+        "adjective agreement"
+      ],
+      "payload": {
+        "accept": [
+          "mala"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "f2",
+      "type": "single_form",
+      "prompt": "Gen. pl. m. of magnus?",
+      "targets": [
+        "adjective agreement"
+      ],
+      "payload": {
+        "accept": [
+          "magnorum",
+          "magnōrum"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "m1",
+      "type": "matching",
+      "prompt": "Match.",
+      "targets": [
+        "adjective agreement"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "bona bella"
+          },
+          {
+            "id": "b",
+            "label": "bonus amīcus"
+          },
+          {
+            "id": "c",
+            "label": "bonae puellae (nom. pl.)"
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "good wars (n. nom/acc pl.)"
+          },
+          {
+            "id": "2",
+            "label": "a good friend"
+          },
+          {
+            "id": "3",
+            "label": "good girls"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "t1",
+      "type": "translate",
+      "prompt": "Magna oppida spectant.",
+      "targets": [
+        "adjective agreement"
+      ],
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "They look at the large towns.",
+          "They watch the great towns."
+        ],
+        "rubric": "They look at; large towns acc."
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "t2",
+      "type": "translate",
+      "prompt": "Puellae bonae sunt.",
+      "targets": [
+        "adjective agreement",
+        "sum"
+      ],
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "The girls are good.",
+          "The good girls are (there)."
+        ],
+        "rubric": "Girls; are good."
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "t3",
+      "type": "translate",
+      "prompt": "the bad war (nom.)",
+      "targets": [
+        "adjective agreement"
+      ],
+      "payload": {
+        "direction": "E2L",
+        "length": "sentence",
+        "sampleAnswers": [
+          "malum bellum"
+        ],
+        "rubric": "malum + bellum neuter nom."
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sa-agree",
+      "type": "short_answer",
+      "prompt": "Why can an adjective of the 2nd declension modify a 1st-declension noun?",
+      "targets": [
+        "adjective agreement"
+      ],
+      "payload": {
+        "sampleAnswers": [
+          "Because agreement is by gender/number/case, not by which declension the noun is.",
+          "The adjective takes endings for the noun’s gender; declension class of the noun can differ."
+        ],
+        "rubric": "Agreement ≠ same declension number."
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

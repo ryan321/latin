@@ -1,0 +1,199 @@
+{
+  "slug": "03-agent-abl",
+  "title": "Agent & means with passive",
+  "unitSlug": "19-passive",
+  "order": 3,
+  "standardSummary": "Translate passives with ā/ab agent and bare abl means.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-ag"
+      },
+      {
+        "type": "skill_count",
+        "skill": "passive",
+        "n": 3,
+        "label": "agent means"
+      },
+      {
+        "type": "translate_count",
+        "n": 2
+      }
+    ]
+  },
+  "teach": "Passive + ā/ab person; means without ā for things.",
+  "allowList": {
+    "lemmas": [
+      "ab",
+      "miles",
+      "rex",
+      "gladius",
+      "vincō",
+      "occido"
+    ],
+    "constructions": [
+      "passive",
+      "agent",
+      "means"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "translate",
+      "matching",
+      "cloze",
+      "short_answer"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-ag",
+      "type": "multiple_choice",
+      "prompt": "In 'ā rēge vincitur', ā rēge is…",
+      "targets": [
+        "passive",
+        "agent"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "means (thing)"
+          },
+          {
+            "id": "b",
+            "label": "personal agent"
+          },
+          {
+            "id": "c",
+            "label": "time when"
+          },
+          {
+            "id": "d",
+            "label": "direct object"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match1",
+      "type": "matching",
+      "prompt": "Match.",
+      "targets": [
+        "passive"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "ā mīlite"
+          },
+          {
+            "id": "b",
+            "label": "gladiō"
+          },
+          {
+            "id": "c",
+            "label": "amātur"
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "by the soldier (agent)"
+          },
+          {
+            "id": "2",
+            "label": "with/by a sword (means)"
+          },
+          {
+            "id": "3",
+            "label": "is loved"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "tr1",
+      "type": "translate",
+      "prompt": "Hostēs ā Rōmānīs vincuntur.",
+      "targets": [
+        "passive"
+      ],
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "The enemies are conquered by the Romans."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "tr2",
+      "type": "translate",
+      "prompt": "The boy is praised by the teacher.",
+      "targets": [
+        "passive"
+      ],
+      "payload": {
+        "direction": "E2L",
+        "length": "sentence",
+        "sampleAnswers": [
+          "Puer a magistro laudatur.",
+          "Puer ā magistrō laudātur."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "cl1",
+      "type": "cloze",
+      "prompt": "She is loved by the mother.",
+      "targets": [
+        "passive"
+      ],
+      "payload": {
+        "template": "ā mātre {{1}}",
+        "blanks": {
+          "1": [
+            "amatur",
+            "amātur"
+          ]
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sa1",
+      "type": "short_answer",
+      "prompt": "Why use ā/ab with people but often bare abl with tools?",
+      "targets": [
+        "passive"
+      ],
+      "payload": {
+        "sampleAnswers": [
+          "Convention: agent vs instrument.",
+          "Person agent takes ā/ab; means often bare abl."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

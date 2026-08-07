@@ -1,0 +1,202 @@
+{
+  "slug": "02-perfect-part",
+  "title": "Perfect passive participle",
+  "unitSlug": "23-participles",
+  "order": 2,
+  "standardSummary": "Form PPP from 4th principal part; agree in gender/number/case; translate having been X-ed.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-ppp"
+      },
+      {
+        "type": "skill_count",
+        "skill": "perfect participle",
+        "n": 3,
+        "label": "PPP"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match-pp"
+      }
+    ]
+  },
+  "teach": "PPP: amātus -a -um; monitus; rēctus; captus; audītus. From 4th principal part.",
+  "allowList": {
+    "lemmas": [
+      "amo",
+      "moneo",
+      "rego",
+      "capio",
+      "audio",
+      "do"
+    ],
+    "constructions": [
+      "perfect participle",
+      "participles",
+      "principal parts"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "matching",
+      "single_form",
+      "translate",
+      "short_answer"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-ppp",
+      "type": "multiple_choice",
+      "prompt": "The PPP comes from…",
+      "targets": [
+        "perfect participle"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "1st principal part only"
+          },
+          {
+            "id": "b",
+            "label": "4th principal part stem"
+          },
+          {
+            "id": "c",
+            "label": "future infinitive only"
+          },
+          {
+            "id": "d",
+            "label": "genitive of nouns"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match-pp",
+      "type": "matching",
+      "prompt": "Match PPP.",
+      "targets": [
+        "perfect participle"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "amātus"
+          },
+          {
+            "id": "b",
+            "label": "monitus"
+          },
+          {
+            "id": "c",
+            "label": "captus"
+          },
+          {
+            "id": "d",
+            "label": "audītus"
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "having been loved / loved"
+          },
+          {
+            "id": "2",
+            "label": "having been warned"
+          },
+          {
+            "id": "3",
+            "label": "having been taken"
+          },
+          {
+            "id": "4",
+            "label": "having been heard"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3",
+          "d": "4"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sf1",
+      "type": "single_form",
+      "prompt": "PPP m. nom. s. of portō:",
+      "targets": [
+        "perfect participle"
+      ],
+      "payload": {
+        "accept": [
+          "portatus",
+          "portātus"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sf2",
+      "type": "single_form",
+      "prompt": "PPP f. nom. s. of capiō:",
+      "targets": [
+        "perfect participle"
+      ],
+      "payload": {
+        "accept": [
+          "capta"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "tr1",
+      "type": "translate",
+      "prompt": "Urbs capta ardet.",
+      "targets": [
+        "perfect participle"
+      ],
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "The captured city burns.",
+          "The city, having been taken, is on fire."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sa1",
+      "type": "short_answer",
+      "prompt": "Why must the PPP agree with a noun?",
+      "targets": [
+        "perfect participle"
+      ],
+      "payload": {
+        "sampleAnswers": [
+          "It is adjectival—gender, number, case match the noun.",
+          "It acts like an adjective."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

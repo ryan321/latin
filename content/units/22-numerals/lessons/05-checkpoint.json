@@ -1,0 +1,174 @@
+{
+  "slug": "05-checkpoint",
+  "title": "Checkpoint — Numerals & time",
+  "unitSlug": "22-numerals",
+  "order": 5,
+  "standardSummary": "Use cardinals, ordinals, and basic time expressions.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc1"
+      },
+      {
+        "type": "skill_count",
+        "skill": "cardinals",
+        "n": 2,
+        "label": "card cp"
+      },
+      {
+        "type": "skill_count",
+        "skill": "ordinals",
+        "n": 2,
+        "label": "ord cp"
+      }
+    ]
+  },
+  "teach": "Checkpoint: numerals and time.",
+  "allowList": {
+    "lemmas": [
+      "unus",
+      "duo",
+      "tres",
+      "primus",
+      "secundus",
+      "hora",
+      "dies"
+    ],
+    "constructions": [
+      "cardinals",
+      "ordinals",
+      "time"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "matching",
+      "single_form",
+      "translate",
+      "cloze"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc1",
+      "type": "multiple_choice",
+      "prompt": "decimus is…",
+      "targets": [
+        "ordinals"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "10 (cardinal)"
+          },
+          {
+            "id": "b",
+            "label": "10th (ordinal)"
+          },
+          {
+            "id": "c",
+            "label": "100"
+          },
+          {
+            "id": "d",
+            "label": "2nd"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match1",
+      "type": "matching",
+      "prompt": "Match.",
+      "targets": [
+        "cardinals",
+        "ordinals",
+        "time"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "quattuor"
+          },
+          {
+            "id": "b",
+            "label": "quārtus"
+          },
+          {
+            "id": "c",
+            "label": "vīgintī"
+          },
+          {
+            "id": "d",
+            "label": "prīmā hōrā"
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "4"
+          },
+          {
+            "id": "2",
+            "label": "4th"
+          },
+          {
+            "id": "3",
+            "label": "20"
+          },
+          {
+            "id": "4",
+            "label": "at the first hour"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3",
+          "d": "4"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sf1",
+      "type": "single_form",
+      "prompt": "Latin for 6:",
+      "targets": [
+        "cardinals"
+      ],
+      "payload": {
+        "accept": [
+          "sex"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "tr1",
+      "type": "translate",
+      "prompt": "Duo frātrēs adsunt.",
+      "targets": [
+        "cardinals"
+      ],
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "Two brothers are present."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

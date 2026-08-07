@@ -1,0 +1,201 @@
+{
+  "slug": "02-ille",
+  "title": "ille, illa, illud",
+  "unitSlug": "15-demonstratives",
+  "order": 2,
+  "standardSummary": "Recognize and form major cases of ille (that).",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-ille"
+      },
+      {
+        "type": "skill_count",
+        "skill": "ille",
+        "n": 3,
+        "label": "ille forms"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match-ille"
+      }
+    ]
+  },
+  "teach": "ille illa illud = that.",
+  "allowList": {
+    "lemmas": [
+      "ille",
+      "illa",
+      "illud",
+      "illum",
+      "illam"
+    ],
+    "constructions": [
+      "ille",
+      "demonstratives"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "matching",
+      "single_form",
+      "translate",
+      "short_answer"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-ille",
+      "type": "multiple_choice",
+      "prompt": "Compared with hic, ille often points to something…",
+      "targets": [
+        "ille"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "nearer / this"
+          },
+          {
+            "id": "b",
+            "label": "farther / that"
+          },
+          {
+            "id": "c",
+            "label": "interrogative"
+          },
+          {
+            "id": "d",
+            "label": "reflexive only"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match-ille",
+      "type": "matching",
+      "prompt": "Match.",
+      "targets": [
+        "ille"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "ille"
+          },
+          {
+            "id": "b",
+            "label": "illa"
+          },
+          {
+            "id": "c",
+            "label": "illum"
+          },
+          {
+            "id": "d",
+            "label": "illōrum"
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "that man (nom.)"
+          },
+          {
+            "id": "2",
+            "label": "that woman (nom.)"
+          },
+          {
+            "id": "3",
+            "label": "that man (acc.)"
+          },
+          {
+            "id": "4",
+            "label": "of those (m.)"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3",
+          "d": "4"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sf1",
+      "type": "single_form",
+      "prompt": "Gen. sing. of ille:",
+      "targets": [
+        "ille"
+      ],
+      "payload": {
+        "accept": [
+          "illius",
+          "illīus"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sf2",
+      "type": "single_form",
+      "prompt": "Nom/acc n. sing.:",
+      "targets": [
+        "ille"
+      ],
+      "payload": {
+        "accept": [
+          "illud"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "tr1",
+      "type": "translate",
+      "prompt": "Illud templum magnum est.",
+      "targets": [
+        "ille"
+      ],
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "That temple is large.",
+          "That temple is great."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sa1",
+      "type": "short_answer",
+      "prompt": "When might a writer choose ille instead of hic?",
+      "targets": [
+        "ille",
+        "hic"
+      ],
+      "payload": {
+        "sampleAnswers": [
+          "For something farther, previous, or emphatic 'that'.",
+          "Distance or emphasis on that."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

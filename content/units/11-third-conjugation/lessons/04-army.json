@@ -1,0 +1,228 @@
+{
+  "slug": "04-army",
+  "title": "Army Latin",
+  "unitSlug": "11-third-conjugation",
+  "order": 4,
+  "standardSummary": "Use army/camp vocabulary with 3rd-conjugation verbs in short sentences.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-legio"
+      },
+      {
+        "type": "skill_count",
+        "skill": "3rd conjugation",
+        "n": 3,
+        "label": "army reading"
+      },
+      {
+        "type": "translate_count",
+        "n": 2
+      }
+    ]
+  },
+  "teach": "Culture: legion & camp; verbs of leading, sending, conquering.",
+  "allowList": {
+    "lemmas": [
+      "legio",
+      "castra",
+      "miles",
+      "dux",
+      "arma",
+      "vinco",
+      "duco",
+      "mitto",
+      "pugno"
+    ],
+    "constructions": [
+      "3rd conjugation",
+      "army"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "translate",
+      "matching",
+      "cloze",
+      "multi_select"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-legio",
+      "type": "multiple_choice",
+      "prompt": "A legiō is roughly…",
+      "targets": [
+        "army"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "a single scout"
+          },
+          {
+            "id": "b",
+            "label": "a large unit of Roman soldiers"
+          },
+          {
+            "id": "c",
+            "label": "a type of ship"
+          },
+          {
+            "id": "d",
+            "label": "a temple"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match-a",
+      "type": "matching",
+      "prompt": "Match.",
+      "targets": [
+        "army"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "castra"
+          },
+          {
+            "id": "b",
+            "label": "arma"
+          },
+          {
+            "id": "c",
+            "label": "vincō"
+          },
+          {
+            "id": "d",
+            "label": "mittō"
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "camp (often pl. form)"
+          },
+          {
+            "id": "2",
+            "label": "arms/weapons"
+          },
+          {
+            "id": "3",
+            "label": "I conquer"
+          },
+          {
+            "id": "4",
+            "label": "I send"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3",
+          "d": "4"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "tr1",
+      "type": "translate",
+      "prompt": "Dux mīlitēs ad castra mittit.",
+      "targets": [
+        "3rd conjugation"
+      ],
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "The leader sends the soldiers to the camp.",
+          "The general sends the soldiers toward the camp."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "tr2",
+      "type": "translate",
+      "prompt": "The soldiers will conquer the enemies.",
+      "targets": [
+        "3rd conjugation future"
+      ],
+      "payload": {
+        "direction": "E2L",
+        "length": "sentence",
+        "sampleAnswers": [
+          "Milites hostes vincent.",
+          "Mīlitēs hostēs vincent."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "cl1",
+      "type": "cloze",
+      "prompt": "He leads (dūcō).",
+      "targets": [
+        "3rd conjugation"
+      ],
+      "payload": {
+        "template": "dux {{1}}",
+        "blanks": {
+          "1": [
+            "ducit",
+            "dūcit"
+          ]
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "ms1",
+      "type": "multi_select",
+      "prompt": "Which verbs are 3rd conjugation?",
+      "targets": [
+        "3rd conjugation"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "dūcō"
+          },
+          {
+            "id": "b",
+            "label": "amō"
+          },
+          {
+            "id": "c",
+            "label": "mittō"
+          },
+          {
+            "id": "d",
+            "label": "moneō"
+          }
+        ],
+        "correctOptionIds": [
+          "a",
+          "c"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

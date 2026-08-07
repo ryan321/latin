@@ -1,0 +1,172 @@
+{
+  "slug": "02-translation-gauntlet",
+  "title": "Translation gauntlet",
+  "unitSlug": "25-capstone",
+  "order": 2,
+  "standardSummary": "Translate both directions across mixed Year 1 constructions.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-t"
+      },
+      {
+        "type": "translate_count",
+        "n": 4
+      },
+      {
+        "type": "skill_count",
+        "skill": "year1 mastery",
+        "n": 2,
+        "label": "translation"
+      }
+    ]
+  },
+  "teach": "L2E and E2L mixed sentences.",
+  "allowList": {
+    "lemmas": [
+      "puella",
+      "miles",
+      "urbs",
+      "qui",
+      "hic",
+      "ille",
+      "amo",
+      "capio",
+      "sum",
+      "do"
+    ],
+    "constructions": [
+      "year1 mastery",
+      "reading"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "translate",
+      "short_answer",
+      "cloze",
+      "matching"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-t",
+      "type": "multiple_choice",
+      "prompt": "E2L 'I will send the letter to the girl' needs…",
+      "targets": [
+        "year1 mastery"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "only nominatives"
+          },
+          {
+            "id": "b",
+            "label": "future verb + acc letter + dat girl"
+          },
+          {
+            "id": "c",
+            "label": "perfect passive only"
+          },
+          {
+            "id": "d",
+            "label": "no verb"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "tr1",
+      "type": "translate",
+      "prompt": "Haec est urbs quam Rōmānī cēpērunt.",
+      "targets": [
+        "year1 mastery"
+      ],
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "This is the city which the Romans captured."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "tr2",
+      "type": "translate",
+      "prompt": "The soldiers who were fighting are brave.",
+      "targets": [
+        "year1 mastery"
+      ],
+      "payload": {
+        "direction": "E2L",
+        "length": "sentence",
+        "sampleAnswers": [
+          "Milites qui pugnabant fortes sunt.",
+          "Mīlitēs quī pugnābant fortēs sunt."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "tr3",
+      "type": "translate",
+      "prompt": "Ā duce monitus, mīles discessit.",
+      "targets": [
+        "year1 mastery"
+      ],
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "Having been warned by the leader, the soldier left.",
+          "Warned by the general, the soldier departed."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "tr4",
+      "type": "translate",
+      "prompt": "Peace will be given to the people.",
+      "targets": [
+        "passive",
+        "future"
+      ],
+      "payload": {
+        "direction": "E2L",
+        "length": "sentence",
+        "sampleAnswers": [
+          "Pax populo dabitur.",
+          "Pāx populō dabitur."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sa1",
+      "type": "short_answer",
+      "prompt": "Which construction did you find hardest this year, and why?",
+      "targets": [
+        "year1 mastery"
+      ],
+      "payload": {
+        "sampleAnswers": [
+          "Open reflection on student difficulty.",
+          "Any honest grammar reflection."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

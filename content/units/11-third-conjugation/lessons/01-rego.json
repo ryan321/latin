@@ -1,0 +1,230 @@
+{
+  "slug": "01-rego",
+  "title": "Third conjugation present (regō)",
+  "unitSlug": "11-third-conjugation",
+  "order": 1,
+  "standardSummary": "Conjugate a 3rd-conjugation verb in the present; contrast with 1st/2nd stems.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-conj"
+      },
+      {
+        "type": "skill_count",
+        "skill": "3rd conjugation",
+        "n": 4,
+        "label": "regō present"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match-reg"
+      }
+    ]
+  },
+  "teach": "3rd conj: infinitive -ere (short e). Present: regō, regis, regit… regunt.",
+  "allowList": {
+    "lemmas": [
+      "rego",
+      "duco",
+      "dico",
+      "scribo",
+      "mitto",
+      "vinco",
+      "peto"
+    ],
+    "constructions": [
+      "3rd conjugation",
+      "present"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "matching",
+      "single_form",
+      "ordering",
+      "short_answer"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-conj",
+      "type": "multiple_choice",
+      "prompt": "The present infinitive of regō is…",
+      "targets": [
+        "3rd conjugation"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "regāre"
+          },
+          {
+            "id": "b",
+            "label": "regēre"
+          },
+          {
+            "id": "c",
+            "label": "regere"
+          },
+          {
+            "id": "d",
+            "label": "regīre"
+          }
+        ],
+        "correctOptionId": "c"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match-reg",
+      "type": "matching",
+      "prompt": "Match regō present.",
+      "targets": [
+        "3rd conjugation"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "regō"
+          },
+          {
+            "id": "b",
+            "label": "regis"
+          },
+          {
+            "id": "c",
+            "label": "regit"
+          },
+          {
+            "id": "d",
+            "label": "regunt"
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "I rule"
+          },
+          {
+            "id": "2",
+            "label": "you (sing.) rule"
+          },
+          {
+            "id": "3",
+            "label": "he/she rules"
+          },
+          {
+            "id": "4",
+            "label": "they rule"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3",
+          "d": "4"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sf-regimus",
+      "type": "single_form",
+      "prompt": "1pl present of regō:",
+      "targets": [
+        "3rd conjugation"
+      ],
+      "payload": {
+        "accept": [
+          "regimus"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sf-ducit",
+      "type": "single_form",
+      "prompt": "3sg present of dūcō:",
+      "targets": [
+        "3rd conjugation"
+      ],
+      "payload": {
+        "accept": [
+          "ducit",
+          "dūcit"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "ord1",
+      "type": "ordering",
+      "prompt": "Order present of mittō: 1sg to 3pl",
+      "targets": [
+        "3rd conjugation"
+      ],
+      "payload": {
+        "items": [
+          {
+            "id": "a",
+            "label": "mittunt"
+          },
+          {
+            "id": "b",
+            "label": "mittō"
+          },
+          {
+            "id": "c",
+            "label": "mittit"
+          },
+          {
+            "id": "d",
+            "label": "mittimus"
+          },
+          {
+            "id": "e",
+            "label": "mittis"
+          },
+          {
+            "id": "f",
+            "label": "mittitis"
+          }
+        ],
+        "correctOrder": [
+          "b",
+          "e",
+          "c",
+          "d",
+          "f",
+          "a"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sa1",
+      "type": "short_answer",
+      "prompt": "How do you spot 3rd conjugation in the dictionary?",
+      "targets": [
+        "3rd conjugation"
+      ],
+      "payload": {
+        "sampleAnswers": [
+          "Infinitive ends in -ere with short e (not -ēre).",
+          "Present infinitive -ere (3rd), not -āre or -ēre."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

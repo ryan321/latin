@@ -14,7 +14,7 @@ Henle-inspired, original sequence. Classical pronunciation. Grammar first, with 
 - **C** = Roman context  
 - **R** = review / checkpoint  
 
-**Shipped content (app):** Units **0–5** complete (31 lessons) — foundations through second declension starter toolkit.
+**Shipped content (app):** Units **0–25** complete — **120 lessons** covering a full Henle First Year–aligned arc (original content, not copyrighted Henle text). Unlock-all is on by default for personal pacing.
 
 **Every lesson** (see product doc): stated **standard** + teach + seed activities + AI may add more **Activity** objects (grids, translates, etc.) until the standard is met.
 
@@ -36,35 +36,38 @@ By the end of the course the student should be able to:
 
 ---
 
-## Unit map (overview)
+## Unit map (overview) — shipped
 
-| Unit | Title | Core grammar | Culture thread |
-|------|--------|--------------|----------------|
-| 0 | Foundations | Course norms; classical pronunciation | Latin as Rome’s language |
-| 1 | Parts of speech | Noun, verb, adjective; prep/adv/conj/pron light | Grammar as word-jobs |
-| 2 | Noun cases | Nom, gen, dat, acc, abl **meanings** (before full charts) | Inflection vs English word order |
-| 3 | First declension & *sum* | 1st-decl endings + *sum*; apply cases | Family & household |
-| 4 | First conjugation present | *amō* type; subject–verb | Daily routine & work |
-| 5 | Second declension | *-us/-um* nouns; agreement intro | Men, tools, places of the city |
-| 6 | First/second adjectives | Agreement; predicate vs attributive | Names, descriptions, social roles |
-| 7 | Second conjugation & infinitive basics | *moneō*; infinitive as complement | Education & rhetoric (light) |
-| 8 | Imperfect & future (present system) | Active present-system tenses so far | Time, seasons, the calendar |
-| 9 | Third declension | 3rd nouns; gender patterns | Geography of Italy |
-| 10 | Third conjugation | *regō* / *-iō* present system | Army: legion & camp |
-| 11 | Perfect system (active) | Perfect, pluperfect, future perfect | Foundation myths & kings |
-| 12 | Fourth conjugation & more verbs | *audiō*; mixed practice | Republic institutions |
-| 13 | Prepositions & personal pronouns | *in/ad/cum…*; *ego/tū/is* | Travel, roads |
-| 14 | Demonstratives | *hic, ille, is* | Forum, temples |
-| 15 | Relative pronoun | *qui, quae, quod* | Citizenship & law |
-| 16 | Uses of ablative & dative | Means, agent, accompaniment | Religion & ritual |
-| 17 | Uses of accusative & place | Place to/from/where | Provinces & empire |
-| 18 | Passive (present system) | Passive recognition & production | Status & labor |
-| 19 | Fourth & fifth declensions | *fructus*, *diēs*, etc. | Games & triumphs |
-| 20 | Comparison of adjectives | Comparative & superlative | Virtues & *exempla* |
-| 21 | Numerals & time | Cardinals/ordinals; dates | Census & administration |
-| 22 | Participles (intro) | Present & perfect participles | Storytelling |
-| 23 | Reading power | Longer passages | Augustus & principate |
-| 24 | Year 1 capstone | Mixed mastery | Roman self-image |
+| Unit | Slug | Title | Core grammar | Culture thread | Lessons |
+|------|------|--------|--------------|----------------|---------|
+| 0 | `00-foundations` | Foundations | Course norms; classical pronunciation | Latin as Rome’s language | 5 |
+| 1 | `01-parts-of-speech` | Parts of speech | Noun, verb, adjective; supporting cast | Grammar as word-jobs | 5 |
+| 2 | `02-noun-cases` | Noun cases | Nom, gen, dat, acc, abl **meanings** | Inflection vs English word order | 6 |
+| 3 | `03-first-declension` | First declension & *sum* | 1st-decl endings + *sum* | Family & household | 6 |
+| 4 | `04-first-conjugation` | First conjugation present | *amō* type; subject–verb | Daily routine & work | 5 |
+| 5 | `05-second-declension` | Second declension | *-us/-um* nouns | Men, tools, city places | 4 |
+| 6 | `06-adjectives` | 1st/2nd adjectives | Agreement | Names, descriptions | 3 |
+| 7 | `07-second-conjugation` | Second conjugation | *moneō* present | Education (light) | 3 |
+| 8 | `08-imperfect` | Imperfect | *eram*; *-bam* | Past ongoing / habitual | 3 |
+| 9 | `09-future` | Future | *erō*; *-bō* vs 3rd/4th *-am* later | Will / shall | 3 |
+| 10 | `10-third-declension` | Third declension | Stem from gen.; neuter; i-stems | Geography of Italy | 5 |
+| 11 | `11-third-conjugation` | Third conjugation | *regō* / *capiō*; impf/fut | Army: legion & camp | 5 |
+| 12 | `12-perfect-system` | Perfect system (active) | Perfect, pluperfect, future perfect | Kings & foundation stories | 5 |
+| 13 | `13-fourth-conjugation` | Fourth conjugation | *audiō*; mixed conjugations | Republic institutions | 5 |
+| 14 | `14-prep-pronouns` | Prepositions & personal pronouns | *ad/in/cum…*; *ego/tū/is* | Travel, roads | 5 |
+| 15 | `15-demonstratives` | Demonstratives | *hic, ille* vs *is* | Forum, temples | 5 |
+| 16 | `16-relative` | Relative pronoun | *quī, quae, quod*; agreement | Citizenship & law | 5 |
+| 17 | `17-ablative-dative` | Ablative & dative uses | Means, agent, accompaniment; IO | Religion & ritual | 5 |
+| 18 | `18-place` | Place & accusative uses | Where / to / from; locative; extent | Provinces & empire | 5 |
+| 19 | `19-passive` | Passive (present system) | *-r -ris -tur…*; agent | Status & labor | 5 |
+| 20 | `20-fourth-fifth` | 4th & 5th declensions | *frūctus*, *diēs*, *rēs* | Games & triumphs | 4 |
+| 21 | `21-comparison` | Comparison of adjectives | *-ior*, *-issimus*; irregulars | Virtues & *exempla* | 5 |
+| 22 | `22-numerals` | Numerals & time | Cardinals/ordinals; calendar | Census & administration | 5 |
+| 23 | `23-participles` | Participles (intro) | Pres. act.; PPP; abl. abs. intro | Storytelling | 4 |
+| 24 | `24-reading` | Reading power | Multi-clause; mixed review | Augustus & principate | 5 |
+| 25 | `25-capstone` | Year 1 capstone | Full mixed mastery | Roman self-image | 4 |
+
+**Total: 120 lessons** across 26 units (0–25).
 
 **Pedagogy:** Teach **parts of speech** (Unit 1), then **case meanings** (Unit 2), then **1st-declension forms** (Unit 3). Do not skip to charts without jobs and cases.
 

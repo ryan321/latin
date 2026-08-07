@@ -1,0 +1,199 @@
+{
+  "slug": "02-superlative",
+  "title": "Superlative degree",
+  "unitSlug": "21-comparison",
+  "order": 2,
+  "standardSummary": "Form regular superlatives (-issimus) and common -rimus / -limus types.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-iss"
+      },
+      {
+        "type": "skill_count",
+        "skill": "superlative",
+        "n": 3,
+        "label": "superlative"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match-s"
+      }
+    ]
+  },
+  "teach": "Superlative: longissimus; pulcherrimus; facillimus.",
+  "allowList": {
+    "lemmas": [
+      "longus",
+      "pulcher",
+      "facilis",
+      "fortis",
+      "altus"
+    ],
+    "constructions": [
+      "superlative",
+      "adjectives"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "matching",
+      "single_form",
+      "translate",
+      "short_answer"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-iss",
+      "type": "multiple_choice",
+      "prompt": "longissimus means…",
+      "targets": [
+        "superlative"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "longer"
+          },
+          {
+            "id": "b",
+            "label": "longest / very long"
+          },
+          {
+            "id": "c",
+            "label": "long (positive)"
+          },
+          {
+            "id": "d",
+            "label": "less long"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match-s",
+      "type": "matching",
+      "prompt": "Match superlative.",
+      "targets": [
+        "superlative"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "altissimus"
+          },
+          {
+            "id": "b",
+            "label": "pulcherrimus"
+          },
+          {
+            "id": "c",
+            "label": "facillimus"
+          },
+          {
+            "id": "d",
+            "label": "fortissimus"
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "highest/very high"
+          },
+          {
+            "id": "2",
+            "label": "most beautiful"
+          },
+          {
+            "id": "3",
+            "label": "easiest"
+          },
+          {
+            "id": "4",
+            "label": "bravest"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3",
+          "d": "4"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sf1",
+      "type": "single_form",
+      "prompt": "Superlative m. nom. s. of longus:",
+      "targets": [
+        "superlative"
+      ],
+      "payload": {
+        "accept": [
+          "longissimus"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sf2",
+      "type": "single_form",
+      "prompt": "Superlative of facilis (m.):",
+      "targets": [
+        "superlative"
+      ],
+      "payload": {
+        "accept": [
+          "facillimus"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "tr1",
+      "type": "translate",
+      "prompt": "Haec via longissima est.",
+      "targets": [
+        "superlative"
+      ],
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "This road is the longest.",
+          "This way is very long."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sa1",
+      "type": "short_answer",
+      "prompt": "Give two ways English can render a Latin superlative.",
+      "targets": [
+        "superlative"
+      ],
+      "payload": {
+        "sampleAnswers": [
+          "-est and 'very…'",
+          "longest / very long"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

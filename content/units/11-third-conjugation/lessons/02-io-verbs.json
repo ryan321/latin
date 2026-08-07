@@ -1,0 +1,202 @@
+{
+  "slug": "02-io-verbs",
+  "title": "-iō verbs of the third (capiō)",
+  "unitSlug": "11-third-conjugation",
+  "order": 2,
+  "standardSummary": "Conjugate capiō-type presents; note the extra i in most forms.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-io"
+      },
+      {
+        "type": "skill_count",
+        "skill": "io verb",
+        "n": 3,
+        "label": "capiō type"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match-cap"
+      }
+    ]
+  },
+  "teach": "3rd -iō: capiō, capis, capit… capiunt.",
+  "allowList": {
+    "lemmas": [
+      "capio",
+      "facio",
+      "iacio",
+      "rapio",
+      "fugio",
+      "cupio"
+    ],
+    "constructions": [
+      "io verb",
+      "3rd conjugation"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "matching",
+      "single_form",
+      "translate",
+      "cloze"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-io",
+      "type": "multiple_choice",
+      "prompt": "3rd person plural of capiō is…",
+      "targets": [
+        "io verb"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "capunt"
+          },
+          {
+            "id": "b",
+            "label": "capiunt"
+          },
+          {
+            "id": "c",
+            "label": "capient"
+          },
+          {
+            "id": "d",
+            "label": "capeunt"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match-cap",
+      "type": "matching",
+      "prompt": "Match capiō.",
+      "targets": [
+        "io verb"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "capiō"
+          },
+          {
+            "id": "b",
+            "label": "capis"
+          },
+          {
+            "id": "c",
+            "label": "capit"
+          },
+          {
+            "id": "d",
+            "label": "capimus"
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "I take/capture"
+          },
+          {
+            "id": "2",
+            "label": "you take"
+          },
+          {
+            "id": "3",
+            "label": "he takes"
+          },
+          {
+            "id": "4",
+            "label": "we take"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3",
+          "d": "4"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sf-faciunt",
+      "type": "single_form",
+      "prompt": "3pl present of faciō:",
+      "targets": [
+        "io verb"
+      ],
+      "payload": {
+        "accept": [
+          "faciunt"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sf-fugit",
+      "type": "single_form",
+      "prompt": "3sg of fugiō:",
+      "targets": [
+        "io verb"
+      ],
+      "payload": {
+        "accept": [
+          "fugit"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "tr1",
+      "type": "translate",
+      "prompt": "Mīles arma capit.",
+      "targets": [
+        "io verb"
+      ],
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "The soldier takes (up) arms.",
+          "The soldier seizes the weapons."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "cl1",
+      "type": "cloze",
+      "prompt": "They make (faciō).",
+      "targets": [
+        "io verb"
+      ],
+      "payload": {
+        "template": "{{1}}",
+        "blanks": {
+          "1": [
+            "faciunt"
+          ]
+        }
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

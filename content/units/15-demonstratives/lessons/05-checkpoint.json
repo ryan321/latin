@@ -1,0 +1,184 @@
+{
+  "slug": "05-checkpoint",
+  "title": "Checkpoint — Demonstratives",
+  "unitSlug": "15-demonstratives",
+  "order": 5,
+  "standardSummary": "Use hic and ille forms; contrast with is.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc1"
+      },
+      {
+        "type": "skill_count",
+        "skill": "demonstratives",
+        "n": 3,
+        "label": "demo checkpoint"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match1"
+      }
+    ]
+  },
+  "teach": "Checkpoint: hic, ille, contrast with is.",
+  "allowList": {
+    "lemmas": [
+      "hic",
+      "ille",
+      "is",
+      "haec",
+      "illud",
+      "hunc"
+    ],
+    "constructions": [
+      "demonstratives",
+      "hic",
+      "ille"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "matching",
+      "single_form",
+      "translate",
+      "short_answer"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc1",
+      "type": "multiple_choice",
+      "prompt": "huius is…",
+      "targets": [
+        "hic"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "nom. pl."
+          },
+          {
+            "id": "b",
+            "label": "gen. sing. of hic"
+          },
+          {
+            "id": "c",
+            "label": "acc. pl."
+          },
+          {
+            "id": "d",
+            "label": "dat. pl. of ille"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match1",
+      "type": "matching",
+      "prompt": "Match.",
+      "targets": [
+        "demonstratives"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "hanc"
+          },
+          {
+            "id": "b",
+            "label": "illud"
+          },
+          {
+            "id": "c",
+            "label": "eum"
+          },
+          {
+            "id": "d",
+            "label": "hī"
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "this (f. acc.)"
+          },
+          {
+            "id": "2",
+            "label": "that (n.)"
+          },
+          {
+            "id": "3",
+            "label": "him (is)"
+          },
+          {
+            "id": "4",
+            "label": "these (m. nom.)"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3",
+          "d": "4"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sf1",
+      "type": "single_form",
+      "prompt": "Nom m. sing. 'that':",
+      "targets": [
+        "ille"
+      ],
+      "payload": {
+        "accept": [
+          "ille"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sf2",
+      "type": "single_form",
+      "prompt": "Acc m. sing. 'this':",
+      "targets": [
+        "hic"
+      ],
+      "payload": {
+        "accept": [
+          "hunc"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "tr1",
+      "type": "translate",
+      "prompt": "Ille hanc terram amat.",
+      "targets": [
+        "demonstratives"
+      ],
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "That man loves this land."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

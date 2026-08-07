@@ -1,0 +1,248 @@
+{
+  "slug": "03-checkpoint",
+  "title": "Checkpoint — Second conjugation",
+  "unitSlug": "07-second-conjugation",
+  "order": 3,
+  "standardSummary": "Conjugate a 2nd-conj present and translate mixed sentences.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "grid"
+      },
+      {
+        "type": "translate_count",
+        "n": 3
+      },
+      {
+        "type": "skill_count",
+        "skill": "2nd conjugation",
+        "n": 2,
+        "label": "2nd conj"
+      }
+    ]
+  },
+  "teach": "Checkpoint 2nd conjugation.",
+  "allowList": {
+    "lemmas": [
+      "habeo",
+      "video",
+      "moneo",
+      "puella",
+      "bellum"
+    ],
+    "constructions": [
+      "2nd conjugation"
+    ],
+    "activityTypes": [
+      "paradigm_grid",
+      "translate",
+      "single_form",
+      "multiple_choice",
+      "matching"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "grid",
+      "type": "paradigm_grid",
+      "prompt": "Conjugate habeō present.",
+      "targets": [
+        "2nd conjugation"
+      ],
+      "payload": {
+        "kind": "verb",
+        "lemma": "habeo",
+        "mode": "full_form",
+        "labels": {
+          "rows": [
+            "1",
+            "2",
+            "3"
+          ],
+          "cols": [
+            "sing.",
+            "plural"
+          ]
+        },
+        "cells": {
+          "1.sg": [
+            "habeo",
+            "habeō"
+          ],
+          "2.sg": [
+            "habes",
+            "habēs"
+          ],
+          "3.sg": [
+            "habet"
+          ],
+          "1.pl": [
+            "habemus",
+            "habēmus"
+          ],
+          "2.pl": [
+            "habetis",
+            "habētis"
+          ],
+          "3.pl": [
+            "habent"
+          ]
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "f1",
+      "type": "single_form",
+      "prompt": "He/she holds (teneō)?",
+      "targets": [
+        "2nd conjugation"
+      ],
+      "payload": {
+        "accept": [
+          "tenet"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "t1",
+      "type": "translate",
+      "prompt": "Vidēmus oppidum.",
+      "targets": [
+        "2nd conjugation"
+      ],
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "We see the town.",
+          "We are looking at the town."
+        ],
+        "rubric": "We see; town."
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "t2",
+      "type": "translate",
+      "prompt": "Puellae nōn timent.",
+      "targets": [
+        "2nd conjugation"
+      ],
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "The girls are not afraid.",
+          "The girls do not fear."
+        ],
+        "rubric": "Girls; do not fear."
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "t3",
+      "type": "translate",
+      "prompt": "I have a gift.",
+      "targets": [
+        "2nd conjugation"
+      ],
+      "payload": {
+        "direction": "E2L",
+        "length": "sentence",
+        "sampleAnswers": [
+          "Habeo donum.",
+          "Habeō dōnum."
+        ],
+        "rubric": "habeō; dōnum acc."
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "mc1",
+      "type": "multiple_choice",
+      "prompt": "monēmus is…",
+      "targets": [
+        "2nd conjugation"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "we warn"
+          },
+          {
+            "id": "b",
+            "label": "they warn"
+          },
+          {
+            "id": "c",
+            "label": "I warn"
+          },
+          {
+            "id": "d",
+            "label": "he warns"
+          }
+        ],
+        "correctOptionId": "a"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "m1",
+      "type": "matching",
+      "prompt": "Ending person (2nd conj.).",
+      "targets": [
+        "2nd conjugation",
+        "personal endings"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "-ēs"
+          },
+          {
+            "id": "b",
+            "label": "-ent"
+          },
+          {
+            "id": "c",
+            "label": "-ēmus"
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "2nd sing."
+          },
+          {
+            "id": "2",
+            "label": "3rd plural"
+          },
+          {
+            "id": "3",
+            "label": "1st plural"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3"
+        }
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

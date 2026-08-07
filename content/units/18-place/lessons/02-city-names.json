@@ -1,0 +1,205 @@
+{
+  "slug": "02-city-names",
+  "title": "Names of cities (special)",
+  "unitSlug": "18-place",
+  "order": 2,
+  "standardSummary": "Use locative and bare place constructions for city names (Rōmae, Rōmam, Rōmā).",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-romae"
+      },
+      {
+        "type": "skill_count",
+        "skill": "locative",
+        "n": 3,
+        "label": "city names"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match-c"
+      }
+    ]
+  },
+  "teach": "City names: Rōmae (at Rome), Rōmam (to Rome), Rōmā (from Rome) — locative/acc/abl special pattern.",
+  "allowList": {
+    "lemmas": [
+      "Roma",
+      "Athenae",
+      "Carthago",
+      "domus",
+      "rus"
+    ],
+    "constructions": [
+      "locative",
+      "place"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "matching",
+      "single_form",
+      "translate",
+      "cloze"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-romae",
+      "type": "multiple_choice",
+      "prompt": "Rōmae often means…",
+      "targets": [
+        "locative"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "of the Romans only"
+          },
+          {
+            "id": "b",
+            "label": "at/in Rome (locative)"
+          },
+          {
+            "id": "c",
+            "label": "into Rome"
+          },
+          {
+            "id": "d",
+            "label": "with Rome"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match-c",
+      "type": "matching",
+      "prompt": "Match.",
+      "targets": [
+        "locative"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "Rōmam"
+          },
+          {
+            "id": "b",
+            "label": "Rōmā"
+          },
+          {
+            "id": "c",
+            "label": "Rōmae"
+          },
+          {
+            "id": "d",
+            "label": "domī"
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "to Rome"
+          },
+          {
+            "id": "2",
+            "label": "from Rome"
+          },
+          {
+            "id": "3",
+            "label": "at Rome"
+          },
+          {
+            "id": "4",
+            "label": "at home"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3",
+          "d": "4"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sf1",
+      "type": "single_form",
+      "prompt": "To Rome:",
+      "targets": [
+        "locative",
+        "place"
+      ],
+      "payload": {
+        "accept": [
+          "Romam",
+          "Rōmam"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sf2",
+      "type": "single_form",
+      "prompt": "At home (locative of domus):",
+      "targets": [
+        "locative"
+      ],
+      "payload": {
+        "accept": [
+          "domi",
+          "domī"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "tr1",
+      "type": "translate",
+      "prompt": "Rōmae habitat.",
+      "targets": [
+        "locative"
+      ],
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "He lives at Rome.",
+          "She lives in Rome."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "cl1",
+      "type": "cloze",
+      "prompt": "They set out from Rome.",
+      "targets": [
+        "locative"
+      ],
+      "payload": {
+        "template": "{{1}} proficīscuntur",
+        "blanks": {
+          "1": [
+            "Roma",
+            "Rōmā"
+          ]
+        }
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

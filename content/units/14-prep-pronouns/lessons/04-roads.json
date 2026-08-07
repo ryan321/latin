@@ -1,0 +1,212 @@
+{
+  "slug": "04-roads",
+  "title": "Travel & roads",
+  "unitSlug": "14-prep-pronouns",
+  "order": 4,
+  "standardSummary": "Combine prepositions and pronouns in travel sentences; culture of Roman roads.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-via"
+      },
+      {
+        "type": "skill_count",
+        "skill": "prepositions",
+        "n": 2,
+        "label": "travel Latin"
+      },
+      {
+        "type": "translate_count",
+        "n": 2
+      }
+    ]
+  },
+  "teach": "viae, travel; ad/ab/in/per with pronouns.",
+  "allowList": {
+    "lemmas": [
+      "via",
+      "Roma",
+      "Italia",
+      "ad",
+      "ab",
+      "per",
+      "ego",
+      "tu",
+      "is"
+    ],
+    "constructions": [
+      "prepositions",
+      "personal pronouns",
+      "roads"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "translate",
+      "matching",
+      "cloze",
+      "short_answer"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-via",
+      "type": "multiple_choice",
+      "prompt": "Roman roads mainly helped…",
+      "targets": [
+        "roads"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "only poetry"
+          },
+          {
+            "id": "b",
+            "label": "army, trade, and communication"
+          },
+          {
+            "id": "c",
+            "label": "ignoring provinces"
+          },
+          {
+            "id": "d",
+            "label": "avoiding travel"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match1",
+      "type": "matching",
+      "prompt": "Match phrase.",
+      "targets": [
+        "prepositions"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "ad Rōmam"
+          },
+          {
+            "id": "b",
+            "label": "ab urbe"
+          },
+          {
+            "id": "c",
+            "label": "per Italiam"
+          },
+          {
+            "id": "d",
+            "label": "cum amīcīs"
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "to Rome"
+          },
+          {
+            "id": "2",
+            "label": "from the city"
+          },
+          {
+            "id": "3",
+            "label": "through Italy"
+          },
+          {
+            "id": "4",
+            "label": "with friends"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3",
+          "d": "4"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "tr1",
+      "type": "translate",
+      "prompt": "Ad urbem veniō.",
+      "targets": [
+        "prepositions"
+      ],
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "I come to the city.",
+          "I am coming to the city."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "tr2",
+      "type": "translate",
+      "prompt": "He walks with me on the road.",
+      "targets": [
+        "prepositions",
+        "personal pronouns"
+      ],
+      "payload": {
+        "direction": "E2L",
+        "length": "sentence",
+        "sampleAnswers": [
+          "Mecum in via ambulat.",
+          "Mēcum in viā ambulat."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "cl1",
+      "type": "cloze",
+      "prompt": "From Italy.",
+      "targets": [
+        "prepositions"
+      ],
+      "payload": {
+        "template": "ab {{1}}",
+        "blanks": {
+          "1": [
+            "Italia",
+            "Italiā"
+          ]
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sa1",
+      "type": "short_answer",
+      "prompt": "Why were roads strategic for Rome?",
+      "targets": [
+        "roads"
+      ],
+      "payload": {
+        "sampleAnswers": [
+          "Moved legions, goods, and messages.",
+          "Army and trade needed reliable routes."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

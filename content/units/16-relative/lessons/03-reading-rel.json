@@ -1,0 +1,199 @@
+{
+  "slug": "03-reading-rel",
+  "title": "Relative clauses in sentences",
+  "unitSlug": "16-relative",
+  "order": 3,
+  "standardSummary": "Translate sentences with relative clauses; produce simple relatives.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-clause"
+      },
+      {
+        "type": "skill_count",
+        "skill": "relative pronoun",
+        "n": 3,
+        "label": "rel reading"
+      },
+      {
+        "type": "translate_count",
+        "n": 2
+      }
+    ]
+  },
+  "teach": "Full sentences with quī clauses.",
+  "allowList": {
+    "lemmas": [
+      "qui",
+      "puella",
+      "miles",
+      "urbs",
+      "rex",
+      "amo",
+      "video",
+      "vinco"
+    ],
+    "constructions": [
+      "relative pronoun"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "translate",
+      "matching",
+      "cloze",
+      "short_answer"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-clause",
+      "type": "multiple_choice",
+      "prompt": "In 'urbs quae est magna', the clause…",
+      "targets": [
+        "relative pronoun"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "is the main verb only"
+          },
+          {
+            "id": "b",
+            "label": "describes urbs"
+          },
+          {
+            "id": "c",
+            "label": "must be interrogative"
+          },
+          {
+            "id": "d",
+            "label": "is always subjunctive"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match1",
+      "type": "matching",
+      "prompt": "Match English to Latin.",
+      "targets": [
+        "relative pronoun"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "the girl who loves"
+          },
+          {
+            "id": "b",
+            "label": "the man whom I see"
+          },
+          {
+            "id": "c",
+            "label": "the war which…"
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "puella quae amat"
+          },
+          {
+            "id": "2",
+            "label": "vir quem videō"
+          },
+          {
+            "id": "3",
+            "label": "bellum quod…"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "tr1",
+      "type": "translate",
+      "prompt": "Mīles quī hostem vīcit fortis est.",
+      "targets": [
+        "relative pronoun",
+        "perfect"
+      ],
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "The soldier who conquered the enemy is brave."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "tr2",
+      "type": "translate",
+      "prompt": "I love the land which is free.",
+      "targets": [
+        "relative pronoun"
+      ],
+      "payload": {
+        "direction": "E2L",
+        "length": "sentence",
+        "sampleAnswers": [
+          "Terram quae libera est amo.",
+          "Terram quae lībera est amō."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "cl1",
+      "type": "cloze",
+      "prompt": "The laws which the people hear.",
+      "targets": [
+        "relative pronoun"
+      ],
+      "payload": {
+        "template": "lēgēs {{1}} populus audit",
+        "blanks": {
+          "1": [
+            "quas",
+            "quās"
+          ]
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sa1",
+      "type": "short_answer",
+      "prompt": "English relatives mapping to quī include…",
+      "targets": [
+        "relative pronoun"
+      ],
+      "payload": {
+        "sampleAnswers": [
+          "who, which, that",
+          "who/which/that"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

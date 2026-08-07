@@ -1,0 +1,205 @@
+{
+  "slug": "01-present-part",
+  "title": "Present active participle",
+  "unitSlug": "23-participles",
+  "order": 1,
+  "standardSummary": "Form present participles (-ns -ntis) and agree them with nouns.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-ns"
+      },
+      {
+        "type": "skill_count",
+        "skill": "present participle",
+        "n": 3,
+        "label": "pres part"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match-p"
+      }
+    ]
+  },
+  "teach": "Present participle: amāns monēns regēns capiēns audiēns; declines 3rd-decl like ingēns.",
+  "allowList": {
+    "lemmas": [
+      "amo",
+      "moneo",
+      "rego",
+      "capio",
+      "audio",
+      "miles"
+    ],
+    "constructions": [
+      "present participle",
+      "participles"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "matching",
+      "single_form",
+      "translate",
+      "cloze"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-ns",
+      "type": "multiple_choice",
+      "prompt": "amāns roughly means…",
+      "targets": [
+        "present participle"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "having been loved"
+          },
+          {
+            "id": "b",
+            "label": "loving / while loving"
+          },
+          {
+            "id": "c",
+            "label": "about to love only"
+          },
+          {
+            "id": "d",
+            "label": "I will love"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match-p",
+      "type": "matching",
+      "prompt": "Match participle.",
+      "targets": [
+        "present participle"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "monēns"
+          },
+          {
+            "id": "b",
+            "label": "regēns"
+          },
+          {
+            "id": "c",
+            "label": "capiēns"
+          },
+          {
+            "id": "d",
+            "label": "audiēns"
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "warning"
+          },
+          {
+            "id": "2",
+            "label": "ruling"
+          },
+          {
+            "id": "3",
+            "label": "taking"
+          },
+          {
+            "id": "4",
+            "label": "hearing"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3",
+          "d": "4"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sf1",
+      "type": "single_form",
+      "prompt": "Present participle of amō (nom s.):",
+      "targets": [
+        "present participle"
+      ],
+      "payload": {
+        "accept": [
+          "amans",
+          "amāns"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sf2",
+      "type": "single_form",
+      "prompt": "Gen sing of amāns:",
+      "targets": [
+        "present participle"
+      ],
+      "payload": {
+        "accept": [
+          "amantis",
+          "amantis"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "tr1",
+      "type": "translate",
+      "prompt": "Mīles pugnāns cadit.",
+      "targets": [
+        "present participle"
+      ],
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "The soldier falls while fighting.",
+          "The fighting soldier falls."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "cl1",
+      "type": "cloze",
+      "prompt": "The girl calling (nom.).",
+      "targets": [
+        "present participle"
+      ],
+      "payload": {
+        "template": "puella {{1}}",
+        "blanks": {
+          "1": [
+            "vocans",
+            "vocāns"
+          ]
+        }
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

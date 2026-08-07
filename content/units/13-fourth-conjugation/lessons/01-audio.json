@@ -1,0 +1,220 @@
+{
+  "slug": "01-audio",
+  "title": "Fourth conjugation present (audiō)",
+  "unitSlug": "13-fourth-conjugation",
+  "order": 1,
+  "standardSummary": "Conjugate audiō in the present; compare with capiō-type forms.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-inf"
+      },
+      {
+        "type": "skill_count",
+        "skill": "4th conjugation",
+        "n": 4,
+        "label": "audiō present"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match-aud"
+      }
+    ]
+  },
+  "teach": "4th conj: -īre. Present: audiō, audīs, audit, audīmus, audītis, audiunt.",
+  "allowList": {
+    "lemmas": [
+      "audio",
+      "venio",
+      "munio",
+      "dormio",
+      "scio",
+      "invenio"
+    ],
+    "constructions": [
+      "4th conjugation",
+      "present"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "matching",
+      "single_form",
+      "ordering",
+      "short_answer"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-inf",
+      "type": "multiple_choice",
+      "prompt": "Infinitive of audiō ends in…",
+      "targets": [
+        "4th conjugation"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "-āre"
+          },
+          {
+            "id": "b",
+            "label": "-ēre"
+          },
+          {
+            "id": "c",
+            "label": "-ere"
+          },
+          {
+            "id": "d",
+            "label": "-īre"
+          }
+        ],
+        "correctOptionId": "d"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match-aud",
+      "type": "matching",
+      "prompt": "Match audiō present.",
+      "targets": [
+        "4th conjugation"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "audiō"
+          },
+          {
+            "id": "b",
+            "label": "audīs"
+          },
+          {
+            "id": "c",
+            "label": "audit"
+          },
+          {
+            "id": "d",
+            "label": "audiunt"
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "I hear"
+          },
+          {
+            "id": "2",
+            "label": "you hear"
+          },
+          {
+            "id": "3",
+            "label": "he hears"
+          },
+          {
+            "id": "4",
+            "label": "they hear"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3",
+          "d": "4"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sf1",
+      "type": "single_form",
+      "prompt": "1pl present of veniō:",
+      "targets": [
+        "4th conjugation"
+      ],
+      "payload": {
+        "accept": [
+          "venimus",
+          "venīmus"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sf2",
+      "type": "single_form",
+      "prompt": "3pl of mūniō:",
+      "targets": [
+        "4th conjugation"
+      ],
+      "payload": {
+        "accept": [
+          "muniunt",
+          "mūniunt"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "ord1",
+      "type": "ordering",
+      "prompt": "Order present of sciō 1sg–3pl key forms",
+      "targets": [
+        "4th conjugation"
+      ],
+      "payload": {
+        "items": [
+          {
+            "id": "a",
+            "label": "sciunt"
+          },
+          {
+            "id": "b",
+            "label": "sciō"
+          },
+          {
+            "id": "c",
+            "label": "scit"
+          },
+          {
+            "id": "d",
+            "label": "scīmus"
+          }
+        ],
+        "correctOrder": [
+          "b",
+          "c",
+          "d",
+          "a"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sa1",
+      "type": "short_answer",
+      "prompt": "How does 4th present differ from 3rd -iō at a glance?",
+      "targets": [
+        "4th conjugation"
+      ],
+      "payload": {
+        "sampleAnswers": [
+          "4th infinitive is -īre; long ī often in stem (audīmus). 3rd -iō has -ere.",
+          "-īre vs -ere; audīmus has long ī."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

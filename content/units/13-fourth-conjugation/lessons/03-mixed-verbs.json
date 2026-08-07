@@ -1,0 +1,220 @@
+{
+  "slug": "03-mixed-verbs",
+  "title": "Mixed conjugation review",
+  "unitSlug": "13-fourth-conjugation",
+  "order": 3,
+  "standardSummary": "Identify conjugation and form present/imperfect/future across 1st–4th.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-id"
+      },
+      {
+        "type": "skill_count",
+        "skill": "conjugation id",
+        "n": 3,
+        "label": "mixed verbs"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match-c"
+      }
+    ]
+  },
+  "teach": "Sort verbs by conjugation; produce correct tense forms in mixed sets.",
+  "allowList": {
+    "lemmas": [
+      "amo",
+      "moneo",
+      "rego",
+      "capio",
+      "audio",
+      "sum"
+    ],
+    "constructions": [
+      "conjugation id",
+      "present",
+      "future"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "matching",
+      "single_form",
+      "multi_select",
+      "short_answer"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-id",
+      "type": "multiple_choice",
+      "prompt": "moneō belongs to…",
+      "targets": [
+        "conjugation id"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "1st"
+          },
+          {
+            "id": "b",
+            "label": "2nd"
+          },
+          {
+            "id": "c",
+            "label": "3rd"
+          },
+          {
+            "id": "d",
+            "label": "4th"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match-c",
+      "type": "matching",
+      "prompt": "Match verb to conjugation.",
+      "targets": [
+        "conjugation id"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "amāre"
+          },
+          {
+            "id": "b",
+            "label": "monēre"
+          },
+          {
+            "id": "c",
+            "label": "regere"
+          },
+          {
+            "id": "d",
+            "label": "audīre"
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "1st"
+          },
+          {
+            "id": "2",
+            "label": "2nd"
+          },
+          {
+            "id": "3",
+            "label": "3rd"
+          },
+          {
+            "id": "4",
+            "label": "4th"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3",
+          "d": "4"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sf1",
+      "type": "single_form",
+      "prompt": "Future 1sg of moneō:",
+      "targets": [
+        "future",
+        "2nd conjugation"
+      ],
+      "payload": {
+        "accept": [
+          "monebo",
+          "monēbō"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sf2",
+      "type": "single_form",
+      "prompt": "Future 1sg of regō:",
+      "targets": [
+        "3rd conjugation future"
+      ],
+      "payload": {
+        "accept": [
+          "regam"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "ms1",
+      "type": "multi_select",
+      "prompt": "Which use -bō style future?",
+      "targets": [
+        "future"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "amō"
+          },
+          {
+            "id": "b",
+            "label": "moneō"
+          },
+          {
+            "id": "c",
+            "label": "regō"
+          },
+          {
+            "id": "d",
+            "label": "audiō"
+          }
+        ],
+        "correctOptionIds": [
+          "a",
+          "b"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sa1",
+      "type": "short_answer",
+      "prompt": "Give one reliable way to find a verb's conjugation.",
+      "targets": [
+        "conjugation id",
+        "principal parts"
+      ],
+      "payload": {
+        "sampleAnswers": [
+          "Look at the present infinitive ending: -āre -ēre -ere -īre.",
+          "The second principal part."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

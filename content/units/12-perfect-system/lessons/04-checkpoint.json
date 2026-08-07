@@ -1,0 +1,190 @@
+{
+  "slug": "04-checkpoint",
+  "title": "Checkpoint — Perfect system",
+  "unitSlug": "12-perfect-system",
+  "order": 5,
+  "standardSummary": "Form and distinguish perfect, pluperfect, and future perfect; use principal parts.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc1"
+      },
+      {
+        "type": "skill_count",
+        "skill": "perfect",
+        "n": 4,
+        "label": "perfect checkpoint"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match1"
+      }
+    ]
+  },
+  "teach": "Checkpoint: perfect system active + principal parts.",
+  "allowList": {
+    "lemmas": [
+      "amo",
+      "sum",
+      "capio",
+      "duco",
+      "mitto",
+      "porto"
+    ],
+    "constructions": [
+      "perfect",
+      "pluperfect",
+      "future perfect",
+      "principal parts"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "matching",
+      "single_form",
+      "translate",
+      "short_answer"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc1",
+      "type": "multiple_choice",
+      "prompt": "cēperō is…",
+      "targets": [
+        "future perfect"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "perfect"
+          },
+          {
+            "id": "b",
+            "label": "pluperfect"
+          },
+          {
+            "id": "c",
+            "label": "future perfect"
+          },
+          {
+            "id": "d",
+            "label": "present"
+          }
+        ],
+        "correctOptionId": "c"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match1",
+      "type": "matching",
+      "prompt": "Match.",
+      "targets": [
+        "perfect",
+        "pluperfect",
+        "future perfect"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "fuī"
+          },
+          {
+            "id": "b",
+            "label": "fueram"
+          },
+          {
+            "id": "c",
+            "label": "amāvistī"
+          },
+          {
+            "id": "d",
+            "label": "mīserint"
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "I was/have been"
+          },
+          {
+            "id": "2",
+            "label": "I had been"
+          },
+          {
+            "id": "3",
+            "label": "you loved (perf.)"
+          },
+          {
+            "id": "4",
+            "label": "they will have sent"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3",
+          "d": "4"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sf1",
+      "type": "single_form",
+      "prompt": "2pl perfect of amō:",
+      "targets": [
+        "perfect"
+      ],
+      "payload": {
+        "accept": [
+          "amavistis",
+          "amāvistis"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sf2",
+      "type": "single_form",
+      "prompt": "1sg pluperfect of capiō:",
+      "targets": [
+        "pluperfect"
+      ],
+      "payload": {
+        "accept": [
+          "ceperam",
+          "cēperam"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "tr1",
+      "type": "translate",
+      "prompt": "Hostēs fūgērunt.",
+      "targets": [
+        "perfect"
+      ],
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "The enemies fled.",
+          "The enemies have fled."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

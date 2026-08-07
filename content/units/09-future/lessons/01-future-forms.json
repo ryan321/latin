@@ -1,0 +1,273 @@
+{
+  "slug": "01-future-forms",
+  "title": "Future forms",
+  "unitSlug": "09-future",
+  "order": 1,
+  "standardSummary": "Form the future of sum and of a 1st-conjugation verb; state the meaning of the future.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-mean"
+      },
+      {
+        "type": "skill_count",
+        "skill": "future",
+        "n": 4,
+        "label": "future forms"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match-sum"
+      }
+    ]
+  },
+  "teach": "Future: will… erō; amābō; monēbō. Distinct from imperfect -bā-.",
+  "allowList": {
+    "lemmas": [
+      "sum",
+      "amo",
+      "moneo",
+      "porto",
+      "video"
+    ],
+    "constructions": [
+      "future"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "matching",
+      "single_form",
+      "ordering",
+      "short_answer"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-mean",
+      "type": "multiple_choice",
+      "prompt": "The future tense often means…",
+      "targets": [
+        "future"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "was doing"
+          },
+          {
+            "id": "b",
+            "label": "will do / shall do"
+          },
+          {
+            "id": "c",
+            "label": "has done"
+          },
+          {
+            "id": "d",
+            "label": "used to do"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match-sum",
+      "type": "matching",
+      "prompt": "Match future of sum.",
+      "targets": [
+        "future",
+        "sum"
+      ],
+      "payload": {
+        "leftLabel": "Form",
+        "rightLabel": "Meaning",
+        "left": [
+          {
+            "id": "a",
+            "label": "erō"
+          },
+          {
+            "id": "b",
+            "label": "eris"
+          },
+          {
+            "id": "c",
+            "label": "erit"
+          },
+          {
+            "id": "d",
+            "label": "erimus"
+          },
+          {
+            "id": "e",
+            "label": "erunt"
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "I will be"
+          },
+          {
+            "id": "2",
+            "label": "you (sing.) will be"
+          },
+          {
+            "id": "3",
+            "label": "he/she/it will be"
+          },
+          {
+            "id": "4",
+            "label": "we will be"
+          },
+          {
+            "id": "5",
+            "label": "they will be"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3",
+          "d": "4",
+          "e": "5"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sf-amabo",
+      "type": "single_form",
+      "prompt": "1st person singular future of amō:",
+      "targets": [
+        "future"
+      ],
+      "payload": {
+        "accept": [
+          "amabo",
+          "amābō"
+        ],
+        "hint": "will love"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sf-amabit",
+      "type": "single_form",
+      "prompt": "3rd person singular future of amō:",
+      "targets": [
+        "future"
+      ],
+      "payload": {
+        "accept": [
+          "amabit",
+          "amābit"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sf-monebimus",
+      "type": "single_form",
+      "prompt": "1st person plural future of moneō:",
+      "targets": [
+        "future"
+      ],
+      "payload": {
+        "accept": [
+          "monebimus",
+          "monēbimus"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sf-erunt",
+      "type": "single_form",
+      "prompt": "3rd person plural future of sum:",
+      "targets": [
+        "future",
+        "sum"
+      ],
+      "payload": {
+        "accept": [
+          "erunt"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "ord-pers",
+      "type": "ordering",
+      "prompt": "Order these future forms of amō: 1sg → 3pl",
+      "targets": [
+        "future"
+      ],
+      "payload": {
+        "items": [
+          {
+            "id": "a",
+            "label": "amābunt"
+          },
+          {
+            "id": "b",
+            "label": "amābō"
+          },
+          {
+            "id": "c",
+            "label": "amābit"
+          },
+          {
+            "id": "d",
+            "label": "amābimus"
+          },
+          {
+            "id": "e",
+            "label": "amābis"
+          },
+          {
+            "id": "f",
+            "label": "amābitis"
+          }
+        ],
+        "correctOrder": [
+          "b",
+          "e",
+          "c",
+          "d",
+          "f",
+          "a"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sa-vs-imp",
+      "type": "short_answer",
+      "prompt": "In one sentence: how do you tell future amābō from imperfect amābam?",
+      "targets": [
+        "future",
+        "imperfect"
+      ],
+      "payload": {
+        "sampleAnswers": [
+          "Future has -bō/-bis/-bit (or -bimus…); imperfect has -bam/-bās/-bat.",
+          "Future: -bō series; imperfect: -bam series."
+        ],
+        "rubric": "Mention both -bō and -bam."
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

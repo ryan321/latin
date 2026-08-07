@@ -1,0 +1,203 @@
+{
+  "slug": "01-hic",
+  "title": "hic, haec, hoc",
+  "unitSlug": "15-demonstratives",
+  "order": 1,
+  "standardSummary": "Recognize and form major cases of hic (this).",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-hic"
+      },
+      {
+        "type": "skill_count",
+        "skill": "hic",
+        "n": 4,
+        "label": "hic forms"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match-hic"
+      }
+    ]
+  },
+  "teach": "hic haec hoc = this.",
+  "allowList": {
+    "lemmas": [
+      "hic",
+      "haec",
+      "hoc",
+      "hunc",
+      "hanc",
+      "huius"
+    ],
+    "constructions": [
+      "hic",
+      "demonstratives"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "matching",
+      "single_form",
+      "translate",
+      "cloze"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-hic",
+      "type": "multiple_choice",
+      "prompt": "hic vir means…",
+      "targets": [
+        "hic"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "that man (far)"
+          },
+          {
+            "id": "b",
+            "label": "this man"
+          },
+          {
+            "id": "c",
+            "label": "which man"
+          },
+          {
+            "id": "d",
+            "label": "no man"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match-hic",
+      "type": "matching",
+      "prompt": "Match form.",
+      "targets": [
+        "hic"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "hic"
+          },
+          {
+            "id": "b",
+            "label": "haec"
+          },
+          {
+            "id": "c",
+            "label": "hunc"
+          },
+          {
+            "id": "d",
+            "label": "huius"
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "this (m. nom.)"
+          },
+          {
+            "id": "2",
+            "label": "this (f. nom.)"
+          },
+          {
+            "id": "3",
+            "label": "this (m. acc.)"
+          },
+          {
+            "id": "4",
+            "label": "of this"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3",
+          "d": "4"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sf1",
+      "type": "single_form",
+      "prompt": "Acc n. sing. of hic:",
+      "targets": [
+        "hic"
+      ],
+      "payload": {
+        "accept": [
+          "hoc"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sf2",
+      "type": "single_form",
+      "prompt": "Abl f. sing.:",
+      "targets": [
+        "hic"
+      ],
+      "payload": {
+        "accept": [
+          "hac",
+          "hāc"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "tr1",
+      "type": "translate",
+      "prompt": "Hanc urbem amō.",
+      "targets": [
+        "hic"
+      ],
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "I love this city."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "cl1",
+      "type": "cloze",
+      "prompt": "These men (m. nom. pl.).",
+      "targets": [
+        "hic"
+      ],
+      "payload": {
+        "template": "{{1}} virī",
+        "blanks": {
+          "1": [
+            "hi",
+            "hī"
+          ]
+        }
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

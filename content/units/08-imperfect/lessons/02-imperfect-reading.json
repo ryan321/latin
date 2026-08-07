@@ -1,0 +1,250 @@
+{
+  "slug": "02-imperfect-reading",
+  "title": "Imperfect in sentences",
+  "unitSlug": "08-imperfect",
+  "order": 2,
+  "standardSummary": "Translate imperfect sentences with nouns and adjectives you know.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "translate_count",
+        "n": 4
+      },
+      {
+        "type": "skill_count",
+        "skill": "imperfect",
+        "n": 2,
+        "label": "imperfect"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "mc-era"
+      }
+    ]
+  },
+  "teach": "Reading with imperfect.",
+  "allowList": {
+    "lemmas": [
+      "eram",
+      "erat",
+      "erant",
+      "amabat",
+      "portabant",
+      "videbant",
+      "puella",
+      "servus",
+      "aqua"
+    ],
+    "constructions": [
+      "imperfect",
+      "1st declension",
+      "2nd declension"
+    ],
+    "activityTypes": [
+      "translate",
+      "multiple_choice",
+      "matching",
+      "cloze"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-era",
+      "type": "multiple_choice",
+      "prompt": "Erant in oppidō means…",
+      "targets": [
+        "imperfect",
+        "sum"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "They will be in the town"
+          },
+          {
+            "id": "b",
+            "label": "They were in the town"
+          },
+          {
+            "id": "c",
+            "label": "They are in the town"
+          },
+          {
+            "id": "d",
+            "label": "Be in the town!"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "t1",
+      "type": "translate",
+      "prompt": "Puella in villā erat.",
+      "targets": [
+        "imperfect",
+        "sum"
+      ],
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "The girl was in the villa.",
+          "The girl was in the country house."
+        ],
+        "rubric": "Girl; was; in villa."
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "t2",
+      "type": "translate",
+      "prompt": "Servī aquam portābant.",
+      "targets": [
+        "imperfect"
+      ],
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "The servants were carrying water.",
+          "The slaves used to carry water."
+        ],
+        "rubric": "Servants; imperfect carry; water."
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "t3",
+      "type": "translate",
+      "prompt": "We were looking at the land.",
+      "targets": [
+        "imperfect"
+      ],
+      "payload": {
+        "direction": "E2L",
+        "length": "sentence",
+        "sampleAnswers": [
+          "Terram spectabamus.",
+          "Terram spectābāmus."
+        ],
+        "rubric": "terram; spectābāmus."
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "t4",
+      "type": "translate",
+      "prompt": "Amīcus fīliam monēbat.",
+      "targets": [
+        "imperfect",
+        "2nd conjugation"
+      ],
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "The friend was warning the daughter.",
+          "The friend used to advise the daughter."
+        ],
+        "rubric": "Friend; imperfect moneō; daughter acc."
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "m1",
+      "type": "matching",
+      "prompt": "Match tense idea.",
+      "targets": [
+        "imperfect"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "amat"
+          },
+          {
+            "id": "b",
+            "label": "amābat"
+          },
+          {
+            "id": "c",
+            "label": "amābit (preview)"
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "loves / is loving (present)"
+          },
+          {
+            "id": "2",
+            "label": "was loving / used to love"
+          },
+          {
+            "id": "3",
+            "label": "will love (future)"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "c1",
+      "type": "cloze",
+      "prompt": "Fill imperfect of sum.",
+      "targets": [
+        "imperfect",
+        "sum"
+      ],
+      "payload": {
+        "template": "Puellae in silvā {{1}}.",
+        "blanks": {
+          "1": [
+            "erant"
+          ]
+        },
+        "wordBank": [
+          "erant",
+          "sunt",
+          "erantne"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "f1",
+      "type": "single_form",
+      "prompt": "You (sing.) were (sum)?",
+      "targets": [
+        "imperfect",
+        "sum"
+      ],
+      "payload": {
+        "accept": [
+          "eras",
+          "erās"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

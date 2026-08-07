@@ -1,0 +1,197 @@
+{
+  "slug": "03-contrast",
+  "title": "hic vs ille vs is",
+  "unitSlug": "15-demonstratives",
+  "order": 3,
+  "standardSummary": "Choose among hic, ille, and is for sense in short sentences.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-choice"
+      },
+      {
+        "type": "skill_count",
+        "skill": "demonstratives",
+        "n": 3,
+        "label": "contrast demos"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match-c"
+      }
+    ]
+  },
+  "teach": "hic = this; ille = that; is = he/she/it or weak that.",
+  "allowList": {
+    "lemmas": [
+      "hic",
+      "ille",
+      "is",
+      "puella",
+      "servus",
+      "templum"
+    ],
+    "constructions": [
+      "demonstratives",
+      "hic",
+      "ille",
+      "is ea id"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "matching",
+      "translate",
+      "multi_select",
+      "short_answer"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-choice",
+      "type": "multiple_choice",
+      "prompt": "For 'this girl (near me)' best is often…",
+      "targets": [
+        "hic"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "illa puella"
+          },
+          {
+            "id": "b",
+            "label": "haec puella"
+          },
+          {
+            "id": "c",
+            "label": "ea only ever"
+          },
+          {
+            "id": "d",
+            "label": "quae puella"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match-c",
+      "type": "matching",
+      "prompt": "Match best label.",
+      "targets": [
+        "demonstratives"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "hic"
+          },
+          {
+            "id": "b",
+            "label": "ille"
+          },
+          {
+            "id": "c",
+            "label": "is"
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "this"
+          },
+          {
+            "id": "2",
+            "label": "that (far/emphatic)"
+          },
+          {
+            "id": "3",
+            "label": "he / weak that"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "tr1",
+      "type": "translate",
+      "prompt": "Hic servus labōrat; ille dormit.",
+      "targets": [
+        "demonstratives"
+      ],
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "This slave works; that one sleeps."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "ms1",
+      "type": "multi_select",
+      "prompt": "Which can mean 'that' in some contexts?",
+      "targets": [
+        "demonstratives"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "ille"
+          },
+          {
+            "id": "b",
+            "label": "is"
+          },
+          {
+            "id": "c",
+            "label": "hic always only 'who'"
+          },
+          {
+            "id": "d",
+            "label": "illud"
+          }
+        ],
+        "correctOptionIds": [
+          "a",
+          "b",
+          "d"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sa1",
+      "type": "short_answer",
+      "prompt": "Translate the pair idea: hic… ille…",
+      "targets": [
+        "demonstratives"
+      ],
+      "payload": {
+        "sampleAnswers": [
+          "this one… that one… / the latter… the former…",
+          "this… that…"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

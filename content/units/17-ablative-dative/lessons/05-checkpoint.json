@@ -1,0 +1,163 @@
+{
+  "slug": "05-checkpoint",
+  "title": "Checkpoint — Ablative & dative uses",
+  "unitSlug": "17-ablative-dative",
+  "order": 5,
+  "standardSummary": "Label and translate means, agent, accompaniment, and indirect object.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc1"
+      },
+      {
+        "type": "skill_count",
+        "skill": "ablative uses",
+        "n": 2,
+        "label": "abl cp"
+      },
+      {
+        "type": "skill_count",
+        "skill": "dative uses",
+        "n": 2,
+        "label": "dat cp"
+      }
+    ]
+  },
+  "teach": "Checkpoint: ablative uses + dative IO.",
+  "allowList": {
+    "lemmas": [
+      "cum",
+      "ab",
+      "do",
+      "gladius",
+      "puella",
+      "miles"
+    ],
+    "constructions": [
+      "ablative uses",
+      "dative uses"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "matching",
+      "translate",
+      "short_answer",
+      "cloze"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc1",
+      "type": "multiple_choice",
+      "prompt": "ā rēge with a passive verb most likely marks…",
+      "targets": [
+        "ablative uses"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "means (thing)"
+          },
+          {
+            "id": "b",
+            "label": "personal agent"
+          },
+          {
+            "id": "c",
+            "label": "time when only"
+          },
+          {
+            "id": "d",
+            "label": "direct object"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match1",
+      "type": "matching",
+      "prompt": "Match.",
+      "targets": [
+        "ablative uses",
+        "dative uses"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "ensī"
+          },
+          {
+            "id": "b",
+            "label": "cum mīlite"
+          },
+          {
+            "id": "c",
+            "label": "puerō librum dō"
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "means (with a sword)"
+          },
+          {
+            "id": "2",
+            "label": "accompaniment"
+          },
+          {
+            "id": "3",
+            "label": "dative IO (to the boy)"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "tr1",
+      "type": "translate",
+      "prompt": "Māter fīliae aquam dat.",
+      "targets": [
+        "dative uses"
+      ],
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "The mother gives water to her daughter."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sa1",
+      "type": "short_answer",
+      "prompt": "List three ablative uses you know.",
+      "targets": [
+        "ablative uses"
+      ],
+      "payload": {
+        "sampleAnswers": [
+          "means, agent, accompaniment / manner / separation",
+          "means agent accompaniment"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

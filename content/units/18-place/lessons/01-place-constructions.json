@@ -1,0 +1,190 @@
+{
+  "slug": "01-place-constructions",
+  "title": "Place constructions",
+  "unitSlug": "18-place",
+  "order": 1,
+  "standardSummary": "Choose in/ad/ab/ex correctly for place where, to which, from which.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-place"
+      },
+      {
+        "type": "skill_count",
+        "skill": "place",
+        "n": 4,
+        "label": "place constructions"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match-p"
+      }
+    ]
+  },
+  "teach": "Where: in + abl. To which: in/ad + acc. From which: ab/ex + abl.",
+  "allowList": {
+    "lemmas": [
+      "in",
+      "ad",
+      "ab",
+      "ex",
+      "urbs",
+      "Italia",
+      "castra",
+      "Roma"
+    ],
+    "constructions": [
+      "place",
+      "accusative",
+      "ablative"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "matching",
+      "cloze",
+      "translate",
+      "short_answer"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-place",
+      "type": "multiple_choice",
+      "prompt": "'in Italiā' expresses…",
+      "targets": [
+        "place"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "motion into Italy"
+          },
+          {
+            "id": "b",
+            "label": "place where in Italy"
+          },
+          {
+            "id": "c",
+            "label": "from Italy"
+          },
+          {
+            "id": "d",
+            "label": "through Italy only"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match-p",
+      "type": "matching",
+      "prompt": "Match.",
+      "targets": [
+        "place"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "in urbe"
+          },
+          {
+            "id": "b",
+            "label": "in urbem"
+          },
+          {
+            "id": "c",
+            "label": "ab urbe"
+          },
+          {
+            "id": "d",
+            "label": "ad urbem"
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "in the city"
+          },
+          {
+            "id": "2",
+            "label": "into the city"
+          },
+          {
+            "id": "3",
+            "label": "from the city"
+          },
+          {
+            "id": "4",
+            "label": "to the city"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3",
+          "d": "4"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "cl1",
+      "type": "cloze",
+      "prompt": "They come into the camp.",
+      "targets": [
+        "place"
+      ],
+      "payload": {
+        "template": "in {{1}} veniunt",
+        "blanks": {
+          "1": [
+            "castra"
+          ]
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "tr1",
+      "type": "translate",
+      "prompt": "Ex Italiā ad Hispāniam nāvigant.",
+      "targets": [
+        "place"
+      ],
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "They sail from Italy to Spain."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sa1",
+      "type": "short_answer",
+      "prompt": "Give the three place questions Latin answers with prep+case.",
+      "targets": [
+        "place"
+      ],
+      "payload": {
+        "sampleAnswers": [
+          "where? to which? from which?",
+          "ubi / quō / unde"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

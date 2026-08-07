@@ -1,0 +1,220 @@
+{
+  "slug": "01-principal-parts",
+  "title": "Principal parts",
+  "unitSlug": "12-perfect-system",
+  "order": 1,
+  "standardSummary": "State the four principal parts of common verbs and explain what each is for.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-pp"
+      },
+      {
+        "type": "skill_count",
+        "skill": "principal parts",
+        "n": 3,
+        "label": "principal parts"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match-pp"
+      }
+    ]
+  },
+  "teach": "Four principal parts: 1 present, 2 infinitive, 3 perfect, 4 supine/perfect participle stem.",
+  "allowList": {
+    "lemmas": [
+      "amo",
+      "moneo",
+      "rego",
+      "capio",
+      "sum",
+      "porto",
+      "duco"
+    ],
+    "constructions": [
+      "principal parts"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "matching",
+      "short_answer",
+      "single_form",
+      "multi_select"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-pp",
+      "type": "multiple_choice",
+      "prompt": "The third principal part is used to form…",
+      "targets": [
+        "principal parts"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "only the present"
+          },
+          {
+            "id": "b",
+            "label": "the perfect system (perfect stem)"
+          },
+          {
+            "id": "c",
+            "label": "only the future passive"
+          },
+          {
+            "id": "d",
+            "label": "nouns only"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match-pp",
+      "type": "matching",
+      "prompt": "Match part number to example (amō).",
+      "targets": [
+        "principal parts"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "1st"
+          },
+          {
+            "id": "b",
+            "label": "2nd"
+          },
+          {
+            "id": "c",
+            "label": "3rd"
+          },
+          {
+            "id": "d",
+            "label": "4th"
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "amō"
+          },
+          {
+            "id": "2",
+            "label": "amāre"
+          },
+          {
+            "id": "3",
+            "label": "amāvī"
+          },
+          {
+            "id": "4",
+            "label": "amātum"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3",
+          "d": "4"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sf1",
+      "type": "single_form",
+      "prompt": "Third principal part of sum:",
+      "targets": [
+        "principal parts",
+        "sum"
+      ],
+      "payload": {
+        "accept": [
+          "fui",
+          "fuī"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sf2",
+      "type": "single_form",
+      "prompt": "Third principal part of dūcō:",
+      "targets": [
+        "principal parts"
+      ],
+      "payload": {
+        "accept": [
+          "duxi",
+          "dūxī"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "ms1",
+      "type": "multi_select",
+      "prompt": "Which come from the perfect stem?",
+      "targets": [
+        "principal parts",
+        "perfect"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "amāvī"
+          },
+          {
+            "id": "b",
+            "label": "amābam"
+          },
+          {
+            "id": "c",
+            "label": "amāveram"
+          },
+          {
+            "id": "d",
+            "label": "amō"
+          }
+        ],
+        "correctOptionIds": [
+          "a",
+          "c"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sa1",
+      "type": "short_answer",
+      "prompt": "Why learn all four principal parts?",
+      "targets": [
+        "principal parts"
+      ],
+      "payload": {
+        "sampleAnswers": [
+          "They give stems for present, perfect, and participial systems.",
+          "You need them to form tenses and participles correctly."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

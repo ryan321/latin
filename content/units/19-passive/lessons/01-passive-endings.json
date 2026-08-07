@@ -1,0 +1,182 @@
+{
+  "slug": "01-passive-endings",
+  "title": "Passive personal endings",
+  "unitSlug": "19-passive",
+  "order": 1,
+  "standardSummary": "State passive personal endings and form present passive of a 1st-conjugation verb.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-end"
+      },
+      {
+        "type": "skill_count",
+        "skill": "passive",
+        "n": 4,
+        "label": "passive endings"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match-e"
+      }
+    ]
+  },
+  "teach": "Passive endings: -r -ris -tur -mur -minī -ntur. amor amāris amātur…",
+  "allowList": {
+    "lemmas": [
+      "amo",
+      "porto",
+      "moneo",
+      "laudo"
+    ],
+    "constructions": [
+      "passive",
+      "present"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "matching",
+      "single_form",
+      "ordering",
+      "short_answer"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-end",
+      "type": "multiple_choice",
+      "prompt": "3sg present passive ending is…",
+      "targets": [
+        "passive"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "-t"
+          },
+          {
+            "id": "b",
+            "label": "-tur"
+          },
+          {
+            "id": "c",
+            "label": "-nt"
+          },
+          {
+            "id": "d",
+            "label": "-r only"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match-e",
+      "type": "matching",
+      "prompt": "Match passive form of amō.",
+      "targets": [
+        "passive"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "amor"
+          },
+          {
+            "id": "b",
+            "label": "amāris"
+          },
+          {
+            "id": "c",
+            "label": "amātur"
+          },
+          {
+            "id": "d",
+            "label": "amantur"
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "I am loved"
+          },
+          {
+            "id": "2",
+            "label": "you are loved"
+          },
+          {
+            "id": "3",
+            "label": "he/she is loved"
+          },
+          {
+            "id": "4",
+            "label": "they are loved"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3",
+          "d": "4"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sf1",
+      "type": "single_form",
+      "prompt": "3sg present passive of portō:",
+      "targets": [
+        "passive"
+      ],
+      "payload": {
+        "accept": [
+          "portatur",
+          "portātur"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sf2",
+      "type": "single_form",
+      "prompt": "1pl present passive of amō:",
+      "targets": [
+        "passive"
+      ],
+      "payload": {
+        "accept": [
+          "amamur",
+          "amāmur"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sa1",
+      "type": "short_answer",
+      "prompt": "What does passive voice emphasize?",
+      "targets": [
+        "passive"
+      ],
+      "payload": {
+        "sampleAnswers": [
+          "The subject receives the action.",
+          "Subject is acted upon."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

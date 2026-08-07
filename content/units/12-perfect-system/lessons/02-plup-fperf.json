@@ -1,0 +1,221 @@
+{
+  "slug": "02-plup-fperf",
+  "title": "Pluperfect & future perfect",
+  "unitSlug": "12-perfect-system",
+  "order": 3,
+  "standardSummary": "Form pluperfect and future perfect active; distinguish all three perfect-system tenses.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-plup"
+      },
+      {
+        "type": "skill_count",
+        "skill": "pluperfect",
+        "n": 3,
+        "label": "plup/fperf"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match-t"
+      }
+    ]
+  },
+  "teach": "Pluperfect: perfect stem + eram… (had done). Future perfect: perfect stem + erō… (will have done).",
+  "allowList": {
+    "lemmas": [
+      "amo",
+      "sum",
+      "duco",
+      "capio",
+      "porto"
+    ],
+    "constructions": [
+      "pluperfect",
+      "future perfect",
+      "perfect"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "matching",
+      "single_form",
+      "short_answer",
+      "translate"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-plup",
+      "type": "multiple_choice",
+      "prompt": "amāveram means…",
+      "targets": [
+        "pluperfect"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "I will love"
+          },
+          {
+            "id": "b",
+            "label": "I had loved"
+          },
+          {
+            "id": "c",
+            "label": "I was loving"
+          },
+          {
+            "id": "d",
+            "label": "I love"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match-t",
+      "type": "matching",
+      "prompt": "Match form.",
+      "targets": [
+        "perfect",
+        "pluperfect",
+        "future perfect"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "amāvī"
+          },
+          {
+            "id": "b",
+            "label": "amāveram"
+          },
+          {
+            "id": "c",
+            "label": "amāverō"
+          },
+          {
+            "id": "d",
+            "label": "amābam"
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "perfect"
+          },
+          {
+            "id": "2",
+            "label": "pluperfect"
+          },
+          {
+            "id": "3",
+            "label": "future perfect"
+          },
+          {
+            "id": "4",
+            "label": "imperfect"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3",
+          "d": "4"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sf1",
+      "type": "single_form",
+      "prompt": "1sg pluperfect of sum:",
+      "targets": [
+        "pluperfect",
+        "sum"
+      ],
+      "payload": {
+        "accept": [
+          "fueram"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sf2",
+      "type": "single_form",
+      "prompt": "3sg future perfect of amō:",
+      "targets": [
+        "future perfect"
+      ],
+      "payload": {
+        "accept": [
+          "amaverit",
+          "amāverit"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sf3",
+      "type": "single_form",
+      "prompt": "3pl pluperfect of dūcō:",
+      "targets": [
+        "pluperfect"
+      ],
+      "payload": {
+        "accept": [
+          "duxerant",
+          "dūxerant"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sa1",
+      "type": "short_answer",
+      "prompt": "In English, how do you often render pluperfect vs perfect?",
+      "targets": [
+        "pluperfect",
+        "perfect"
+      ],
+      "payload": {
+        "sampleAnswers": [
+          "Pluperfect: had done; perfect: has/have done or did.",
+          "had X vs has/did X"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "tr1",
+      "type": "translate",
+      "prompt": "Mīlitēs castra cēperant.",
+      "targets": [
+        "pluperfect"
+      ],
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "The soldiers had captured the camp.",
+          "The soldiers had taken the camp."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

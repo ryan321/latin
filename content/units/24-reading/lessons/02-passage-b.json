@@ -1,0 +1,210 @@
+{
+  "slug": "02-passage-b",
+  "title": "Passage workshop B — principate",
+  "unitSlug": "24-reading",
+  "order": 3,
+  "standardSummary": "Read short culture-linked sentences on Augustus/principate; mixed review.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-aug"
+      },
+      {
+        "type": "skill_count",
+        "skill": "reading",
+        "n": 3,
+        "label": "passage B"
+      },
+      {
+        "type": "translate_count",
+        "n": 2
+      }
+    ]
+  },
+  "teach": "Augustus, pax, imperium; longer sentences with known grammar.",
+  "allowList": {
+    "lemmas": [
+      "Augustus",
+      "pax",
+      "imperium",
+      "populus",
+      "Roma",
+      "do",
+      "sum",
+      "qui"
+    ],
+    "constructions": [
+      "reading",
+      "culture",
+      "relative pronoun"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "translate",
+      "matching",
+      "short_answer",
+      "cloze"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-aug",
+      "type": "multiple_choice",
+      "prompt": "Augustus is associated with the start of the…",
+      "targets": [
+        "culture"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "Roman monarchy of Romulus only"
+          },
+          {
+            "id": "b",
+            "label": "principate / imperial system after the Republic"
+          },
+          {
+            "id": "c",
+            "label": "end of all Latin"
+          },
+          {
+            "id": "d",
+            "label": "Greek democracy in Athens only"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match1",
+      "type": "matching",
+      "prompt": "Match.",
+      "targets": [
+        "culture"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "pāx"
+          },
+          {
+            "id": "b",
+            "label": "imperium"
+          },
+          {
+            "id": "c",
+            "label": "populus Rōmānus"
+          },
+          {
+            "id": "d",
+            "label": "prīnceps"
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "peace"
+          },
+          {
+            "id": "2",
+            "label": "command/empire"
+          },
+          {
+            "id": "3",
+            "label": "the Roman people"
+          },
+          {
+            "id": "4",
+            "label": "leading citizen / emperor title sense"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3",
+          "d": "4"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "tr1",
+      "type": "translate",
+      "prompt": "Augustus pācem populo Rōmānō dedit.",
+      "targets": [
+        "reading",
+        "dative uses"
+      ],
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "Augustus gave peace to the Roman people."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "tr2",
+      "type": "translate",
+      "prompt": "Rōma quae caput imperiī erat magna est.",
+      "targets": [
+        "reading",
+        "relative pronoun"
+      ],
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "Rome, which was the head of the empire, is great."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "cl1",
+      "type": "cloze",
+      "prompt": "Peace was given (perfect passive 3sg of dō).",
+      "targets": [
+        "passive",
+        "perfect"
+      ],
+      "payload": {
+        "template": "pāx {{1}}",
+        "blanks": {
+          "1": [
+            "data est"
+          ]
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sa1",
+      "type": "short_answer",
+      "prompt": "What does 'principate' emphasize about early empire politics?",
+      "targets": [
+        "culture"
+      ],
+      "payload": {
+        "sampleAnswers": [
+          "The emperor as first citizen with republican forms still claimed.",
+          "Power centered on a princeps."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

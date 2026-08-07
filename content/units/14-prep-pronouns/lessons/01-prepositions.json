@@ -1,0 +1,209 @@
+{
+  "slug": "01-prepositions",
+  "title": "Prepositions: acc vs abl",
+  "unitSlug": "14-prep-pronouns",
+  "order": 1,
+  "standardSummary": "State which case common prepositions take; translate short prepositional phrases.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-in"
+      },
+      {
+        "type": "skill_count",
+        "skill": "prepositions",
+        "n": 4,
+        "label": "prepositions"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match-prep"
+      }
+    ]
+  },
+  "teach": "ad/in(+acc)/per take acc; ab/cum/dē/ex/in(+abl) take abl.",
+  "allowList": {
+    "lemmas": [
+      "ad",
+      "in",
+      "per",
+      "ab",
+      "cum",
+      "de",
+      "ex",
+      "urbs",
+      "via",
+      "castra"
+    ],
+    "constructions": [
+      "prepositions",
+      "accusative",
+      "ablative"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "matching",
+      "single_form",
+      "cloze",
+      "translate"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-in",
+      "type": "multiple_choice",
+      "prompt": "in urbem means…",
+      "targets": [
+        "prepositions"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "in the city (where)"
+          },
+          {
+            "id": "b",
+            "label": "into the city (motion to)"
+          },
+          {
+            "id": "c",
+            "label": "from the city"
+          },
+          {
+            "id": "d",
+            "label": "with the city"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match-prep",
+      "type": "matching",
+      "prompt": "Match preposition to typical case.",
+      "targets": [
+        "prepositions"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "ad"
+          },
+          {
+            "id": "b",
+            "label": "cum"
+          },
+          {
+            "id": "c",
+            "label": "ex"
+          },
+          {
+            "id": "d",
+            "label": "per"
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "accusative"
+          },
+          {
+            "id": "2",
+            "label": "ablative"
+          },
+          {
+            "id": "3",
+            "label": "ablative"
+          },
+          {
+            "id": "4",
+            "label": "accusative"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3",
+          "d": "4"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sf1",
+      "type": "single_form",
+      "prompt": "cum + abl of amīcus sing.:",
+      "targets": [
+        "prepositions"
+      ],
+      "payload": {
+        "accept": [
+          "amico",
+          "amīcō"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sf2",
+      "type": "single_form",
+      "prompt": "ad + 'city' (acc):",
+      "targets": [
+        "prepositions"
+      ],
+      "payload": {
+        "accept": [
+          "urbem"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "cl1",
+      "type": "cloze",
+      "prompt": "They walk on the road.",
+      "targets": [
+        "prepositions"
+      ],
+      "payload": {
+        "template": "in {{1}} ambulant",
+        "blanks": {
+          "1": [
+            "via",
+            "viā"
+          ]
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "tr1",
+      "type": "translate",
+      "prompt": "ex castrīs",
+      "targets": [
+        "prepositions"
+      ],
+      "payload": {
+        "direction": "L2E",
+        "length": "phrase",
+        "sampleAnswers": [
+          "out of the camp",
+          "from the camp"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

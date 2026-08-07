@@ -1,0 +1,188 @@
+{
+  "slug": "05-checkpoint",
+  "title": "Checkpoint — Third conjugation",
+  "unitSlug": "11-third-conjugation",
+  "order": 5,
+  "standardSummary": "Master present system of 3rd and -iō verbs including imperfect and future.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc1"
+      },
+      {
+        "type": "skill_count",
+        "skill": "3rd conjugation",
+        "n": 4,
+        "label": "checkpoint 3rd conj"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match1"
+      }
+    ]
+  },
+  "teach": "Checkpoint: regō / capiō present system.",
+  "allowList": {
+    "lemmas": [
+      "rego",
+      "capio",
+      "duco",
+      "facio",
+      "mitto",
+      "vinco"
+    ],
+    "constructions": [
+      "3rd conjugation",
+      "io verb",
+      "future",
+      "imperfect"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "matching",
+      "single_form",
+      "translate",
+      "short_answer"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc1",
+      "type": "multiple_choice",
+      "prompt": "Future 3sg of mittō is…",
+      "targets": [
+        "3rd conjugation future"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "mittābit"
+          },
+          {
+            "id": "b",
+            "label": "mittet"
+          },
+          {
+            "id": "c",
+            "label": "mittēbat"
+          },
+          {
+            "id": "d",
+            "label": "mīsit"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match1",
+      "type": "matching",
+      "prompt": "Match.",
+      "targets": [
+        "3rd conjugation"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "regunt"
+          },
+          {
+            "id": "b",
+            "label": "capiēbat"
+          },
+          {
+            "id": "c",
+            "label": "faciam"
+          },
+          {
+            "id": "d",
+            "label": "dūcēmus"
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "present 3pl regō"
+          },
+          {
+            "id": "2",
+            "label": "imperfect 3sg capiō"
+          },
+          {
+            "id": "3",
+            "label": "future 1sg faciō"
+          },
+          {
+            "id": "4",
+            "label": "future 1pl dūcō"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3",
+          "d": "4"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sf1",
+      "type": "single_form",
+      "prompt": "2sg present of scrībō:",
+      "targets": [
+        "3rd conjugation"
+      ],
+      "payload": {
+        "accept": [
+          "scribis",
+          "scrībis"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sf2",
+      "type": "single_form",
+      "prompt": "3pl future of capiō:",
+      "targets": [
+        "io verb",
+        "future"
+      ],
+      "payload": {
+        "accept": [
+          "capient"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "tr1",
+      "type": "translate",
+      "prompt": "Hostēs vincēmus.",
+      "targets": [
+        "3rd conjugation"
+      ],
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "We will conquer the enemies.",
+          "We shall defeat the enemies."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

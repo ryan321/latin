@@ -1,0 +1,205 @@
+{
+  "slug": "02-imp-fut-4",
+  "title": "Imperfect & future of 4th",
+  "unitSlug": "13-fourth-conjugation",
+  "order": 2,
+  "standardSummary": "Form imperfect and future of 4th conjugation verbs.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-fut"
+      },
+      {
+        "type": "skill_count",
+        "skill": "4th conjugation future",
+        "n": 3,
+        "label": "4th tenses"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match-t"
+      }
+    ]
+  },
+  "teach": "Imperfect: audiēbam. Future: audiam, audiēs, audiet… (like 3rd -am series).",
+  "allowList": {
+    "lemmas": [
+      "audio",
+      "venio",
+      "scio",
+      "munio"
+    ],
+    "constructions": [
+      "4th conjugation",
+      "imperfect",
+      "future"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "matching",
+      "single_form",
+      "translate",
+      "cloze"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-fut",
+      "type": "multiple_choice",
+      "prompt": "1sg future of audiō is…",
+      "targets": [
+        "4th conjugation future"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "audībō"
+          },
+          {
+            "id": "b",
+            "label": "audiam"
+          },
+          {
+            "id": "c",
+            "label": "audiēbō"
+          },
+          {
+            "id": "d",
+            "label": "audīvī"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match-t",
+      "type": "matching",
+      "prompt": "Match.",
+      "targets": [
+        "4th conjugation"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "audiēbat"
+          },
+          {
+            "id": "b",
+            "label": "audiet"
+          },
+          {
+            "id": "c",
+            "label": "veniēbant"
+          },
+          {
+            "id": "d",
+            "label": "scient"
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "impf 3sg audiō"
+          },
+          {
+            "id": "2",
+            "label": "fut 3sg audiō"
+          },
+          {
+            "id": "3",
+            "label": "impf 3pl veniō"
+          },
+          {
+            "id": "4",
+            "label": "fut 3pl sciō"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3",
+          "d": "4"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sf1",
+      "type": "single_form",
+      "prompt": "1sg imperfect of veniō:",
+      "targets": [
+        "4th conjugation",
+        "imperfect"
+      ],
+      "payload": {
+        "accept": [
+          "veniebam",
+          "veniēbam"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sf2",
+      "type": "single_form",
+      "prompt": "3pl future of audiō:",
+      "targets": [
+        "4th conjugation future"
+      ],
+      "payload": {
+        "accept": [
+          "audient"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "tr1",
+      "type": "translate",
+      "prompt": "Puerōs audiēmus.",
+      "targets": [
+        "4th conjugation"
+      ],
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "We will hear the boys.",
+          "We shall listen to the boys."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "cl1",
+      "type": "cloze",
+      "prompt": "They were coming.",
+      "targets": [
+        "4th conjugation",
+        "imperfect"
+      ],
+      "payload": {
+        "template": "{{1}}",
+        "blanks": {
+          "1": [
+            "veniebant",
+            "veniēbant"
+          ]
+        }
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

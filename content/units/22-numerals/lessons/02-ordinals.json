@@ -1,0 +1,202 @@
+{
+  "slug": "02-ordinals",
+  "title": "Ordinal numbers",
+  "unitSlug": "22-numerals",
+  "order": 2,
+  "standardSummary": "Form and recognize ordinals prīmus… decimus and common higher ones.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-prim"
+      },
+      {
+        "type": "skill_count",
+        "skill": "ordinals",
+        "n": 3,
+        "label": "ordinals"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match-o"
+      }
+    ]
+  },
+  "teach": "prīmus secundus tertius…; decline like adjectives.",
+  "allowList": {
+    "lemmas": [
+      "primus",
+      "secundus",
+      "tertius",
+      "quartus",
+      "quintus",
+      "sextus",
+      "decimus"
+    ],
+    "constructions": [
+      "ordinals",
+      "numerals"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "matching",
+      "single_form",
+      "translate",
+      "cloze"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-prim",
+      "type": "multiple_choice",
+      "prompt": "prīmus means…",
+      "targets": [
+        "ordinals"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "one"
+          },
+          {
+            "id": "b",
+            "label": "first"
+          },
+          {
+            "id": "c",
+            "label": "once"
+          },
+          {
+            "id": "d",
+            "label": "none"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match-o",
+      "type": "matching",
+      "prompt": "Match.",
+      "targets": [
+        "ordinals"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "secundus"
+          },
+          {
+            "id": "b",
+            "label": "tertius"
+          },
+          {
+            "id": "c",
+            "label": "quīntus"
+          },
+          {
+            "id": "d",
+            "label": "decimus"
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "second"
+          },
+          {
+            "id": "2",
+            "label": "third"
+          },
+          {
+            "id": "3",
+            "label": "fifth"
+          },
+          {
+            "id": "4",
+            "label": "tenth"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3",
+          "d": "4"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sf1",
+      "type": "single_form",
+      "prompt": "Latin ordinal 'fourth':",
+      "targets": [
+        "ordinals"
+      ],
+      "payload": {
+        "accept": [
+          "quartus"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sf2",
+      "type": "single_form",
+      "prompt": "'sixth' f. nom. s.:",
+      "targets": [
+        "ordinals"
+      ],
+      "payload": {
+        "accept": [
+          "sexta"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "tr1",
+      "type": "translate",
+      "prompt": "Prīma hōra est.",
+      "targets": [
+        "ordinals"
+      ],
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "It is the first hour."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "cl1",
+      "type": "cloze",
+      "prompt": "The second day.",
+      "targets": [
+        "ordinals"
+      ],
+      "payload": {
+        "template": "{{1}} diēs",
+        "blanks": {
+          "1": [
+            "secundus"
+          ]
+        }
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

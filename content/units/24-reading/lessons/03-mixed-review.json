@@ -1,0 +1,218 @@
+{
+  "slug": "03-mixed-review",
+  "title": "Mixed forms bootcamp",
+  "unitSlug": "24-reading",
+  "order": 4,
+  "standardSummary": "Rapid identification of forms across Year 1 grammar in mixed drills.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc1"
+      },
+      {
+        "type": "skill_count",
+        "skill": "mixed review",
+        "n": 4,
+        "label": "mixed forms"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match1"
+      }
+    ]
+  },
+  "teach": "Identify tense/case/voice/degree across mixed examples.",
+  "allowList": {
+    "lemmas": [
+      "amo",
+      "rego",
+      "sum",
+      "qui",
+      "hic",
+      "bonus",
+      "urbs"
+    ],
+    "constructions": [
+      "mixed review"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "matching",
+      "single_form",
+      "multi_select",
+      "short_answer"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc1",
+      "type": "multiple_choice",
+      "prompt": "rēxissent would be…",
+      "targets": [
+        "mixed review"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "present"
+          },
+          {
+            "id": "b",
+            "label": "pluperfect subjunctive (preview) / advanced"
+          },
+          {
+            "id": "c",
+            "label": "clearly future of sum"
+          },
+          {
+            "id": "d",
+            "label": "nom pl of rēx"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match1",
+      "type": "matching",
+      "prompt": "Match form analysis.",
+      "targets": [
+        "mixed review"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "amāberis"
+          },
+          {
+            "id": "b",
+            "label": "cēperant"
+          },
+          {
+            "id": "c",
+            "label": "fortior"
+          },
+          {
+            "id": "d",
+            "label": "quibus"
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "fut passive 2sg"
+          },
+          {
+            "id": "2",
+            "label": "pluperfect 3pl"
+          },
+          {
+            "id": "3",
+            "label": "comparative"
+          },
+          {
+            "id": "4",
+            "label": "dat/abl pl relative"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3",
+          "d": "4"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sf1",
+      "type": "single_form",
+      "prompt": "3sg future of sum:",
+      "targets": [
+        "future",
+        "sum"
+      ],
+      "payload": {
+        "accept": [
+          "erit"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sf2",
+      "type": "single_form",
+      "prompt": "Gen pl of urbs (i-stem):",
+      "targets": [
+        "i-stem"
+      ],
+      "payload": {
+        "accept": [
+          "urbium"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "ms1",
+      "type": "multi_select",
+      "prompt": "Which are perfect system?",
+      "targets": [
+        "perfect"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "amāvī"
+          },
+          {
+            "id": "b",
+            "label": "amāveram"
+          },
+          {
+            "id": "c",
+            "label": "amābam"
+          },
+          {
+            "id": "d",
+            "label": "amāverō"
+          }
+        ],
+        "correctOptionIds": [
+          "a",
+          "b",
+          "d"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sa1",
+      "type": "short_answer",
+      "prompt": "Name four conjugations' present infinitive endings.",
+      "targets": [
+        "conjugation id"
+      ],
+      "payload": {
+        "sampleAnswers": [
+          "-āre -ēre -ere -īre",
+          "are ere (long) ere (short) ire"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

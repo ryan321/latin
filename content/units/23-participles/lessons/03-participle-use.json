@@ -1,0 +1,199 @@
+{
+  "slug": "03-participle-use",
+  "title": "Participles in storytelling",
+  "unitSlug": "23-participles",
+  "order": 3,
+  "standardSummary": "Translate ablative absolute light intro and participial phrases in narrative.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-aa"
+      },
+      {
+        "type": "skill_count",
+        "skill": "participles",
+        "n": 3,
+        "label": "part use"
+      },
+      {
+        "type": "translate_count",
+        "n": 2
+      }
+    ]
+  },
+  "teach": "Participial phrases; light ablative absolute: urbe captā, mīlitēs discessērunt.",
+  "allowList": {
+    "lemmas": [
+      "urbs",
+      "miles",
+      "rex",
+      "capio",
+      "video",
+      "dico"
+    ],
+    "constructions": [
+      "participles",
+      "ablative absolute"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "translate",
+      "matching",
+      "cloze",
+      "short_answer"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-aa",
+      "type": "multiple_choice",
+      "prompt": "In 'urbe captā', the phrase is often…",
+      "targets": [
+        "ablative absolute"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "a finite main verb alone"
+          },
+          {
+            "id": "b",
+            "label": "an ablative absolute setting the scene"
+          },
+          {
+            "id": "c",
+            "label": "a genitive of possession only"
+          },
+          {
+            "id": "d",
+            "label": "future infinitive"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match1",
+      "type": "matching",
+      "prompt": "Match sense.",
+      "targets": [
+        "participles"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "mīles pugnāns"
+          },
+          {
+            "id": "b",
+            "label": "urbe captā"
+          },
+          {
+            "id": "c",
+            "label": "litterīs scrīptīs"
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "the soldier fighting"
+          },
+          {
+            "id": "2",
+            "label": "with the city having been captured"
+          },
+          {
+            "id": "3",
+            "label": "with the letter having been written"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "tr1",
+      "type": "translate",
+      "prompt": "Hostibus vīsīs, mīlitēs fūgērunt.",
+      "targets": [
+        "ablative absolute",
+        "participles"
+      ],
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "When the enemies had been seen, the soldiers fled.",
+          "With the enemies having been seen, the soldiers fled."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "tr2",
+      "type": "translate",
+      "prompt": "The king, having been warned, comes.",
+      "targets": [
+        "perfect participle"
+      ],
+      "payload": {
+        "direction": "E2L",
+        "length": "sentence",
+        "sampleAnswers": [
+          "Rex monitus venit.",
+          "Rēx monitus venit."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "cl1",
+      "type": "cloze",
+      "prompt": "With these things said (n. pl. abl PPP of dīcō).",
+      "targets": [
+        "ablative absolute"
+      ],
+      "payload": {
+        "template": "hīs {{1}}",
+        "blanks": {
+          "1": [
+            "dictis",
+            "dictīs"
+          ]
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sa1",
+      "type": "short_answer",
+      "prompt": "How can you often English an ablative absolute?",
+      "targets": [
+        "ablative absolute"
+      ],
+      "payload": {
+        "sampleAnswers": [
+          "with a 'when/after/since' clause",
+          "when/after X had been done"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

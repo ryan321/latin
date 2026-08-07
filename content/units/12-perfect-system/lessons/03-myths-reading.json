@@ -1,0 +1,213 @@
+{
+  "slug": "03-myths-reading",
+  "title": "Kings & short narrative",
+  "unitSlug": "12-perfect-system",
+  "order": 4,
+  "standardSummary": "Read short perfect-heavy sentences on early Rome / kings; choose tenses deliberately.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-roma"
+      },
+      {
+        "type": "skill_count",
+        "skill": "perfect",
+        "n": 3,
+        "label": "narrative perfect"
+      },
+      {
+        "type": "translate_count",
+        "n": 2
+      }
+    ]
+  },
+  "teach": "Culture: foundation myths & kings; perfect for completed story actions.",
+  "allowList": {
+    "lemmas": [
+      "rex",
+      "Roma",
+      "urbs",
+      "condo",
+      "vinco",
+      "venio",
+      "sum",
+      "pugno"
+    ],
+    "constructions": [
+      "perfect",
+      "narrative"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "translate",
+      "matching",
+      "cloze",
+      "short_answer"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-roma",
+      "type": "multiple_choice",
+      "prompt": "In Roman tradition, early Rome was ruled by…",
+      "targets": [
+        "culture"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "only emperors from day one"
+          },
+          {
+            "id": "b",
+            "label": "kings, then the Republic"
+          },
+          {
+            "id": "c",
+            "label": "only Greek archons"
+          },
+          {
+            "id": "d",
+            "label": "no leaders"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match1",
+      "type": "matching",
+      "prompt": "Match tense sense in story.",
+      "targets": [
+        "perfect",
+        "imperfect"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "vēnit"
+          },
+          {
+            "id": "b",
+            "label": "veniēbat"
+          },
+          {
+            "id": "c",
+            "label": "vēnerat"
+          },
+          {
+            "id": "d",
+            "label": "veniet"
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "came / has come"
+          },
+          {
+            "id": "2",
+            "label": "was coming"
+          },
+          {
+            "id": "3",
+            "label": "had come"
+          },
+          {
+            "id": "4",
+            "label": "will come"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3",
+          "d": "4"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "tr1",
+      "type": "translate",
+      "prompt": "Rōmulus urbem condidit.",
+      "targets": [
+        "perfect"
+      ],
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "Romulus founded the city.",
+          "Romulus has founded the city."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "tr2",
+      "type": "translate",
+      "prompt": "The king had conquered the enemies.",
+      "targets": [
+        "pluperfect"
+      ],
+      "payload": {
+        "direction": "E2L",
+        "length": "sentence",
+        "sampleAnswers": [
+          "Rex hostes vicerat.",
+          "Rēx hostēs vīcerat."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "cl1",
+      "type": "cloze",
+      "prompt": "They fought (perfect of pugnō).",
+      "targets": [
+        "perfect"
+      ],
+      "payload": {
+        "template": "mīlitēs {{1}}",
+        "blanks": {
+          "1": [
+            "pugnaverunt",
+            "pugnāvērunt",
+            "pugnavere",
+            "pugnāvēre"
+          ]
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sa1",
+      "type": "short_answer",
+      "prompt": "Why do stories often mix imperfect and perfect?",
+      "targets": [
+        "perfect",
+        "imperfect"
+      ],
+      "payload": {
+        "sampleAnswers": [
+          "Imperfect sets scene/ongoing action; perfect moves the plot with completed events.",
+          "Background vs completed events."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

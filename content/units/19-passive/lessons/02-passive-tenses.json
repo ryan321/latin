@@ -1,0 +1,203 @@
+{
+  "slug": "02-passive-tenses",
+  "title": "Imperfect & future passive",
+  "unitSlug": "19-passive",
+  "order": 2,
+  "standardSummary": "Form imperfect and future passive of 1st/2nd conjugation verbs.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-imp"
+      },
+      {
+        "type": "skill_count",
+        "skill": "passive",
+        "n": 3,
+        "label": "pass tenses"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match-t"
+      }
+    ]
+  },
+  "teach": "Imperfect passive: amābar. Future passive 1st/2nd: amābor amāberis amābitur…",
+  "allowList": {
+    "lemmas": [
+      "amo",
+      "moneo",
+      "laudo",
+      "servo"
+    ],
+    "constructions": [
+      "passive",
+      "imperfect",
+      "future"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "matching",
+      "single_form",
+      "translate",
+      "cloze"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-imp",
+      "type": "multiple_choice",
+      "prompt": "amābātur means…",
+      "targets": [
+        "passive"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "he loves"
+          },
+          {
+            "id": "b",
+            "label": "he was being loved / used to be loved"
+          },
+          {
+            "id": "c",
+            "label": "he will love"
+          },
+          {
+            "id": "d",
+            "label": "he has loved"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match-t",
+      "type": "matching",
+      "prompt": "Match.",
+      "targets": [
+        "passive"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "amābor"
+          },
+          {
+            "id": "b",
+            "label": "amābāris"
+          },
+          {
+            "id": "c",
+            "label": "monēbitur"
+          },
+          {
+            "id": "d",
+            "label": "laudantur"
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "I will be loved"
+          },
+          {
+            "id": "2",
+            "label": "you were being loved"
+          },
+          {
+            "id": "3",
+            "label": "he will be warned"
+          },
+          {
+            "id": "4",
+            "label": "they are praised"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3",
+          "d": "4"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sf1",
+      "type": "single_form",
+      "prompt": "3sg future passive of servō:",
+      "targets": [
+        "passive"
+      ],
+      "payload": {
+        "accept": [
+          "servabitur",
+          "servābitur"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sf2",
+      "type": "single_form",
+      "prompt": "1sg imperfect passive of moneō:",
+      "targets": [
+        "passive"
+      ],
+      "payload": {
+        "accept": [
+          "monebar",
+          "monēbar"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "tr1",
+      "type": "translate",
+      "prompt": "Urbs dēfendētur.",
+      "targets": [
+        "passive"
+      ],
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "The city will be defended."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "cl1",
+      "type": "cloze",
+      "prompt": "They were being praised.",
+      "targets": [
+        "passive"
+      ],
+      "payload": {
+        "template": "{{1}}",
+        "blanks": {
+          "1": [
+            "laudabantur",
+            "laudābantur"
+          ]
+        }
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

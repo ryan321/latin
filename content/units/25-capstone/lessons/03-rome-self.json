@@ -1,0 +1,208 @@
+{
+  "slug": "03-rome-self",
+  "title": "Roman self-image",
+  "unitSlug": "25-capstone",
+  "order": 3,
+  "standardSummary": "Connect language mastery to how Romans spoke about themselves: mōs, virtūs, imperium, fāma.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-mos"
+      },
+      {
+        "type": "skill_count",
+        "skill": "culture",
+        "n": 2,
+        "label": "self-image"
+      },
+      {
+        "type": "translate_count",
+        "n": 2
+      }
+    ]
+  },
+  "teach": "Culture capstone: Roman values vocabulary in short Latin.",
+  "allowList": {
+    "lemmas": [
+      "mos",
+      "virtus",
+      "imperium",
+      "fama",
+      "gloria",
+      "Roma",
+      "populus"
+    ],
+    "constructions": [
+      "culture",
+      "year1 mastery"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "translate",
+      "matching",
+      "short_answer",
+      "cloze"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-mos",
+      "type": "multiple_choice",
+      "prompt": "mōs maiōrum refers to…",
+      "targets": [
+        "culture"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "a type of future tense"
+          },
+          {
+            "id": "b",
+            "label": "the custom/tradition of the ancestors"
+          },
+          {
+            "id": "c",
+            "label": "only Greek philosophy"
+          },
+          {
+            "id": "d",
+            "label": "a mountain range"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match1",
+      "type": "matching",
+      "prompt": "Match.",
+      "targets": [
+        "culture"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "virtūs"
+          },
+          {
+            "id": "b",
+            "label": "fāma"
+          },
+          {
+            "id": "c",
+            "label": "glōria"
+          },
+          {
+            "id": "d",
+            "label": "imperium"
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "virtue/courage"
+          },
+          {
+            "id": "2",
+            "label": "reputation/report"
+          },
+          {
+            "id": "3",
+            "label": "glory"
+          },
+          {
+            "id": "4",
+            "label": "command/empire"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3",
+          "d": "4"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "tr1",
+      "type": "translate",
+      "prompt": "Virtūs Rōmānōrum magna erat.",
+      "targets": [
+        "culture"
+      ],
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "The virtue of the Romans was great.",
+          "Roman courage was great."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "tr2",
+      "type": "translate",
+      "prompt": "The glory of the Roman people is eternal.",
+      "targets": [
+        "culture"
+      ],
+      "payload": {
+        "direction": "E2L",
+        "length": "sentence",
+        "sampleAnswers": [
+          "Gloria populi Romani aeterna est.",
+          "Glōria populī Rōmānī aeterna est."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "cl1",
+      "type": "cloze",
+      "prompt": "Of the ancestors (gen pl of maior used as noun).",
+      "targets": [
+        "culture"
+      ],
+      "payload": {
+        "template": "mōs {{1}}",
+        "blanks": {
+          "1": [
+            "maiorum",
+            "maiōrum"
+          ]
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sa1",
+      "type": "short_answer",
+      "prompt": "Name two values Romans liked to claim for themselves.",
+      "targets": [
+        "culture"
+      ],
+      "payload": {
+        "sampleAnswers": [
+          "virtus, pietas, gravitas, fides, gloria…",
+          "courage and duty / virtue and glory"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

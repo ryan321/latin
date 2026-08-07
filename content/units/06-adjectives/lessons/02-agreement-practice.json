@@ -1,0 +1,277 @@
+{
+  "slug": "02-agreement-practice",
+  "title": "Agreement in phrases",
+  "unitSlug": "06-adjectives",
+  "order": 2,
+  "standardSummary": "Choose correct adjective forms and translate noun+adjective phrases.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "skill_count",
+        "skill": "adjective agreement",
+        "n": 4,
+        "label": "agreement"
+      },
+      {
+        "type": "translate_count",
+        "n": 3
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "mc-pick"
+      }
+    ]
+  },
+  "teach": "Practice magnus, parvus, multus with 1st/2nd nouns.",
+  "allowList": {
+    "lemmas": [
+      "magnus",
+      "parvus",
+      "multus",
+      "bonus",
+      "puella",
+      "via",
+      "servus",
+      "bellum",
+      "oppidum"
+    ],
+    "constructions": [
+      "adjective agreement"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "translate",
+      "matching",
+      "cloze",
+      "single_form"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-pick",
+      "type": "multiple_choice",
+      "prompt": "“the large girl” (nom.) is…",
+      "targets": [
+        "adjective agreement"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "magna puella"
+          },
+          {
+            "id": "b",
+            "label": "magnus puella"
+          },
+          {
+            "id": "c",
+            "label": "magnum puella"
+          },
+          {
+            "id": "d",
+            "label": "magnī puella"
+          }
+        ],
+        "correctOptionId": "a"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "mc-pick2",
+      "type": "multiple_choice",
+      "prompt": "“of the good friend” (gen. sing. m.) is closest to…",
+      "targets": [
+        "adjective agreement"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "bonī amīcī"
+          },
+          {
+            "id": "b",
+            "label": "bonae amīcī"
+          },
+          {
+            "id": "c",
+            "label": "bonum amīcum"
+          },
+          {
+            "id": "d",
+            "label": "bonōs amīcōs"
+          }
+        ],
+        "correctOptionId": "a"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "form-magnam",
+      "type": "single_form",
+      "prompt": "Acc. sing. f. of magnus (large)?",
+      "targets": [
+        "adjective agreement"
+      ],
+      "payload": {
+        "accept": [
+          "magnam"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "form-parvum",
+      "type": "single_form",
+      "prompt": "Acc. sing. n. of parvus?",
+      "targets": [
+        "adjective agreement"
+      ],
+      "payload": {
+        "accept": [
+          "parvum"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match-phr",
+      "type": "matching",
+      "prompt": "Match Latin phrase to English.",
+      "targets": [
+        "adjective agreement",
+        "vocab"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "magna via"
+          },
+          {
+            "id": "b",
+            "label": "magnus servus"
+          },
+          {
+            "id": "c",
+            "label": "magnum bellum"
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "a large road"
+          },
+          {
+            "id": "2",
+            "label": "a large servant/slave"
+          },
+          {
+            "id": "3",
+            "label": "a large war"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "tr1",
+      "type": "translate",
+      "prompt": "Puella bona est.",
+      "targets": [
+        "adjective agreement",
+        "sum"
+      ],
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "The girl is good.",
+          "A good girl is (there).",
+          "The good girl exists."
+        ],
+        "rubric": "Girl subject; good; est."
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "tr2",
+      "type": "translate",
+      "prompt": "Servus magnus aquam portat.",
+      "targets": [
+        "adjective agreement",
+        "1st conjugation"
+      ],
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "The large servant carries water.",
+          "A great/large slave carries water."
+        ],
+        "rubric": "Large servant subject; carries water."
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "tr3",
+      "type": "translate",
+      "prompt": "the small gifts (acc. pl. n.)",
+      "targets": [
+        "adjective agreement",
+        "neuter"
+      ],
+      "payload": {
+        "direction": "E2L",
+        "length": "sentence",
+        "sampleAnswers": [
+          "parva dona",
+          "parva dōna"
+        ],
+        "rubric": "parva + dōna neuter acc=pl."
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "cloze1",
+      "type": "cloze",
+      "prompt": "Agree the adjective.",
+      "targets": [
+        "adjective agreement"
+      ],
+      "payload": {
+        "template": "Puella {{1}} est.",
+        "blanks": {
+          "1": [
+            "bona",
+            "magna",
+            "parva"
+          ]
+        },
+        "wordBank": [
+          "bona",
+          "bonus",
+          "bonum"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

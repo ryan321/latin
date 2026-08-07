@@ -1,0 +1,211 @@
+{
+  "slug": "02-neuter-corpus",
+  "title": "Third declension neuter",
+  "unitSlug": "10-third-declension",
+  "order": 2,
+  "standardSummary": "Decline a 3rd-declension neuter; state neuter rules (nom=acc; pl -a).",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-neut"
+      },
+      {
+        "type": "skill_count",
+        "skill": "3rd declension neuter",
+        "n": 3,
+        "label": "neuter 3rd"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match-corp"
+      }
+    ]
+  },
+  "teach": "Neuter rule: nom = acc; plural nom/acc often -a (corpora).",
+  "allowList": {
+    "lemmas": [
+      "corpus",
+      "nomen",
+      "flumen",
+      "tempus",
+      "caput"
+    ],
+    "constructions": [
+      "3rd declension",
+      "neuter"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "matching",
+      "single_form",
+      "translate",
+      "cloze"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-neut",
+      "type": "multiple_choice",
+      "prompt": "In neuter nouns, nominative and accusative are…",
+      "targets": [
+        "neuter",
+        "3rd declension"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "always different"
+          },
+          {
+            "id": "b",
+            "label": "the same form"
+          },
+          {
+            "id": "c",
+            "label": "only plural the same"
+          },
+          {
+            "id": "d",
+            "label": "Greek only"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match-corp",
+      "type": "matching",
+      "prompt": "Match corpus forms.",
+      "targets": [
+        "3rd declension neuter"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "corpus"
+          },
+          {
+            "id": "b",
+            "label": "corporis"
+          },
+          {
+            "id": "c",
+            "label": "corporī"
+          },
+          {
+            "id": "d",
+            "label": "corpora"
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "nom/acc sing."
+          },
+          {
+            "id": "2",
+            "label": "gen. sing."
+          },
+          {
+            "id": "3",
+            "label": "dat. sing."
+          },
+          {
+            "id": "4",
+            "label": "nom/acc pl."
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3",
+          "d": "4"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sf-flumine",
+      "type": "single_form",
+      "prompt": "Ablative singular of flūmen, flūminis:",
+      "targets": [
+        "3rd declension neuter"
+      ],
+      "payload": {
+        "accept": [
+          "flumine",
+          "flūmine"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sf-nomina",
+      "type": "single_form",
+      "prompt": "Nominative plural of nōmen:",
+      "targets": [
+        "3rd declension neuter"
+      ],
+      "payload": {
+        "accept": [
+          "nomina",
+          "nōmina"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "tr1",
+      "type": "translate",
+      "prompt": "Nōmen rēgis magnum est.",
+      "targets": [
+        "3rd declension"
+      ],
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "The name of the king is great.",
+          "The king's name is great."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "cl1",
+      "type": "cloze",
+      "prompt": "Ablative of place with flūmen.",
+      "targets": [
+        "3rd declension",
+        "ablative"
+      ],
+      "payload": {
+        "template": "in {{1}}",
+        "blanks": {
+          "1": [
+            "flumine",
+            "flūmine"
+          ]
+        },
+        "wordBank": [
+          "flūmine",
+          "flūmen",
+          "flūminis"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

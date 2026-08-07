@@ -1,0 +1,190 @@
+{
+  "slug": "03-time-dates",
+  "title": "Time & calendar intro",
+  "unitSlug": "22-numerals",
+  "order": 3,
+  "standardSummary": "Express hour/day basics; Roman calendar keywords (Kalendae, Nōnae, Īdūs light).",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-kal"
+      },
+      {
+        "type": "skill_count",
+        "skill": "time",
+        "n": 3,
+        "label": "time dates"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match-t"
+      }
+    ]
+  },
+  "teach": "hōra, diēs; Kalendae Nōnae Īdūs; abl of time when.",
+  "allowList": {
+    "lemmas": [
+      "hora",
+      "dies",
+      "annus",
+      "Kalendae",
+      "Nonae",
+      "Idus"
+    ],
+    "constructions": [
+      "time",
+      "ordinals",
+      "ablative"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "matching",
+      "translate",
+      "short_answer",
+      "cloze"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-kal",
+      "type": "multiple_choice",
+      "prompt": "Kalendae refers to…",
+      "targets": [
+        "time"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "the middle of every month only in Greece"
+          },
+          {
+            "id": "b",
+            "label": "the 1st of the month (calends)"
+          },
+          {
+            "id": "c",
+            "label": "a type of verb"
+          },
+          {
+            "id": "d",
+            "label": "midnight only"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match-t",
+      "type": "matching",
+      "prompt": "Match.",
+      "targets": [
+        "time"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "hōra"
+          },
+          {
+            "id": "b",
+            "label": "Īdūs"
+          },
+          {
+            "id": "c",
+            "label": "eō diē"
+          },
+          {
+            "id": "d",
+            "label": "annus"
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "hour"
+          },
+          {
+            "id": "2",
+            "label": "Ides (mid-month)"
+          },
+          {
+            "id": "3",
+            "label": "on that day"
+          },
+          {
+            "id": "4",
+            "label": "year"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3",
+          "d": "4"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "tr1",
+      "type": "translate",
+      "prompt": "Tertiā hōrā venit.",
+      "targets": [
+        "time"
+      ],
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "He comes at the third hour.",
+          "She came at the third hour."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "cl1",
+      "type": "cloze",
+      "prompt": "On the first day.",
+      "targets": [
+        "time"
+      ],
+      "payload": {
+        "template": "{{1}} diē",
+        "blanks": {
+          "1": [
+            "primo",
+            "prīmō"
+          ]
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sa1",
+      "type": "short_answer",
+      "prompt": "Name the three named points of the Roman month.",
+      "targets": [
+        "time"
+      ],
+      "payload": {
+        "sampleAnswers": [
+          "Kalends, Nones, Ides",
+          "Kalendae, Nonae, Idus"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

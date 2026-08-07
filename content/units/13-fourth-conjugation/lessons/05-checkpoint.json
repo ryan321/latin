@@ -1,0 +1,187 @@
+{
+  "slug": "05-checkpoint",
+  "title": "Checkpoint — Fourth conjugation",
+  "unitSlug": "13-fourth-conjugation",
+  "order": 5,
+  "standardSummary": "Master audiō-type present system and mixed conjugation identification.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc1"
+      },
+      {
+        "type": "skill_count",
+        "skill": "4th conjugation",
+        "n": 3,
+        "label": "4th checkpoint"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match1"
+      }
+    ]
+  },
+  "teach": "Checkpoint: 4th conjugation + mixed review.",
+  "allowList": {
+    "lemmas": [
+      "audio",
+      "venio",
+      "scio",
+      "amo",
+      "rego",
+      "capio"
+    ],
+    "constructions": [
+      "4th conjugation",
+      "conjugation id",
+      "future"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "matching",
+      "single_form",
+      "translate",
+      "short_answer"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc1",
+      "type": "multiple_choice",
+      "prompt": "venient is…",
+      "targets": [
+        "4th conjugation future"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "present"
+          },
+          {
+            "id": "b",
+            "label": "imperfect"
+          },
+          {
+            "id": "c",
+            "label": "future"
+          },
+          {
+            "id": "d",
+            "label": "perfect"
+          }
+        ],
+        "correctOptionId": "c"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match1",
+      "type": "matching",
+      "prompt": "Match.",
+      "targets": [
+        "4th conjugation",
+        "conjugation id"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "audīmus"
+          },
+          {
+            "id": "b",
+            "label": "audiēbam"
+          },
+          {
+            "id": "c",
+            "label": "capiunt"
+          },
+          {
+            "id": "d",
+            "label": "regam"
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "present 1pl audiō"
+          },
+          {
+            "id": "2",
+            "label": "impf 1sg audiō"
+          },
+          {
+            "id": "3",
+            "label": "present 3pl capiō"
+          },
+          {
+            "id": "4",
+            "label": "future 1sg regō"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3",
+          "d": "4"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sf1",
+      "type": "single_form",
+      "prompt": "2sg present of dormiō:",
+      "targets": [
+        "4th conjugation"
+      ],
+      "payload": {
+        "accept": [
+          "dormis",
+          "dormīs"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sf2",
+      "type": "single_form",
+      "prompt": "3sg future of veniō:",
+      "targets": [
+        "4th conjugation future"
+      ],
+      "payload": {
+        "accept": [
+          "veniet"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "tr1",
+      "type": "translate",
+      "prompt": "Inveniunt viam.",
+      "targets": [
+        "4th conjugation"
+      ],
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "They find the road.",
+          "They discover the way."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

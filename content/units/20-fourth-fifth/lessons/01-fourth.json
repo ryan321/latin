@@ -1,0 +1,199 @@
+{
+  "slug": "01-fourth",
+  "title": "Fourth declension (fructus)",
+  "unitSlug": "20-fourth-fifth",
+  "order": 1,
+  "standardSummary": "Decline a 4th-declension m. noun; recognize -ūs genitive.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-us"
+      },
+      {
+        "type": "skill_count",
+        "skill": "4th declension",
+        "n": 4,
+        "label": "4th decl"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match-f"
+      }
+    ]
+  },
+  "teach": "4th decl: gen -ūs. fructus fructūs fructuī fructum frūctū; pl -ūs -uum -ibus.",
+  "allowList": {
+    "lemmas": [
+      "fructus",
+      "exercitus",
+      "senatus",
+      "portus",
+      "manus",
+      "cornu"
+    ],
+    "constructions": [
+      "4th declension"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "matching",
+      "single_form",
+      "translate",
+      "short_answer"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-us",
+      "type": "multiple_choice",
+      "prompt": "Genitive singular of 4th declension ends in…",
+      "targets": [
+        "4th declension"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "-ae"
+          },
+          {
+            "id": "b",
+            "label": "-ī"
+          },
+          {
+            "id": "c",
+            "label": "-is"
+          },
+          {
+            "id": "d",
+            "label": "-ūs"
+          }
+        ],
+        "correctOptionId": "d"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match-f",
+      "type": "matching",
+      "prompt": "Match fructus forms.",
+      "targets": [
+        "4th declension"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "frūctūs (gen s.)"
+          },
+          {
+            "id": "b",
+            "label": "frūctum"
+          },
+          {
+            "id": "c",
+            "label": "frūctibus"
+          },
+          {
+            "id": "d",
+            "label": "frūctuum"
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "of fruit/enjoyment"
+          },
+          {
+            "id": "2",
+            "label": "acc. sing."
+          },
+          {
+            "id": "3",
+            "label": "dat/abl pl."
+          },
+          {
+            "id": "4",
+            "label": "gen. pl."
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3",
+          "d": "4"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sf1",
+      "type": "single_form",
+      "prompt": "Acc sing of exercitus:",
+      "targets": [
+        "4th declension"
+      ],
+      "payload": {
+        "accept": [
+          "exercitum"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sf2",
+      "type": "single_form",
+      "prompt": "Nom/acc pl of portus:",
+      "targets": [
+        "4th declension"
+      ],
+      "payload": {
+        "accept": [
+          "portus",
+          "portūs"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "tr1",
+      "type": "translate",
+      "prompt": "Senātūs sententia clara est.",
+      "targets": [
+        "4th declension"
+      ],
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "The opinion of the senate is clear."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sa1",
+      "type": "short_answer",
+      "prompt": "Name two common 4th-declension nouns.",
+      "targets": [
+        "4th declension"
+      ],
+      "payload": {
+        "sampleAnswers": [
+          "exercitus, senatus, portus, manus, cornū…",
+          "exercitus and senatus"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

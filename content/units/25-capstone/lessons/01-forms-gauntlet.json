@@ -1,0 +1,233 @@
+{
+  "slug": "01-forms-gauntlet",
+  "title": "Forms gauntlet",
+  "unitSlug": "25-capstone",
+  "order": 1,
+  "standardSummary": "Demonstrate control of major paradigms: nouns 1–5, adjectives, key pronouns, verb systems.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc1"
+      },
+      {
+        "type": "skill_count",
+        "skill": "year1 mastery",
+        "n": 5,
+        "label": "forms gauntlet"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match1"
+      }
+    ]
+  },
+  "teach": "Rapid mixed paradigms across the year.",
+  "allowList": {
+    "lemmas": [
+      "puella",
+      "servus",
+      "rex",
+      "fructus",
+      "dies",
+      "bonus",
+      "qui",
+      "hic",
+      "amo",
+      "rego",
+      "sum"
+    ],
+    "constructions": [
+      "year1 mastery",
+      "mixed review"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "matching",
+      "single_form",
+      "multi_select",
+      "short_answer"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc1",
+      "type": "multiple_choice",
+      "prompt": "Genitive plural of 2nd declension m. is typically…",
+      "targets": [
+        "year1 mastery"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "-ārum"
+          },
+          {
+            "id": "b",
+            "label": "-ōrum"
+          },
+          {
+            "id": "c",
+            "label": "-um only always"
+          },
+          {
+            "id": "d",
+            "label": "-ērum"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match1",
+      "type": "matching",
+      "prompt": "Match form to category.",
+      "targets": [
+        "year1 mastery"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "puellīs"
+          },
+          {
+            "id": "b",
+            "label": "rēgum"
+          },
+          {
+            "id": "c",
+            "label": "diēī"
+          },
+          {
+            "id": "d",
+            "label": "amāverant"
+          },
+          {
+            "id": "e",
+            "label": "huic"
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "1st decl dat/abl pl"
+          },
+          {
+            "id": "2",
+            "label": "3rd decl gen pl"
+          },
+          {
+            "id": "3",
+            "label": "5th decl gen/dat s."
+          },
+          {
+            "id": "4",
+            "label": "pluperfect"
+          },
+          {
+            "id": "5",
+            "label": "dat s. of hic"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3",
+          "d": "4",
+          "e": "5"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sf1",
+      "type": "single_form",
+      "prompt": "1sg perfect of sum:",
+      "targets": [
+        "perfect",
+        "sum"
+      ],
+      "payload": {
+        "accept": [
+          "fui",
+          "fuī"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sf2",
+      "type": "single_form",
+      "prompt": "Acc pl m. of ille:",
+      "targets": [
+        "ille"
+      ],
+      "payload": {
+        "accept": [
+          "illos",
+          "illōs"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "ms1",
+      "type": "multi_select",
+      "prompt": "Which are 3rd conjugation futures?",
+      "targets": [
+        "year1 mastery"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "regam"
+          },
+          {
+            "id": "b",
+            "label": "amābō"
+          },
+          {
+            "id": "c",
+            "label": "audiam"
+          },
+          {
+            "id": "d",
+            "label": "monēbō"
+          }
+        ],
+        "correctOptionIds": [
+          "a",
+          "c"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sa1",
+      "type": "short_answer",
+      "prompt": "List the five noun declensions by a hallmark genitive singular.",
+      "targets": [
+        "year1 mastery"
+      ],
+      "payload": {
+        "sampleAnswers": [
+          "-ae -ī -is -ūs -ēī",
+          "ae, i, is, us, ei"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

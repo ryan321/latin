@@ -1,0 +1,168 @@
+{
+  "slug": "05-checkpoint",
+  "title": "Checkpoint — Passive",
+  "unitSlug": "19-passive",
+  "order": 5,
+  "standardSummary": "Form present-system passives and translate with agent/means.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc1"
+      },
+      {
+        "type": "skill_count",
+        "skill": "passive",
+        "n": 4,
+        "label": "passive checkpoint"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match1"
+      }
+    ]
+  },
+  "teach": "Checkpoint: passive endings + tenses + agent.",
+  "allowList": {
+    "lemmas": [
+      "amo",
+      "porto",
+      "moneo",
+      "ab",
+      "miles"
+    ],
+    "constructions": [
+      "passive",
+      "agent"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "matching",
+      "single_form",
+      "translate",
+      "cloze"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc1",
+      "type": "multiple_choice",
+      "prompt": "portābuntur is…",
+      "targets": [
+        "passive"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "present active"
+          },
+          {
+            "id": "b",
+            "label": "future passive"
+          },
+          {
+            "id": "c",
+            "label": "perfect active"
+          },
+          {
+            "id": "d",
+            "label": "imperfect active"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match1",
+      "type": "matching",
+      "prompt": "Match.",
+      "targets": [
+        "passive"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "amātur"
+          },
+          {
+            "id": "b",
+            "label": "amābātur"
+          },
+          {
+            "id": "c",
+            "label": "amābitur"
+          },
+          {
+            "id": "d",
+            "label": "ā rēge"
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "is loved"
+          },
+          {
+            "id": "2",
+            "label": "was being loved"
+          },
+          {
+            "id": "3",
+            "label": "will be loved"
+          },
+          {
+            "id": "4",
+            "label": "by the king"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3",
+          "d": "4"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sf1",
+      "type": "single_form",
+      "prompt": "3pl present passive of moneō:",
+      "targets": [
+        "passive"
+      ],
+      "payload": {
+        "accept": [
+          "monentur"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "tr1",
+      "type": "translate",
+      "prompt": "Litterae ā puerō scrībuntur.",
+      "targets": [
+        "passive"
+      ],
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "The letter is written by the boy.",
+          "Letters are written by the boy."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

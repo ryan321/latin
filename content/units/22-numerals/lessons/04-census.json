@@ -1,0 +1,188 @@
+{
+  "slug": "04-census",
+  "title": "Census & administration (light)",
+  "unitSlug": "22-numerals",
+  "order": 4,
+  "standardSummary": "Numerals in civic context; brief note on census and counting people/things.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-cens"
+      },
+      {
+        "type": "skill_count",
+        "skill": "cardinals",
+        "n": 2,
+        "label": "census Latin"
+      },
+      {
+        "type": "translate_count",
+        "n": 1
+      }
+    ]
+  },
+  "teach": "census idea; counting citizens/soldiers with numerals.",
+  "allowList": {
+    "lemmas": [
+      "census",
+      "civis",
+      "miles",
+      "mille",
+      "centum",
+      "populus"
+    ],
+    "constructions": [
+      "cardinals",
+      "census"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "translate",
+      "matching",
+      "short_answer",
+      "cloze"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-cens",
+      "type": "multiple_choice",
+      "prompt": "A Roman census primarily…",
+      "targets": [
+        "census"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "only wrote poetry"
+          },
+          {
+            "id": "b",
+            "label": "registered citizens and property for civic/military purposes"
+          },
+          {
+            "id": "c",
+            "label": "elected consuls every hour"
+          },
+          {
+            "id": "d",
+            "label": "banned numerals"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match1",
+      "type": "matching",
+      "prompt": "Match.",
+      "targets": [
+        "cardinals"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "centum"
+          },
+          {
+            "id": "b",
+            "label": "mīlle"
+          },
+          {
+            "id": "c",
+            "label": "cīvēs"
+          },
+          {
+            "id": "d",
+            "label": "mīlitēs"
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "100"
+          },
+          {
+            "id": "2",
+            "label": "1000"
+          },
+          {
+            "id": "3",
+            "label": "citizens"
+          },
+          {
+            "id": "4",
+            "label": "soldiers"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3",
+          "d": "4"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "tr1",
+      "type": "translate",
+      "prompt": "Centum mīlitēs in castrīs sunt.",
+      "targets": [
+        "cardinals"
+      ],
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "There are a hundred soldiers in the camp."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "cl1",
+      "type": "cloze",
+      "prompt": "A thousand men.",
+      "targets": [
+        "cardinals"
+      ],
+      "payload": {
+        "template": "{{1}} virī",
+        "blanks": {
+          "1": [
+            "mille",
+            "mīlle"
+          ]
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sa1",
+      "type": "short_answer",
+      "prompt": "Why would a state count people?",
+      "targets": [
+        "census"
+      ],
+      "payload": {
+        "sampleAnswers": [
+          "Taxes, army recruitment, civic status.",
+          "Administration and military planning."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

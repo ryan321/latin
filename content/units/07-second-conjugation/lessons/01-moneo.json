@@ -1,0 +1,280 @@
+{
+  "slug": "01-moneo",
+  "title": "Second conjugation present",
+  "unitSlug": "07-second-conjugation",
+  "order": 1,
+  "standardSummary": "Conjugate a 2nd-conjugation verb in the present and contrast with 1st conjugation.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "grid-moneo"
+      },
+      {
+        "type": "skill_count",
+        "skill": "2nd conjugation",
+        "n": 3,
+        "label": "2nd conj"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "mc-inf"
+      }
+    ]
+  },
+  "teach": "Second conjugation: infinitive -ēre; present monēō monēs monet…",
+  "allowList": {
+    "lemmas": [
+      "moneo",
+      "habeo",
+      "video",
+      "timeo",
+      "doceo",
+      "teneo"
+    ],
+    "constructions": [
+      "2nd conjugation",
+      "personal endings"
+    ],
+    "activityTypes": [
+      "paradigm_grid",
+      "single_form",
+      "matching",
+      "multiple_choice"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "grid-moneo",
+      "type": "paradigm_grid",
+      "prompt": "Conjugate moneō present (write full forms).",
+      "targets": [
+        "2nd conjugation"
+      ],
+      "payload": {
+        "kind": "verb",
+        "lemma": "moneo",
+        "stem": "mon",
+        "mode": "full_form",
+        "labels": {
+          "rows": [
+            "1",
+            "2",
+            "3"
+          ],
+          "cols": [
+            "sing.",
+            "plural"
+          ]
+        },
+        "cells": {
+          "1.sg": [
+            "moneo",
+            "moneō"
+          ],
+          "2.sg": [
+            "mones",
+            "monēs"
+          ],
+          "3.sg": [
+            "monet"
+          ],
+          "1.pl": [
+            "monemus",
+            "monēmus"
+          ],
+          "2.pl": [
+            "monetis",
+            "monētis"
+          ],
+          "3.pl": [
+            "monent"
+          ]
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "mc-inf",
+      "type": "multiple_choice",
+      "prompt": "2nd conjugation infinitives typically end in…",
+      "targets": [
+        "2nd conjugation"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "-āre"
+          },
+          {
+            "id": "b",
+            "label": "-ēre"
+          },
+          {
+            "id": "c",
+            "label": "-ere short only never long"
+          },
+          {
+            "id": "d",
+            "label": "-īre only"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "f1",
+      "type": "single_form",
+      "prompt": "He/she sees (videō)?",
+      "targets": [
+        "2nd conjugation"
+      ],
+      "payload": {
+        "accept": [
+          "videt"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "f2",
+      "type": "single_form",
+      "prompt": "We have (habeō)?",
+      "targets": [
+        "2nd conjugation"
+      ],
+      "payload": {
+        "accept": [
+          "habemus",
+          "habēmus"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "f3",
+      "type": "single_form",
+      "prompt": "They fear (timeō)?",
+      "targets": [
+        "2nd conjugation"
+      ],
+      "payload": {
+        "accept": [
+          "timent"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "m1",
+      "type": "matching",
+      "prompt": "Match form to English (habeō).",
+      "targets": [
+        "2nd conjugation"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "habeō"
+          },
+          {
+            "id": "b",
+            "label": "habēs"
+          },
+          {
+            "id": "c",
+            "label": "habent"
+          },
+          {
+            "id": "d",
+            "label": "habētis"
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "I have"
+          },
+          {
+            "id": "2",
+            "label": "you (sing.) have"
+          },
+          {
+            "id": "3",
+            "label": "they have"
+          },
+          {
+            "id": "4",
+            "label": "you (plural) have"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3",
+          "d": "4"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "mc-contrast",
+      "type": "multiple_choice",
+      "prompt": "amat vs monet: the stem vowel difference is basically…",
+      "targets": [
+        "2nd conjugation",
+        "1st conjugation"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "-ā- vs -ē- in many forms"
+          },
+          {
+            "id": "b",
+            "label": "No difference"
+          },
+          {
+            "id": "c",
+            "label": "Only future tense differs"
+          },
+          {
+            "id": "d",
+            "label": "Only passive differs"
+          }
+        ],
+        "correctOptionId": "a"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "f4",
+      "type": "single_form",
+      "prompt": "You (plural) teach (doceō)?",
+      "targets": [
+        "2nd conjugation"
+      ],
+      "payload": {
+        "accept": [
+          "docetis",
+          "docētis"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

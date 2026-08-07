@@ -1,0 +1,178 @@
+{
+  "slug": "03-extent",
+  "title": "Extent of space & time (intro)",
+  "unitSlug": "18-place",
+  "order": 3,
+  "standardSummary": "Recognize accusative of extent (space/time) in short examples.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-ext"
+      },
+      {
+        "type": "skill_count",
+        "skill": "extent",
+        "n": 2,
+        "label": "extent"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match-e"
+      }
+    ]
+  },
+  "teach": "Accusative can show how far / how long: multōs annōs, tria mīlia passuum.",
+  "allowList": {
+    "lemmas": [
+      "annus",
+      "dies",
+      "mille",
+      "via",
+      "longus"
+    ],
+    "constructions": [
+      "extent",
+      "accusative"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "matching",
+      "translate",
+      "short_answer",
+      "cloze"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-ext",
+      "type": "multiple_choice",
+      "prompt": "In 'multōs annōs vīxit', multōs annōs is…",
+      "targets": [
+        "extent"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "nominative subject"
+          },
+          {
+            "id": "b",
+            "label": "accusative of extent of time"
+          },
+          {
+            "id": "c",
+            "label": "ablative of means"
+          },
+          {
+            "id": "d",
+            "label": "genitive"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match-e",
+      "type": "matching",
+      "prompt": "Match.",
+      "targets": [
+        "extent"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "multōs annōs"
+          },
+          {
+            "id": "b",
+            "label": "tria mīlia passuum"
+          },
+          {
+            "id": "c",
+            "label": "ūnō diē"
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "for many years"
+          },
+          {
+            "id": "2",
+            "label": "three miles (space)"
+          },
+          {
+            "id": "3",
+            "label": "in/on one day (time when, abl)"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "tr1",
+      "type": "translate",
+      "prompt": "Mīlitēs multās horās iter fēcērunt.",
+      "targets": [
+        "extent"
+      ],
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "The soldiers journeyed for many hours."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "cl1",
+      "type": "cloze",
+      "prompt": "For three years.",
+      "targets": [
+        "extent"
+      ],
+      "payload": {
+        "template": "{{1}} annōs",
+        "blanks": {
+          "1": [
+            "tres",
+            "trēs"
+          ]
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sa1",
+      "type": "short_answer",
+      "prompt": "Extent of time uses which case often?",
+      "targets": [
+        "extent"
+      ],
+      "payload": {
+        "sampleAnswers": [
+          "accusative",
+          "the accusative"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

@@ -1,0 +1,217 @@
+{
+  "slug": "03-imp-fut-3",
+  "title": "Imperfect & future of 3rd",
+  "unitSlug": "11-third-conjugation",
+  "order": 3,
+  "standardSummary": "Form imperfect and future of 3rd and -iō verbs (present system).",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-fut3"
+      },
+      {
+        "type": "skill_count",
+        "skill": "3rd conjugation future",
+        "n": 3,
+        "label": "3rd tenses"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match-t"
+      }
+    ]
+  },
+  "teach": "3rd imperfect: regēbam. Future: regam, regēs, reget… (NOT -bō). -iō: capiēbam; capiam…",
+  "allowList": {
+    "lemmas": [
+      "rego",
+      "capio",
+      "duco",
+      "facio",
+      "mitto"
+    ],
+    "constructions": [
+      "3rd conjugation",
+      "imperfect",
+      "future"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "matching",
+      "single_form",
+      "ordering",
+      "short_answer"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-fut3",
+      "type": "multiple_choice",
+      "prompt": "The 1sg future of regō is…",
+      "targets": [
+        "3rd conjugation future"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "regābō"
+          },
+          {
+            "id": "b",
+            "label": "regam"
+          },
+          {
+            "id": "c",
+            "label": "regēbō"
+          },
+          {
+            "id": "d",
+            "label": "regō"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match-t",
+      "type": "matching",
+      "prompt": "Match form to label.",
+      "targets": [
+        "3rd conjugation",
+        "future",
+        "imperfect"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "regēbat"
+          },
+          {
+            "id": "b",
+            "label": "reget"
+          },
+          {
+            "id": "c",
+            "label": "capiēbant"
+          },
+          {
+            "id": "d",
+            "label": "facient"
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "imperfect 3sg regō"
+          },
+          {
+            "id": "2",
+            "label": "future 3sg regō"
+          },
+          {
+            "id": "3",
+            "label": "imperfect 3pl capiō"
+          },
+          {
+            "id": "4",
+            "label": "future 3pl faciō"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3",
+          "d": "4"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sf-regam",
+      "type": "single_form",
+      "prompt": "1sg future of regō:",
+      "targets": [
+        "3rd conjugation future"
+      ],
+      "payload": {
+        "accept": [
+          "regam"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sf-capiebat",
+      "type": "single_form",
+      "prompt": "3sg imperfect of capiō:",
+      "targets": [
+        "io verb",
+        "imperfect"
+      ],
+      "payload": {
+        "accept": [
+          "capiebat",
+          "capiēbat"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "ord-fut",
+      "type": "ordering",
+      "prompt": "Order future of dūcō 1sg–3sg",
+      "targets": [
+        "3rd conjugation future"
+      ],
+      "payload": {
+        "items": [
+          {
+            "id": "a",
+            "label": "dūcet"
+          },
+          {
+            "id": "b",
+            "label": "dūcam"
+          },
+          {
+            "id": "c",
+            "label": "dūcēs"
+          }
+        ],
+        "correctOrder": [
+          "b",
+          "c",
+          "a"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sa1",
+      "type": "short_answer",
+      "prompt": "How does 3rd-conjugation future differ from 1st/2nd?",
+      "targets": [
+        "3rd conjugation future"
+      ],
+      "payload": {
+        "sampleAnswers": [
+          "3rd uses -am -ēs -et… not -bō -bis -bit.",
+          "No -bō; uses -am/-ēs/-et series."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

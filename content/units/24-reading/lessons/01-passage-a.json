@@ -1,0 +1,201 @@
+{
+  "slug": "01-passage-a",
+  "title": "Passage workshop A",
+  "unitSlug": "24-reading",
+  "order": 2,
+  "standardSummary": "Translate a short connected passage using Year 1 grammar; answer comprehension questions.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-comp"
+      },
+      {
+        "type": "skill_count",
+        "skill": "reading",
+        "n": 3,
+        "label": "passage A"
+      },
+      {
+        "type": "translate_count",
+        "n": 2
+      }
+    ]
+  },
+  "teach": "Short narrative: city, soldiers, king; mixed tenses.",
+  "allowList": {
+    "lemmas": [
+      "rex",
+      "urbs",
+      "miles",
+      "hostis",
+      "venio",
+      "video",
+      "vinco",
+      "sum"
+    ],
+    "constructions": [
+      "reading",
+      "perfect",
+      "relative pronoun"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "translate",
+      "short_answer",
+      "cloze",
+      "matching"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-comp",
+      "type": "multiple_choice",
+      "prompt": "If 'hostēs fūgērunt' appears after 'urbe captā', the enemies…",
+      "targets": [
+        "reading",
+        "perfect"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "will flee later only"
+          },
+          {
+            "id": "b",
+            "label": "fled (completed)"
+          },
+          {
+            "id": "c",
+            "label": "never flee"
+          },
+          {
+            "id": "d",
+            "label": "are nominative of means"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "tr1",
+      "type": "translate",
+      "prompt": "Rēx mīlitēs in urbem mīsit.",
+      "targets": [
+        "reading",
+        "perfect"
+      ],
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "The king sent the soldiers into the city."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "tr2",
+      "type": "translate",
+      "prompt": "Hostēs quī fūgerant rediērunt.",
+      "targets": [
+        "reading",
+        "pluperfect"
+      ],
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "The enemies who had fled returned."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sa1",
+      "type": "short_answer",
+      "prompt": "In one sentence, summarize a typical capture-of-a-city storyline in Latin class Latin.",
+      "targets": [
+        "reading"
+      ],
+      "payload": {
+        "sampleAnswers": [
+          "Soldiers approach, fight, take the city; enemies flee.",
+          "Army arrives, battle, city taken, enemies flee."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "cl1",
+      "type": "cloze",
+      "prompt": "The city which was great.",
+      "targets": [
+        "relative pronoun"
+      ],
+      "payload": {
+        "template": "urbs {{1}} magna erat",
+        "blanks": {
+          "1": [
+            "quae"
+          ]
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match1",
+      "type": "matching",
+      "prompt": "Match form in narrative.",
+      "targets": [
+        "reading"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "mīsit"
+          },
+          {
+            "id": "b",
+            "label": "capiēbant"
+          },
+          {
+            "id": "c",
+            "label": "vincent"
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "perfect"
+          },
+          {
+            "id": "2",
+            "label": "imperfect"
+          },
+          {
+            "id": "3",
+            "label": "future"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3"
+        }
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

@@ -1,0 +1,197 @@
+{
+  "slug": "02-agreement",
+  "title": "Antecedent agreement",
+  "unitSlug": "16-relative",
+  "order": 2,
+  "standardSummary": "Make the relative agree with its antecedent in gender and number; case from clause role.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-agr"
+      },
+      {
+        "type": "skill_count",
+        "skill": "relative agreement",
+        "n": 3,
+        "label": "agreement"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match-a"
+      }
+    ]
+  },
+  "teach": "Gender/number from antecedent; case from use inside relative clause.",
+  "allowList": {
+    "lemmas": [
+      "qui",
+      "puella",
+      "servus",
+      "bellum",
+      "urbs",
+      "rex"
+    ],
+    "constructions": [
+      "relative pronoun",
+      "relative agreement"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "matching",
+      "cloze",
+      "translate",
+      "short_answer"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-agr",
+      "type": "multiple_choice",
+      "prompt": "In 'puella quam videō', quam is f.s. because…",
+      "targets": [
+        "relative agreement"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "videō is feminine"
+          },
+          {
+            "id": "b",
+            "label": "it agrees with puella"
+          },
+          {
+            "id": "c",
+            "label": "all objects are feminine"
+          },
+          {
+            "id": "d",
+            "label": "Latin has no agreement"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match-a",
+      "type": "matching",
+      "prompt": "Relative as subject for each antecedent.",
+      "targets": [
+        "relative agreement"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "servus ___ labōrat"
+          },
+          {
+            "id": "b",
+            "label": "puellae ___ labōrant"
+          },
+          {
+            "id": "c",
+            "label": "bellum ___ est magnum"
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "quī"
+          },
+          {
+            "id": "2",
+            "label": "quae"
+          },
+          {
+            "id": "3",
+            "label": "quod"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "cl1",
+      "type": "cloze",
+      "prompt": "The king whom we fear.",
+      "targets": [
+        "relative agreement"
+      ],
+      "payload": {
+        "template": "rēx {{1}} timēmus",
+        "blanks": {
+          "1": [
+            "quem"
+          ]
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "cl2",
+      "type": "cloze",
+      "prompt": "The city which is great.",
+      "targets": [
+        "relative agreement"
+      ],
+      "payload": {
+        "template": "urbs {{1}} magna est",
+        "blanks": {
+          "1": [
+            "quae"
+          ]
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "tr1",
+      "type": "translate",
+      "prompt": "Servus quem videō labōrat.",
+      "targets": [
+        "relative pronoun"
+      ],
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "The slave whom I see is working.",
+          "The servant whom I see works."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sa1",
+      "type": "short_answer",
+      "prompt": "Case of the relative comes from…",
+      "targets": [
+        "relative agreement"
+      ],
+      "payload": {
+        "sampleAnswers": [
+          "Its job in the relative clause.",
+          "Use inside its own clause."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

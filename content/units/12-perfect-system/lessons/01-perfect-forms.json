@@ -1,0 +1,233 @@
+{
+  "slug": "01-perfect-forms",
+  "title": "Perfect indicative active",
+  "unitSlug": "12-perfect-system",
+  "order": 2,
+  "standardSummary": "Form the perfect of regular verbs and of sum; state perfect meaning (has/did).",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-mean"
+      },
+      {
+        "type": "skill_count",
+        "skill": "perfect",
+        "n": 4,
+        "label": "perfect forms"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match-end"
+      }
+    ]
+  },
+  "teach": "Perfect: completed past. Endings -ī -istī -it -imus -istis -ērunt/-ēre on perfect stem.",
+  "allowList": {
+    "lemmas": [
+      "amo",
+      "moneo",
+      "rego",
+      "capio",
+      "sum",
+      "duco",
+      "mitto"
+    ],
+    "constructions": [
+      "perfect"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "matching",
+      "single_form",
+      "ordering",
+      "translate"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-mean",
+      "type": "multiple_choice",
+      "prompt": "The perfect often means…",
+      "targets": [
+        "perfect"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "was doing (ongoing)"
+          },
+          {
+            "id": "b",
+            "label": "has done / did (completed)"
+          },
+          {
+            "id": "c",
+            "label": "will do"
+          },
+          {
+            "id": "d",
+            "label": "is doing now only"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match-end",
+      "type": "matching",
+      "prompt": "Match perfect ending.",
+      "targets": [
+        "perfect"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "-ī"
+          },
+          {
+            "id": "b",
+            "label": "-istī"
+          },
+          {
+            "id": "c",
+            "label": "-it"
+          },
+          {
+            "id": "d",
+            "label": "-ērunt"
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "I …"
+          },
+          {
+            "id": "2",
+            "label": "you (sing.) …"
+          },
+          {
+            "id": "3",
+            "label": "he/she …"
+          },
+          {
+            "id": "4",
+            "label": "they …"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3",
+          "d": "4"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sf-amavit",
+      "type": "single_form",
+      "prompt": "3sg perfect of amō:",
+      "targets": [
+        "perfect"
+      ],
+      "payload": {
+        "accept": [
+          "amavit",
+          "amāvit"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sf-fuerunt",
+      "type": "single_form",
+      "prompt": "3pl perfect of sum:",
+      "targets": [
+        "perfect",
+        "sum"
+      ],
+      "payload": {
+        "accept": [
+          "fuerunt"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sf-cepi",
+      "type": "single_form",
+      "prompt": "1sg perfect of capiō:",
+      "targets": [
+        "perfect"
+      ],
+      "payload": {
+        "accept": [
+          "cepi",
+          "cēpī"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "ord1",
+      "type": "ordering",
+      "prompt": "Order perfect of mittō 1sg–3sg",
+      "targets": [
+        "perfect"
+      ],
+      "payload": {
+        "items": [
+          {
+            "id": "a",
+            "label": "mīsit"
+          },
+          {
+            "id": "b",
+            "label": "mīsī"
+          },
+          {
+            "id": "c",
+            "label": "mīsistī"
+          }
+        ],
+        "correctOrder": [
+          "b",
+          "c",
+          "a"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "tr1",
+      "type": "translate",
+      "prompt": "Rēx urbem vīcit.",
+      "targets": [
+        "perfect"
+      ],
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "The king conquered the city.",
+          "The king has conquered the city."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

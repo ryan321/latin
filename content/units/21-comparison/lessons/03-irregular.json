@@ -1,0 +1,211 @@
+{
+  "slug": "03-irregular",
+  "title": "Irregular comparison",
+  "unitSlug": "21-comparison",
+  "order": 3,
+  "standardSummary": "Memorize bonus/malus/magnus/parvus/multus comparison sets.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-melior"
+      },
+      {
+        "type": "skill_count",
+        "skill": "irregular comparison",
+        "n": 4,
+        "label": "irreg comp"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match-i"
+      }
+    ]
+  },
+  "teach": "bonus melior optimus; malus peior pessimus; magnus maior maximus; parvus minor minimus; multus plūs plūrimus.",
+  "allowList": {
+    "lemmas": [
+      "bonus",
+      "malus",
+      "magnus",
+      "parvus",
+      "multus"
+    ],
+    "constructions": [
+      "irregular comparison",
+      "comparative",
+      "superlative"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "matching",
+      "single_form",
+      "translate",
+      "cloze"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-melior",
+      "type": "multiple_choice",
+      "prompt": "melior is the comparative of…",
+      "targets": [
+        "irregular comparison"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "malus"
+          },
+          {
+            "id": "b",
+            "label": "bonus"
+          },
+          {
+            "id": "c",
+            "label": "magnus"
+          },
+          {
+            "id": "d",
+            "label": "multus"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match-i",
+      "type": "matching",
+      "prompt": "Match positive → superlative.",
+      "targets": [
+        "irregular comparison"
+      ],
+      "payload": {
+        "leftLabel": "Match",
+        "rightLabel": "With",
+        "left": [
+          {
+            "id": "a",
+            "label": "bonus"
+          },
+          {
+            "id": "b",
+            "label": "malus"
+          },
+          {
+            "id": "c",
+            "label": "magnus"
+          },
+          {
+            "id": "d",
+            "label": "parvus"
+          },
+          {
+            "id": "e",
+            "label": "multus"
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "optimus"
+          },
+          {
+            "id": "2",
+            "label": "pessimus"
+          },
+          {
+            "id": "3",
+            "label": "maximus"
+          },
+          {
+            "id": "4",
+            "label": "minimus"
+          },
+          {
+            "id": "5",
+            "label": "plūrimus"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3",
+          "d": "4",
+          "e": "5"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sf1",
+      "type": "single_form",
+      "prompt": "Comparative of magnus (m.):",
+      "targets": [
+        "irregular comparison"
+      ],
+      "payload": {
+        "accept": [
+          "maior",
+          "major"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sf2",
+      "type": "single_form",
+      "prompt": "Superlative of malus (m.):",
+      "targets": [
+        "irregular comparison"
+      ],
+      "payload": {
+        "accept": [
+          "pessimus"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "tr1",
+      "type": "translate",
+      "prompt": "Hic liber melior est.",
+      "targets": [
+        "irregular comparison"
+      ],
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "This book is better."
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "cl1",
+      "type": "cloze",
+      "prompt": "The greatest (m. nom. s.).",
+      "targets": [
+        "irregular comparison"
+      ],
+      "payload": {
+        "template": "{{1}}",
+        "blanks": {
+          "1": [
+            "maximus"
+          ]
+        }
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}
