@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { redirect } from "next/navigation";
-import { auth, signOut } from "@/lib/auth";
+import { auth } from "@/lib/auth";
 import { listAllLessons, listUnits } from "@/lib/content";
 import { getCompletedSlugs, isUnlocked } from "@/lib/standard";
 
@@ -15,36 +15,14 @@ export default async function HomePage() {
 
   return (
     <main className="mx-auto max-w-3xl px-4 py-10">
-      <header className="mb-10 flex items-start justify-between gap-4">
-        <div>
-          <h1 className="font-serif text-3xl font-bold text-stone-900 dark:text-stone-50">
-            Latin Year 1
-          </h1>
-          <p className="mt-1 text-sm text-stone-500">
-            Signed in as {session.user.name ?? session.user.email}
-          </p>
-        </div>
-        <div className="flex flex-col items-end gap-2">
-          <Link
-            href="/help/typing"
-            className="text-sm text-amber-800 underline hover:text-amber-950 dark:text-amber-400"
-          >
-            Typing help
-          </Link>
-          <form
-            action={async () => {
-              "use server";
-              await signOut({ redirectTo: "/login" });
-            }}
-          >
-            <button
-              type="submit"
-              className="text-sm text-stone-500 underline hover:text-stone-800"
-            >
-              Sign out
-            </button>
-          </form>
-        </div>
+      <header className="mb-10">
+        <h1 className="font-serif text-3xl font-bold text-stone-900 dark:text-stone-50">
+          Your course
+        </h1>
+        <p className="mt-1 text-sm text-stone-500">
+          Year 1 high-school Latin — all lessons are open for now. Each lesson
+          still has its own standard to meet when you work it.
+        </p>
       </header>
 
       <div className="space-y-8">
@@ -77,7 +55,7 @@ export default async function HomePage() {
                             {lesson.title}
                           </span>
                           <span className="text-xs text-stone-500">
-                            {done ? "Complete" : "Open"}
+                            {done ? "Standard met" : "Available"}
                           </span>
                         </Link>
                       ) : (

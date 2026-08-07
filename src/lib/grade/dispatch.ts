@@ -111,21 +111,39 @@ function scoreRatio(
   };
 }
 
+/** Normalize legacy sing./plural keys to sg/pl for comparison. */
+function normalizeCellId(id: string): string {
+  return id
+    .replace(/\.sing\.?$/i, ".sg")
+    .replace(/\.singular$/i, ".sg")
+    .replace(/\.plural$/i, ".pl")
+    .replace(/\.pl$/i, ".pl");
+}
+
 function gradeParadigmGrid(
   payload: ParadigmGridPayload,
   response: unknown
 ): GradeResult {
-  const answers = asRecord(response);
+  const answersRaw = asRecord(response);
+  const answers: Record<string, string> = {};
+  for (const [k, v] of Object.entries(answersRaw)) {
+    answers[normalizeCellId(k)] = v;
+  }
   const cellResults: Record<string, boolean> = {};
   let correct = 0;
   let total = 0;
 
-  for (const [cellId, accepted] of Object.entries(payload.cells)) {
-    if (payload.prefill && cellId in payload.prefill) continue;
+  for (const [cellIdRaw, accepted] of Object.entries(payload.cells)) {
+    const cellId = normalizeCellId(cellIdRaw);
+    if (payload.prefill) {
+      const prefKeys = Object.keys(payload.prefill).map(normalizeCellId);
+      if (prefKeys.includes(cellId)) continue;
+    }
     total += 1;
-    const given = answers[cellId] ?? "";
+    const given = answers[cellId] ?? answersRaw[cellIdRaw] ?? "";
     const ok = matchesAny(given, accepted, "latin");
     cellResults[cellId] = ok;
+    cellResults[cellIdRaw] = ok;
     if (ok) correct += 1;
   }
 

@@ -1,0 +1,201 @@
+{
+  "slug": "04-rome-map",
+  "title": "Rome on the map",
+  "unitSlug": "00-foundations",
+  "order": 4,
+  "standardSummary": "Place Rome and Italy in the Mediterranean and answer culture questions.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-italy"
+      },
+      {
+        "type": "skill_count",
+        "skill": "culture-rome",
+        "n": 3,
+        "label": "Rome geography"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "sa-why-latin"
+      }
+    ]
+  },
+  "teach": "Rome sits in central Italy on the Tiber; Latin is the language of Rome and later the Empire.",
+  "allowList": {
+    "lemmas": [
+      "Roma",
+      "Italia"
+    ],
+    "constructions": [
+      "culture"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "matching",
+      "short_answer",
+      "multi_select"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-italy",
+      "type": "multiple_choice",
+      "prompt": "Rome is located primarily in…",
+      "targets": [
+        "culture-rome"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "Northern Africa only"
+          },
+          {
+            "id": "b",
+            "label": "Central Italy, on the Tiber River"
+          },
+          {
+            "id": "c",
+            "label": "Greece"
+          },
+          {
+            "id": "d",
+            "label": "Britain"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "mc-med",
+      "type": "multiple_choice",
+      "prompt": "Romans called the Mediterranean Sea roughly…",
+      "targets": [
+        "culture-rome"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "Mare Nostrum (“Our Sea”) in their worldview"
+          },
+          {
+            "id": "b",
+            "label": "The Atlantic only"
+          },
+          {
+            "id": "c",
+            "label": "The Red Sea"
+          },
+          {
+            "id": "d",
+            "label": "They had no word for sea"
+          }
+        ],
+        "correctOptionId": "a"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match-places",
+      "type": "matching",
+      "prompt": "Match place to description.",
+      "targets": [
+        "culture-rome"
+      ],
+      "payload": {
+        "left": [
+          {
+            "id": "rome",
+            "label": "Rōma"
+          },
+          {
+            "id": "tiber",
+            "label": "Tiber"
+          },
+          {
+            "id": "italy",
+            "label": "Italia"
+          }
+        ],
+        "right": [
+          {
+            "id": "a",
+            "label": "The city that became the center of Roman power"
+          },
+          {
+            "id": "b",
+            "label": "The river by Rome"
+          },
+          {
+            "id": "c",
+            "label": "The peninsula where Rome grew"
+          }
+        ],
+        "pairs": {
+          "rome": "a",
+          "tiber": "b",
+          "italy": "c"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "multi-empire",
+      "type": "multi_select",
+      "prompt": "Select ALL true statements.",
+      "targets": [
+        "culture-rome"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "Latin began as the language of Rome and Latium"
+          },
+          {
+            "id": "b",
+            "label": "Rome is an island in the Atlantic"
+          },
+          {
+            "id": "c",
+            "label": "The Empire later spread Latin widely"
+          },
+          {
+            "id": "d",
+            "label": "Italy is north of Scandinavia"
+          }
+        ],
+        "correctOptionIds": [
+          "a",
+          "c"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sa-why-latin",
+      "type": "short_answer",
+      "prompt": "Why learn Latin if you care about the Roman world? One or two sentences.",
+      "targets": [
+        "culture-rome"
+      ],
+      "payload": {
+        "sampleAnswers": [
+          "Latin is the language of Rome and much of Roman literature, law, and inscriptions.",
+          "Reading Latin connects you directly to Roman texts and the Empire’s language."
+        ],
+        "rubric": "Links Latin to Rome/Empire/texts. Not only “it is hard.”"
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

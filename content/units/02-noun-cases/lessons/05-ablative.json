@@ -1,0 +1,343 @@
+{
+  "slug": "05-ablative",
+  "title": "Ablative — by, with, from; place where",
+  "unitSlug": "02-noun-cases",
+  "order": 5,
+  "standardSummary": "Recognize ablative ideas, especially in + place where; hit skill counts.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-abl"
+      },
+      {
+        "type": "skill_count",
+        "skill": "ablative",
+        "n": 4,
+        "label": "ablative"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "sa-in"
+      }
+    ]
+  },
+  "teach": "Ablative covers several jobs: by/with/from, and place where with in. Very common early with in + ablative.",
+  "allowList": {
+    "lemmas": [
+      "villa",
+      "silva",
+      "in"
+    ],
+    "constructions": [
+      "ablative",
+      "in + abl"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "matching",
+      "short_answer",
+      "multi_select"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-abl",
+      "type": "multiple_choice",
+      "source": "seed",
+      "prompt": "In early Latin reading, in + ablative most often shows…",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "Place where (in/on …)"
+          },
+          {
+            "id": "b",
+            "label": "Direct object"
+          },
+          {
+            "id": "c",
+            "label": "The subject of the verb"
+          },
+          {
+            "id": "d",
+            "label": "Only future tense"
+          }
+        ],
+        "correctOptionId": "a"
+      },
+      "targets": [
+        "ablative",
+        "case"
+      ]
+    },
+    {
+      "id": "match-prep",
+      "type": "matching",
+      "source": "seed",
+      "prompt": "Match the English phrase idea to the case you will expect in Latin (starter sense).",
+      "required": true,
+      "payload": {
+        "leftLabel": "English idea",
+        "rightLabel": "Case",
+        "left": [
+          {
+            "id": "subj",
+            "label": "the girl (as subject)"
+          },
+          {
+            "id": "obj",
+            "label": "the land (as object of sees)"
+          },
+          {
+            "id": "in",
+            "label": "in the forest (location)"
+          }
+        ],
+        "right": [
+          {
+            "id": "nom",
+            "label": "Nominative"
+          },
+          {
+            "id": "acc",
+            "label": "Accusative"
+          },
+          {
+            "id": "abl",
+            "label": "Ablative"
+          }
+        ],
+        "pairs": {
+          "subj": "nom",
+          "obj": "acc",
+          "in": "abl"
+        }
+      },
+      "targets": [
+        "ablative",
+        "case"
+      ]
+    },
+    {
+      "id": "sa-in",
+      "type": "short_answer",
+      "source": "seed",
+      "prompt": "Why is villā ablative in “Puella est in villā”?",
+      "required": true,
+      "payload": {
+        "sampleAnswers": [
+          "Because in + ablative shows place where — in the villa.",
+          "Location after in takes the ablative."
+        ],
+        "rubric": "Place where / location / in + ablative. Not “because villa is a place name only.”"
+      },
+      "targets": [
+        "ablative",
+        "case"
+      ]
+    },
+    {
+      "id": "mc-abl-means",
+      "type": "multiple_choice",
+      "source": "seed",
+      "prompt": "Besides place where, ablative starter senses also include…",
+      "targets": [
+        "ablative"
+      ],
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "Only the subject of the verb"
+          },
+          {
+            "id": "b",
+            "label": "By / with / from (among other uses)"
+          },
+          {
+            "id": "c",
+            "label": "Only future tense"
+          },
+          {
+            "id": "d",
+            "label": "Only adjectives"
+          }
+        ],
+        "correctOptionId": "b"
+      }
+    },
+    {
+      "id": "mc-in-where",
+      "type": "multiple_choice",
+      "source": "seed",
+      "prompt": "“in the forest” (location) points to…",
+      "targets": [
+        "ablative"
+      ],
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "Nominative"
+          },
+          {
+            "id": "b",
+            "label": "Accusative direct object"
+          },
+          {
+            "id": "c",
+            "label": "Ablative (place where with in)"
+          },
+          {
+            "id": "d",
+            "label": "Genitive possession"
+          }
+        ],
+        "correctOptionId": "c"
+      }
+    },
+    {
+      "id": "match-prep-case",
+      "type": "matching",
+      "source": "seed",
+      "prompt": "Match each English idea to the case you expect in early Latin.",
+      "targets": [
+        "ablative",
+        "accusative",
+        "nominative"
+      ],
+      "required": true,
+      "payload": {
+        "leftLabel": "English idea",
+        "rightLabel": "Case",
+        "left": [
+          {
+            "id": "a",
+            "label": "the girl (subject)"
+          },
+          {
+            "id": "b",
+            "label": "the land (object of sees)"
+          },
+          {
+            "id": "c",
+            "label": "in the villa (where)"
+          },
+          {
+            "id": "d",
+            "label": "in the forest (where)"
+          }
+        ],
+        "right": [
+          {
+            "id": "nom",
+            "label": "Nominative"
+          },
+          {
+            "id": "acc",
+            "label": "Accusative"
+          },
+          {
+            "id": "abl",
+            "label": "Ablative"
+          }
+        ],
+        "pairs": {
+          "a": "nom",
+          "b": "acc",
+          "c": "abl",
+          "d": "abl"
+        }
+      }
+    },
+    {
+      "id": "multi-where",
+      "type": "multi_select",
+      "source": "seed",
+      "prompt": "Which phrases are place-where ideas (ablative with in later)?",
+      "targets": [
+        "ablative"
+      ],
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "in the villa"
+          },
+          {
+            "id": "b",
+            "label": "sees the land"
+          },
+          {
+            "id": "c",
+            "label": "in the forest"
+          },
+          {
+            "id": "d",
+            "label": "the girl’s water"
+          }
+        ],
+        "correctOptionIds": [
+          "a",
+          "c"
+        ]
+      }
+    },
+    {
+      "id": "mc-not-into-yet",
+      "type": "multiple_choice",
+      "source": "seed",
+      "prompt": "For now, in + ablative means place where. Motion “into” with in + accusative is…",
+      "targets": [
+        "ablative",
+        "case"
+      ],
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "Something we’ll meet later — don’t confuse it with place where yet"
+          },
+          {
+            "id": "b",
+            "label": "Exactly the same as place where"
+          },
+          {
+            "id": "c",
+            "label": "Never used in Latin"
+          },
+          {
+            "id": "d",
+            "label": "Only for verbs of being"
+          }
+        ],
+        "correctOptionId": "a"
+      }
+    },
+    {
+      "id": "sa-abl-jobs",
+      "type": "short_answer",
+      "source": "seed",
+      "prompt": "Name two starter uses of the ablative you learned.",
+      "targets": [
+        "ablative",
+        "case"
+      ],
+      "required": true,
+      "payload": {
+        "sampleAnswers": [
+          "Place where with in; also by/with/from.",
+          "Location after in; means/instrument or separation ideas."
+        ],
+        "rubric": "Mentions place where / in+abl and at least one of by/with/from/means. Partial if only one."
+      }
+    }
+  ]
+}

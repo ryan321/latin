@@ -1,0 +1,319 @@
+{
+  "slug": "03-accusative",
+  "title": "Accusative — the direct object",
+  "unitSlug": "02-noun-cases",
+  "order": 3,
+  "standardSummary": "Identify direct objects / accusative ideas; hit skill counts.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-acc"
+      },
+      {
+        "type": "skill_count",
+        "skill": "accusative",
+        "n": 4,
+        "label": "accusative / direct object"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "sa-acc"
+      }
+    ]
+  },
+  "teach": "Accusative case marks the direct object — who or what receives the action of the verb.",
+  "allowList": {
+    "lemmas": [
+      "puella",
+      "terra",
+      "spectat"
+    ],
+    "constructions": [
+      "accusative",
+      "direct object"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "matching",
+      "short_answer",
+      "multi_select"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-acc",
+      "type": "multiple_choice",
+      "source": "seed",
+      "prompt": "The accusative case is mainly used for…",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "The subject of the verb"
+          },
+          {
+            "id": "b",
+            "label": "The direct object of the verb"
+          },
+          {
+            "id": "c",
+            "label": "Only possession (“of”)"
+          },
+          {
+            "id": "d",
+            "label": "Only the verb itself"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "targets": [
+        "accusative",
+        "case"
+      ]
+    },
+    {
+      "id": "match-nv-jobs",
+      "type": "matching",
+      "source": "seed",
+      "prompt": "In “The girl sees the land,” match each noun to its job.",
+      "required": true,
+      "payload": {
+        "leftLabel": "Noun",
+        "rightLabel": "Job (case idea)",
+        "left": [
+          {
+            "id": "girl",
+            "label": "girl"
+          },
+          {
+            "id": "land",
+            "label": "land"
+          }
+        ],
+        "right": [
+          {
+            "id": "nom",
+            "label": "Subject → nominative"
+          },
+          {
+            "id": "acc",
+            "label": "Direct object → accusative"
+          }
+        ],
+        "pairs": {
+          "girl": "nom",
+          "land": "acc"
+        }
+      },
+      "targets": [
+        "accusative",
+        "case"
+      ]
+    },
+    {
+      "id": "sa-acc",
+      "type": "short_answer",
+      "source": "seed",
+      "prompt": "In “Puella terram spectat” (The girl looks at the land), why is terram accusative?",
+      "required": true,
+      "payload": {
+        "sampleAnswers": [
+          "Because the land is the direct object — what she looks at.",
+          "Terram receives the action of spectat."
+        ],
+        "rubric": "Direct object / receives the action / what is seen. Not “because it is last.”"
+      },
+      "targets": [
+        "accusative",
+        "case"
+      ]
+    },
+    {
+      "id": "multi-obj-1",
+      "type": "multi_select",
+      "source": "seed",
+      "prompt": "Select the direct object(s): “They carry water. She sees Rome.”",
+      "targets": [
+        "accusative"
+      ],
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "they",
+            "label": "They"
+          },
+          {
+            "id": "water",
+            "label": "water"
+          },
+          {
+            "id": "she",
+            "label": "She"
+          },
+          {
+            "id": "rome",
+            "label": "Rome"
+          },
+          {
+            "id": "sees",
+            "label": "sees"
+          }
+        ],
+        "correctOptionIds": [
+          "water",
+          "rome"
+        ]
+      }
+    },
+    {
+      "id": "multi-obj-2",
+      "type": "multi_select",
+      "source": "seed",
+      "prompt": "Select the direct object(s): “Farmers love land and peace.”",
+      "targets": [
+        "accusative"
+      ],
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "farmers",
+            "label": "Farmers"
+          },
+          {
+            "id": "love",
+            "label": "love"
+          },
+          {
+            "id": "land",
+            "label": "land"
+          },
+          {
+            "id": "peace",
+            "label": "peace"
+          }
+        ],
+        "correctOptionIds": [
+          "land",
+          "peace"
+        ]
+      }
+    },
+    {
+      "id": "mc-acc-q",
+      "type": "multiple_choice",
+      "source": "seed",
+      "prompt": "The question that best finds the direct object is…",
+      "targets": [
+        "accusative"
+      ],
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "Who/what is doing the action?"
+          },
+          {
+            "id": "b",
+            "label": "Whom/what receives the action?"
+          },
+          {
+            "id": "c",
+            "label": "Where is it?"
+          },
+          {
+            "id": "d",
+            "label": "Whose is it?"
+          }
+        ],
+        "correctOptionId": "b"
+      }
+    },
+    {
+      "id": "match-three-jobs",
+      "type": "matching",
+      "source": "seed",
+      "prompt": "In “The girl gives water to the farmer,” match each noun idea to its job (starter cases).",
+      "targets": [
+        "nominative",
+        "accusative",
+        "dative"
+      ],
+      "required": true,
+      "payload": {
+        "leftLabel": "Noun",
+        "rightLabel": "Job / case idea",
+        "left": [
+          {
+            "id": "girl",
+            "label": "girl"
+          },
+          {
+            "id": "water",
+            "label": "water"
+          },
+          {
+            "id": "farmer",
+            "label": "farmer (to the farmer)"
+          }
+        ],
+        "right": [
+          {
+            "id": "nom",
+            "label": "Subject → nominative"
+          },
+          {
+            "id": "acc",
+            "label": "Direct object → accusative"
+          },
+          {
+            "id": "dat",
+            "label": "To/for → dative"
+          }
+        ],
+        "pairs": {
+          "girl": "nom",
+          "water": "acc",
+          "farmer": "dat"
+        }
+      }
+    },
+    {
+      "id": "mc-order-vary",
+      "type": "multiple_choice",
+      "source": "seed",
+      "prompt": "In Latin, terram puella spectat can still mean “the girl looks at the land” because…",
+      "targets": [
+        "accusative",
+        "nominative",
+        "case"
+      ],
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "Word order is always fixed like English"
+          },
+          {
+            "id": "b",
+            "label": "Endings (case) mark subject vs object, not only position"
+          },
+          {
+            "id": "c",
+            "label": "Latin has no objects"
+          },
+          {
+            "id": "d",
+            "label": "spectat is a noun"
+          }
+        ],
+        "correctOptionId": "b"
+      }
+    }
+  ]
+}

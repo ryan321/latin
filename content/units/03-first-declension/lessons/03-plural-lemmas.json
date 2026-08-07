@@ -1,0 +1,241 @@
+{
+  "slug": "03-plural-lemmas",
+  "title": "More nouns & plurals",
+  "unitSlug": "03-first-declension",
+  "order": 3,
+  "standardSummary": "Decline additional 1st-declension nouns and show plural fluency.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "grid-terra"
+      },
+      {
+        "type": "skill_count",
+        "skill": "1st declension",
+        "n": 3,
+        "label": "1st declension forms"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "form-acc-pl"
+      }
+    ]
+  },
+  "teach": "Practice 1st declension with terra, aqua, via — singular and plural.",
+  "allowList": {
+    "lemmas": [
+      "terra",
+      "aqua",
+      "via",
+      "puella",
+      "silva"
+    ],
+    "constructions": [
+      "1st declension"
+    ],
+    "activityTypes": [
+      "paradigm_grid",
+      "single_form",
+      "matching",
+      "multiple_choice"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "grid-terra",
+      "type": "paradigm_grid",
+      "prompt": "Decline terra (1st declension).",
+      "targets": [
+        "1st declension"
+      ],
+      "payload": {
+        "kind": "noun",
+        "lemma": "terra",
+        "stem": "terr",
+        "pattern": "first_declension",
+        "mode": "full_form",
+        "labels": {
+          "rows": [
+            "nom",
+            "gen",
+            "dat",
+            "acc",
+            "abl"
+          ],
+          "cols": [
+            "sing.",
+            "plural"
+          ]
+        },
+        "cells": {}
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "form-gen-aqua",
+      "type": "single_form",
+      "prompt": "Genitive singular of aqua?",
+      "targets": [
+        "1st declension"
+      ],
+      "payload": {
+        "accept": [
+          "aquae"
+        ],
+        "hint": "1st decl Gen. sing. = -ae"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "form-acc-pl",
+      "type": "single_form",
+      "prompt": "Accusative plural of via?",
+      "targets": [
+        "1st declension"
+      ],
+      "payload": {
+        "accept": [
+          "vias",
+          "viās"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "form-dat-pl",
+      "type": "single_form",
+      "prompt": "Dative plural of puella?",
+      "targets": [
+        "1st declension"
+      ],
+      "payload": {
+        "accept": [
+          "puellis",
+          "puellīs"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match-endings",
+      "type": "matching",
+      "prompt": "Match case+number to the 1st-declension ending (sing.).",
+      "targets": [
+        "1st declension"
+      ],
+      "payload": {
+        "left": [
+          {
+            "id": "n",
+            "label": "Nominative sing."
+          },
+          {
+            "id": "g",
+            "label": "Genitive sing."
+          },
+          {
+            "id": "ac",
+            "label": "Accusative sing."
+          },
+          {
+            "id": "ab",
+            "label": "Ablative sing."
+          }
+        ],
+        "right": [
+          {
+            "id": "a",
+            "label": "-a"
+          },
+          {
+            "id": "ae",
+            "label": "-ae"
+          },
+          {
+            "id": "am",
+            "label": "-am"
+          },
+          {
+            "id": "ā",
+            "label": "-ā (macron optional when typing)"
+          }
+        ],
+        "pairs": {
+          "n": "a",
+          "g": "ae",
+          "ac": "am",
+          "ab": "ā"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "mc-pl",
+      "type": "multiple_choice",
+      "prompt": "Nominative plural of puella is…",
+      "targets": [
+        "1st declension"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "puellam"
+          },
+          {
+            "id": "b",
+            "label": "puellae"
+          },
+          {
+            "id": "c",
+            "label": "puellās"
+          },
+          {
+            "id": "d",
+            "label": "puellārum"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "mc-gen-pl",
+      "type": "multiple_choice",
+      "prompt": "Genitive plural ending of 1st declension is…",
+      "targets": [
+        "1st declension"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "-ārum"
+          },
+          {
+            "id": "b",
+            "label": "-am"
+          },
+          {
+            "id": "c",
+            "label": "-ōrum"
+          },
+          {
+            "id": "d",
+            "label": "-ibus"
+          }
+        ],
+        "correctOptionId": "a"
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

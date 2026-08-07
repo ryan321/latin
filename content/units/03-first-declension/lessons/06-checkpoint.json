@@ -1,0 +1,239 @@
+{
+  "slug": "06-checkpoint",
+  "title": "Checkpoint — First declension",
+  "unitSlug": "03-first-declension",
+  "order": 6,
+  "standardSummary": "Decline a 1st-declension noun, conjugate sum, and translate short sentences.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "paradigm_mastery",
+        "n": 1
+      },
+      {
+        "type": "skill_count",
+        "skill": "sum",
+        "n": 1,
+        "label": "sum"
+      },
+      {
+        "type": "translate_count",
+        "n": 3
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match-cases"
+      }
+    ]
+  },
+  "teach": "Unit 3 gauntlet: forms + sum + translation.",
+  "allowList": {
+    "lemmas": [
+      "puella",
+      "terra",
+      "aqua",
+      "via",
+      "sum",
+      "est",
+      "sunt"
+    ],
+    "constructions": [
+      "1st declension",
+      "sum present",
+      "nominative",
+      "accusative",
+      "ablative"
+    ],
+    "activityTypes": [
+      "paradigm_grid",
+      "single_form",
+      "translate",
+      "matching",
+      "multiple_choice"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "grid-via",
+      "type": "paradigm_grid",
+      "prompt": "Decline via.",
+      "targets": [
+        "1st declension"
+      ],
+      "payload": {
+        "kind": "noun",
+        "lemma": "via",
+        "stem": "vi",
+        "pattern": "first_declension",
+        "mode": "full_form",
+        "labels": {
+          "rows": [
+            "nom",
+            "gen",
+            "dat",
+            "acc",
+            "abl"
+          ],
+          "cols": [
+            "sing.",
+            "plural"
+          ]
+        },
+        "cells": {}
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "form-sum",
+      "type": "single_form",
+      "prompt": "3rd plural of sum?",
+      "targets": [
+        "sum"
+      ],
+      "payload": {
+        "accept": [
+          "sunt"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match-cases",
+      "type": "matching",
+      "prompt": "Match case to job.",
+      "targets": [
+        "nominative",
+        "accusative",
+        "ablative"
+      ],
+      "payload": {
+        "left": [
+          {
+            "id": "n",
+            "label": "Nominative"
+          },
+          {
+            "id": "ac",
+            "label": "Accusative"
+          },
+          {
+            "id": "ab",
+            "label": "Ablative after in"
+          }
+        ],
+        "right": [
+          {
+            "id": "s",
+            "label": "Subject"
+          },
+          {
+            "id": "o",
+            "label": "Direct object"
+          },
+          {
+            "id": "w",
+            "label": "Place where"
+          }
+        ],
+        "pairs": {
+          "n": "s",
+          "ac": "o",
+          "ab": "w"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "tr1",
+      "type": "translate",
+      "prompt": "Puella terram spectat.",
+      "targets": [
+        "1st declension"
+      ],
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "The girl looks at the land.",
+          "The girl watches the earth."
+        ],
+        "rubric": "Girl subject; looks at/watches; land object."
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "tr2",
+      "type": "translate",
+      "prompt": "Aqua in villā est.",
+      "targets": [
+        "sum"
+      ],
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "Water is in the villa.",
+          "The water is in the country house."
+        ],
+        "rubric": "Water; is; in villa."
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "tr3",
+      "type": "translate",
+      "prompt": "The girls are in the forest.",
+      "targets": [
+        "sum",
+        "1st declension"
+      ],
+      "payload": {
+        "direction": "E2L",
+        "length": "sentence",
+        "sampleAnswers": [
+          "Puellae in silva sunt.",
+          "Puellae in silvā sunt."
+        ],
+        "rubric": "puellae; in silvā; sunt."
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "mc-acc",
+      "type": "multiple_choice",
+      "prompt": "In Puella aquam portat, aquam is…",
+      "targets": [
+        "accusative"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "Nominative subject"
+          },
+          {
+            "id": "b",
+            "label": "Accusative direct object"
+          },
+          {
+            "id": "c",
+            "label": "Genitive"
+          },
+          {
+            "id": "d",
+            "label": "Ablative place where"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

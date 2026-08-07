@@ -50,6 +50,7 @@ Exact lesson count can grow over time. The curriculum should eventually cover ro
 
 | Strand | Year 1 targets (illustrative) |
 |--------|-------------------------------|
+| Foundations | Parts of speech; case **meanings** before full charts |
 | Nouns | 1st–5th declensions; major case uses |
 | Adjectives | 1st/2nd and 3rd declension; agreement |
 | Pronouns | Personal, demonstrative, relative (intro) |

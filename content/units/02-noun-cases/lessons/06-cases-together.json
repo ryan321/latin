@@ -1,0 +1,436 @@
+{
+  "slug": "06-cases-together",
+  "title": "All five cases together",
+  "unitSlug": "02-noun-cases",
+  "order": 6,
+  "standardSummary": "Match all five cases to jobs; order a simple analysis; short answer synthesizing case.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "match-five"
+      },
+      {
+        "type": "skill_count",
+        "skill": "nominative",
+        "n": 2,
+        "label": "nominative"
+      },
+      {
+        "type": "skill_count",
+        "skill": "accusative",
+        "n": 2,
+        "label": "accusative"
+      },
+      {
+        "type": "skill_count",
+        "skill": "ablative",
+        "n": 2,
+        "label": "ablative"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "order-analyze"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "sa-synth"
+      }
+    ]
+  },
+  "teach": "Review: nominative subject, accusative object, genitive of, dative to/for, ablative by/with/from and place where.",
+  "allowList": {
+    "lemmas": [
+      "puella",
+      "terra",
+      "villa"
+    ],
+    "constructions": [
+      "nominative",
+      "accusative",
+      "genitive",
+      "dative",
+      "ablative"
+    ],
+    "activityTypes": [
+      "matching",
+      "ordering",
+      "short_answer",
+      "multiple_choice"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "match-five",
+      "type": "matching",
+      "source": "seed",
+      "prompt": "Match each case to its core job.",
+      "required": true,
+      "payload": {
+        "leftLabel": "Case",
+        "rightLabel": "Job",
+        "left": [
+          {
+            "id": "nom",
+            "label": "Nominative"
+          },
+          {
+            "id": "gen",
+            "label": "Genitive"
+          },
+          {
+            "id": "dat",
+            "label": "Dative"
+          },
+          {
+            "id": "acc",
+            "label": "Accusative"
+          },
+          {
+            "id": "abl",
+            "label": "Ablative (after in)"
+          }
+        ],
+        "right": [
+          {
+            "id": "subj",
+            "label": "Subject"
+          },
+          {
+            "id": "of",
+            "label": "Of / possession"
+          },
+          {
+            "id": "to",
+            "label": "To / for"
+          },
+          {
+            "id": "obj",
+            "label": "Direct object"
+          },
+          {
+            "id": "where",
+            "label": "Place where"
+          }
+        ],
+        "pairs": {
+          "nom": "subj",
+          "gen": "of",
+          "dat": "to",
+          "acc": "obj",
+          "abl": "where"
+        }
+      },
+      "targets": [
+        "nominative",
+        "accusative",
+        "genitive",
+        "dative",
+        "ablative",
+        "case"
+      ]
+    },
+    {
+      "id": "order-analyze",
+      "type": "ordering",
+      "source": "seed",
+      "prompt": "Put these translation steps in a sensible order (first → last).",
+      "required": true,
+      "payload": {
+        "items": [
+          {
+            "id": "a",
+            "label": "Find the verb"
+          },
+          {
+            "id": "b",
+            "label": "Find the subject (nominative idea)"
+          },
+          {
+            "id": "c",
+            "label": "Find any direct object (accusative idea)"
+          },
+          {
+            "id": "d",
+            "label": "Check prepositional phrases (e.g. in + ablative)"
+          }
+        ],
+        "correctOrder": [
+          "a",
+          "b",
+          "c",
+          "d"
+        ]
+      },
+      "targets": [
+        "case"
+      ]
+    },
+    {
+      "id": "sa-synth",
+      "type": "short_answer",
+      "source": "seed",
+      "prompt": "In your own words: what is the difference between nominative and accusative?",
+      "required": true,
+      "payload": {
+        "sampleAnswers": [
+          "Nominative is the subject; accusative is the direct object.",
+          "Nominative does the action (or is); accusative receives the action."
+        ],
+        "rubric": "Subject vs direct object clearly. Partial if vague but mentions who does vs who is acted on."
+      },
+      "targets": [
+        "nominative",
+        "accusative",
+        "case"
+      ]
+    },
+    {
+      "id": "mc-nom-2",
+      "type": "multiple_choice",
+      "source": "seed",
+      "prompt": "In “The water is in the forest,” which word is the nominative idea (subject)?",
+      "targets": [
+        "nominative"
+      ],
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "water"
+          },
+          {
+            "id": "b",
+            "label": "forest"
+          },
+          {
+            "id": "c",
+            "label": "in"
+          },
+          {
+            "id": "d",
+            "label": "is (as a noun)"
+          }
+        ],
+        "correctOptionId": "a"
+      }
+    },
+    {
+      "id": "mc-acc-2",
+      "type": "multiple_choice",
+      "source": "seed",
+      "prompt": "In “The girl sees the land,” which is the accusative idea?",
+      "targets": [
+        "accusative"
+      ],
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "girl"
+          },
+          {
+            "id": "b",
+            "label": "sees"
+          },
+          {
+            "id": "c",
+            "label": "land"
+          },
+          {
+            "id": "d",
+            "label": "the (as a case)"
+          }
+        ],
+        "correctOptionId": "c"
+      }
+    },
+    {
+      "id": "mc-abl-2",
+      "type": "multiple_choice",
+      "source": "seed",
+      "prompt": "In “She is in the villa,” villa is the idea of which case?",
+      "targets": [
+        "ablative"
+      ],
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "Nominative"
+          },
+          {
+            "id": "b",
+            "label": "Accusative"
+          },
+          {
+            "id": "c",
+            "label": "Ablative (place where after in)"
+          },
+          {
+            "id": "d",
+            "label": "Genitive"
+          }
+        ],
+        "correctOptionId": "c"
+      }
+    },
+    {
+      "id": "match-five-2",
+      "type": "matching",
+      "source": "seed",
+      "prompt": "Match case → job again (mixed order).",
+      "targets": [
+        "nominative",
+        "genitive",
+        "dative",
+        "accusative",
+        "ablative",
+        "case"
+      ],
+      "required": true,
+      "payload": {
+        "leftLabel": "Case",
+        "rightLabel": "Job",
+        "left": [
+          {
+            "id": "g",
+            "label": "Genitive"
+          },
+          {
+            "id": "n",
+            "label": "Nominative"
+          },
+          {
+            "id": "ab",
+            "label": "Ablative (after in)"
+          },
+          {
+            "id": "d",
+            "label": "Dative"
+          },
+          {
+            "id": "ac",
+            "label": "Accusative"
+          }
+        ],
+        "right": [
+          {
+            "id": "of",
+            "label": "Of / possession"
+          },
+          {
+            "id": "subj",
+            "label": "Subject"
+          },
+          {
+            "id": "where",
+            "label": "Place where"
+          },
+          {
+            "id": "to",
+            "label": "To / for"
+          },
+          {
+            "id": "obj",
+            "label": "Direct object"
+          }
+        ],
+        "pairs": {
+          "g": "of",
+          "n": "subj",
+          "ab": "where",
+          "d": "to",
+          "ac": "obj"
+        }
+      }
+    },
+    {
+      "id": "mc-mixed-1",
+      "type": "multiple_choice",
+      "source": "seed",
+      "prompt": "“to the girl” (indirect object) is primarily…",
+      "targets": [
+        "dative"
+      ],
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "Genitive"
+          },
+          {
+            "id": "b",
+            "label": "Dative"
+          },
+          {
+            "id": "c",
+            "label": "Nominative"
+          },
+          {
+            "id": "d",
+            "label": "Ablative place where"
+          }
+        ],
+        "correctOptionId": "b"
+      }
+    },
+    {
+      "id": "mc-mixed-2",
+      "type": "multiple_choice",
+      "source": "seed",
+      "prompt": "“the girl’s road” shows…",
+      "targets": [
+        "genitive"
+      ],
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "Genitive possession"
+          },
+          {
+            "id": "b",
+            "label": "Accusative object"
+          },
+          {
+            "id": "c",
+            "label": "Ablative means"
+          },
+          {
+            "id": "d",
+            "label": "A verb form"
+          }
+        ],
+        "correctOptionId": "a"
+      }
+    },
+    {
+      "id": "sa-five",
+      "type": "short_answer",
+      "source": "seed",
+      "prompt": "List the five cases from this unit and one short job for each (can be brief).",
+      "targets": [
+        "case",
+        "nominative",
+        "accusative",
+        "genitive",
+        "dative",
+        "ablative"
+      ],
+      "required": true,
+      "payload": {
+        "sampleAnswers": [
+          "Nom subject; gen of; dat to/for; acc object; abl by/with/from or place where.",
+          "Nominative=subject, genitive=possession, dative=to/for, accusative=direct object, ablative=place where/with/from."
+        ],
+        "rubric": "Names all five with roughly correct jobs. Partial if 3–4 solid."
+      }
+    }
+  ]
+}

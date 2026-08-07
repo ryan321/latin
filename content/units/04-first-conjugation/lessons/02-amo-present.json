@@ -1,0 +1,239 @@
+{
+  "slug": "02-amo-present",
+  "title": "Amō — present active",
+  "unitSlug": "04-first-conjugation",
+  "order": 2,
+  "standardSummary": "Conjugate a 1st-conjugation verb in the present and form key persons.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "grid-amo"
+      },
+      {
+        "type": "skill_count",
+        "skill": "1st conjugation",
+        "n": 3,
+        "label": "1st conj forms"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "form-amant"
+      }
+    ]
+  },
+  "teach": "First conjugation present: stem + personal endings (amō type).",
+  "allowList": {
+    "lemmas": [
+      "amo",
+      "porto",
+      "specto",
+      "laudo",
+      "voco"
+    ],
+    "constructions": [
+      "1st conjugation",
+      "personal endings"
+    ],
+    "activityTypes": [
+      "paradigm_grid",
+      "single_form",
+      "matching",
+      "multiple_choice"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "grid-amo",
+      "type": "paradigm_grid",
+      "prompt": "Conjugate amō present indicative active.",
+      "targets": [
+        "1st conjugation"
+      ],
+      "payload": {
+        "kind": "verb",
+        "lemma": "amo",
+        "stem": "am",
+        "pattern": "first_conj_present",
+        "mode": "full_form",
+        "labels": {
+          "rows": [
+            "1",
+            "2",
+            "3"
+          ],
+          "cols": [
+            "sing.",
+            "plural"
+          ]
+        },
+        "cells": {}
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "form-amas",
+      "type": "single_form",
+      "prompt": "You (sing.) love — form of amō?",
+      "targets": [
+        "1st conjugation"
+      ],
+      "payload": {
+        "accept": [
+          "amas",
+          "amās"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "form-amant",
+      "type": "single_form",
+      "prompt": "They love?",
+      "targets": [
+        "1st conjugation"
+      ],
+      "payload": {
+        "accept": [
+          "amant"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "form-amamus",
+      "type": "single_form",
+      "prompt": "We love?",
+      "targets": [
+        "1st conjugation"
+      ],
+      "payload": {
+        "accept": [
+          "amamus",
+          "amāmus"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match-porto",
+      "type": "matching",
+      "prompt": "Match portō forms to English.",
+      "targets": [
+        "1st conjugation"
+      ],
+      "payload": {
+        "left": [
+          {
+            "id": "a",
+            "label": "portō"
+          },
+          {
+            "id": "b",
+            "label": "portat"
+          },
+          {
+            "id": "c",
+            "label": "portant"
+          },
+          {
+            "id": "d",
+            "label": "portāmus"
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "I carry"
+          },
+          {
+            "id": "2",
+            "label": "he/she carries"
+          },
+          {
+            "id": "3",
+            "label": "they carry"
+          },
+          {
+            "id": "4",
+            "label": "we carry"
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3",
+          "d": "4"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "mc-stem",
+      "type": "multiple_choice",
+      "prompt": "The present stem of amō (for amās, amat…) is essentially…",
+      "targets": [
+        "1st conjugation"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "am- (with -ā- thematic vowel in many forms)"
+          },
+          {
+            "id": "b",
+            "label": "nt- only"
+          },
+          {
+            "id": "c",
+            "label": "puell-"
+          },
+          {
+            "id": "d",
+            "label": "sum-"
+          }
+        ],
+        "correctOptionId": "a"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "mc-inf",
+      "type": "multiple_choice",
+      "prompt": "The infinitive of amō is…",
+      "targets": [
+        "1st conjugation"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "amāre"
+          },
+          {
+            "id": "b",
+            "label": "amant"
+          },
+          {
+            "id": "c",
+            "label": "amas"
+          },
+          {
+            "id": "d",
+            "label": "amōmus"
+          }
+        ],
+        "correctOptionId": "a"
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

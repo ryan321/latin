@@ -1,0 +1,280 @@
+{
+  "slug": "01-personal-endings",
+  "title": "Personal endings",
+  "unitSlug": "04-first-conjugation",
+  "order": 1,
+  "standardSummary": "Identify person/number and match personal endings -ō -s -t -mus -tis -nt.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-person"
+      },
+      {
+        "type": "skill_count",
+        "skill": "personal endings",
+        "n": 3,
+        "label": "personal endings"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match-end"
+      }
+    ]
+  },
+  "teach": "Latin finite verbs show person and number with personal endings.",
+  "allowList": {
+    "lemmas": [
+      "amo"
+    ],
+    "constructions": [
+      "personal endings",
+      "verb"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "matching",
+      "ordering",
+      "short_answer"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-person",
+      "type": "multiple_choice",
+      "prompt": "The ending -t on a present active verb usually means…",
+      "targets": [
+        "personal endings"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "I (1st sing.)"
+          },
+          {
+            "id": "b",
+            "label": "you sing. (2nd sing.)"
+          },
+          {
+            "id": "c",
+            "label": "he/she/it (3rd sing.)"
+          },
+          {
+            "id": "d",
+            "label": "we (1st plural)"
+          }
+        ],
+        "correctOptionId": "c"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match-end",
+      "type": "matching",
+      "prompt": "Match ending to person/number.",
+      "targets": [
+        "personal endings"
+      ],
+      "payload": {
+        "left": [
+          {
+            "id": "o",
+            "label": "-ō"
+          },
+          {
+            "id": "s",
+            "label": "-s"
+          },
+          {
+            "id": "t",
+            "label": "-t"
+          },
+          {
+            "id": "mus",
+            "label": "-mus"
+          },
+          {
+            "id": "tis",
+            "label": "-tis"
+          },
+          {
+            "id": "nt",
+            "label": "-nt"
+          }
+        ],
+        "right": [
+          {
+            "id": "1s",
+            "label": "I"
+          },
+          {
+            "id": "2s",
+            "label": "you (sing.)"
+          },
+          {
+            "id": "3s",
+            "label": "he/she/it"
+          },
+          {
+            "id": "1p",
+            "label": "we"
+          },
+          {
+            "id": "2p",
+            "label": "you (plural)"
+          },
+          {
+            "id": "3p",
+            "label": "they"
+          }
+        ],
+        "pairs": {
+          "o": "1s",
+          "s": "2s",
+          "t": "3s",
+          "mus": "1p",
+          "tis": "2p",
+          "nt": "3p"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match-ex",
+      "type": "matching",
+      "prompt": "Match English to person.",
+      "targets": [
+        "personal endings"
+      ],
+      "payload": {
+        "left": [
+          {
+            "id": "a",
+            "label": "we love"
+          },
+          {
+            "id": "b",
+            "label": "you (sing.) love"
+          },
+          {
+            "id": "c",
+            "label": "they love"
+          },
+          {
+            "id": "d",
+            "label": "I love"
+          }
+        ],
+        "right": [
+          {
+            "id": "1p",
+            "label": "1st plural"
+          },
+          {
+            "id": "2s",
+            "label": "2nd singular"
+          },
+          {
+            "id": "3p",
+            "label": "3rd plural"
+          },
+          {
+            "id": "1s",
+            "label": "1st singular"
+          }
+        ],
+        "pairs": {
+          "a": "1p",
+          "b": "2s",
+          "c": "3p",
+          "d": "1s"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "order-end",
+      "type": "ordering",
+      "prompt": "Order the singular personal endings as listed in charts (1 → 2 → 3).",
+      "targets": [
+        "personal endings"
+      ],
+      "payload": {
+        "items": [
+          {
+            "id": "a",
+            "label": "-ō (I)"
+          },
+          {
+            "id": "b",
+            "label": "-s (you sing.)"
+          },
+          {
+            "id": "c",
+            "label": "-t (he/she/it)"
+          }
+        ],
+        "correctOrder": [
+          "a",
+          "b",
+          "c"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "mc-nt",
+      "type": "multiple_choice",
+      "prompt": "-nt marks…",
+      "targets": [
+        "personal endings"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "1st singular"
+          },
+          {
+            "id": "b",
+            "label": "2nd plural"
+          },
+          {
+            "id": "c",
+            "label": "3rd plural (they)"
+          },
+          {
+            "id": "d",
+            "label": "infinitive"
+          }
+        ],
+        "correctOptionId": "c"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sa-why",
+      "type": "short_answer",
+      "prompt": "Why do Latin verbs change endings for person?",
+      "targets": [
+        "personal endings",
+        "verb"
+      ],
+      "payload": {
+        "sampleAnswers": [
+          "To show who is doing the action without always needing a separate pronoun.",
+          "Personal endings mark I/you/he/we/you/they on the verb form."
+        ],
+        "rubric": "Mentions who does the action / person-number on the verb."
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

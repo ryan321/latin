@@ -1,0 +1,278 @@
+{
+  "slug": "01-us-nouns",
+  "title": "Second declension -us",
+  "unitSlug": "05-second-declension",
+  "order": 1,
+  "standardSummary": "Decline a 2nd-declension masculine -us noun and identify key endings.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "grid-servus"
+      },
+      {
+        "type": "skill_count",
+        "skill": "2nd declension",
+        "n": 3,
+        "label": "2nd declension"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "form-acc"
+      }
+    ]
+  },
+  "teach": "Masculine -us nouns: servus, amīcus, ager patterns intro.",
+  "allowList": {
+    "lemmas": [
+      "servus",
+      "amicus",
+      "filius",
+      "dominus"
+    ],
+    "constructions": [
+      "2nd declension"
+    ],
+    "activityTypes": [
+      "paradigm_grid",
+      "single_form",
+      "matching",
+      "multiple_choice"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "grid-servus",
+      "type": "paradigm_grid",
+      "prompt": "Decline servus (2nd decl. m.).",
+      "targets": [
+        "2nd declension"
+      ],
+      "payload": {
+        "kind": "noun",
+        "lemma": "servus",
+        "stem": "serv",
+        "mode": "full_form",
+        "labels": {
+          "rows": [
+            "nom",
+            "gen",
+            "dat",
+            "acc",
+            "abl"
+          ],
+          "cols": [
+            "sing.",
+            "plural"
+          ]
+        },
+        "cells": {
+          "nom.sg": [
+            "servus"
+          ],
+          "gen.sg": [
+            "servi",
+            "servī"
+          ],
+          "dat.sg": [
+            "servo",
+            "servō"
+          ],
+          "acc.sg": [
+            "servum"
+          ],
+          "abl.sg": [
+            "servo",
+            "servō"
+          ],
+          "nom.pl": [
+            "servi",
+            "servī"
+          ],
+          "gen.pl": [
+            "servorum",
+            "servōrum"
+          ],
+          "dat.pl": [
+            "servis",
+            "servīs"
+          ],
+          "acc.pl": [
+            "servos",
+            "servōs"
+          ],
+          "abl.pl": [
+            "servis",
+            "servīs"
+          ]
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "form-acc",
+      "type": "single_form",
+      "prompt": "Accusative singular of servus?",
+      "targets": [
+        "2nd declension"
+      ],
+      "payload": {
+        "accept": [
+          "servum"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "form-gen",
+      "type": "single_form",
+      "prompt": "Genitive singular of amīcus?",
+      "targets": [
+        "2nd declension"
+      ],
+      "payload": {
+        "accept": [
+          "amici",
+          "amīcī"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "form-nom-pl",
+      "type": "single_form",
+      "prompt": "Nominative plural of servus?",
+      "targets": [
+        "2nd declension"
+      ],
+      "payload": {
+        "accept": [
+          "servi",
+          "servī"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match-end",
+      "type": "matching",
+      "prompt": "2nd decl. m. sing. endings.",
+      "targets": [
+        "2nd declension"
+      ],
+      "payload": {
+        "left": [
+          {
+            "id": "n",
+            "label": "Nom. sing."
+          },
+          {
+            "id": "g",
+            "label": "Gen. sing."
+          },
+          {
+            "id": "ac",
+            "label": "Acc. sing."
+          },
+          {
+            "id": "ab",
+            "label": "Abl. sing."
+          }
+        ],
+        "right": [
+          {
+            "id": "us",
+            "label": "-us"
+          },
+          {
+            "id": "i",
+            "label": "-ī"
+          },
+          {
+            "id": "um",
+            "label": "-um"
+          },
+          {
+            "id": "o",
+            "label": "-ō"
+          }
+        ],
+        "pairs": {
+          "n": "us",
+          "g": "i",
+          "ac": "um",
+          "ab": "o"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "mc-voc",
+      "type": "multiple_choice",
+      "prompt": "Vocative singular of servus is often…",
+      "targets": [
+        "2nd declension"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "serve"
+          },
+          {
+            "id": "b",
+            "label": "servum"
+          },
+          {
+            "id": "c",
+            "label": "servōrum"
+          },
+          {
+            "id": "d",
+            "label": "servās"
+          }
+        ],
+        "correctOptionId": "a"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "mc-contrast",
+      "type": "multiple_choice",
+      "prompt": "1st decl. acc. sing. -am vs 2nd decl. m. acc. sing.…",
+      "targets": [
+        "2nd declension",
+        "1st declension"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "-um"
+          },
+          {
+            "id": "b",
+            "label": "-ās"
+          },
+          {
+            "id": "c",
+            "label": "-ae"
+          },
+          {
+            "id": "d",
+            "label": "-ōrum"
+          }
+        ],
+        "correctOptionId": "a"
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

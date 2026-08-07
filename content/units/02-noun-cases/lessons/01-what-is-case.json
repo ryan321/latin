@@ -1,0 +1,294 @@
+{
+  "slug": "01-what-is-case",
+  "title": "What is case?",
+  "unitSlug": "02-noun-cases",
+  "order": 1,
+  "standardSummary": "Define case; explain endings vs word order; practice with several checks.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-case-def"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "mc-order"
+      },
+      {
+        "type": "skill_count",
+        "skill": "case",
+        "n": 3,
+        "label": "case concepts"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "sa-endings"
+      }
+    ]
+  },
+  "teach": "Case is the form of a noun that shows its job in the sentence. Latin uses case endings; English mostly uses word order.",
+  "allowList": {
+    "lemmas": [
+      "puella",
+      "terra"
+    ],
+    "constructions": [
+      "case"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "short_answer",
+      "matching",
+      "ordering"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-case-def",
+      "type": "multiple_choice",
+      "source": "seed",
+      "prompt": "In Latin grammar, case is mainly…",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "How loud you pronounce a noun"
+          },
+          {
+            "id": "b",
+            "label": "The form of a noun that shows its job in the sentence"
+          },
+          {
+            "id": "c",
+            "label": "Whether a word is a verb or adjective"
+          },
+          {
+            "id": "d",
+            "label": "The English translation only"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "targets": [
+        "case"
+      ]
+    },
+    {
+      "id": "mc-order",
+      "type": "multiple_choice",
+      "source": "seed",
+      "prompt": "English “The girl sees the land” vs “The land sees the girl” changes meaning mostly by…",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "Word order"
+          },
+          {
+            "id": "b",
+            "label": "Spelling of “girl” changing"
+          },
+          {
+            "id": "c",
+            "label": "Loudness"
+          },
+          {
+            "id": "d",
+            "label": "Capital letters"
+          }
+        ],
+        "correctOptionId": "a"
+      },
+      "targets": [
+        "case"
+      ]
+    },
+    {
+      "id": "sa-endings",
+      "type": "short_answer",
+      "source": "seed",
+      "prompt": "In one or two sentences: how does Latin often show who does what to whom, if not only by word order?",
+      "required": true,
+      "payload": {
+        "sampleAnswers": [
+          "By changing noun endings (case endings) so you can tell subject from object.",
+          "Latin uses case endings on nouns to show each noun’s job."
+        ],
+        "rubric": "Mentions endings/case/inflection showing role. Not only “Latin is free word order” without endings."
+      },
+      "targets": [
+        "case"
+      ]
+    },
+    {
+      "id": "mc-inflect",
+      "type": "multiple_choice",
+      "source": "seed",
+      "prompt": "Latin is called an inflected language mainly because…",
+      "targets": [
+        "case"
+      ],
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "It only uses word order like English"
+          },
+          {
+            "id": "b",
+            "label": "Word endings change to show grammar jobs"
+          },
+          {
+            "id": "c",
+            "label": "It has no verbs"
+          },
+          {
+            "id": "d",
+            "label": "Every word is always the same form"
+          }
+        ],
+        "correctOptionId": "b"
+      }
+    },
+    {
+      "id": "match-five-preview",
+      "type": "matching",
+      "source": "seed",
+      "prompt": "Match each case name to its starter job (preview — you will practice each soon).",
+      "targets": [
+        "case",
+        "nominative",
+        "accusative",
+        "genitive",
+        "dative",
+        "ablative"
+      ],
+      "required": true,
+      "payload": {
+        "leftLabel": "Case",
+        "rightLabel": "Starter job",
+        "left": [
+          {
+            "id": "nom",
+            "label": "Nominative"
+          },
+          {
+            "id": "acc",
+            "label": "Accusative"
+          },
+          {
+            "id": "gen",
+            "label": "Genitive"
+          },
+          {
+            "id": "dat",
+            "label": "Dative"
+          },
+          {
+            "id": "abl",
+            "label": "Ablative (after in)"
+          }
+        ],
+        "right": [
+          {
+            "id": "subj",
+            "label": "Subject"
+          },
+          {
+            "id": "obj",
+            "label": "Direct object"
+          },
+          {
+            "id": "of",
+            "label": "Of / possession"
+          },
+          {
+            "id": "to",
+            "label": "To / for"
+          },
+          {
+            "id": "where",
+            "label": "Place where"
+          }
+        ],
+        "pairs": {
+          "nom": "subj",
+          "acc": "obj",
+          "gen": "of",
+          "dat": "to",
+          "abl": "where"
+        }
+      }
+    },
+    {
+      "id": "mc-english-order",
+      "type": "multiple_choice",
+      "source": "seed",
+      "prompt": "“The land sees the girl” means something different from “The girl sees the land” mainly because of…",
+      "targets": [
+        "case"
+      ],
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "Word order in English"
+          },
+          {
+            "id": "b",
+            "label": "The font size"
+          },
+          {
+            "id": "c",
+            "label": "Whether vowels are long"
+          },
+          {
+            "id": "d",
+            "label": "The number of commas"
+          }
+        ],
+        "correctOptionId": "a"
+      }
+    },
+    {
+      "id": "order-cases-learn",
+      "type": "ordering",
+      "source": "seed",
+      "prompt": "Put these learning steps in order for this unit (first → last).",
+      "targets": [
+        "case"
+      ],
+      "required": true,
+      "payload": {
+        "items": [
+          {
+            "id": "a",
+            "label": "Learn what case means"
+          },
+          {
+            "id": "b",
+            "label": "Learn each case’s job (nom, acc, …)"
+          },
+          {
+            "id": "c",
+            "label": "Practice all five together"
+          },
+          {
+            "id": "d",
+            "label": "Later: attach real Latin endings (1st declension)"
+          }
+        ],
+        "correctOrder": [
+          "a",
+          "b",
+          "c",
+          "d"
+        ]
+      }
+    }
+  ]
+}

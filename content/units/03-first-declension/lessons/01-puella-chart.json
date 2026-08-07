@@ -1,20 +1,38 @@
 {
   "slug": "01-puella-chart",
   "title": "First declension paradigm (puella)",
-  "unitSlug": "01-first-declension",
+  "unitSlug": "03-first-declension",
   "order": 1,
   "standardSummary": "Decline puella in all cases singular and plural, and produce at least one more 1st-declension form correctly.",
   "standard": {
     "requirements": [
-      { "type": "activity_passed", "activityId": "grid-puella" },
-      { "type": "activity_passed", "activityId": "form-gen-via" }
+      {
+        "type": "activity_passed",
+        "activityId": "grid-puella"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "form-gen-via"
+      }
     ]
   },
   "teach": "## First declension\n\nMost first-declension nouns are feminine and end in **-a** in the nominative singular (dictionary form). Example: **puella, puellae** f. — girl.\n\n### Endings (learn these cold)\n\n| Case | Singular | Plural |\n|------|----------|--------|\n| Nominative | -a | -ae |\n| Genitive | -ae | -ārum |\n| Dative | -ae | -īs |\n| Accusative | -am | -ās |\n| Ablative | -ā | -īs |\n\nStem of *puella* is **puell-**. Attach the endings to the stem.\n\n### Case jobs (preview)\n\n- **Nominative** — subject (*Puella ambulat.* The girl walks.)\n- **Genitive** — \"of\" (*aqua puellae* — the girl's water)\n- **Dative** — to/for (*puellae* — to/for the girl)\n- **Accusative** — direct object\n- **Ablative** — by/with/from; also after *in* for place where (*in villā*)\n\nYou will practice cases with meaning soon. Today: **forms automaticity**.",
   "allowList": {
-    "lemmas": ["puella", "via", "terra", "aqua", "silva", "villa"],
-    "constructions": ["1st declension"],
-    "activityTypes": ["paradigm_grid", "single_form"]
+    "lemmas": [
+      "puella",
+      "via",
+      "terra",
+      "aqua",
+      "silva",
+      "villa"
+    ],
+    "constructions": [
+      "1st declension"
+    ],
+    "activityTypes": [
+      "paradigm_grid",
+      "single_form"
+    ]
   },
   "seeds": [
     {
@@ -22,7 +40,9 @@
       "type": "paradigm_grid",
       "source": "seed",
       "prompt": "Decline puella (1st declension), all cases, singular and plural.",
-      "targets": ["1st declension"],
+      "targets": [
+        "1st declension"
+      ],
       "required": true,
       "payload": {
         "kind": "noun",
@@ -31,8 +51,17 @@
         "pattern": "first_declension",
         "mode": "full_form",
         "labels": {
-          "rows": ["nom", "gen", "dat", "acc", "abl"],
-          "cols": ["sg", "pl"]
+          "rows": [
+            "nom",
+            "gen",
+            "dat",
+            "acc",
+            "abl"
+          ],
+          "cols": [
+            "sing.",
+            "plural"
+          ]
         },
         "cells": {}
       }
@@ -42,10 +71,15 @@
       "type": "single_form",
       "source": "seed",
       "prompt": "What is the genitive singular of via (way, road)?",
-      "targets": ["1st declension", "genitive"],
+      "targets": [
+        "1st declension",
+        "genitive"
+      ],
       "required": true,
       "payload": {
-        "accept": ["viae"],
+        "accept": [
+          "viae"
+        ],
         "hint": "1st declension genitive singular ends in -ae"
       }
     }

@@ -135,6 +135,7 @@ Pin the exact OpenRouter model id after checking their model list; update `.env.
 |----------|---------|
 | `NEXT_PUBLIC_SITE_URL` | Canonical public URL (production) |
 | `GENERATION_MAX_PER_LESSON` | Cap AI-generated activities per lesson attempt (cost/fatigue) |
+| `UNLOCK_ALL_LESSONS` | `true` (default): all lessons open; `false`: sequential unlock |
 | `LOG_AI_PAYLOADS` | `true` in dev to log grade/generate JSON for debugging |
 
 **Never commit** `.env.local` or production secrets. Fly uses `fly secrets set`, not committed env files.

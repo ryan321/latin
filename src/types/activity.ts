@@ -205,6 +205,13 @@ export const standardRequirementSchema = z.discriminatedUnion("type", [
     activityType: activityTypeSchema,
     n: z.number().int().positive(),
   }),
+  /** Count distinct passed activities whose targets[] include this skill tag. */
+  z.object({
+    type: z.literal("skill_count"),
+    skill: z.string(),
+    n: z.number().int().positive(),
+    label: z.string().optional(),
+  }),
   z.object({
     type: z.literal("translate_count"),
     direction: z.enum(["L2E", "E2L"]).optional(),

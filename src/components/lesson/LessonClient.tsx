@@ -19,6 +19,7 @@ type ChatMessage = { id: string; role: "user" | "assistant"; content: string };
 type ProgressReq = {
   met: boolean;
   detail: string;
+  remaining?: number;
 };
 
 type Props = {
@@ -26,7 +27,6 @@ type Props = {
   unitSlug: string;
   title: string;
   standardSummary: string;
-  /** Server-rendered MDX teach body */
   teachContent: ReactNode;
   seeds: Activity[];
   generated: Activity[];
@@ -64,9 +64,19 @@ export function LessonClient({
   const [draft, setDraft] = useState("");
   const [chatBusy, setChatBusy] = useState(false);
   const [chatError, setChatError] = useState<string | null>(null);
-  const [genBusy, setGenBusy] = useState(false);
-  const [genError, setGenError] = useState<string | null>(null);
+  const [reviewBusy, setReviewBusy] = useState(false);
+  const [reviewError, setReviewError] = useState<string | null>(null);
+  const [coachingMarkdown, setCoachingMarkdown] = useState<string | null>(
+    null
+  );
+  const [reviewDoneOnce, setReviewDoneOnce] = useState(false);
+  /** Activity ids from the latest remediation batch; when all checked, auto-review again. */
+  const [pendingBatchIds, setPendingBatchIds] = useState<string[]>([]);
+  const [recentIssues, setRecentIssues] = useState<string[]>([]);
   const chatScrollRef = useRef<HTMLDivElement | null>(null);
+  const coachRef = useRef<HTMLDivElement | null>(null);
+  const autoSeedReviewFired = useRef(false);
+  const autoBatchReviewKey = useRef<string | null>(null);
 
   useEffect(() => {
     chatScrollRef.current?.scrollTo({
@@ -79,6 +89,14 @@ export function LessonClient({
     () => [...seeds, ...generated],
     [seeds, generated]
   );
+
+  const seedsAllAttempted = useMemo(
+    () => seeds.every((s) => latest[s.id] != null),
+    [seeds, latest]
+  );
+
+  const seedSection = seeds;
+  const extraSection = generated;
 
   async function sendChat(e: FormEvent) {
     e.preventDefault();
@@ -114,33 +132,137 @@ export function LessonClient({
     }
   }
 
-  async function morePractice() {
-    setGenBusy(true);
-    setGenError(null);
+  async function runReview(phase: "after_seeds" | "after_extra") {
+    if (reviewBusy) return;
+    setReviewBusy(true);
+    setReviewError(null);
     try {
-      const issues = Object.values(latest)
-        .filter((l) => l.status !== "passed")
-        .flatMap(() => []);
-      const res = await fetch("/api/activities/generate", {
+      const res = await fetch("/api/lessons/review", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ lessonSlug, issues }),
+        body: JSON.stringify({
+          lessonSlug,
+          phase,
+          issues: recentIssues,
+        }),
       });
       const data = await res.json();
-      if (!res.ok) throw new Error(data.error || "Could not generate practice");
-      if (data.activities?.length) {
-        setGenerated((g) => [...g, ...data.activities]);
-      } else if (data.message) {
-        setGenError(data.message);
-      } else {
-        setGenError("No new items returned — try the tutor or check your API key.");
+      if (!res.ok) throw new Error(data.error || "Review failed");
+
+      if (data.progress?.requirements) {
+        setProgress(
+          data.progress.requirements.map(
+            (r: { met: boolean; detail: string; remaining?: number }) => ({
+              met: r.met,
+              detail: r.detail,
+              remaining: r.remaining,
+            })
+          )
+        );
       }
-      if (data.standardMet) setStandardMet(true);
+      const met = !!data.standardMet;
+      setStandardMet(met);
+      setCoachingMarkdown(data.coachingMarkdown ?? null);
+      setReviewDoneOnce(true);
+
+      const newActs = (data.activities as Activity[] | undefined) ?? [];
+      if (newActs.length) {
+        setGenerated((g) => {
+          const ids = new Set(g.map((x) => x.id));
+          const add = newActs.filter((a) => !ids.has(a.id));
+          return [...g, ...add];
+        });
+        // New batch to complete before the next auto-review
+        const batchIds = newActs.map((a) => a.id);
+        setPendingBatchIds(batchIds);
+        autoBatchReviewKey.current = null;
+      } else {
+        // No new items (met, or generation empty) — clear batch loop
+        setPendingBatchIds([]);
+        autoBatchReviewKey.current = null;
+      }
+
+      if (data.coachingMarkdown) {
+        setMessages((m) => [
+          ...m,
+          {
+            id: `coach-${Date.now()}`,
+            role: "assistant",
+            content: data.coachingMarkdown,
+          },
+        ]);
+      }
+
+      requestAnimationFrame(() => {
+        coachRef.current?.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      });
     } catch (err) {
-      setGenError(err instanceof Error ? err.message : "Generate failed");
+      setReviewError(err instanceof Error ? err.message : "Review failed");
+      // Allow retry of the same batch auto-review
+      autoBatchReviewKey.current = null;
     } finally {
-      setGenBusy(false);
+      setReviewBusy(false);
     }
+  }
+
+  // 1) Auto-review when every seed has been checked (once)
+  useEffect(() => {
+    if (
+      !standardMet &&
+      seedsAllAttempted &&
+      !reviewDoneOnce &&
+      !autoSeedReviewFired.current &&
+      !reviewBusy
+    ) {
+      autoSeedReviewFired.current = true;
+      void runReview("after_seeds");
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [seedsAllAttempted, standardMet, reviewDoneOnce]);
+
+  // 2) Auto-review when the current extra-practice batch is fully attempted
+  //    → loop: coach → practice → evaluate → coach → … until standard met
+  const pendingBatchComplete =
+    pendingBatchIds.length > 0 &&
+    pendingBatchIds.every((id) => latest[id] != null);
+
+  useEffect(() => {
+    if (standardMet || reviewBusy || !pendingBatchComplete) return;
+    const key = pendingBatchIds.slice().sort().join("|");
+    if (!key || autoBatchReviewKey.current === key) return;
+    autoBatchReviewKey.current = key;
+    void runReview("after_extra");
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [pendingBatchComplete, standardMet, reviewBusy, pendingBatchIds, latest]);
+
+  function onActivityGraded(
+    activityId: string,
+    result: {
+      status: AnswerStatus;
+      feedback: string;
+      standardMet: boolean;
+      issues?: string[];
+      progress?: ProgressReq[];
+    }
+  ) {
+    setLatest((L) => ({
+      ...L,
+      [activityId]: {
+        status: result.status,
+        feedback: result.feedback,
+      },
+    }));
+    if (result.issues?.length) {
+      setRecentIssues((prev) => {
+        const next = [...result.issues!, ...prev];
+        return [...new Set(next)].slice(0, 12);
+      });
+    }
+    if (result.progress) setProgress(result.progress);
+    setStandardMet(result.standardMet);
   }
 
   return (
@@ -176,48 +298,127 @@ export function LessonClient({
           {teachContent}
         </section>
 
+        {/* ── Main practice (seeds) ───────────────────────── */}
         <section className="space-y-4">
-          <div className="flex items-center justify-between gap-3">
+          <div>
             <h2 className="font-serif text-lg font-semibold text-stone-900 dark:text-stone-100">
               Practice
             </h2>
-            {!standardMet && (
-              <button
-                type="button"
-                onClick={morePractice}
-                disabled={genBusy}
-                className="rounded-lg border border-stone-300 px-3 py-1.5 text-xs font-semibold text-stone-700 hover:bg-stone-50 disabled:opacity-50 dark:border-stone-600 dark:text-stone-200 dark:hover:bg-stone-800"
-              >
-                {genBusy ? "Generating…" : "More practice"}
-              </button>
-            )}
+            <p className="text-xs text-stone-500">
+              Work through these questions. When you finish the set, we check
+              the standard and add help only where you need it.
+            </p>
           </div>
-          {genError && (
-            <p className="text-xs text-rose-700 dark:text-rose-300">{genError}</p>
-          )}
           <ol className="space-y-4">
-            {activities.map((a) => (
+            {seedSection.map((a) => (
               <ActivityCard
                 key={a.id}
                 activity={a}
                 lessonSlug={lessonSlug}
                 initialStatus={latest[a.id]?.status ?? null}
                 initialFeedback={latest[a.id]?.feedback ?? null}
-                onGraded={(result) => {
-                  setLatest((L) => ({
-                    ...L,
-                    [a.id]: {
-                      status: result.status,
-                      feedback: result.feedback,
-                    },
-                  }));
-                  if (result.progress) setProgress(result.progress);
-                  setStandardMet(result.standardMet);
-                }}
+                onGraded={(result) => onActivityGraded(a.id, result)}
               />
             ))}
           </ol>
+
+          {seedsAllAttempted && !standardMet && !reviewBusy && (
+            <div className="flex flex-wrap items-center justify-between gap-3 rounded-xl border border-amber-200 bg-amber-50/90 px-4 py-3 dark:border-amber-900 dark:bg-amber-950/30">
+              <p className="text-sm text-amber-950 dark:text-amber-100">
+                {reviewDoneOnce
+                  ? "You can re-check the standard after extra practice."
+                  : "You’ve answered the main set — checking how you did…"}
+              </p>
+              <button
+                type="button"
+                onClick={() =>
+                  runReview(reviewDoneOnce ? "after_extra" : "after_seeds")
+                }
+                disabled={reviewBusy}
+                className="rounded-lg bg-amber-800 px-3 py-1.5 text-xs font-semibold text-amber-50 hover:bg-amber-900 disabled:opacity-50"
+              >
+                {reviewBusy
+                  ? "Reviewing…"
+                  : reviewDoneOnce
+                    ? "Review progress again"
+                    : "See how I did"}
+              </button>
+            </div>
+          )}
+          {reviewBusy && (
+            <p className="text-sm text-stone-500">
+              Looking at your answers and preparing feedback…
+            </p>
+          )}
+          {reviewError && (
+            <p className="text-sm text-rose-700 dark:text-rose-300">
+              {reviewError}
+            </p>
+          )}
         </section>
+
+        {/* ── Coach + remediation ─────────────────────────── */}
+        {coachingMarkdown && (
+          <section
+            ref={coachRef}
+            className="rounded-xl border border-sky-200 bg-gradient-to-br from-sky-50 to-amber-50/40 p-5 shadow-sm dark:border-sky-900 dark:from-sky-950/40 dark:to-amber-950/20"
+          >
+            <h2 className="text-xs font-bold uppercase tracking-wide text-sky-900 dark:text-sky-300">
+              Coach
+            </h2>
+            <div className="prose prose-sm mt-2 max-w-none prose-stone dark:prose-invert prose-p:my-2 prose-headings:font-serif">
+              <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                {coachingMarkdown}
+              </ReactMarkdown>
+            </div>
+          </section>
+        )}
+
+        {extraSection.length > 0 && (
+          <section className="space-y-4">
+            <div>
+              <h2 className="font-serif text-lg font-semibold text-stone-900 dark:text-stone-100">
+                Extra practice
+              </h2>
+              <p className="text-xs text-stone-500">
+                Aimed at what you still need for this lesson’s standard.
+              </p>
+            </div>
+            <ol className="space-y-4">
+              {extraSection.map((a) => (
+                <ActivityCard
+                  key={a.id}
+                  activity={a}
+                  lessonSlug={lessonSlug}
+                  initialStatus={latest[a.id]?.status ?? null}
+                  initialFeedback={latest[a.id]?.feedback ?? null}
+                  onGraded={(result) => onActivityGraded(a.id, result)}
+                />
+              ))}
+            </ol>
+            {!standardMet && pendingBatchIds.length > 0 && (
+              <p className="text-center text-xs text-stone-500">
+                {pendingBatchComplete || reviewBusy
+                  ? "Checking how you did on this set…"
+                  : `Answer each extra question — when this set is done, we review automatically (${pendingBatchIds.filter((id) => latest[id] != null).length}/${pendingBatchIds.length} checked).`}
+              </p>
+            )}
+            {!standardMet && (
+              <div className="flex justify-center">
+                <button
+                  type="button"
+                  onClick={() => runReview("after_extra")}
+                  disabled={reviewBusy}
+                  className="rounded-lg border border-amber-800/40 bg-white px-4 py-2 text-sm font-semibold text-amber-950 hover:bg-amber-50 disabled:opacity-50 dark:border-amber-700 dark:bg-stone-900 dark:text-amber-100"
+                >
+                  {reviewBusy
+                    ? "Reviewing…"
+                    : "Review now (don’t wait for full set)"}
+                </button>
+              </div>
+            )}
+          </section>
+        )}
 
         {standardMet && (
           <div className="flex flex-wrap items-center justify-between gap-3 rounded-xl border border-emerald-300 bg-emerald-50 p-4 text-sm text-emerald-900 dark:border-emerald-800 dark:bg-emerald-950/40 dark:text-emerald-100">
@@ -263,8 +464,8 @@ export function LessonClient({
 
       <aside>
         <div
-          className="flex flex-col overflow-hidden rounded-xl border border-stone-200 bg-white shadow-sm dark:border-stone-700 dark:bg-stone-900 lg:sticky lg:top-6"
-          style={{ height: "calc(100vh - 6rem)", maxHeight: 720 }}
+          className="flex flex-col overflow-hidden rounded-xl border border-stone-200 bg-white shadow-sm dark:border-stone-700 dark:bg-stone-900 lg:sticky lg:top-20"
+          style={{ height: "calc(100vh - 7.5rem)", maxHeight: 720 }}
         >
           <div className="border-b border-stone-200 px-4 py-3 dark:border-stone-700">
             <h3 className="text-sm font-semibold text-stone-900 dark:text-stone-100">
@@ -336,5 +537,4 @@ export function LessonClient({
       </aside>
     </main>
   );
-
 }

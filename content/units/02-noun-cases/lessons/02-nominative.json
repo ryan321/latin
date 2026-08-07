@@ -1,0 +1,303 @@
+{
+  "slug": "02-nominative",
+  "title": "Nominative — the subject",
+  "unitSlug": "02-noun-cases",
+  "order": 2,
+  "standardSummary": "Identify subjects / nominative ideas; pass several nominative-tagged checks.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-nom"
+      },
+      {
+        "type": "skill_count",
+        "skill": "nominative",
+        "n": 4,
+        "label": "nominative / subject"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "sa-nom"
+      }
+    ]
+  },
+  "teach": "Nominative case marks the subject — who or what is doing the action or being described.",
+  "allowList": {
+    "lemmas": [
+      "puella",
+      "est"
+    ],
+    "constructions": [
+      "nominative",
+      "subject"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "multi_select",
+      "short_answer",
+      "matching"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-nom",
+      "type": "multiple_choice",
+      "source": "seed",
+      "prompt": "The nominative case is mainly used for…",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "The direct object"
+          },
+          {
+            "id": "b",
+            "label": "The subject of the verb"
+          },
+          {
+            "id": "c",
+            "label": "Means “of” / possession only"
+          },
+          {
+            "id": "d",
+            "label": "Place where after in"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "targets": [
+        "case",
+        "nominative"
+      ]
+    },
+    {
+      "id": "multi-subjects",
+      "type": "multi_select",
+      "source": "seed",
+      "prompt": "Select the subject(s) of each clause idea: “The girl walks. The water is cold.”",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "girl",
+            "label": "girl"
+          },
+          {
+            "id": "walks",
+            "label": "walks"
+          },
+          {
+            "id": "water",
+            "label": "water"
+          },
+          {
+            "id": "cold",
+            "label": "cold"
+          }
+        ],
+        "correctOptionIds": [
+          "girl",
+          "water"
+        ]
+      },
+      "targets": [
+        "case",
+        "nominative"
+      ]
+    },
+    {
+      "id": "sa-nom",
+      "type": "short_answer",
+      "source": "seed",
+      "prompt": "In “Puella est in villā” (The girl is in the villa), why is puella nominative? One sentence.",
+      "required": true,
+      "payload": {
+        "sampleAnswers": [
+          "Because the girl is the subject — who is in the villa.",
+          "Puella is the subject of est."
+        ],
+        "rubric": "Says subject / who is being / subject of est. Not “because it is first.”"
+      },
+      "targets": [
+        "case",
+        "nominative"
+      ]
+    },
+    {
+      "id": "multi-subj-2",
+      "type": "multi_select",
+      "source": "seed",
+      "prompt": "Select the subject(s): “Rome is great. Farmers work.”",
+      "targets": [
+        "nominative"
+      ],
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "rome",
+            "label": "Rome"
+          },
+          {
+            "id": "is",
+            "label": "is"
+          },
+          {
+            "id": "great",
+            "label": "great"
+          },
+          {
+            "id": "farmers",
+            "label": "Farmers"
+          },
+          {
+            "id": "work",
+            "label": "work"
+          }
+        ],
+        "correctOptionIds": [
+          "rome",
+          "farmers"
+        ]
+      }
+    },
+    {
+      "id": "multi-subj-3",
+      "type": "multi_select",
+      "source": "seed",
+      "prompt": "Select the subject(s): “Water is cold and the girl walks.”",
+      "targets": [
+        "nominative"
+      ],
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "water",
+            "label": "Water"
+          },
+          {
+            "id": "cold",
+            "label": "cold"
+          },
+          {
+            "id": "girl",
+            "label": "girl"
+          },
+          {
+            "id": "walks",
+            "label": "walks"
+          }
+        ],
+        "correctOptionIds": [
+          "water",
+          "girl"
+        ]
+      }
+    },
+    {
+      "id": "mc-nom-linking",
+      "type": "multiple_choice",
+      "source": "seed",
+      "prompt": "With a linking verb like “is,” the subject is still…",
+      "targets": [
+        "nominative"
+      ],
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "Accusative"
+          },
+          {
+            "id": "b",
+            "label": "Nominative"
+          },
+          {
+            "id": "c",
+            "label": "Ablative only"
+          },
+          {
+            "id": "d",
+            "label": "Not a noun job"
+          }
+        ],
+        "correctOptionId": "b"
+      }
+    },
+    {
+      "id": "match-nom-acc",
+      "type": "matching",
+      "source": "seed",
+      "prompt": "In “The girl sees the land,” match each noun to its case idea.",
+      "targets": [
+        "nominative",
+        "accusative"
+      ],
+      "required": true,
+      "payload": {
+        "leftLabel": "Noun",
+        "rightLabel": "Case idea",
+        "left": [
+          {
+            "id": "girl",
+            "label": "girl"
+          },
+          {
+            "id": "land",
+            "label": "land"
+          }
+        ],
+        "right": [
+          {
+            "id": "nom",
+            "label": "Nominative (subject)"
+          },
+          {
+            "id": "acc",
+            "label": "Accusative (direct object)"
+          }
+        ],
+        "pairs": {
+          "girl": "nom",
+          "land": "acc"
+        }
+      }
+    },
+    {
+      "id": "mc-not-first",
+      "type": "multiple_choice",
+      "source": "seed",
+      "prompt": "Why is “first word = subject” a bad rule for Latin?",
+      "targets": [
+        "nominative",
+        "case"
+      ],
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "Because Latin word order can vary; case endings show the subject"
+          },
+          {
+            "id": "b",
+            "label": "Because Latin has no subjects"
+          },
+          {
+            "id": "c",
+            "label": "Because the subject is always last"
+          },
+          {
+            "id": "d",
+            "label": "Because verbs cannot have subjects"
+          }
+        ],
+        "correctOptionId": "a"
+      }
+    }
+  ]
+}

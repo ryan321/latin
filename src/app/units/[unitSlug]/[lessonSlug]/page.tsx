@@ -103,6 +103,7 @@ export default async function LessonPage({
       initialProgress={progress.requirements.map((r) => ({
         met: r.met,
         detail: r.detail,
+        remaining: r.remaining,
       }))}
       initialStandardMet={progress.met}
       initialMessages={chatRows.map((r) => ({

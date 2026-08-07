@@ -1,0 +1,440 @@
+{
+  "slug": "04-adjectives-others",
+  "title": "Adjectives and other parts of speech",
+  "unitSlug": "01-parts-of-speech",
+  "order": 4,
+  "standardSummary": "Identify adjectives and prepositions; match mixed parts of speech; hit skill counts.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-adj"
+      },
+      {
+        "type": "skill_count",
+        "skill": "adjective",
+        "n": 3,
+        "label": "adjective identification"
+      },
+      {
+        "type": "skill_count",
+        "skill": "preposition",
+        "n": 2,
+        "label": "preposition identification"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match-pos"
+      }
+    ]
+  },
+  "teach": "Adjectives describe nouns. Prepositions, adverbs, conjunctions, and pronouns round out the toolkit.",
+  "allowList": {
+    "lemmas": [
+      "magna",
+      "bona",
+      "in",
+      "cum"
+    ],
+    "constructions": [
+      "preposition",
+      "adjective",
+      "parts of speech"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "matching",
+      "multi_select"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-adj",
+      "type": "multiple_choice",
+      "source": "seed",
+      "prompt": "In “the large villa,” the word large is primarily a…",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "Noun"
+          },
+          {
+            "id": "b",
+            "label": "Verb"
+          },
+          {
+            "id": "c",
+            "label": "Adjective"
+          },
+          {
+            "id": "d",
+            "label": "Preposition"
+          }
+        ],
+        "correctOptionId": "c"
+      },
+      "targets": [
+        "adjective",
+        "parts of speech"
+      ]
+    },
+    {
+      "id": "match-pos",
+      "type": "matching",
+      "source": "seed",
+      "prompt": "Match each word to its part of speech in the sentence “The brave girl walks in the forest and she is happy.”",
+      "required": true,
+      "payload": {
+        "leftLabel": "Word",
+        "rightLabel": "Part of speech",
+        "left": [
+          {
+            "id": "brave",
+            "label": "brave"
+          },
+          {
+            "id": "walks",
+            "label": "walks"
+          },
+          {
+            "id": "in",
+            "label": "in"
+          },
+          {
+            "id": "and",
+            "label": "and"
+          },
+          {
+            "id": "she",
+            "label": "she"
+          }
+        ],
+        "right": [
+          {
+            "id": "adj",
+            "label": "Adjective"
+          },
+          {
+            "id": "verb",
+            "label": "Verb"
+          },
+          {
+            "id": "prep",
+            "label": "Preposition"
+          },
+          {
+            "id": "conj",
+            "label": "Conjunction"
+          },
+          {
+            "id": "pron",
+            "label": "Pronoun"
+          }
+        ],
+        "pairs": {
+          "brave": "adj",
+          "walks": "verb",
+          "in": "prep",
+          "and": "conj",
+          "she": "pron"
+        }
+      },
+      "targets": [
+        "adjective",
+        "conjunction",
+        "parts of speech",
+        "preposition",
+        "pronoun",
+        "verb"
+      ]
+    },
+    {
+      "id": "multi-prep",
+      "type": "multi_select",
+      "source": "seed",
+      "prompt": "Select ALL the prepositions: “She walks with a friend from the road into the villa.”",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "with",
+            "label": "with"
+          },
+          {
+            "id": "friend",
+            "label": "friend"
+          },
+          {
+            "id": "from",
+            "label": "from"
+          },
+          {
+            "id": "into",
+            "label": "into"
+          },
+          {
+            "id": "walks",
+            "label": "walks"
+          }
+        ],
+        "correctOptionIds": [
+          "with",
+          "from",
+          "into"
+        ]
+      },
+      "targets": [
+        "preposition"
+      ]
+    },
+    {
+      "id": "multi-adj-1",
+      "type": "multi_select",
+      "source": "seed",
+      "prompt": "Select ALL adjectives: “The small brave girl sees a great road.”",
+      "targets": [
+        "adjective"
+      ],
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "small",
+            "label": "small"
+          },
+          {
+            "id": "brave",
+            "label": "brave"
+          },
+          {
+            "id": "girl",
+            "label": "girl"
+          },
+          {
+            "id": "sees",
+            "label": "sees"
+          },
+          {
+            "id": "great",
+            "label": "great"
+          },
+          {
+            "id": "road",
+            "label": "road"
+          }
+        ],
+        "correctOptionIds": [
+          "small",
+          "brave",
+          "great"
+        ]
+      }
+    },
+    {
+      "id": "multi-adj-2",
+      "type": "multi_select",
+      "source": "seed",
+      "prompt": "Select ALL adjectives: “Cold water fills the large villa.”",
+      "targets": [
+        "adjective"
+      ],
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "cold",
+            "label": "Cold"
+          },
+          {
+            "id": "water",
+            "label": "water"
+          },
+          {
+            "id": "fills",
+            "label": "fills"
+          },
+          {
+            "id": "large",
+            "label": "large"
+          },
+          {
+            "id": "villa",
+            "label": "villa"
+          }
+        ],
+        "correctOptionIds": [
+          "cold",
+          "large"
+        ]
+      }
+    },
+    {
+      "id": "multi-prep-2",
+      "type": "multi_select",
+      "source": "seed",
+      "prompt": "Select ALL prepositions: “He walks with friends through the forest toward Rome.”",
+      "targets": [
+        "preposition"
+      ],
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "with",
+            "label": "with"
+          },
+          {
+            "id": "friends",
+            "label": "friends"
+          },
+          {
+            "id": "through",
+            "label": "through"
+          },
+          {
+            "id": "forest",
+            "label": "forest"
+          },
+          {
+            "id": "toward",
+            "label": "toward"
+          },
+          {
+            "id": "rome",
+            "label": "Rome"
+          }
+        ],
+        "correctOptionIds": [
+          "with",
+          "through",
+          "toward"
+        ]
+      }
+    },
+    {
+      "id": "match-pos-2",
+      "type": "matching",
+      "source": "seed",
+      "prompt": "Match each bold word to its part of speech in context.",
+      "targets": [
+        "adjective",
+        "adverb",
+        "conjunction",
+        "pronoun",
+        "parts of speech"
+      ],
+      "required": true,
+      "payload": {
+        "leftLabel": "Word in context",
+        "rightLabel": "Part of speech",
+        "left": [
+          {
+            "id": "a",
+            "label": "A **happy** farmer"
+          },
+          {
+            "id": "b",
+            "label": "She walks **quickly**"
+          },
+          {
+            "id": "c",
+            "label": "bread **and** water"
+          },
+          {
+            "id": "d",
+            "label": "**They** are ready"
+          }
+        ],
+        "right": [
+          {
+            "id": "adj",
+            "label": "Adjective"
+          },
+          {
+            "id": "adv",
+            "label": "Adverb"
+          },
+          {
+            "id": "conj",
+            "label": "Conjunction"
+          },
+          {
+            "id": "pron",
+            "label": "Pronoun"
+          }
+        ],
+        "pairs": {
+          "a": "adj",
+          "b": "adv",
+          "c": "conj",
+          "d": "pron"
+        }
+      }
+    },
+    {
+      "id": "mc-prep-job",
+      "type": "multiple_choice",
+      "source": "seed",
+      "prompt": "A preposition mainly…",
+      "targets": [
+        "preposition",
+        "parts of speech"
+      ],
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "Names a person or place"
+          },
+          {
+            "id": "b",
+            "label": "Relates a noun to something else in the sentence (in, with, from…)"
+          },
+          {
+            "id": "c",
+            "label": "Shows past tense only"
+          },
+          {
+            "id": "d",
+            "label": "Always describes how an action is done"
+          }
+        ],
+        "correctOptionId": "b"
+      }
+    },
+    {
+      "id": "mc-adj-agree-preview",
+      "type": "multiple_choice",
+      "source": "seed",
+      "prompt": "In Latin later, adjectives will need to “agree” with nouns. That means adjectives will match the noun’s…",
+      "targets": [
+        "adjective"
+      ],
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "Only English alphabetical order"
+          },
+          {
+            "id": "b",
+            "label": "Gender, number, and case (when you have those tools)"
+          },
+          {
+            "id": "c",
+            "label": "Only the author’s favorite color"
+          },
+          {
+            "id": "d",
+            "label": "Nothing — adjectives never change"
+          }
+        ],
+        "correctOptionId": "b"
+      }
+    }
+  ]
+}

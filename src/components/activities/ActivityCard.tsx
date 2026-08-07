@@ -12,6 +12,7 @@ import type {
   ClozePayload,
 } from "@/types/activity";
 import { LatinKeyboard } from "@/components/latin-keyboard/LatinKeyboard";
+import { RichText } from "@/lib/rich-text";
 import {
   DndContext,
   closestCenter,
@@ -40,7 +41,8 @@ type Props = {
     status: AnswerStatus;
     feedback: string;
     standardMet: boolean;
-    progress?: { met: boolean; detail: string }[];
+    issues?: string[];
+    progress?: { met: boolean; detail: string; remaining?: number }[];
   }) => void;
 };
 
@@ -274,10 +276,12 @@ export function ActivityCard({
         status: data.status,
         feedback: data.feedback,
         standardMet: data.standardMet,
+        issues: Array.isArray(data.issues) ? data.issues : [],
         progress: data.progress?.requirements?.map(
-          (r: { met: boolean; detail: string }) => ({
+          (r: { met: boolean; detail: string; remaining?: number }) => ({
             met: r.met,
             detail: r.detail,
+            remaining: r.remaining,
           })
         ),
       });
@@ -315,7 +319,10 @@ export function ActivityCard({
     <li className="rounded-xl border border-stone-200 bg-white p-5 shadow-sm dark:border-stone-700 dark:bg-stone-900">
       <div className="mb-3 flex items-start justify-between gap-3">
         <p className="text-sm font-medium text-stone-900 dark:text-stone-100">
-          {activity.prompt}
+          <RichText
+            text={activity.prompt ?? ""}
+            className="font-bold text-stone-900 dark:text-stone-50"
+          />
           {activity.source === "generated" && (
             <span className="ml-2 text-xs font-normal text-stone-500">
               (extra practice)
@@ -493,6 +500,25 @@ export function ActivityCard({
   );
 }
 
+/** Map display column labels to internal cell-key suffix (sg / pl). */
+function numberColKey(col: string): string {
+  const c = col.toLowerCase().replace(/\.$/, "").trim();
+  if (c === "sg" || c === "sing" || c === "singular") return "sg";
+  if (c === "pl" || c === "plural") return "pl";
+  return col;
+}
+
+function formatColHeader(col: string): string {
+  const key = numberColKey(col);
+  if (key === "sg") return "sing.";
+  if (key === "pl") return "plural";
+  return col;
+}
+
+function paradigmCellId(row: string, col: string): string {
+  return `${row}.${numberColKey(col)}`;
+}
+
 function ParadigmGridEditor({
   payload,
   cells,
@@ -525,9 +551,9 @@ function ParadigmGridEditor({
             {cols.map((c) => (
               <th
                 key={c}
-                className="border border-stone-200 p-1 text-xs font-semibold uppercase text-stone-600 dark:border-stone-700 dark:text-stone-300"
+                className="border border-stone-200 p-1 text-xs font-semibold normal-case text-stone-600 dark:border-stone-700 dark:text-stone-300"
               >
-                {c}
+                {formatColHeader(c)}
               </th>
             ))}
           </tr>
@@ -539,7 +565,7 @@ function ParadigmGridEditor({
                 {row}
               </th>
               {cols.map((col) => {
-                const id = `${row}.${col}`;
+                const id = paradigmCellId(row, col);
                 const prefilled = payload.prefill?.[id];
                 const result = cellResults[id];
                 const border =
@@ -592,7 +618,7 @@ function MatchingEditor({
 }) {
   return (
     <div className="mt-2 space-y-3">
-      <div className="grid grid-cols-2 gap-2 text-xs font-semibold uppercase tracking-wide text-stone-500">
+      <div className="hidden grid-cols-2 gap-2 text-xs font-semibold uppercase tracking-wide text-stone-500 sm:grid">
         <span>{payload.leftLabel ?? "Match"}</span>
         <span>{payload.rightLabel ?? "With"}</span>
       </div>
@@ -607,10 +633,10 @@ function MatchingEditor({
         return (
           <div
             key={left.id}
-            className={`grid grid-cols-1 gap-2 rounded-lg border p-2 sm:grid-cols-2 ${border}`}
+            className={`grid grid-cols-1 gap-2 rounded-lg border p-3 sm:grid-cols-2 sm:items-center ${border}`}
           >
-            <p className="flex items-center text-sm text-stone-800 dark:text-stone-200">
-              {left.label}
+            <p className="text-[15px] leading-snug text-stone-800 dark:text-stone-200">
+              <RichText text={left.label} />
             </p>
             <select
               value={pairs[left.id] ?? ""}
@@ -618,7 +644,7 @@ function MatchingEditor({
               onChange={(e) =>
                 setPairs({ ...pairs, [left.id]: e.target.value })
               }
-              className="w-full rounded-md border border-stone-300 bg-stone-50 px-2 py-1.5 text-sm dark:border-stone-600 dark:bg-stone-950 dark:text-stone-100"
+              className="w-full rounded-md border border-stone-300 bg-stone-50 px-2 py-2 text-sm dark:border-stone-600 dark:bg-stone-950 dark:text-stone-100"
             >
               <option value="">— choose —</option>
               {rightOptions.map((r) => (

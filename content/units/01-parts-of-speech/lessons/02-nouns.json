@@ -1,0 +1,411 @@
+{
+  "slug": "02-nouns",
+  "title": "Nouns",
+  "unitSlug": "01-parts-of-speech",
+  "order": 2,
+  "standardSummary": "Identify nouns in English and match core Latin noun glosses; hit skill counts for noun spotting.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-noun-def"
+      },
+      {
+        "type": "skill_count",
+        "skill": "noun",
+        "n": 5,
+        "label": "noun identification"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match-gloss"
+      }
+    ]
+  },
+  "teach": "A noun names a person, place, thing, or idea. In Latin, nouns will later take case endings.",
+  "allowList": {
+    "lemmas": [
+      "terra",
+      "aqua",
+      "silva",
+      "femina",
+      "Roma",
+      "puella",
+      "via",
+      "villa"
+    ],
+    "constructions": [
+      "noun"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "multi_select",
+      "matching"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-noun-def",
+      "type": "multiple_choice",
+      "source": "seed",
+      "prompt": "Which best defines a noun?",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "A word that describes an action only"
+          },
+          {
+            "id": "b",
+            "label": "A word that names a person, place, thing, or idea"
+          },
+          {
+            "id": "c",
+            "label": "A word that always ends in -ly in English"
+          },
+          {
+            "id": "d",
+            "label": "Any word in a Latin dictionary"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "targets": [
+        "noun"
+      ]
+    },
+    {
+      "id": "multi-nouns",
+      "type": "multi_select",
+      "source": "seed",
+      "prompt": "Select ALL the nouns in: “The girl carries water to Rome.”",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "the",
+            "label": "The"
+          },
+          {
+            "id": "girl",
+            "label": "girl"
+          },
+          {
+            "id": "carries",
+            "label": "carries"
+          },
+          {
+            "id": "water",
+            "label": "water"
+          },
+          {
+            "id": "to",
+            "label": "to"
+          },
+          {
+            "id": "rome",
+            "label": "Rome"
+          }
+        ],
+        "correctOptionIds": [
+          "girl",
+          "water",
+          "rome"
+        ]
+      },
+      "targets": [
+        "noun"
+      ]
+    },
+    {
+      "id": "match-gloss",
+      "type": "matching",
+      "source": "seed",
+      "prompt": "Match each Latin noun (you will see these soon) to its English meaning.",
+      "required": true,
+      "payload": {
+        "leftLabel": "Latin",
+        "rightLabel": "English",
+        "left": [
+          {
+            "id": "puella",
+            "label": "puella"
+          },
+          {
+            "id": "aqua",
+            "label": "aqua"
+          },
+          {
+            "id": "terra",
+            "label": "terra"
+          },
+          {
+            "id": "via",
+            "label": "via"
+          }
+        ],
+        "right": [
+          {
+            "id": "girl",
+            "label": "girl"
+          },
+          {
+            "id": "water",
+            "label": "water"
+          },
+          {
+            "id": "land",
+            "label": "land / earth"
+          },
+          {
+            "id": "road",
+            "label": "road / way"
+          }
+        ],
+        "pairs": {
+          "puella": "girl",
+          "aqua": "water",
+          "terra": "land",
+          "via": "road"
+        }
+      },
+      "targets": [
+        "noun",
+        "vocab"
+      ]
+    },
+    {
+      "id": "multi-nouns-2",
+      "type": "multi_select",
+      "source": "seed",
+      "prompt": "Select ALL nouns: “Courage and peace matter in Rome.”",
+      "targets": [
+        "noun"
+      ],
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "courage",
+            "label": "Courage"
+          },
+          {
+            "id": "and",
+            "label": "and"
+          },
+          {
+            "id": "peace",
+            "label": "peace"
+          },
+          {
+            "id": "matter",
+            "label": "matter"
+          },
+          {
+            "id": "rome",
+            "label": "Rome"
+          }
+        ],
+        "correctOptionIds": [
+          "courage",
+          "peace",
+          "rome"
+        ]
+      }
+    },
+    {
+      "id": "multi-nouns-3",
+      "type": "multi_select",
+      "source": "seed",
+      "prompt": "Select ALL nouns: “The table in the villa holds water.”",
+      "targets": [
+        "noun"
+      ],
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "table",
+            "label": "table"
+          },
+          {
+            "id": "in",
+            "label": "in"
+          },
+          {
+            "id": "villa",
+            "label": "villa"
+          },
+          {
+            "id": "holds",
+            "label": "holds"
+          },
+          {
+            "id": "water",
+            "label": "water"
+          }
+        ],
+        "correctOptionIds": [
+          "table",
+          "villa",
+          "water"
+        ]
+      }
+    },
+    {
+      "id": "match-gloss-2",
+      "type": "matching",
+      "source": "seed",
+      "prompt": "Match Latin nouns to English.",
+      "targets": [
+        "noun",
+        "vocab"
+      ],
+      "required": true,
+      "payload": {
+        "leftLabel": "Latin",
+        "rightLabel": "English",
+        "left": [
+          {
+            "id": "roma",
+            "label": "Rōma"
+          },
+          {
+            "id": "silva",
+            "label": "silva"
+          },
+          {
+            "id": "villa",
+            "label": "villa"
+          },
+          {
+            "id": "femina",
+            "label": "fēmina"
+          }
+        ],
+        "right": [
+          {
+            "id": "rome",
+            "label": "Rome"
+          },
+          {
+            "id": "forest",
+            "label": "forest / woods"
+          },
+          {
+            "id": "farmhouse",
+            "label": "country house / villa"
+          },
+          {
+            "id": "woman",
+            "label": "woman"
+          }
+        ],
+        "pairs": {
+          "roma": "rome",
+          "silva": "forest",
+          "villa": "farmhouse",
+          "femina": "woman"
+        }
+      }
+    },
+    {
+      "id": "mc-idea-noun",
+      "type": "multiple_choice",
+      "source": "seed",
+      "prompt": "Which word is a noun naming an idea (not a physical object)?",
+      "targets": [
+        "noun"
+      ],
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "table"
+          },
+          {
+            "id": "b",
+            "label": "peace"
+          },
+          {
+            "id": "c",
+            "label": "runs"
+          },
+          {
+            "id": "d",
+            "label": "quickly"
+          }
+        ],
+        "correctOptionId": "b"
+      }
+    },
+    {
+      "id": "multi-nouns-4",
+      "type": "multi_select",
+      "source": "seed",
+      "prompt": "Select ALL nouns: “The poet loves Italy and the sea.”",
+      "targets": [
+        "noun"
+      ],
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "poet",
+            "label": "poet"
+          },
+          {
+            "id": "loves",
+            "label": "loves"
+          },
+          {
+            "id": "italy",
+            "label": "Italy"
+          },
+          {
+            "id": "sea",
+            "label": "sea"
+          }
+        ],
+        "correctOptionIds": [
+          "poet",
+          "italy",
+          "sea"
+        ]
+      }
+    },
+    {
+      "id": "mc-place-noun",
+      "type": "multiple_choice",
+      "source": "seed",
+      "prompt": "Which is a noun naming a place?",
+      "targets": [
+        "noun"
+      ],
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "quickly"
+          },
+          {
+            "id": "b",
+            "label": "Rome"
+          },
+          {
+            "id": "c",
+            "label": "is"
+          },
+          {
+            "id": "d",
+            "label": "and"
+          }
+        ],
+        "correctOptionId": "b"
+      }
+    }
+  ]
+}

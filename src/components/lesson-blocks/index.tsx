@@ -8,7 +8,7 @@
  *   <LatinExample latin="Puella in villā est." english="The girl is in the villa." />
  *   <ParadigmTable lemma="puella, puellae f." headers="Case|Singular|Plural"
  *     rows="Nominative|puella|puellae|Genitive|puellae|puellārum|Dative|puellae|puellīs|Accusative|puellam|puellās|Ablative|puellā|puellīs" />
- *   <EndingsStrip label="1st declension endings (sg)" endings="a | ae | ae | am | ā" />
+ *   <EndingsStrip label="1st declension endings (sing.)" endings="a | ae | ae | am | ā" />
  *   <SoundCard letter="v" ipa="/w/" example="via" tip='like English "w"' />
  *   <CaseCards items="Nominative ~ subject|Accusative ~ direct object|Ablative ~ by/with/from; in + place where" />
  *   <Compare left="Classical" right="Ecclesiastical" rows="c always /k/ ~ c soft before e/i|v like w ~ v like English v" />
@@ -16,6 +16,8 @@
  *   <MapCallout title="Italia">Rome sits on the Tiber in central Italy.</MapCallout>
  */
 import type { ReactNode } from "react";
+// React namespace for ExampleSentence keying
+import React from "react";
 
 function split(s: string | undefined, sep = "|"): string[] {
   if (!s) return [];
@@ -525,6 +527,80 @@ export function LetterRow({
   );
 }
 
+/**
+ * Parts-of-speech glossary cards.
+ * items = "Noun ~ Person, place, thing, or idea|Verb ~ Action or state of being|..."
+ */
+export function PosCards({ items = "" }: { items?: string }) {
+  const cards = split(items).map((item) => {
+    const [title, ...rest] = item.split("~").map((s) => s.trim());
+    return { title: title ?? "", body: rest.join("~") };
+  });
+  return (
+    <div className="not-prose my-5 grid gap-2 sm:grid-cols-2">
+      {cards.map((c, i) => (
+        <div
+          key={i}
+          className="rounded-xl border border-stone-200 bg-white p-3 shadow-sm dark:border-stone-700 dark:bg-stone-900"
+        >
+          <p className="font-serif text-base font-bold text-amber-900 dark:text-amber-400">
+            {c.title}
+          </p>
+          <p className="mt-1 text-sm leading-snug text-stone-600 dark:text-stone-300">
+            {c.body}
+          </p>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+/**
+ * Example sentence with **bold** (or __bold__) markers on target words.
+ * gloss = short analysis line below
+ */
+export function ExampleSentence({
+  text = "",
+  gloss,
+}: {
+  text?: string;
+  gloss?: string;
+}) {
+  // Lazy import pattern avoided — keep renderer local for server MDX
+  const nodes: React.ReactNode[] = [];
+  const re = /\*\*([\s\S]+?)\*\*|__([\s\S]+?)__/g;
+  let last = 0;
+  let match: RegExpExecArray | null;
+  let key = 0;
+  while ((match = re.exec(text)) !== null) {
+    if (match.index > last) nodes.push(text.slice(last, match.index));
+    const word = match[1] ?? match[2] ?? "";
+    nodes.push(
+      <strong
+        key={key++}
+        className="font-bold text-amber-900 dark:text-amber-300"
+      >
+        {word}
+      </strong>
+    );
+    last = match.index + match[0].length;
+  }
+  if (last < text.length) nodes.push(text.slice(last));
+
+  return (
+    <figure className="not-prose my-3 rounded-xl border border-stone-200 bg-stone-50 px-4 py-3 dark:border-stone-700 dark:bg-stone-900/80">
+      <p className="text-[15px] leading-relaxed text-stone-900 dark:text-stone-100">
+        {nodes.length ? nodes : text}
+      </p>
+      {gloss && (
+        <figcaption className="mt-2 border-t border-stone-200 pt-2 text-xs text-stone-500 dark:border-stone-700">
+          {gloss}
+        </figcaption>
+      )}
+    </figure>
+  );
+}
+
 export const lessonComponents = {
   KeyTerm,
   Latin,
@@ -542,4 +618,6 @@ export const lessonComponents = {
   FlowChart,
   VowelChart,
   LetterRow,
+  PosCards,
+  ExampleSentence,
 };

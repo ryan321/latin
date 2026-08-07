@@ -62,7 +62,7 @@ export function buildFirstDeclensionGrid(opts: {
     pattern: "first_declension",
     labels: {
       rows: ["nom", "gen", "dat", "acc", "abl"],
-      cols: ["sg", "pl"],
+      cols: ["sing.", "plural"],
     },
     cells,
   };
@@ -96,7 +96,7 @@ export function buildSumPresentGrid(opts: {
       pattern: "sum_present",
       labels: {
         rows: ["1", "2", "3"],
-        cols: ["sg", "pl"],
+        cols: ["sing.", "plural"],
       },
       cells: SUM_PRESENT,
     },
@@ -127,7 +127,7 @@ export function buildFirstConjPresentGrid(opts: {
       pattern: "first_conj_present",
       labels: {
         rows: ["1", "2", "3"],
-        cols: ["sg", "pl"],
+        cols: ["sing.", "plural"],
       },
       cells,
     },

@@ -36,6 +36,8 @@ All practice is an **Activity** object: seed or AI-generated. The UI and grader 
 
 Response: `{ "pairs": { "nom": "subject" } }`
 
+Left/right labels may mark a target word with `**word**` (preferred) or `__word__` — both render as **bold amber** in the UI (e.g. `"The **girl** runs."`).
+
 ### ordering
 
 ```json

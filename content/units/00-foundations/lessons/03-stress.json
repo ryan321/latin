@@ -1,0 +1,200 @@
+{
+  "slug": "03-stress",
+  "title": "Syllables & stress",
+  "unitSlug": "00-foundations",
+  "order": 3,
+  "standardSummary": "Apply the Latin stress rule and identify stressed syllables.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-rule"
+      },
+      {
+        "type": "skill_count",
+        "skill": "stress",
+        "n": 3,
+        "label": "stress practice"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "sa-stress"
+      }
+    ]
+  },
+  "teach": "Latin stress usually falls on the penult if long, otherwise the antepenult.",
+  "allowList": {
+    "lemmas": [
+      "Roma",
+      "puella",
+      "agricola"
+    ],
+    "constructions": [
+      "stress",
+      "pronunciation"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "matching",
+      "short_answer",
+      "ordering"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-rule",
+      "type": "multiple_choice",
+      "prompt": "If the second-to-last syllable is long, stress usually falls…",
+      "targets": [
+        "stress"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "On the last syllable always"
+          },
+          {
+            "id": "b",
+            "label": "On that second-to-last syllable (the penult)"
+          },
+          {
+            "id": "c",
+            "label": "On the first syllable always"
+          },
+          {
+            "id": "d",
+            "label": "Never on a long syllable"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "mc-short-penult",
+      "type": "multiple_choice",
+      "prompt": "If the penult is short, stress usually moves to…",
+      "targets": [
+        "stress"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "The third-to-last syllable (antepenult)"
+          },
+          {
+            "id": "b",
+            "label": "The last syllable only"
+          },
+          {
+            "id": "c",
+            "label": "Nowhere — Latin has no stress"
+          },
+          {
+            "id": "d",
+            "label": "Every syllable equally"
+          }
+        ],
+        "correctOptionId": "a"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "order-stress",
+      "type": "ordering",
+      "prompt": "Order the stress-check steps (first → last).",
+      "targets": [
+        "stress"
+      ],
+      "payload": {
+        "items": [
+          {
+            "id": "a",
+            "label": "Find the second-to-last syllable (penult)"
+          },
+          {
+            "id": "b",
+            "label": "Ask: is the penult long?"
+          },
+          {
+            "id": "c",
+            "label": "If long → stress the penult; if short → stress the antepenult"
+          }
+        ],
+        "correctOrder": [
+          "a",
+          "b",
+          "c"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match-terms",
+      "type": "matching",
+      "prompt": "Match stress terms.",
+      "targets": [
+        "stress"
+      ],
+      "payload": {
+        "left": [
+          {
+            "id": "pen",
+            "label": "Penult"
+          },
+          {
+            "id": "ant",
+            "label": "Antepenult"
+          },
+          {
+            "id": "ult",
+            "label": "Ultima"
+          }
+        ],
+        "right": [
+          {
+            "id": "a",
+            "label": "Second-to-last syllable"
+          },
+          {
+            "id": "b",
+            "label": "Third-to-last syllable"
+          },
+          {
+            "id": "c",
+            "label": "Last syllable"
+          }
+        ],
+        "pairs": {
+          "pen": "a",
+          "ant": "b",
+          "ult": "c"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sa-stress",
+      "type": "short_answer",
+      "prompt": "In one or two sentences, state the basic Latin stress rule.",
+      "targets": [
+        "stress"
+      ],
+      "payload": {
+        "sampleAnswers": [
+          "Stress the penult if long; otherwise stress the antepenult.",
+          "If the second-to-last syllable is long, stress it; if short, stress the third-to-last."
+        ],
+        "rubric": "Mentions penult long → stress there; else antepenult. Partial if only one half."
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

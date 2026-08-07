@@ -14,18 +14,25 @@ export type ProgressSnapshot = {
     requirement: StandardRequirement;
     met: boolean;
     detail: string;
+    /** How many more passes needed (0 if met) */
+    remaining: number;
   }[];
   /** Latest status per activity id */
   latestByActivity: Record<
     string,
     { status: AnswerStatus; feedback: string | null }
   >;
+  /** Skills still below the bar (from skill_count requirements) */
+  weakSkills: string[];
+  /** Activity types still needed for count requirements */
+  weakTypes: string[];
 };
 
 type AttemptRow = {
   activityId: string;
   status: AnswerStatus;
   feedback: string | null;
+  issues: string[];
   createdAt: Date;
 };
 
@@ -38,6 +45,7 @@ export async function loadLatestAttempts(
       activityId: attempts.activityId,
       status: attempts.status,
       feedback: attempts.feedback,
+      issues: attempts.issues,
       createdAt: attempts.createdAt,
     })
     .from(attempts)
@@ -46,8 +54,10 @@ export async function loadLatestAttempts(
     )
     .orderBy(desc(attempts.createdAt));
 
-  // keep chronological for counting; latest map built separately
-  return rows;
+  return rows.map((r) => ({
+    ...r,
+    issues: Array.isArray(r.issues) ? r.issues : [],
+  }));
 }
 
 function latestMap(
@@ -86,6 +96,9 @@ export function evaluateStandard(
   const byId = new Map(activities.map((a) => [a.id, a]));
   const latestByActivity = latestMap(rows);
 
+  const weakSkills: string[] = [];
+  const weakTypes: string[] = [];
+
   const requirements = lesson.standard.requirements.map((req) => {
     if (req.type === "activity_passed") {
       const st = latestByActivity[req.activityId]?.status;
@@ -94,19 +107,42 @@ export function evaluateStandard(
       const label =
         act?.prompt?.slice(0, 60) ||
         req.activityId.replace(/-/g, " ");
+      if (!met && act?.targets) {
+        for (const t of act.targets) {
+          if (!weakSkills.includes(t)) weakSkills.push(t);
+        }
+      }
       return {
         requirement: req,
         met,
+        remaining: met ? 0 : 1,
         detail: met ? `Passed: ${label}` : `Need to pass: ${label}`,
       };
     }
     if (req.type === "count") {
       const n = countPassed(rows, (id) => byId.get(id)?.type === req.activityType);
       const met = n >= req.n;
+      if (!met) weakTypes.push(req.activityType);
       return {
         requirement: req,
         met,
-        detail: `${n}/${req.n} ${req.activityType} passed`,
+        remaining: Math.max(0, req.n - n),
+        detail: `${n}/${req.n} ${req.activityType} activities passed`,
+      };
+    }
+    if (req.type === "skill_count") {
+      const n = countPassed(rows, (id) => {
+        const a = byId.get(id);
+        return !!a?.targets?.includes(req.skill);
+      });
+      const met = n >= req.n;
+      if (!met && !weakSkills.includes(req.skill)) weakSkills.push(req.skill);
+      const label = req.label ?? req.skill;
+      return {
+        requirement: req,
+        met,
+        remaining: Math.max(0, req.n - n),
+        detail: `${n}/${req.n} on “${label}”`,
       };
     }
     if (req.type === "translate_count") {
@@ -122,11 +158,13 @@ export function evaluateStandard(
         return true;
       });
       const met = n >= req.n;
+      if (!met) weakTypes.push("translate");
       const dir = req.direction ?? "any";
       const len = req.length ?? "any";
       return {
         requirement: req,
         met,
+        remaining: Math.max(0, req.n - n),
         detail: `${n}/${req.n} translate (${dir}, ${len}) passed`,
       };
     }
@@ -136,15 +174,18 @@ export function evaluateStandard(
         (id) => byId.get(id)?.type === "paradigm_grid"
       );
       const met = n >= req.n;
+      if (!met) weakTypes.push("paradigm_grid");
       return {
         requirement: req,
         met,
+        remaining: Math.max(0, req.n - n),
         detail: `${n}/${req.n} paradigm grids passed`,
       };
     }
     return {
       requirement: req,
       met: false,
+      remaining: 1,
       detail: "Unknown requirement",
     };
   });
@@ -153,6 +194,54 @@ export function evaluateStandard(
     met: requirements.every((r) => r.met),
     requirements,
     latestByActivity,
+    weakSkills,
+    weakTypes,
+  };
+}
+
+/** Recent fail signals for targeted remediation. */
+export function collectRemediationFocus(
+  progress: ProgressSnapshot,
+  activities: Activity[],
+  rows: AttemptRow[]
+): {
+  weakSkills: string[];
+  weakTypes: string[];
+  recentIssues: string[];
+  failedPrompts: string[];
+  unmetDetails: string[];
+} {
+  const byId = new Map(activities.map((a) => [a.id, a]));
+  const recentIssues: string[] = [];
+  const failedPrompts: string[] = [];
+
+  // Newest-first rows: look at recent non-pass attempts
+  for (const r of rows.slice(0, 40)) {
+    if (r.status === "passed") continue;
+    for (const issue of r.issues) {
+      if (issue && !recentIssues.includes(issue)) recentIssues.push(issue);
+    }
+    const act = byId.get(r.activityId);
+    if (act?.prompt && failedPrompts.length < 6) {
+      failedPrompts.push(act.prompt.slice(0, 120));
+    }
+    if (act?.targets) {
+      for (const t of act.targets) {
+        if (!progress.weakSkills.includes(t)) {
+          // still track as soft focus
+        }
+      }
+    }
+  }
+
+  return {
+    weakSkills: progress.weakSkills,
+    weakTypes: progress.weakTypes,
+    recentIssues,
+    failedPrompts,
+    unmetDetails: progress.requirements
+      .filter((r) => !r.met)
+      .map((r) => r.detail),
   };
 }
 
@@ -207,12 +296,23 @@ export async function getCompletedSlugs(
   return new Set(rows.map((r) => r.lessonSlug));
 }
 
-/** Lesson is unlocked if it is the first, or the previous lesson is complete. */
+/**
+ * Sequential gating: lesson opens when the previous one is complete.
+ * Set UNLOCK_ALL_LESSONS=true (default for now) to open the full course.
+ */
+export function unlockAllLessonsEnabled(): boolean {
+  const v = process.env.UNLOCK_ALL_LESSONS?.trim().toLowerCase();
+  if (v === undefined || v === "") return true; // default open
+  return v === "1" || v === "true" || v === "yes";
+}
+
+/** Lesson is unlocked if all-open mode, first lesson, or previous is complete. */
 export function isUnlocked(
   lessonSlug: string,
   orderedSlugs: string[],
   completed: Set<string>
 ): boolean {
+  if (unlockAllLessonsEnabled()) return true;
   const idx = orderedSlugs.indexOf(lessonSlug);
   if (idx <= 0) return true;
   const prev = orderedSlugs[idx - 1]!;

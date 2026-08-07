@@ -1,0 +1,342 @@
+{
+  "slug": "04-genitive-dative",
+  "title": "Genitive & dative",
+  "unitSlug": "02-noun-cases",
+  "order": 4,
+  "standardSummary": "Distinguish genitive (of) and dative (to/for); hit skill counts for both.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "match-gd"
+      },
+      {
+        "type": "skill_count",
+        "skill": "genitive",
+        "n": 3,
+        "label": "genitive"
+      },
+      {
+        "type": "skill_count",
+        "skill": "dative",
+        "n": 3,
+        "label": "dative"
+      }
+    ]
+  },
+  "teach": "Genitive often means of/possession. Dative often means to/for (indirect object).",
+  "allowList": {
+    "lemmas": [
+      "puella",
+      "aqua"
+    ],
+    "constructions": [
+      "genitive",
+      "dative"
+    ],
+    "activityTypes": [
+      "matching",
+      "multiple_choice",
+      "short_answer"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "match-gd",
+      "type": "matching",
+      "source": "seed",
+      "prompt": "Match each case to its starter meaning.",
+      "required": true,
+      "payload": {
+        "leftLabel": "Case",
+        "rightLabel": "Core idea",
+        "left": [
+          {
+            "id": "gen",
+            "label": "Genitive"
+          },
+          {
+            "id": "dat",
+            "label": "Dative"
+          }
+        ],
+        "right": [
+          {
+            "id": "of",
+            "label": "Of / possession"
+          },
+          {
+            "id": "to",
+            "label": "To / for (indirect object)"
+          }
+        ],
+        "pairs": {
+          "gen": "of",
+          "dat": "to"
+        }
+      },
+      "targets": [
+        "case",
+        "dative",
+        "genitive"
+      ]
+    },
+    {
+      "id": "mc-gen",
+      "type": "multiple_choice",
+      "source": "seed",
+      "prompt": "In “the water of the girl” / “the girl’s water,” “girl” is in the sense of…",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "Nominative (subject)"
+          },
+          {
+            "id": "b",
+            "label": "Genitive (possession / of)"
+          },
+          {
+            "id": "c",
+            "label": "Accusative (direct object)"
+          },
+          {
+            "id": "d",
+            "label": "Ablative (place where)"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "targets": [
+        "case",
+        "genitive"
+      ]
+    },
+    {
+      "id": "mc-dat",
+      "type": "multiple_choice",
+      "source": "seed",
+      "prompt": "In “She gives water to the girl,” “to the girl” is the idea of…",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "Dative (to/for)"
+          },
+          {
+            "id": "b",
+            "label": "Genitive (of)"
+          },
+          {
+            "id": "c",
+            "label": "Nominative only"
+          },
+          {
+            "id": "d",
+            "label": "A verb form"
+          }
+        ],
+        "correctOptionId": "a"
+      },
+      "targets": [
+        "case",
+        "dative"
+      ]
+    },
+    {
+      "id": "mc-gen-2",
+      "type": "multiple_choice",
+      "source": "seed",
+      "prompt": "“the road of Rome” / “Rome’s road” — Rome is the idea of…",
+      "targets": [
+        "genitive"
+      ],
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "Nominative"
+          },
+          {
+            "id": "b",
+            "label": "Genitive"
+          },
+          {
+            "id": "c",
+            "label": "Accusative"
+          },
+          {
+            "id": "d",
+            "label": "A verb"
+          }
+        ],
+        "correctOptionId": "b"
+      }
+    },
+    {
+      "id": "mc-gen-3",
+      "type": "multiple_choice",
+      "source": "seed",
+      "prompt": "Dictionary forms like puella, puellae give nominative and genitive so you can…",
+      "targets": [
+        "genitive",
+        "case"
+      ],
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "Know the stem and declension pattern"
+          },
+          {
+            "id": "b",
+            "label": "Skip learning cases entirely"
+          },
+          {
+            "id": "c",
+            "label": "Only learn English"
+          },
+          {
+            "id": "d",
+            "label": "Mark the verb tense"
+          }
+        ],
+        "correctOptionId": "a"
+      }
+    },
+    {
+      "id": "mc-dat-2",
+      "type": "multiple_choice",
+      "source": "seed",
+      "prompt": "“He prepares a gift for the friend” — for the friend is the idea of…",
+      "targets": [
+        "dative"
+      ],
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "Dative"
+          },
+          {
+            "id": "b",
+            "label": "Genitive"
+          },
+          {
+            "id": "c",
+            "label": "Ablative place where"
+          },
+          {
+            "id": "d",
+            "label": "Nominative subject"
+          }
+        ],
+        "correctOptionId": "a"
+      }
+    },
+    {
+      "id": "mc-dat-3",
+      "type": "multiple_choice",
+      "source": "seed",
+      "prompt": "Indirect object (to/for whom) is mainly the job of…",
+      "targets": [
+        "dative"
+      ],
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "Accusative"
+          },
+          {
+            "id": "b",
+            "label": "Dative"
+          },
+          {
+            "id": "c",
+            "label": "Vocative only"
+          },
+          {
+            "id": "d",
+            "label": "Adverb"
+          }
+        ],
+        "correctOptionId": "b"
+      }
+    },
+    {
+      "id": "match-gd-sentences",
+      "type": "matching",
+      "source": "seed",
+      "prompt": "Match each English phrase to genitive or dative idea.",
+      "targets": [
+        "genitive",
+        "dative"
+      ],
+      "required": true,
+      "payload": {
+        "leftLabel": "Phrase",
+        "rightLabel": "Case idea",
+        "left": [
+          {
+            "id": "a",
+            "label": "the girl’s water"
+          },
+          {
+            "id": "b",
+            "label": "gives water to the girl"
+          },
+          {
+            "id": "c",
+            "label": "the walls of Rome"
+          },
+          {
+            "id": "d",
+            "label": "a gift for the farmer"
+          }
+        ],
+        "right": [
+          {
+            "id": "gen",
+            "label": "Genitive (of / ’s)"
+          },
+          {
+            "id": "dat",
+            "label": "Dative (to / for)"
+          }
+        ],
+        "pairs": {
+          "a": "gen",
+          "b": "dat",
+          "c": "gen",
+          "d": "dat"
+        }
+      }
+    },
+    {
+      "id": "sa-gd",
+      "type": "short_answer",
+      "source": "seed",
+      "prompt": "In one sentence: how is genitive different from dative?",
+      "targets": [
+        "genitive",
+        "dative",
+        "case"
+      ],
+      "required": true,
+      "payload": {
+        "sampleAnswers": [
+          "Genitive is of/possession; dative is to/for (indirect object).",
+          "Genitive answers whose/of what; dative answers to/for whom."
+        ],
+        "rubric": "Contrasts of/possession vs to/for. Partial if only one is clear."
+      }
+    }
+  ]
+}

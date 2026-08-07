@@ -1,0 +1,235 @@
+{
+  "slug": "03-mixed-sentences",
+  "title": "Mixing 1st and 2nd declension",
+  "unitSlug": "05-second-declension",
+  "order": 3,
+  "standardSummary": "Translate sentences mixing 1st- and 2nd-declension nouns with sum and 1st-conj verbs.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "translate_count",
+        "n": 4
+      },
+      {
+        "type": "skill_count",
+        "skill": "2nd declension",
+        "n": 2,
+        "label": "2nd decl"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "mc-mix"
+      }
+    ]
+  },
+  "teach": "Combined reading with puella, servus, bellum, oppidum.",
+  "allowList": {
+    "lemmas": [
+      "puella",
+      "servus",
+      "bellum",
+      "oppidum",
+      "amicus",
+      "est",
+      "sunt",
+      "spectat",
+      "portat"
+    ],
+    "constructions": [
+      "1st declension",
+      "2nd declension",
+      "sum",
+      "1st conjugation"
+    ],
+    "activityTypes": [
+      "translate",
+      "multiple_choice",
+      "matching",
+      "cloze"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-mix",
+      "type": "multiple_choice",
+      "prompt": "In Servus aquam portat, servus is…",
+      "targets": [
+        "2nd declension",
+        "nominative"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "Nominative subject"
+          },
+          {
+            "id": "b",
+            "label": "Accusative object"
+          },
+          {
+            "id": "c",
+            "label": "Ablative"
+          },
+          {
+            "id": "d",
+            "label": "Genitive only"
+          }
+        ],
+        "correctOptionId": "a"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "tr1",
+      "type": "translate",
+      "prompt": "Servus in oppidō est.",
+      "targets": [
+        "2nd declension",
+        "sum"
+      ],
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "The servant/slave is in the town.",
+          "A servant is in the town."
+        ],
+        "rubric": "Subject servus; is; in town (oppidō abl)."
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "tr2",
+      "type": "translate",
+      "prompt": "Puella amīcum spectat.",
+      "targets": [
+        "1st declension",
+        "2nd declension"
+      ],
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "The girl looks at the friend.",
+          "The girl watches her friend."
+        ],
+        "rubric": "Girl subject; friend acc; looks at."
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "tr3",
+      "type": "translate",
+      "prompt": "Bellum nōn amant.",
+      "targets": [
+        "neuter",
+        "1st conjugation"
+      ],
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "They do not love war.",
+          "They do not like war."
+        ],
+        "rubric": "They; do not love; war object (bellum acc=nom form)."
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "tr4",
+      "type": "translate",
+      "prompt": "The friend is in the villa.",
+      "targets": [
+        "2nd declension",
+        "sum"
+      ],
+      "payload": {
+        "direction": "E2L",
+        "length": "sentence",
+        "sampleAnswers": [
+          "Amicus in villa est.",
+          "Amīcus in villā est."
+        ],
+        "rubric": "amīcus; in villā; est."
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match",
+      "type": "matching",
+      "prompt": "Form → case idea (servus).",
+      "targets": [
+        "2nd declension"
+      ],
+      "payload": {
+        "left": [
+          {
+            "id": "a",
+            "label": "servum"
+          },
+          {
+            "id": "b",
+            "label": "servī (sing. gen.)"
+          },
+          {
+            "id": "c",
+            "label": "servō (abl/Dat. sing.)"
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "Accusative sing."
+          },
+          {
+            "id": "2",
+            "label": "Genitive sing."
+          },
+          {
+            "id": "3",
+            "label": "Dat/Abl. sing."
+          }
+        ],
+        "pairs": {
+          "a": "1",
+          "b": "2",
+          "c": "3"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "cloze",
+      "type": "cloze",
+      "prompt": "Complete.",
+      "targets": [
+        "2nd declension"
+      ],
+      "payload": {
+        "template": "Puella {{1}} spectat.",
+        "blanks": {
+          "1": [
+            "servum",
+            "amicum",
+            "amīcum"
+          ]
+        },
+        "wordBank": [
+          "servum",
+          "servus",
+          "servī"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

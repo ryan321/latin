@@ -1,0 +1,254 @@
+{
+  "slug": "05-familia",
+  "title": "Familia Romana",
+  "unitSlug": "03-first-declension",
+  "order": 5,
+  "standardSummary": "Use family vocabulary and 1st-declension forms in short culture-linked practice.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "match-family"
+      },
+      {
+        "type": "skill_count",
+        "skill": "vocab",
+        "n": 2,
+        "label": "family vocab"
+      },
+      {
+        "type": "translate_count",
+        "n": 2
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "sa-familia"
+      }
+    ]
+  },
+  "teach": "Roman household words; some 2nd-declension previews as recognition only.",
+  "allowList": {
+    "lemmas": [
+      "puella",
+      "femina",
+      "filia",
+      "villa",
+      "familia",
+      "pater",
+      "mater",
+      "filius",
+      "servus"
+    ],
+    "constructions": [
+      "1st declension",
+      "culture"
+    ],
+    "activityTypes": [
+      "matching",
+      "translate",
+      "multiple_choice",
+      "short_answer",
+      "multi_select"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "match-family",
+      "type": "matching",
+      "prompt": "Match Latin to English.",
+      "targets": [
+        "vocab"
+      ],
+      "payload": {
+        "left": [
+          {
+            "id": "f",
+            "label": "fīlia"
+          },
+          {
+            "id": "fe",
+            "label": "fēmina"
+          },
+          {
+            "id": "fa",
+            "label": "familia"
+          },
+          {
+            "id": "v",
+            "label": "villa"
+          }
+        ],
+        "right": [
+          {
+            "id": "a",
+            "label": "daughter"
+          },
+          {
+            "id": "b",
+            "label": "woman"
+          },
+          {
+            "id": "c",
+            "label": "household / family"
+          },
+          {
+            "id": "d",
+            "label": "country house / estate"
+          }
+        ],
+        "pairs": {
+          "f": "a",
+          "fe": "b",
+          "fa": "c",
+          "v": "d"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match-m",
+      "type": "matching",
+      "prompt": "Recognition: masculine household words (2nd decl. preview).",
+      "targets": [
+        "vocab"
+      ],
+      "payload": {
+        "left": [
+          {
+            "id": "p",
+            "label": "pater"
+          },
+          {
+            "id": "m",
+            "label": "māter"
+          },
+          {
+            "id": "fi",
+            "label": "fīlius"
+          },
+          {
+            "id": "s",
+            "label": "servus"
+          }
+        ],
+        "right": [
+          {
+            "id": "a",
+            "label": "father"
+          },
+          {
+            "id": "b",
+            "label": "mother"
+          },
+          {
+            "id": "c",
+            "label": "son"
+          },
+          {
+            "id": "d",
+            "label": "enslaved man / servant (historical term: slave)"
+          }
+        ],
+        "pairs": {
+          "p": "a",
+          "m": "b",
+          "fi": "c",
+          "s": "d"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "tr1",
+      "type": "translate",
+      "prompt": "Fīlia in villā est.",
+      "targets": [
+        "1st declension",
+        "sum"
+      ],
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "The daughter is in the villa.",
+          "A daughter is in the country house."
+        ],
+        "rubric": "Daughter subject; is; in villa."
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "tr2",
+      "type": "translate",
+      "prompt": "The woman is in the forest.",
+      "targets": [
+        "1st declension",
+        "sum",
+        "E2L"
+      ],
+      "payload": {
+        "direction": "E2L",
+        "length": "sentence",
+        "sampleAnswers": [
+          "Femina in silva est.",
+          "Fēmina in silvā est."
+        ],
+        "rubric": "fēmina nom; in + abl silva; est."
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "mc-familia",
+      "type": "multiple_choice",
+      "prompt": "Roman familia often included…",
+      "targets": [
+        "culture"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "Only children under five"
+          },
+          {
+            "id": "b",
+            "label": "The household under the paterfamilias, including dependents and enslaved people"
+          },
+          {
+            "id": "c",
+            "label": "Only soldiers"
+          },
+          {
+            "id": "d",
+            "label": "Only the Senate"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sa-familia",
+      "type": "short_answer",
+      "prompt": "In a sentence: what is a Roman villa in this course’s sense?",
+      "targets": [
+        "culture",
+        "vocab"
+      ],
+      "payload": {
+        "sampleAnswers": [
+          "A country house or working estate, not only a luxury home.",
+          "A rural household property / farm estate."
+        ],
+        "rubric": "Country estate / farm house sense."
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

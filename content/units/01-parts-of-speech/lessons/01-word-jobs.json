@@ -1,0 +1,423 @@
+{
+  "slug": "01-word-jobs",
+  "title": "Words have jobs",
+  "unitSlug": "01-parts-of-speech",
+  "order": 1,
+  "standardSummary": "Show you can tell noun vs verb jobs: pass core items and earn skill counts on noun and verb identification.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-pos-def"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match-nv"
+      },
+      {
+        "type": "skill_count",
+        "skill": "noun",
+        "n": 4,
+        "label": "noun identification"
+      },
+      {
+        "type": "skill_count",
+        "skill": "verb",
+        "n": 4,
+        "label": "verb identification"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "sa-why"
+      }
+    ]
+  },
+  "teach": "Parts of speech are the jobs words do in a sentence. Before Latin endings, you need the jobs: noun, verb, adjective, and friends.",
+  "allowList": {
+    "lemmas": [],
+    "constructions": [
+      "parts of speech"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "matching",
+      "short_answer",
+      "multi_select"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-pos-def",
+      "type": "multiple_choice",
+      "source": "seed",
+      "prompt": "What is a “part of speech”?",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "How loud you say a word"
+          },
+          {
+            "id": "b",
+            "label": "The job a word does in a sentence (noun, verb, etc.)"
+          },
+          {
+            "id": "c",
+            "label": "Only Latin dictionary forms"
+          },
+          {
+            "id": "d",
+            "label": "A type of Roman building"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "targets": [
+        "parts of speech"
+      ]
+    },
+    {
+      "id": "match-nv",
+      "type": "matching",
+      "source": "seed",
+      "prompt": "Match each bold word to noun or verb.",
+      "required": true,
+      "payload": {
+        "leftLabel": "Word in context",
+        "rightLabel": "Job",
+        "left": [
+          {
+            "id": "girl",
+            "label": "The **girl** runs."
+          },
+          {
+            "id": "runs",
+            "label": "The girl **runs**."
+          },
+          {
+            "id": "Rome",
+            "label": "**Rome** is a city."
+          },
+          {
+            "id": "is",
+            "label": "Water **is** cold."
+          }
+        ],
+        "right": [
+          {
+            "id": "noun",
+            "label": "Noun"
+          },
+          {
+            "id": "verb",
+            "label": "Verb"
+          }
+        ],
+        "pairs": {
+          "girl": "noun",
+          "runs": "verb",
+          "Rome": "noun",
+          "is": "verb"
+        }
+      },
+      "targets": [
+        "noun",
+        "verb",
+        "parts of speech"
+      ]
+    },
+    {
+      "id": "match-nv-2",
+      "type": "matching",
+      "source": "seed",
+      "prompt": "Match each bold word to noun or verb.",
+      "targets": [
+        "noun",
+        "verb"
+      ],
+      "required": true,
+      "payload": {
+        "leftLabel": "Word in context",
+        "rightLabel": "Job",
+        "left": [
+          {
+            "id": "a",
+            "label": "The **farmer** works."
+          },
+          {
+            "id": "b",
+            "label": "The farmer **works**."
+          },
+          {
+            "id": "c",
+            "label": "**Water** is cold."
+          },
+          {
+            "id": "d",
+            "label": "They **see** Rome."
+          }
+        ],
+        "right": [
+          {
+            "id": "noun",
+            "label": "Noun"
+          },
+          {
+            "id": "verb",
+            "label": "Verb"
+          }
+        ],
+        "pairs": {
+          "a": "noun",
+          "b": "verb",
+          "c": "noun",
+          "d": "verb"
+        }
+      }
+    },
+    {
+      "id": "multi-nouns-1",
+      "type": "multi_select",
+      "source": "seed",
+      "prompt": "Select ALL the nouns: “The girl carries water in Rome.”",
+      "targets": [
+        "noun"
+      ],
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "girl",
+            "label": "girl"
+          },
+          {
+            "id": "carries",
+            "label": "carries"
+          },
+          {
+            "id": "water",
+            "label": "water"
+          },
+          {
+            "id": "in",
+            "label": "in"
+          },
+          {
+            "id": "rome",
+            "label": "Rome"
+          }
+        ],
+        "correctOptionIds": [
+          "girl",
+          "water",
+          "rome"
+        ]
+      }
+    },
+    {
+      "id": "multi-verbs-1",
+      "type": "multi_select",
+      "source": "seed",
+      "prompt": "Select ALL the verbs: “The girls are tired and they rest.”",
+      "targets": [
+        "verb"
+      ],
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "girls",
+            "label": "girls"
+          },
+          {
+            "id": "are",
+            "label": "are"
+          },
+          {
+            "id": "tired",
+            "label": "tired"
+          },
+          {
+            "id": "rest",
+            "label": "rest"
+          }
+        ],
+        "correctOptionIds": [
+          "are",
+          "rest"
+        ]
+      }
+    },
+    {
+      "id": "match-nv-3",
+      "type": "matching",
+      "source": "seed",
+      "prompt": "Match each bold word to noun or verb.",
+      "targets": [
+        "noun",
+        "verb"
+      ],
+      "required": true,
+      "payload": {
+        "leftLabel": "Word in context",
+        "rightLabel": "Job",
+        "left": [
+          {
+            "id": "a",
+            "label": "**Peace** is good."
+          },
+          {
+            "id": "b",
+            "label": "We **love** peace."
+          },
+          {
+            "id": "c",
+            "label": "The **road** is long."
+          },
+          {
+            "id": "d",
+            "label": "Soldiers **march**."
+          }
+        ],
+        "right": [
+          {
+            "id": "noun",
+            "label": "Noun"
+          },
+          {
+            "id": "verb",
+            "label": "Verb"
+          }
+        ],
+        "pairs": {
+          "a": "noun",
+          "b": "verb",
+          "c": "noun",
+          "d": "verb"
+        }
+      }
+    },
+    {
+      "id": "mc-shift",
+      "type": "multiple_choice",
+      "source": "seed",
+      "prompt": "In “I run every morning” vs “a long run,” the word run is…",
+      "targets": [
+        "parts of speech"
+      ],
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "Always a noun"
+          },
+          {
+            "id": "b",
+            "label": "Always a verb"
+          },
+          {
+            "id": "c",
+            "label": "A verb in the first sentence, a noun in the second"
+          },
+          {
+            "id": "d",
+            "label": "A preposition in both"
+          }
+        ],
+        "correctOptionId": "c"
+      }
+    },
+    {
+      "id": "sa-why",
+      "type": "short_answer",
+      "source": "seed",
+      "prompt": "In one or two sentences: why does Latin care so much about a word’s job (part of speech)?",
+      "required": true,
+      "payload": {
+        "sampleAnswers": [
+          "Because endings change with the job of the word — case for nouns, person for verbs.",
+          "Latin shows grammar with endings, and those endings depend on whether a word is a noun, verb, etc."
+        ],
+        "rubric": "Mentions endings/inflection or that form depends on the word’s role. Not just “Latin is hard.”"
+      },
+      "targets": [
+        "parts of speech"
+      ]
+    },
+    {
+      "id": "multi-mixed-pos",
+      "type": "multi_select",
+      "source": "seed",
+      "prompt": "Select ALL nouns: “Love and war shape Rome.”",
+      "targets": [
+        "noun"
+      ],
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "love",
+            "label": "Love"
+          },
+          {
+            "id": "and",
+            "label": "and"
+          },
+          {
+            "id": "war",
+            "label": "war"
+          },
+          {
+            "id": "shape",
+            "label": "shape"
+          },
+          {
+            "id": "rome",
+            "label": "Rome"
+          }
+        ],
+        "correctOptionIds": [
+          "love",
+          "war",
+          "rome"
+        ]
+      }
+    },
+    {
+      "id": "multi-mixed-v",
+      "type": "multi_select",
+      "source": "seed",
+      "prompt": "Select ALL verbs: “Friends are here and they wait.”",
+      "targets": [
+        "verb"
+      ],
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "friends",
+            "label": "Friends"
+          },
+          {
+            "id": "are",
+            "label": "are"
+          },
+          {
+            "id": "here",
+            "label": "here"
+          },
+          {
+            "id": "wait",
+            "label": "wait"
+          }
+        ],
+        "correctOptionIds": [
+          "are",
+          "wait"
+        ]
+      }
+    }
+  ]
+}

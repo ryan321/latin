@@ -1,0 +1,361 @@
+{
+  "slug": "05-checkpoint",
+  "title": "Checkpoint — Parts of speech",
+  "unitSlug": "01-parts-of-speech",
+  "order": 5,
+  "standardSummary": "Identify noun, verb, adjective, and preposition across mixed items.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "skill_count",
+        "skill": "noun",
+        "n": 3,
+        "label": "noun"
+      },
+      {
+        "type": "skill_count",
+        "skill": "verb",
+        "n": 3,
+        "label": "verb"
+      },
+      {
+        "type": "skill_count",
+        "skill": "adjective",
+        "n": 2,
+        "label": "adjective"
+      },
+      {
+        "type": "skill_count",
+        "skill": "preposition",
+        "n": 1,
+        "label": "preposition"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "sa-pos"
+      }
+    ]
+  },
+  "teach": "Mixed POS gauntlet before noun cases.",
+  "allowList": {
+    "lemmas": [],
+    "constructions": [
+      "parts of speech",
+      "noun",
+      "verb",
+      "adjective",
+      "preposition"
+    ],
+    "activityTypes": [
+      "matching",
+      "multi_select",
+      "multiple_choice",
+      "short_answer"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "match-nv",
+      "type": "matching",
+      "prompt": "Match bold words to noun or verb.",
+      "targets": [
+        "noun",
+        "verb"
+      ],
+      "payload": {
+        "left": [
+          {
+            "id": "a",
+            "label": "The **soldier** fights."
+          },
+          {
+            "id": "b",
+            "label": "The soldier **fights**."
+          },
+          {
+            "id": "c",
+            "label": "**Italy** is large."
+          },
+          {
+            "id": "d",
+            "label": "They **are** ready."
+          }
+        ],
+        "right": [
+          {
+            "id": "n",
+            "label": "Noun"
+          },
+          {
+            "id": "v",
+            "label": "Verb"
+          }
+        ],
+        "pairs": {
+          "a": "n",
+          "b": "v",
+          "c": "n",
+          "d": "v"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "multi-n",
+      "type": "multi_select",
+      "prompt": "Select ALL nouns: “Peace and war shape the city.”",
+      "targets": [
+        "noun"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "p",
+            "label": "Peace"
+          },
+          {
+            "id": "a",
+            "label": "and"
+          },
+          {
+            "id": "w",
+            "label": "war"
+          },
+          {
+            "id": "s",
+            "label": "shape"
+          },
+          {
+            "id": "c",
+            "label": "city"
+          }
+        ],
+        "correctOptionIds": [
+          "p",
+          "w",
+          "c"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "multi-v",
+      "type": "multi_select",
+      "prompt": "Select ALL verbs: “Friends wait and they hope.”",
+      "targets": [
+        "verb"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "f",
+            "label": "Friends"
+          },
+          {
+            "id": "w",
+            "label": "wait"
+          },
+          {
+            "id": "t",
+            "label": "they"
+          },
+          {
+            "id": "h",
+            "label": "hope"
+          }
+        ],
+        "correctOptionIds": [
+          "w",
+          "h"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "multi-adj",
+      "type": "multi_select",
+      "prompt": "Select ALL adjectives: “A brave small boy sees a dark forest.”",
+      "targets": [
+        "adjective"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "b",
+            "label": "brave"
+          },
+          {
+            "id": "s",
+            "label": "small"
+          },
+          {
+            "id": "boy",
+            "label": "boy"
+          },
+          {
+            "id": "d",
+            "label": "dark"
+          },
+          {
+            "id": "f",
+            "label": "forest"
+          }
+        ],
+        "correctOptionIds": [
+          "b",
+          "s",
+          "d"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "multi-prep",
+      "type": "multi_select",
+      "prompt": "Select ALL prepositions: “From the road into the villa with a friend.”",
+      "targets": [
+        "preposition"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "from",
+            "label": "From"
+          },
+          {
+            "id": "road",
+            "label": "road"
+          },
+          {
+            "id": "into",
+            "label": "into"
+          },
+          {
+            "id": "with",
+            "label": "with"
+          },
+          {
+            "id": "friend",
+            "label": "friend"
+          }
+        ],
+        "correctOptionIds": [
+          "from",
+          "into",
+          "with"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "mc-adj",
+      "type": "multiple_choice",
+      "prompt": "In “cold water,” cold is…",
+      "targets": [
+        "adjective"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "Noun"
+          },
+          {
+            "id": "b",
+            "label": "Verb"
+          },
+          {
+            "id": "c",
+            "label": "Adjective"
+          },
+          {
+            "id": "d",
+            "label": "Preposition"
+          }
+        ],
+        "correctOptionId": "c"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match-mixed",
+      "type": "matching",
+      "prompt": "Match each bold word to its POS.",
+      "targets": [
+        "noun",
+        "verb",
+        "adjective",
+        "preposition"
+      ],
+      "payload": {
+        "left": [
+          {
+            "id": "a",
+            "label": "**Rome** stands firm"
+          },
+          {
+            "id": "b",
+            "label": "they **stand** firm"
+          },
+          {
+            "id": "c",
+            "label": "a **firm** wall"
+          },
+          {
+            "id": "d",
+            "label": "walks **in** the garden"
+          }
+        ],
+        "right": [
+          {
+            "id": "n",
+            "label": "Noun"
+          },
+          {
+            "id": "v",
+            "label": "Verb"
+          },
+          {
+            "id": "adj",
+            "label": "Adjective"
+          },
+          {
+            "id": "p",
+            "label": "Preposition"
+          }
+        ],
+        "pairs": {
+          "a": "n",
+          "b": "v",
+          "c": "adj",
+          "d": "p"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sa-pos",
+      "type": "short_answer",
+      "prompt": "Why must you know a word’s job before learning Latin endings?",
+      "targets": [
+        "parts of speech"
+      ],
+      "payload": {
+        "sampleAnswers": [
+          "Because endings depend on whether a word is a noun, verb, etc.",
+          "Case endings for nouns and personal endings for verbs only make sense if you know the job."
+        ],
+        "rubric": "Links job/POS to endings/forms."
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

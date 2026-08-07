@@ -1,25 +1,88 @@
+import type { ComponentPropsWithoutRef } from "react";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import remarkGfm from "remark-gfm";
 import { lessonComponents } from "@/components/lesson-blocks";
 
+const heading = {
+  h2: (props: ComponentPropsWithoutRef<"h2">) => (
+    <h2
+      className="mt-2 mb-4 border-b border-stone-200 pb-2 font-serif text-xl font-semibold tracking-tight text-stone-900 dark:border-stone-700 dark:text-stone-50"
+      {...props}
+    />
+  ),
+  h3: (props: ComponentPropsWithoutRef<"h3">) => (
+    <h3
+      className="mt-8 mb-3 font-serif text-sm font-bold uppercase tracking-wide text-amber-900 dark:text-amber-400/90"
+      {...props}
+    />
+  ),
+  h4: (props: ComponentPropsWithoutRef<"h4">) => (
+    <h4
+      className="mt-5 mb-2 font-serif text-base font-semibold text-stone-800 dark:text-stone-100"
+      {...props}
+    />
+  ),
+  p: (props: ComponentPropsWithoutRef<"p">) => (
+    <p
+      className="my-3 text-[15px] leading-relaxed text-stone-800 dark:text-stone-200"
+      {...props}
+    />
+  ),
+  ul: (props: ComponentPropsWithoutRef<"ul">) => (
+    <ul
+      className="my-3 list-disc space-y-1 pl-5 text-[15px] text-stone-800 dark:text-stone-200"
+      {...props}
+    />
+  ),
+  ol: (props: ComponentPropsWithoutRef<"ol">) => (
+    <ol
+      className="my-3 list-decimal space-y-1 pl-5 text-[15px] text-stone-800 dark:text-stone-200"
+      {...props}
+    />
+  ),
+  strong: (props: ComponentPropsWithoutRef<"strong">) => (
+    <strong className="font-semibold text-stone-900 dark:text-stone-50" {...props} />
+  ),
+  em: (props: ComponentPropsWithoutRef<"em">) => (
+    <em className="font-serif italic text-stone-900 dark:text-stone-100" {...props} />
+  ),
+  table: (props: ComponentPropsWithoutRef<"table">) => (
+    <div className="not-prose my-4 overflow-x-auto rounded-xl border border-stone-200 shadow-sm dark:border-stone-700">
+      <table className="w-full border-collapse text-sm" {...props} />
+    </div>
+  ),
+  thead: (props: ComponentPropsWithoutRef<"thead">) => (
+    <thead className="bg-stone-100 dark:bg-stone-800" {...props} />
+  ),
+  th: (props: ComponentPropsWithoutRef<"th">) => (
+    <th
+      className="border-b border-stone-200 px-3 py-2.5 text-left text-xs font-bold uppercase tracking-wide text-stone-600 dark:border-stone-700 dark:text-stone-300"
+      {...props}
+    />
+  ),
+  td: (props: ComponentPropsWithoutRef<"td">) => (
+    <td
+      className="border-b border-stone-100 px-3 py-2.5 align-top text-stone-800 dark:border-stone-800 dark:text-stone-200"
+      {...props}
+    />
+  ),
+  tr: (props: ComponentPropsWithoutRef<"tr">) => (
+    <tr className="even:bg-stone-50/80 dark:even:bg-stone-900/50" {...props} />
+  ),
+};
+
 /**
  * Server-rendered rich teach content (MDX + lesson component palette).
- * Falls back gracefully if MDX fails.
  */
 export async function TeachBody({ source }: { source: string }) {
   try {
     return (
-      <div className="teach-body prose prose-stone max-w-none dark:prose-invert prose-headings:font-serif prose-headings:font-semibold prose-headings:tracking-tight prose-h2:mt-2 prose-h2:mb-4 prose-h2:border-b prose-h2:border-stone-200 prose-h2:pb-2 prose-h2:text-xl dark:prose-h2:border-stone-700 prose-h3:mt-8 prose-h3:mb-3 prose-h3:text-base prose-h3:font-bold prose-h3:uppercase prose-h3:tracking-wide prose-h3:text-amber-900 dark:prose-h3:text-amber-400/90 prose-p:my-3 prose-p:text-[15px] prose-p:leading-relaxed prose-li:my-0.5 prose-strong:text-stone-900 dark:prose-strong:text-stone-50 prose-table:my-4 prose-table:w-full prose-th:border prose-th:border-stone-200 prose-th:bg-stone-100 prose-th:px-3 prose-th:py-2 prose-th:text-left prose-td:border prose-td:border-stone-200 prose-td:px-3 prose-td:py-2 dark:prose-th:border-stone-700 dark:prose-th:bg-stone-800 dark:prose-td:border-stone-700">
+      <div className="teach-body max-w-none">
         <MDXRemote
           source={source}
           components={{
             ...lessonComponents,
-            // Ensure native elements keep sensible defaults under MDX
-            table: (props) => (
-              <div className="not-prose my-4 overflow-x-auto rounded-lg border border-stone-200 dark:border-stone-700">
-                <table className="w-full border-collapse text-sm" {...props} />
-              </div>
-            ),
+            ...heading,
           }}
           options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }}
         />

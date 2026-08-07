@@ -1,0 +1,230 @@
+{
+  "slug": "05-checkpoint",
+  "title": "Checkpoint — First conjugation",
+  "unitSlug": "04-first-conjugation",
+  "order": 5,
+  "standardSummary": "Conjugate a 1st-conj verb, agree subject and verb, translate short sentences.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "grid-laudo"
+      },
+      {
+        "type": "translate_count",
+        "n": 3
+      },
+      {
+        "type": "skill_count",
+        "skill": "agreement",
+        "n": 1,
+        "label": "agreement"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match-end"
+      }
+    ]
+  },
+  "teach": "Unit 4 checkpoint.",
+  "allowList": {
+    "lemmas": [
+      "laudo",
+      "amo",
+      "porto",
+      "puella",
+      "terra",
+      "aqua"
+    ],
+    "constructions": [
+      "1st conjugation",
+      "agreement"
+    ],
+    "activityTypes": [
+      "paradigm_grid",
+      "translate",
+      "matching",
+      "multiple_choice",
+      "single_form"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "grid-laudo",
+      "type": "paradigm_grid",
+      "prompt": "Conjugate laudō present.",
+      "targets": [
+        "1st conjugation"
+      ],
+      "payload": {
+        "kind": "verb",
+        "lemma": "laudo",
+        "stem": "laud",
+        "pattern": "first_conj_present",
+        "mode": "full_form",
+        "labels": {
+          "rows": [
+            "1",
+            "2",
+            "3"
+          ],
+          "cols": [
+            "sing.",
+            "plural"
+          ]
+        },
+        "cells": {}
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match-end",
+      "type": "matching",
+      "prompt": "Ending → person.",
+      "targets": [
+        "personal endings"
+      ],
+      "payload": {
+        "left": [
+          {
+            "id": "t",
+            "label": "-t"
+          },
+          {
+            "id": "nt",
+            "label": "-nt"
+          },
+          {
+            "id": "mus",
+            "label": "-mus"
+          }
+        ],
+        "right": [
+          {
+            "id": "3s",
+            "label": "3rd sing."
+          },
+          {
+            "id": "3p",
+            "label": "3rd plural"
+          },
+          {
+            "id": "1p",
+            "label": "1st plural"
+          }
+        ],
+        "pairs": {
+          "t": "3s",
+          "nt": "3p",
+          "mus": "1p"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "mc-agr",
+      "type": "multiple_choice",
+      "prompt": "Puellae …",
+      "targets": [
+        "agreement"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "amat"
+          },
+          {
+            "id": "b",
+            "label": "amant"
+          },
+          {
+            "id": "c",
+            "label": "amō"
+          },
+          {
+            "id": "d",
+            "label": "amās"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "tr1",
+      "type": "translate",
+      "prompt": "Puellae aquam portant.",
+      "targets": [
+        "1st conjugation"
+      ],
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "The girls carry water."
+        ],
+        "rubric": "Girls; carry; water."
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "tr2",
+      "type": "translate",
+      "prompt": "Fēminam laudat.",
+      "targets": [
+        "1st conjugation"
+      ],
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "He/she praises the woman.",
+          "He praises the woman."
+        ],
+        "rubric": "3rd sing. subject in ending; praises; woman acc."
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "tr3",
+      "type": "translate",
+      "prompt": "The girl does not love the land.",
+      "targets": [
+        "1st conjugation"
+      ],
+      "payload": {
+        "direction": "E2L",
+        "length": "sentence",
+        "sampleAnswers": [
+          "Puella terram non amat.",
+          "Puella terram nōn amat."
+        ],
+        "rubric": "puella; terram; nōn amat."
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "form",
+      "type": "single_form",
+      "prompt": "We praise (laudō)?",
+      "targets": [
+        "1st conjugation"
+      ],
+      "payload": {
+        "accept": [
+          "laudamus",
+          "laudāmus"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

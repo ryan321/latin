@@ -37,6 +37,8 @@ Import nothing — components are injected by the renderer.
 | `MapCallout` | Culture / place box | `title` + children |
 | `VowelChart` | Short vs long vowels | `short="a\|e\|…"` `long="ā\|ē\|…"` |
 | `LetterRow` | Chip row of letters/diphthongs | `letters="ae\|au\|oe"` |
+| `PosCards` | Parts-of-speech card grid | `items="Noun ~ …\|Verb ~ …"` |
+| `ExampleSentence` | Sentence with `__underlined__` words | `text` `gloss` |
 | `Image` / `Video` | Media | `src` `alt` / `caption` |
 
 Prefer `VowelChart` / `ParadigmTable` over raw markdown tables in MDX — GFM tables can flatten under MDX.

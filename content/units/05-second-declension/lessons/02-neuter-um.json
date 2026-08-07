@@ -1,0 +1,262 @@
+{
+  "slug": "02-neuter-um",
+  "title": "Neuter -um nouns",
+  "unitSlug": "05-second-declension",
+  "order": 2,
+  "standardSummary": "Apply the neuter law and decline a -um noun.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "grid-bellum"
+      },
+      {
+        "type": "skill_count",
+        "skill": "neuter",
+        "n": 2,
+        "label": "neuter"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "mc-law"
+      }
+    ]
+  },
+  "teach": "Neuter 2nd declension: nom=acc; plural -a.",
+  "allowList": {
+    "lemmas": [
+      "bellum",
+      "oppidum",
+      "donum",
+      "verbum"
+    ],
+    "constructions": [
+      "2nd declension",
+      "neuter"
+    ],
+    "activityTypes": [
+      "paradigm_grid",
+      "single_form",
+      "multiple_choice",
+      "matching"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "grid-bellum",
+      "type": "paradigm_grid",
+      "prompt": "Decline bellum (neuter).",
+      "targets": [
+        "2nd declension",
+        "neuter"
+      ],
+      "payload": {
+        "kind": "noun",
+        "lemma": "bellum",
+        "stem": "bell",
+        "mode": "full_form",
+        "labels": {
+          "rows": [
+            "nom",
+            "gen",
+            "dat",
+            "acc",
+            "abl"
+          ],
+          "cols": [
+            "sing.",
+            "plural"
+          ]
+        },
+        "cells": {
+          "nom.sg": [
+            "bellum"
+          ],
+          "gen.sg": [
+            "belli",
+            "bellī"
+          ],
+          "dat.sg": [
+            "bello",
+            "bellō"
+          ],
+          "acc.sg": [
+            "bellum"
+          ],
+          "abl.sg": [
+            "bello",
+            "bellō"
+          ],
+          "nom.pl": [
+            "bella"
+          ],
+          "gen.pl": [
+            "bellorum",
+            "bellōrum"
+          ],
+          "dat.pl": [
+            "bellis",
+            "bellīs"
+          ],
+          "acc.pl": [
+            "bella"
+          ],
+          "abl.pl": [
+            "bellis",
+            "bellīs"
+          ]
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "mc-law",
+      "type": "multiple_choice",
+      "prompt": "Neuter rule: nominative and accusative are…",
+      "targets": [
+        "neuter"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "Always different"
+          },
+          {
+            "id": "b",
+            "label": "The same form (in each number)"
+          },
+          {
+            "id": "c",
+            "label": "Only plural differs from all other genders"
+          },
+          {
+            "id": "d",
+            "label": "Never used"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "form-nom-pl",
+      "type": "single_form",
+      "prompt": "Nom/acc plural of bellum?",
+      "targets": [
+        "neuter"
+      ],
+      "payload": {
+        "accept": [
+          "bella"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "form-donum-acc",
+      "type": "single_form",
+      "prompt": "Accusative singular of dōnum?",
+      "targets": [
+        "neuter"
+      ],
+      "payload": {
+        "accept": [
+          "donum",
+          "dōnum"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match",
+      "type": "matching",
+      "prompt": "Match neuter words.",
+      "targets": [
+        "vocab",
+        "neuter"
+      ],
+      "payload": {
+        "left": [
+          {
+            "id": "b",
+            "label": "bellum"
+          },
+          {
+            "id": "o",
+            "label": "oppidum"
+          },
+          {
+            "id": "d",
+            "label": "dōnum"
+          },
+          {
+            "id": "v",
+            "label": "verbum"
+          }
+        ],
+        "right": [
+          {
+            "id": "1",
+            "label": "war"
+          },
+          {
+            "id": "2",
+            "label": "town"
+          },
+          {
+            "id": "3",
+            "label": "gift"
+          },
+          {
+            "id": "4",
+            "label": "word"
+          }
+        ],
+        "pairs": {
+          "b": "1",
+          "o": "2",
+          "d": "3",
+          "v": "4"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "mc-pl",
+      "type": "multiple_choice",
+      "prompt": "Neuter nominative plural ending (2nd decl.) is…",
+      "targets": [
+        "neuter"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "-ī"
+          },
+          {
+            "id": "b",
+            "label": "-a"
+          },
+          {
+            "id": "c",
+            "label": "-ās"
+          },
+          {
+            "id": "d",
+            "label": "-um"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

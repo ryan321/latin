@@ -1,0 +1,204 @@
+{
+  "slug": "05-checkpoint",
+  "title": "Checkpoint — Foundations",
+  "unitSlug": "00-foundations",
+  "order": 5,
+  "standardSummary": "Show mastery of course norms, classical sounds, and basic Rome context.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-standard"
+      },
+      {
+        "type": "skill_count",
+        "skill": "pronunciation",
+        "n": 2,
+        "label": "sounds"
+      },
+      {
+        "type": "skill_count",
+        "skill": "culture-rome",
+        "n": 1,
+        "label": "Rome"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "sa-ready"
+      }
+    ]
+  },
+  "teach": "Mixed review of Unit 0: mastery unlocks, classical pronunciation, Rome.",
+  "allowList": {
+    "lemmas": [
+      "Roma"
+    ],
+    "constructions": [
+      "pronunciation",
+      "culture"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "matching",
+      "short_answer",
+      "multi_select"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-standard",
+      "type": "multiple_choice",
+      "prompt": "You move to the next lesson when you…",
+      "targets": [
+        "course"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "Get a letter grade of A"
+          },
+          {
+            "id": "b",
+            "label": "Meet the lesson’s stated standard"
+          },
+          {
+            "id": "c",
+            "label": "Only open the page"
+          },
+          {
+            "id": "d",
+            "label": "Skip all practice"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match-sounds",
+      "type": "matching",
+      "prompt": "Match classical sound facts.",
+      "targets": [
+        "pronunciation"
+      ],
+      "payload": {
+        "left": [
+          {
+            "id": "c",
+            "label": "c in Caesar"
+          },
+          {
+            "id": "v",
+            "label": "v in via"
+          },
+          {
+            "id": "mac",
+            "label": "macron over a vowel"
+          }
+        ],
+        "right": [
+          {
+            "id": "k",
+            "label": "Hard /k/"
+          },
+          {
+            "id": "w",
+            "label": "Like English w"
+          },
+          {
+            "id": "long",
+            "label": "Vowel is long"
+          }
+        ],
+        "pairs": {
+          "c": "k",
+          "v": "w",
+          "mac": "long"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "mc-v",
+      "type": "multiple_choice",
+      "prompt": "Classically, Latin v sounds most like…",
+      "targets": [
+        "pronunciation"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "English v in very"
+          },
+          {
+            "id": "b",
+            "label": "English w in we"
+          },
+          {
+            "id": "c",
+            "label": "English f"
+          },
+          {
+            "id": "d",
+            "label": "Silent"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "mc-rome",
+      "type": "multiple_choice",
+      "prompt": "Rome grew on which peninsula?",
+      "targets": [
+        "culture-rome"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "Italy"
+          },
+          {
+            "id": "b",
+            "label": "Spain only"
+          },
+          {
+            "id": "c",
+            "label": "India"
+          },
+          {
+            "id": "d",
+            "label": "Scandinavia"
+          }
+        ],
+        "correctOptionId": "a"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "sa-ready",
+      "type": "short_answer",
+      "prompt": "Name two things you will practice constantly in this course (besides “Latin”).",
+      "targets": [
+        "course"
+      ],
+      "payload": {
+        "sampleAnswers": [
+          "Forms/endings and translation; meeting standards before moving on.",
+          "Grammar (parts of speech, cases, forms) and Roman context."
+        ],
+        "rubric": "Mentions forms/grammar/cases/translation/standards/context — at least two real course habits."
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

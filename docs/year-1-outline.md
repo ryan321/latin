@@ -14,6 +14,8 @@ Henle-inspired, original sequence. Classical pronunciation. Grammar first, with 
 - **C** = Roman context  
 - **R** = review / checkpoint  
 
+**Shipped content (app):** Units **0–5** complete (31 lessons) — foundations through second declension starter toolkit.
+
 **Every lesson** (see product doc): stated **standard** + teach + seed activities + AI may add more **Activity** objects (grids, translates, etc.) until the standard is met.
 
 ---
@@ -38,75 +40,93 @@ By the end of the course the student should be able to:
 
 | Unit | Title | Core grammar | Culture thread |
 |------|--------|--------------|----------------|
-| 0 | Foundations | Alphabet, sound, stress, how the course works | What is Latin? Rome’s language |
-| 1 | First declension & *sum* | Nom/gen/dat/acc/abl/voc; *sum* present | Family & household (*familia*) |
-| 2 | First conjugation present | *amō* type; subject–verb | Daily routine & work |
-| 3 | Second declension | *-us/-um* nouns; agreement intro | Men, tools, places of the city |
-| 4 | First/second adjectives | Agreement; predicate vs attributive | Names, descriptions, social roles |
-| 5 | Second conjugation & infinite basics | *moneō*; infinitive as complement | Education & rhetoric (light) |
-| 6 | Imperfect & future (present system) | All active present-system tenses so far | Time, seasons, the calendar |
-| 7 | Third declension (consonant stems) | 3rd nouns; gender patterns | Geography of Italy & the Mediterranean |
-| 8 | Third conjugation | *regō* / *-iō* present system | Army basics: legion & camp |
-| 9 | Perfect system (active) | Perfect, pluperfect, future perfect | Foundation myths & early kings (story) |
-| 10 | Fourth conjugation & more verbs | *audiō*; mixed practice | Republic institutions (Senate, consuls) |
-| 11 | Passive & personal pronouns | *in/ad/cum/ab…*; *ego/tū/is* | Travel, roads, milestones |
-| 12 | Demonstratives | *hic, ille, is* | Forum, temples, public space |
-| 13 | Passive / relative | *qui, quae, quod* | Citizenship & law (light) |
-| 14 | Passive of the ablative & dative | Means, agent, accompaniment, etc. | Religion & ritual (overview) |
-| 15 | Passive of the accusative & place | Place to/from/where; extent | Provinces & empire map |
-| 16 | Passive (present system) | Passive voice recognition & production | Slavery, status, labor |
-| 17 | Fourth & fifth declensions | *fructus*, *diēs*, etc. | Celebrations, triumphs, spectacles |
-| 18 | Comparison of adjectives | Comparative & superlative | Heroes, virtues, *exempla* |
-| 19 | Numerals & time expressions | Cardinals/ordinals; age; dates (Roman) | War, census, administration |
-| 20 | Participles (intro) | Present & perfect participles as adjectives | Literature & storytelling |
-| 21 | Reading power | Longer passages; cumulative syntax | Augustus & the early Empire |
-| 22 | Year 1 capstone | Mixed mastery; free reading/writing | “What Romans thought they were” |
+| 0 | Foundations | Course norms; classical pronunciation | Latin as Rome’s language |
+| 1 | Parts of speech | Noun, verb, adjective; prep/adv/conj/pron light | Grammar as word-jobs |
+| 2 | Noun cases | Nom, gen, dat, acc, abl **meanings** (before full charts) | Inflection vs English word order |
+| 3 | First declension & *sum* | 1st-decl endings + *sum*; apply cases | Family & household |
+| 4 | First conjugation present | *amō* type; subject–verb | Daily routine & work |
+| 5 | Second declension | *-us/-um* nouns; agreement intro | Men, tools, places of the city |
+| 6 | First/second adjectives | Agreement; predicate vs attributive | Names, descriptions, social roles |
+| 7 | Second conjugation & infinitive basics | *moneō*; infinitive as complement | Education & rhetoric (light) |
+| 8 | Imperfect & future (present system) | Active present-system tenses so far | Time, seasons, the calendar |
+| 9 | Third declension | 3rd nouns; gender patterns | Geography of Italy |
+| 10 | Third conjugation | *regō* / *-iō* present system | Army: legion & camp |
+| 11 | Perfect system (active) | Perfect, pluperfect, future perfect | Foundation myths & kings |
+| 12 | Fourth conjugation & more verbs | *audiō*; mixed practice | Republic institutions |
+| 13 | Prepositions & personal pronouns | *in/ad/cum…*; *ego/tū/is* | Travel, roads |
+| 14 | Demonstratives | *hic, ille, is* | Forum, temples |
+| 15 | Relative pronoun | *qui, quae, quod* | Citizenship & law |
+| 16 | Uses of ablative & dative | Means, agent, accompaniment | Religion & ritual |
+| 17 | Uses of accusative & place | Place to/from/where | Provinces & empire |
+| 18 | Passive (present system) | Passive recognition & production | Status & labor |
+| 19 | Fourth & fifth declensions | *fructus*, *diēs*, etc. | Games & triumphs |
+| 20 | Comparison of adjectives | Comparative & superlative | Virtues & *exempla* |
+| 21 | Numerals & time | Cardinals/ordinals; dates | Census & administration |
+| 22 | Participles (intro) | Present & perfect participles | Storytelling |
+| 23 | Reading power | Longer passages | Augustus & principate |
+| 24 | Year 1 capstone | Mixed mastery | Roman self-image |
 
-Units 0–8 ≈ first semester feel; 9–22 ≈ second semester + synthesis. Pacing can compress culture-only days or expand drills.
+**Pedagogy:** Teach **parts of speech** (Unit 1), then **case meanings** (Unit 2), then **1st-declension forms** (Unit 3). Do not skip to charts without jobs and cases.
 
 ---
 
 ## Unit 0 — Foundations
 
-**Goals:** classical sound system; macrons as help; parts of speech preview; course norms (meet standard → unlock).
+**Goals:** course norms (standard → unlock); classical pronunciation.
 
-| # | Lesson | Tags | Notes |
-|---|--------|------|--------|
-| 0.1 | Welcome & how mastery works | — | UI habits: check answer, chat, unlock |
-| 0.2 | Alphabet & classical consonants | G | *v* = /w/, *c/g* hard, *i/j* vowel/consonant |
-| 0.3 | Vowels, diphthongs, macrons | G | Long vs short; *ae, au, oe* |
-| 0.4 | Syllables & stress | G | Antepenult rule |
-| 0.5 | What kind of language is Latin? | C | Inflection; SOV tendency; why endings matter |
-| 0.6 | Rome on the map (bird’s eye) | C | Italy, Tiber, Mediterranean |
-| 0.7 | Checkpoint 0 | R | Sounds, stress, basic terms |
-
-**Vocab seed:** *Roma, Italia, lingua, littera, magistra/magister* (as needed for app voice).
+| # | Lesson | Tags | Notes | Shipped |
+|---|--------|------|--------|---------|
+| 0.1 | Welcome & how mastery works | — | UI habits | ✓ |
+| 0.2 | Alphabet & classical sounds | G | consonants, vowels, stress | ✓ |
+| 0.3 | Syllables & stress | G | penult rule | ✓ |
+| 0.4 | Rome on the map | C | Italy, Tiber | ✓ |
+| 0.5 | Checkpoint — Foundations | R | mixed | ✓ |
 
 ---
 
-## Unit 1 — First declension & *sum*
+## Unit 1 — Parts of speech
 
-**Goals:** full 1st declension singular/plural; five main cases + vocative awareness; *sum* present; nominative subject, accusative object, genitive “of,” ablative with *in/sub* (location intro).
+**Goals:** noun, verb, adjective cold; light prep/adv/conj/pron; why Latin cares about word-jobs.
 
-| # | Lesson | Tags | Notes |
-|---|--------|------|--------|
-| 1.1 | Nouns have endings: case idea | G | English remnants vs Latin |
-| 1.2 | First declension paradigm (*puella*) | G | Chart mastery |
-| 1.3 | Nominative & accusative | G T | Subject / direct object |
-| 1.4 | Genitive & dative | G T | Possession; indirect object |
-| 1.5 | Ablative & *in* + abl. | G T | *in villā* |
-| 1.6 | Plural forms | G | Full chart fluency |
-| 1.7 | *sum, es, est…* present | G | Predicate nominative |
-| 1.8 | Mixing *sum* + 1st decl. | T | Short sentences |
-| 1.9 | Familia Romana | C | *pater, māter, fīlius, fīlia, servus* (preview 2nd) |
-| 1.10 | English → Latin: family lines | T V | Production |
-| 1.11 | Checkpoint 1 | R | Decline + *sum* + cases |
+| # | Lesson | Tags | Notes | Shipped |
+|---|--------|------|--------|---------|
+| 1.1 | Words have jobs | G | What is a part of speech? | ✓ |
+| 1.2 | Nouns | G V | Person/place/thing/idea; gender preview | ✓ |
+| 1.3 | Verbs | G | Action vs being; *sum/est/sunt* peek | ✓ |
+| 1.4 | Adjectives & others | G | Adj + supporting cast | ✓ |
+
+---
+
+## Unit 2 — Noun cases (meanings first)
+
+**Goals:** five cases as **jobs** (not full charts yet); analyze English; prepare for endings.
+
+| # | Lesson | Tags | Notes | Shipped |
+|---|--------|------|--------|---------|
+| 2.1 | What is case? | G | Endings vs English word order | ✓ |
+| 2.2 | Nominative — subject | G | Who/what does or is | ✓ |
+| 2.3 | Accusative — direct object | G T | Whom/what is acted on | ✓ |
+| 2.4 | Genitive & dative | G | Of / possession; to/for | ✓ |
+| 2.5 | Ablative | G | By/with/from; *in* + place where | ✓ |
+| 2.6 | All five together | R G | Matching + analysis habit | ✓ |
+
+---
+
+## Unit 3 — First declension & *sum*
+
+**Goals:** 1st-declension endings attached to known case meanings; short sentences with *sum*.
+
+| # | Lesson | Tags | Notes | Shipped |
+|---|--------|------|--------|---------|
+| 3.1 | First declension paradigm (*puella*) | G | Chart mastery | ✓ |
+| 3.2 | Cases in short sentences | G T | Apply nom/acc/abl + *est* | ✓ |
 
 **Core vocab (illustrative):** *puella, fēmina, terra, aqua, silva, via, patria, Roma, pecūnia, porta, mensa, villa, poēta* (m.), *agricola* (m.), *incola*.
 
 ---
 
-## Unit 2 — First conjugation, present indicative active
+## Unit 4 — First conjugation, present indicative active
+
 
 **Goals:** *amō* present; personal endings; infinitive *-āre*; simple SOV sentences.
 

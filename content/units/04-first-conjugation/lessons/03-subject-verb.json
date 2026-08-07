@@ -1,0 +1,260 @@
+{
+  "slug": "03-subject-verb",
+  "title": "Subjects and verbs agree",
+  "unitSlug": "04-first-conjugation",
+  "order": 3,
+  "standardSummary": "Connect nominative subjects with correct 3rd-person verb forms.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-agree"
+      },
+      {
+        "type": "skill_count",
+        "skill": "agreement",
+        "n": 3,
+        "label": "subject-verb"
+      },
+      {
+        "type": "translate_count",
+        "n": 3
+      }
+    ]
+  },
+  "teach": "3rd person verbs with 1st-declension subjects; SOV feel.",
+  "allowList": {
+    "lemmas": [
+      "puella",
+      "puellae",
+      "amat",
+      "amant",
+      "portat",
+      "portant",
+      "spectat",
+      "terra",
+      "aqua"
+    ],
+    "constructions": [
+      "1st conjugation",
+      "1st declension",
+      "nominative",
+      "agreement"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "matching",
+      "translate",
+      "cloze",
+      "single_form"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-agree",
+      "type": "multiple_choice",
+      "prompt": "Puella … terram. Which verb form fits?",
+      "targets": [
+        "agreement"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "amant"
+          },
+          {
+            "id": "b",
+            "label": "amat"
+          },
+          {
+            "id": "c",
+            "label": "amāmus"
+          },
+          {
+            "id": "d",
+            "label": "amō"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "mc-pl",
+      "type": "multiple_choice",
+      "prompt": "Puellae aquam …",
+      "targets": [
+        "agreement"
+      ],
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "portat"
+          },
+          {
+            "id": "b",
+            "label": "portant"
+          },
+          {
+            "id": "c",
+            "label": "portō"
+          },
+          {
+            "id": "d",
+            "label": "portās"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "match-sv",
+      "type": "matching",
+      "prompt": "Match subject idea to verb form of spectō.",
+      "targets": [
+        "agreement",
+        "1st conjugation"
+      ],
+      "payload": {
+        "left": [
+          {
+            "id": "a",
+            "label": "the girl (sing.)"
+          },
+          {
+            "id": "b",
+            "label": "the girls (plural)"
+          },
+          {
+            "id": "c",
+            "label": "I"
+          }
+        ],
+        "right": [
+          {
+            "id": "t",
+            "label": "spectat"
+          },
+          {
+            "id": "nt",
+            "label": "spectant"
+          },
+          {
+            "id": "o",
+            "label": "spectō"
+          }
+        ],
+        "pairs": {
+          "a": "t",
+          "b": "nt",
+          "c": "o"
+        }
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "cloze1",
+      "type": "cloze",
+      "prompt": "Fill the verb.",
+      "targets": [
+        "agreement"
+      ],
+      "payload": {
+        "template": "Puella terram {{1}}.",
+        "blanks": {
+          "1": [
+            "spectat",
+            "amat",
+            "portat"
+          ]
+        },
+        "wordBank": [
+          "spectat",
+          "spectant",
+          "sunt"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "tr1",
+      "type": "translate",
+      "prompt": "Puella aquam portat.",
+      "targets": [
+        "1st conjugation",
+        "1st declension"
+      ],
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "The girl carries water.",
+          "A girl is carrying water."
+        ],
+        "rubric": "Girl subject; carries; water object."
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "tr2",
+      "type": "translate",
+      "prompt": "Puellae terram spectant.",
+      "targets": [
+        "agreement"
+      ],
+      "payload": {
+        "direction": "L2E",
+        "length": "sentence",
+        "sampleAnswers": [
+          "The girls look at the land.",
+          "The girls watch the earth."
+        ],
+        "rubric": "Girls plural; look at/watch; land."
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "tr3",
+      "type": "translate",
+      "prompt": "The girl praises the woman.",
+      "targets": [
+        "1st conjugation"
+      ],
+      "payload": {
+        "direction": "E2L",
+        "length": "sentence",
+        "sampleAnswers": [
+          "Puella feminam laudat.",
+          "Puella fēminam laudat."
+        ],
+        "rubric": "puella nom; fēminam acc; laudat."
+      },
+      "source": "seed",
+      "required": true
+    },
+    {
+      "id": "form-portant",
+      "type": "single_form",
+      "prompt": "They carry (portō)?",
+      "targets": [
+        "1st conjugation"
+      ],
+      "payload": {
+        "accept": [
+          "portant"
+        ]
+      },
+      "source": "seed",
+      "required": true
+    }
+  ]
+}

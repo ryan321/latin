@@ -1,16 +1,9 @@
-import Link from "next/link";
 import { TypingHelpContent } from "@/components/latin-keyboard/LatinKeyboard";
 
 export default function TypingHelpPage() {
   return (
     <main className="mx-auto max-w-lg px-4 py-10">
-      <Link
-        href="/"
-        className="text-sm text-amber-800 hover:underline dark:text-amber-400"
-      >
-        ← Back to lessons
-      </Link>
-      <h1 className="mt-4 font-serif text-2xl font-bold text-stone-900 dark:text-stone-50">
+      <h1 className="font-serif text-2xl font-bold text-stone-900 dark:text-stone-50">
         Typing Latin characters
       </h1>
       <p className="mt-2 text-sm text-stone-500">

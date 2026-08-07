@@ -1,0 +1,410 @@
+{
+  "slug": "03-verbs",
+  "title": "Verbs",
+  "unitSlug": "01-parts-of-speech",
+  "order": 3,
+  "standardSummary": "Identify verbs (action and being); match sum/est/sunt; hit skill counts for verb spotting.",
+  "standard": {
+    "requirements": [
+      {
+        "type": "activity_passed",
+        "activityId": "mc-verb-def"
+      },
+      {
+        "type": "skill_count",
+        "skill": "verb",
+        "n": 4,
+        "label": "verb identification"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "match-sum"
+      }
+    ]
+  },
+  "teach": "A verb shows action or state of being. Latin verbs change for person and number.",
+  "allowList": {
+    "lemmas": [
+      "sum",
+      "est",
+      "sunt",
+      "spectat",
+      "portat"
+    ],
+    "constructions": [
+      "sum",
+      "parts of speech",
+      "verb"
+    ],
+    "activityTypes": [
+      "multiple_choice",
+      "multi_select",
+      "matching"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "mc-verb-def",
+      "type": "multiple_choice",
+      "source": "seed",
+      "prompt": "Which best defines a verb?",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "A word that names a person or place"
+          },
+          {
+            "id": "b",
+            "label": "A word that shows action or a state of being"
+          },
+          {
+            "id": "c",
+            "label": "A word that only describes size or color"
+          },
+          {
+            "id": "d",
+            "label": "A word that joins two clauses"
+          }
+        ],
+        "correctOptionId": "b"
+      },
+      "targets": [
+        "parts of speech",
+        "verb"
+      ]
+    },
+    {
+      "id": "multi-verbs",
+      "type": "multi_select",
+      "source": "seed",
+      "prompt": "Select ALL the verbs: “The girls are in the villa and they carry water.”",
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "girls",
+            "label": "girls"
+          },
+          {
+            "id": "are",
+            "label": "are"
+          },
+          {
+            "id": "villa",
+            "label": "villa"
+          },
+          {
+            "id": "carry",
+            "label": "carry"
+          },
+          {
+            "id": "water",
+            "label": "water"
+          }
+        ],
+        "correctOptionIds": [
+          "are",
+          "carry"
+        ]
+      },
+      "targets": [
+        "verb"
+      ]
+    },
+    {
+      "id": "match-sum",
+      "type": "matching",
+      "source": "seed",
+      "prompt": "Match Latin forms of “to be” (you will learn the full chart soon) to English.",
+      "required": true,
+      "payload": {
+        "leftLabel": "Latin",
+        "rightLabel": "English",
+        "left": [
+          {
+            "id": "sum",
+            "label": "sum"
+          },
+          {
+            "id": "est",
+            "label": "est"
+          },
+          {
+            "id": "sunt",
+            "label": "sunt"
+          }
+        ],
+        "right": [
+          {
+            "id": "i_am",
+            "label": "I am"
+          },
+          {
+            "id": "he_is",
+            "label": "he/she/it is"
+          },
+          {
+            "id": "they_are",
+            "label": "they are"
+          }
+        ],
+        "pairs": {
+          "sum": "i_am",
+          "est": "he_is",
+          "sunt": "they_are"
+        }
+      },
+      "targets": [
+        "sum",
+        "verb"
+      ]
+    },
+    {
+      "id": "multi-verbs-2",
+      "type": "multi_select",
+      "source": "seed",
+      "prompt": "Select ALL the verbs: “Caesar is great and the soldiers march.”",
+      "targets": [
+        "verb"
+      ],
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "caesar",
+            "label": "Caesar"
+          },
+          {
+            "id": "is",
+            "label": "is"
+          },
+          {
+            "id": "great",
+            "label": "great"
+          },
+          {
+            "id": "soldiers",
+            "label": "soldiers"
+          },
+          {
+            "id": "march",
+            "label": "march"
+          }
+        ],
+        "correctOptionIds": [
+          "is",
+          "march"
+        ]
+      }
+    },
+    {
+      "id": "multi-verbs-3",
+      "type": "multi_select",
+      "source": "seed",
+      "prompt": "Select ALL the verbs: “They see the land and they love Rome.”",
+      "targets": [
+        "verb"
+      ],
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "they1",
+            "label": "They (first)"
+          },
+          {
+            "id": "see",
+            "label": "see"
+          },
+          {
+            "id": "land",
+            "label": "land"
+          },
+          {
+            "id": "love",
+            "label": "love"
+          },
+          {
+            "id": "rome",
+            "label": "Rome"
+          }
+        ],
+        "correctOptionIds": [
+          "see",
+          "love"
+        ]
+      }
+    },
+    {
+      "id": "match-nv-verbs",
+      "type": "matching",
+      "source": "seed",
+      "prompt": "Match each bold word to noun or verb.",
+      "targets": [
+        "verb",
+        "noun"
+      ],
+      "required": true,
+      "payload": {
+        "leftLabel": "Word in context",
+        "rightLabel": "Job",
+        "left": [
+          {
+            "id": "a",
+            "label": "She **walks** home."
+          },
+          {
+            "id": "b",
+            "label": "The **walk** is long."
+          },
+          {
+            "id": "c",
+            "label": "Boys **play**."
+          },
+          {
+            "id": "d",
+            "label": "A long **play**."
+          }
+        ],
+        "right": [
+          {
+            "id": "noun",
+            "label": "Noun"
+          },
+          {
+            "id": "verb",
+            "label": "Verb"
+          }
+        ],
+        "pairs": {
+          "a": "verb",
+          "b": "noun",
+          "c": "verb",
+          "d": "noun"
+        }
+      }
+    },
+    {
+      "id": "mc-being",
+      "type": "multiple_choice",
+      "source": "seed",
+      "prompt": "Which sentence uses a verb of *being* (not a physical action)?",
+      "targets": [
+        "verb"
+      ],
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "The girl carries water."
+          },
+          {
+            "id": "b",
+            "label": "The water is cold."
+          },
+          {
+            "id": "c",
+            "label": "Soldiers march to Rome."
+          },
+          {
+            "id": "d",
+            "label": "They see the forest."
+          }
+        ],
+        "correctOptionId": "b"
+      }
+    },
+    {
+      "id": "match-person",
+      "type": "matching",
+      "source": "seed",
+      "prompt": "Match the English person idea to the example.",
+      "targets": [
+        "verb",
+        "person"
+      ],
+      "required": true,
+      "payload": {
+        "leftLabel": "Person",
+        "rightLabel": "Example",
+        "left": [
+          {
+            "id": "1s",
+            "label": "1st singular (I)"
+          },
+          {
+            "id": "2s",
+            "label": "2nd singular (you, one)"
+          },
+          {
+            "id": "3s",
+            "label": "3rd singular (he/she/it)"
+          },
+          {
+            "id": "3p",
+            "label": "3rd plural (they)"
+          }
+        ],
+        "right": [
+          {
+            "id": "a",
+            "label": "I am / I walk"
+          },
+          {
+            "id": "b",
+            "label": "you are / you walk"
+          },
+          {
+            "id": "c",
+            "label": "she is / he walks"
+          },
+          {
+            "id": "d",
+            "label": "they are / they walk"
+          }
+        ],
+        "pairs": {
+          "1s": "a",
+          "2s": "b",
+          "3s": "c",
+          "3p": "d"
+        }
+      }
+    },
+    {
+      "id": "mc-sum-est",
+      "type": "multiple_choice",
+      "source": "seed",
+      "prompt": "est is best translated as…",
+      "targets": [
+        "verb",
+        "sum"
+      ],
+      "required": true,
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "label": "I am"
+          },
+          {
+            "id": "b",
+            "label": "he/she/it is"
+          },
+          {
+            "id": "c",
+            "label": "they are"
+          },
+          {
+            "id": "d",
+            "label": "we are"
+          }
+        ],
+        "correctOptionId": "b"
+      }
+    }
+  ]
+}

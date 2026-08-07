@@ -1,22 +1,56 @@
 {
   "slug": "02-cases-translate",
   "title": "Cases in short sentences",
-  "unitSlug": "01-first-declension",
+  "unitSlug": "03-first-declension",
   "order": 2,
   "standardSummary": "Translate short Latin→English and English→Latin items using 1st-declension forms and sum (est/sunt) as needed. Meet the translate counts.",
   "standard": {
     "requirements": [
-      { "type": "activity_passed", "activityId": "match-cases" },
-      { "type": "activity_passed", "activityId": "cloze-villa" },
-      { "type": "translate_count", "direction": "L2E", "n": 2 },
-      { "type": "translate_count", "direction": "E2L", "n": 1 },
-      { "type": "activity_passed", "activityId": "mc-acc" }
+      {
+        "type": "activity_passed",
+        "activityId": "match-cases"
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "cloze-villa"
+      },
+      {
+        "type": "translate_count",
+        "direction": "L2E",
+        "n": 2
+      },
+      {
+        "type": "translate_count",
+        "direction": "E2L",
+        "n": 1
+      },
+      {
+        "type": "activity_passed",
+        "activityId": "mc-acc"
+      }
     ]
   },
-  "teach": "## Using cases\n\nLatin shows the job of a noun with **endings**, not word order alone.\n\n- *Puella terram spectat.* — The girl looks at the land. (*puella* nom. subject; *terram* acc. object)\n- *Aqua est in silvā.* — Water is in the forest. (*in* + ablative for place where)\n\n### sum (present), quick look\n\n| | sg | pl |\n|--|----|----|\n| 1 | sum | sumus |\n| 2 | es | estis |\n| 3 | est | sunt |\n\n*Puella est in villā.* — The girl is in the country house.\n\n### Your job this lesson\n\nTranslate carefully. If you miss the standard, use **More practice** for extra items, or ask the tutor.",
+  "teach": "## Using cases\n\nLatin shows the job of a noun with **endings**, not word order alone.\n\n- *Puella terram spectat.* — The girl looks at the land. (*puella* nom. subject; *terram* acc. object)\n- *Aqua est in silvā.* — Water is in the forest. (*in* + ablative for place where)\n\n### sum (present), quick look\n\n| | sing. | plural |\n|--|----|----|\n| 1 | sum | sumus |\n| 2 | es | estis |\n| 3 | est | sunt |\n\n*Puella est in villā.* — The girl is in the country house.\n\n### Your job this lesson\n\nTranslate carefully. If you miss the standard, use **More practice** for extra items, or ask the tutor.",
   "allowList": {
-    "lemmas": ["puella", "terra", "aqua", "silva", "villa", "via", "est", "sunt", "spectat", "habitat"],
-    "constructions": ["1st declension", "nominative subject", "accusative object", "in + abl", "sum present"],
+    "lemmas": [
+      "puella",
+      "terra",
+      "aqua",
+      "silva",
+      "villa",
+      "via",
+      "est",
+      "sunt",
+      "spectat",
+      "habitat"
+    ],
+    "constructions": [
+      "1st declension",
+      "nominative subject",
+      "accusative object",
+      "in + abl",
+      "sum present"
+    ],
     "activityTypes": [
       "translate",
       "multiple_choice",
@@ -37,14 +71,32 @@
         "leftLabel": "Case",
         "rightLabel": "Job",
         "left": [
-          { "id": "nom", "label": "Nominative" },
-          { "id": "acc", "label": "Accusative" },
-          { "id": "abl", "label": "Ablative (after in)" }
+          {
+            "id": "nom",
+            "label": "Nominative"
+          },
+          {
+            "id": "acc",
+            "label": "Accusative"
+          },
+          {
+            "id": "abl",
+            "label": "Ablative (after in)"
+          }
         ],
         "right": [
-          { "id": "subject", "label": "Subject of the verb" },
-          { "id": "object", "label": "Direct object" },
-          { "id": "place", "label": "Place where" }
+          {
+            "id": "subject",
+            "label": "Subject of the verb"
+          },
+          {
+            "id": "object",
+            "label": "Direct object"
+          },
+          {
+            "id": "place",
+            "label": "Place where"
+          }
         ],
         "pairs": {
           "nom": "subject",
@@ -62,10 +114,20 @@
       "payload": {
         "template": "Puella in {{1}} {{2}}.",
         "blanks": {
-          "1": ["villa", "villā"],
-          "2": ["est"]
+          "1": [
+            "villa",
+            "villā"
+          ],
+          "2": [
+            "est"
+          ]
         },
-        "wordBank": ["est", "villa", "spectat", "puellae"]
+        "wordBank": [
+          "est",
+          "villa",
+          "spectat",
+          "puellae"
+        ]
       }
     },
     {
@@ -76,10 +138,22 @@
       "required": true,
       "payload": {
         "options": [
-          { "id": "a", "label": "Nominative — it is the subject" },
-          { "id": "b", "label": "Accusative — direct object of spectat" },
-          { "id": "c", "label": "Genitive — possession" },
-          { "id": "d", "label": "Ablative — place where" }
+          {
+            "id": "a",
+            "label": "Nominative — it is the subject"
+          },
+          {
+            "id": "b",
+            "label": "Accusative — direct object of spectat"
+          },
+          {
+            "id": "c",
+            "label": "Genitive — possession"
+          },
+          {
+            "id": "d",
+            "label": "Ablative — place where"
+          }
         ],
         "correctOptionId": "b"
       }
@@ -89,7 +163,10 @@
       "type": "translate",
       "source": "seed",
       "prompt": "Puella in villā est.",
-      "targets": ["in + abl", "sum"],
+      "targets": [
+        "in + abl",
+        "sum"
+      ],
       "required": true,
       "payload": {
         "direction": "L2E",
@@ -107,7 +184,10 @@
       "type": "translate",
       "source": "seed",
       "prompt": "Puella terram spectat.",
-      "targets": ["nom", "acc"],
+      "targets": [
+        "nom",
+        "acc"
+      ],
       "required": true,
       "payload": {
         "direction": "L2E",
@@ -125,7 +205,10 @@
       "type": "translate",
       "source": "seed",
       "prompt": "The water is in the forest.",
-      "targets": ["in + abl", "sum"],
+      "targets": [
+        "in + abl",
+        "sum"
+      ],
       "required": true,
       "payload": {
         "direction": "E2L",
