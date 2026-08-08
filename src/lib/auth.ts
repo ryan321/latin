@@ -19,40 +19,52 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
       id: "credentials",
       name: "Credentials",
       credentials: {
-        email: { label: "Email", type: "email" },
+        username: { label: "Username", type: "text" },
         password: { label: "Password", type: "password" },
       },
       async authorize(credentials) {
         try {
-          if (!credentials?.email || !credentials?.password) {
-            console.warn("[auth] missing email or password");
+          if (!credentials?.username || !credentials?.password) {
+            console.warn("[auth] missing username or password");
             return null;
           }
 
-          const email = String(credentials.email).toLowerCase().trim();
+          const username = normalizeUsername(String(credentials.username));
           const password = String(credentials.password);
+
+          if (!username) {
+            console.warn("[auth] empty username");
+            return null;
+          }
 
           const [user] = await db
             .select()
             .from(users)
-            .where(eq(users.email, email))
+            .where(eq(users.username, username))
             .limit(1);
 
           if (!user?.passwordHash) {
-            console.warn("[auth] no user for", email);
+            console.warn("[auth] no user for", username);
             return null;
           }
 
           const valid = await compare(password, user.passwordHash);
           if (!valid) {
-            console.warn("[auth] bad password for", email);
+            console.warn("[auth] bad password for", username);
             return null;
           }
 
           return {
             id: user.id,
-            email: user.email,
             name: user.name,
+            // stash extras on the user object for jwt callback
+            username: user.username,
+            isTeacher: user.isTeacher,
+          } as {
+            id: string;
+            name: string;
+            username: string;
+            isTeacher: boolean;
           };
         } catch (err) {
           console.error("[auth] authorize error", err);
@@ -78,23 +90,40 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
   },
   callbacks: {
     async jwt({ token, user }) {
-      if (user?.id) {
+      if (user) {
         token.sub = user.id;
-        token.email = user.email;
         token.name = user.name;
+        const u = user as {
+          username?: string;
+          isTeacher?: boolean;
+        };
+        if (typeof u.username === "string") token.username = u.username;
+        if (typeof u.isTeacher === "boolean") token.isTeacher = u.isTeacher;
       }
       return token;
     },
     async session({ session, token }) {
       if (session.user) {
         if (token.sub) session.user.id = token.sub;
-        if (typeof token.email === "string") session.user.email = token.email;
         if (typeof token.name === "string") session.user.name = token.name;
+        if (typeof token.username === "string") {
+          session.user.username = token.username;
+        }
+        session.user.isTeacher = Boolean(token.isTeacher);
       }
       return session;
     },
   },
 });
+
+export function normalizeUsername(raw: string): string {
+  return raw.trim().toLowerCase();
+}
+
+/** Allowed: letters, numbers, underscore, hyphen; 2–32 chars */
+export function isValidUsername(username: string): boolean {
+  return /^[a-z0-9_-]{2,32}$/.test(username);
+}
 
 export async function requireUser() {
   const session = await auth();
@@ -102,6 +131,23 @@ export async function requireUser() {
     return {
       session: null as null,
       error: Response.json({ error: "Unauthorized" }, { status: 401 }),
+    };
+  }
+  return { session, error: null as null };
+}
+
+export async function requireTeacher() {
+  const session = await auth();
+  if (!session?.user?.id) {
+    return {
+      session: null as null,
+      error: Response.json({ error: "Unauthorized" }, { status: 401 }),
+    };
+  }
+  if (!session.user.isTeacher) {
+    return {
+      session: null as null,
+      error: Response.json({ error: "Teacher only" }, { status: 403 }),
     };
   }
   return { session, error: null as null };

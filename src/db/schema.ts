@@ -21,7 +21,8 @@ export const chatRoleEnum = pgEnum("chat_role", ["user", "assistant"]);
 
 export const users = pgTable("users", {
   id: uuid("id").defaultRandom().primaryKey(),
-  email: text("email").notNull().unique(),
+  /** Login id — no email; lowercase unique */
+  username: text("username").notNull().unique(),
   name: text("name").notNull(),
   passwordHash: text("password_hash").notNull(),
   isTeacher: boolean("is_teacher").notNull().default(false),

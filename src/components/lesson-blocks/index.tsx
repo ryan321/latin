@@ -86,28 +86,106 @@ export function Callout({
   );
 }
 
+/**
+ * Lesson image. Prefer files under `/media/…` (see docs/lesson-media.md).
+ * variant: "default" | "hero" (wide banner) | "inline" (smaller, not full-bleed)
+ */
 export function Image({
   src,
   alt = "",
   caption,
+  credit,
+  variant = "default",
 }: {
   src: string;
   alt?: string;
   caption?: string;
+  /** Optional short credit line (e.g. “Public domain”, “Course art”) */
+  credit?: string;
+  variant?: "default" | "hero" | "inline";
 }) {
+  const size =
+    variant === "hero"
+      ? "w-full max-h-[22rem] object-cover"
+      : variant === "inline"
+        ? "mx-auto max-h-56 max-w-md object-contain"
+        : "mx-auto max-h-[20rem] w-full max-w-2xl object-contain";
   return (
-    <figure className="my-6">
+    <figure
+      className={`my-6 overflow-hidden rounded-xl border border-stone-200 bg-stone-50 shadow-sm dark:border-stone-700 dark:bg-stone-900/50 ${
+        variant === "hero" ? "" : ""
+      }`}
+    >
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src={src}
         alt={alt}
         loading="lazy"
         decoding="async"
-        className="mx-auto max-w-full rounded-lg border border-stone-200 dark:border-stone-700"
+        className={`${size} block`}
       />
-      {caption && (
-        <figcaption className="mt-2 text-center text-sm text-stone-500">
-          {caption}
+      {(caption || credit) && (
+        <figcaption className="border-t border-stone-200 px-3 py-2 text-center dark:border-stone-700">
+          {caption && (
+            <span className="block text-sm text-stone-600 dark:text-stone-300">
+              {caption}
+            </span>
+          )}
+          {credit && (
+            <span className="mt-0.5 block text-[11px] text-stone-400">
+              {credit}
+            </span>
+          )}
+        </figcaption>
+      )}
+    </figure>
+  );
+}
+
+/**
+ * Scene art for culture / story beats. Same as Image with hero-ish framing
+ * and a soft label strip.
+ */
+export function Scene({
+  src,
+  alt = "",
+  title,
+  caption,
+  credit,
+}: {
+  src: string;
+  alt?: string;
+  title?: string;
+  caption?: string;
+  credit?: string;
+}) {
+  return (
+    <figure className="not-prose my-6 overflow-hidden rounded-xl border border-amber-200/70 bg-gradient-to-b from-amber-50/50 to-stone-50 shadow-sm dark:border-amber-900/40 dark:from-amber-950/20 dark:to-stone-950">
+      {title && (
+        <div className="border-b border-amber-200/60 px-3 py-1.5 text-[11px] font-bold uppercase tracking-wider text-amber-900/70 dark:border-amber-900/40 dark:text-amber-300/80">
+          {title}
+        </div>
+      )}
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={src}
+        alt={alt}
+        loading="lazy"
+        decoding="async"
+        className="max-h-[22rem] w-full object-cover"
+      />
+      {(caption || credit) && (
+        <figcaption className="border-t border-amber-200/50 px-3 py-2 text-center dark:border-amber-900/30">
+          {caption && (
+            <span className="block text-sm text-stone-700 dark:text-stone-300">
+              {caption}
+            </span>
+          )}
+          {credit && (
+            <span className="mt-0.5 block text-[11px] text-stone-400">
+              {credit}
+            </span>
+          )}
         </figcaption>
       )}
     </figure>
@@ -700,4 +778,5 @@ export const lessonComponents = {
   ExampleSentence,
   ReadingPassage,
   VocabList,
+  Scene,
 };

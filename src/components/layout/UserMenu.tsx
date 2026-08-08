@@ -3,24 +3,33 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 
-function initials(name: string | null | undefined, email: string | null | undefined): string {
+function initials(
+  name: string | null | undefined,
+  username: string | null | undefined
+): string {
   if (name?.trim()) {
     const parts = name.trim().split(/\s+/);
     const a = parts[0]?.[0] ?? "";
     const b = parts[1]?.[0] ?? "";
     return (a + b).toUpperCase() || "?";
   }
-  if (email?.trim()) return email.charAt(0).toUpperCase();
+  if (username?.trim()) return username.charAt(0).toUpperCase();
   return "?";
 }
 
 type Props = {
   name: string | null | undefined;
-  email: string | null | undefined;
+  username: string | null | undefined;
+  isTeacher?: boolean;
   signOutAction: () => Promise<void>;
 };
 
-export function UserMenu({ name, email, signOutAction }: Props) {
+export function UserMenu({
+  name,
+  username,
+  isTeacher,
+  signOutAction,
+}: Props) {
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
@@ -42,7 +51,7 @@ export function UserMenu({ name, email, signOutAction }: Props) {
     };
   }, [open]);
 
-  const label = name?.trim() || email || "Account";
+  const label = name?.trim() || username || "Account";
 
   return (
     <div ref={ref} className="relative">
@@ -54,7 +63,7 @@ export function UserMenu({ name, email, signOutAction }: Props) {
         aria-label="Account menu"
         className="flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-br from-amber-800 to-amber-600 text-sm font-semibold text-amber-50 shadow-sm ring-2 ring-transparent transition hover:ring-amber-800/30 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-700"
       >
-        {initials(name, email)}
+        {initials(name, username)}
       </button>
 
       {open && (
@@ -66,8 +75,13 @@ export function UserMenu({ name, email, signOutAction }: Props) {
             <p className="truncate text-sm font-semibold text-stone-900 dark:text-stone-50">
               {label}
             </p>
-            {email && name && (
-              <p className="truncate text-xs text-stone-500">{email}</p>
+            {username && (
+              <p className="truncate text-xs text-stone-500">@{username}</p>
+            )}
+            {isTeacher && (
+              <p className="mt-0.5 text-[10px] font-bold uppercase tracking-wide text-amber-800 dark:text-amber-400">
+                Teacher
+              </p>
             )}
           </div>
 
@@ -78,6 +92,24 @@ export function UserMenu({ name, email, signOutAction }: Props) {
             className="block px-3 py-2 text-sm text-stone-700 hover:bg-stone-50 dark:text-stone-200 dark:hover:bg-stone-800"
           >
             Course home
+          </Link>
+          {isTeacher && (
+            <Link
+              href="/teacher"
+              role="menuitem"
+              onClick={() => setOpen(false)}
+              className="block px-3 py-2 text-sm text-stone-700 hover:bg-stone-50 dark:text-stone-200 dark:hover:bg-stone-800"
+            >
+              Teacher dashboard
+            </Link>
+          )}
+          <Link
+            href="/practice/flashcards"
+            role="menuitem"
+            onClick={() => setOpen(false)}
+            className="block px-3 py-2 text-sm text-stone-700 hover:bg-stone-50 dark:text-stone-200 dark:hover:bg-stone-800"
+          >
+            Flashcards
           </Link>
           <Link
             href="/help/typing"

@@ -39,7 +39,7 @@ Import nothing — components are injected by the renderer.
 | `LetterRow` | Chip row of letters/diphthongs | `letters="ae\|au\|oe"` |
 | `PosCards` | Parts-of-speech card grid | `items="Noun ~ …\|Verb ~ …"` |
 | `ExampleSentence` | Sentence with `__underlined__` words | `text` `gloss` |
-| `Image` / `Video` | Media | `src` `alt` / `caption` |
+| `Image` / `Scene` / `Video` | Media | `src` `alt` `caption` `credit`; Scene has `title` (see `docs/lesson-media.md`) |
 
 Prefer `VowelChart` / `ParadigmTable` over raw markdown tables in MDX — GFM tables can flatten under MDX.
 

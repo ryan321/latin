@@ -2,7 +2,7 @@
 
 Personal mastery-based Year 1 high-school Latin app (Henle-inspired, classical pronunciation). Lessons declare a **standard**; practice uses shared activity types (ending grids, translation, …); AI grades free responses, generates more practice, and tutors in chat.
 
-See `docs/` for product, curriculum, stack, and runbook. Authoring rule for all years: **English grammar concepts before Latin forms** (`docs/curriculum-principles.md`).
+See `docs/` for product, curriculum, stack, and runbook. Authoring rule for all years: **English grammar concepts before Latin forms** (`docs/curriculum-principles.md`). Lesson art lives under `public/media/` and is embedded with MDX `<Image>` / `<Scene>` (`docs/lesson-media.md`).
 
 ## Quick start (local Postgres)
 

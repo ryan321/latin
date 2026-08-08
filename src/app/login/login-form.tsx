@@ -15,12 +15,12 @@ export function LoginForm() {
     setBusy(true);
 
     const form = new FormData(e.currentTarget);
-    const email = String(form.get("email") ?? "").trim();
+    const username = String(form.get("username") ?? "").trim();
     const password = String(form.get("password") ?? "");
 
     try {
       const result = await signIn("credentials", {
-        email,
+        username,
         password,
         redirect: false,
       });
@@ -30,7 +30,7 @@ export function LoginForm() {
         return;
       }
       if (result.error) {
-        setError("Invalid email or password.");
+        setError("Invalid username or password.");
         return;
       }
 
@@ -47,13 +47,16 @@ export function LoginForm() {
     <form onSubmit={onSubmit} className="mt-6 space-y-4">
       {error && <p className="text-sm text-rose-600">{error}</p>}
       <label className="block text-sm">
-        <span className="text-stone-600 dark:text-stone-300">Email</span>
+        <span className="text-stone-600 dark:text-stone-300">Username</span>
         <input
-          name="email"
-          type="email"
+          name="username"
+          type="text"
           required
           autoComplete="username"
-          defaultValue="student@local.test"
+          autoCapitalize="none"
+          autoCorrect="off"
+          spellCheck={false}
+          defaultValue="student"
           className="mt-1 w-full rounded-md border border-stone-300 px-3 py-2 dark:border-stone-600 dark:bg-stone-950"
         />
       </label>
@@ -69,7 +72,8 @@ export function LoginForm() {
         />
       </label>
       <p className="text-xs text-stone-400">
-        Default seed: student@local.test / latin-learn
+        Default seed: <strong>student</strong> / latin-learn · teacher:{" "}
+        <strong>teacher</strong> / latin-teach
       </p>
       <button
         type="submit"
